@@ -1,0 +1,283 @@
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+ background-color: rgb(20, 45, 20);
+
+  }
+.signUp{
+  min-width: 320px;
+  height: 100vh;
+ 
+ background-color: rgb(20, 45, 20);
+ display:grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+.signUp div{
+ display: grid;
+ margin: auto;
+ justify-items: center;
+ align-items: center;
+ text-align: center;
+ border: none;
+ background-color: #ffffff;
+ border-radius: 10px;
+ color: #343333ad;
+
+ 
+}
+.signUp input{
+ width: 250px; 
+ height: 30px;
+ border: none;
+ background-color:beige;
+ border-radius: 10px;
+ text-align: center;
+ font-size: smaller;
+ outline-color: rgb(151, 245, 132);
+ margin-bottom: 10px;
+ 
+}
+.signUp button{
+  border-radius: 5px;
+  background-color: rgba(47, 142, 47, 0.633);
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 5px;
+  outline-color: palevioletred;
+  width: 200px;
+}
+.img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: grey;
+}
+.two{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content:baseline;
+}
+.three{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content:baseline;
+  width: 320px;
+}
+.four{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content:baseline;
+
+  width: 420px;
+}
+
+.three3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  justify-content:baseline;
+  
+}
+.three4{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content:baseline;
+  
+}
+.three2{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content:flex-end;
+  width: 100%;
+}
+.three2 div{
+  padding: 10px;
+  margin: 10px;
+ border: 1px solid rgba(69, 69, 69, 0.247);
+ height: fit-content;
+ background-color: #fff;
+ border-radius: 5px;
+ color: #424040c5;
+}
+.bars{
+  display: none;
+}
+.two2{
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  justify-content:baseline;
+  border-radius: 10px;
+
+}
+.seven{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  justify-content:baseline;
+  padding: 10px;
+  width: 1000px;
+}
+.scroll{
+  min-width: 320px;
+  overflow-x: scroll;
+}
+.row5{
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  justify-content:baseline;
+  height: 170px;
+  padding: 10px;
+}
+
+.user{
+  background-color: #f5f5dc;
+  width: 98%;
+  min-width: 320px;
+  height: 30px;
+  margin: auto;
+}
+.user2{
+  background-color: #ffffffc0;
+  width: 98%;
+  min-width: 320px;
+  height: fit-content;
+  margin: auto;
+  padding: 10px;
+}
+.bgUser{
+  width: fit-content;
+  height:fit-content;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  font-family:cursive;
+  color: green;
+  display: grid;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid rgba(65, 64, 64, 0.189);
+  border-radius: 10px;
+  background-color: rgba(240, 245, 249, 0.92);
+}
+.profile{
+  width: 320px;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: small;
+}
+.profile input{
+  margin: auto;
+ height: 30px;
+ min-width: 300px;
+ border: none;
+ background-color: beige;
+ text-align: center;
+ outline-color: greenyellow;
+ margin-bottom: 20px;
+ 
+
+}
+.profile button{
+  height: 30px;
+  width: 200px;
+ display: flex;
+  background-color: #1a1a1a;
+  color: white;
+  font-weight: bold;
+  justify-self: center;
+  border-radius: 10px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.profile div{
+  color:green;
+  font-weight: bold;
+}
+th{
+  width: 100px;
+   margin: 10px;
+  border: 1px solid rgba(79, 79, 79, 0.213);
+  
+}
+
+th:hover{
+  background-color: #938e8ea1;
+}
+
+.white{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid rgba(132, 131, 131, 0.316);
+}
+.red{
+  color: red;
+}
+.red2{
+  color: red;
+  font-size: 25px;
+  border: 3px solid red;
+  height: 25px;
+
+}
+.green{
+  color: green;
+}.green2{
+  color: green;
+  font-size: 25px;
+  border: 3px solid green;
+  height: 25px;
+
+}
+.save{
+  background-color: rgb(220, 242, 220);
+}
+.save:hover{
+  background-color: rgb(11, 45, 11);
+color: #fff;
+}
+
+.click{
+  
+  background-color: rgb(212, 207, 207);
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  display: grid;
+  margin: 2px;
+  justify-self: flex-end;
+
+}
+
+
+
+
+
+@media all and (width < 450px){
+  .three2{
+    display: none;
+    background:green;
+  }
+  .bars{
+    display: grid;
+    justify-content:center;
+    align-items: flex-end;
+    height: 50px;
+  }
+  
+}
+
+
