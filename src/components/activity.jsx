@@ -10,10 +10,13 @@ const Activity = () => {
         const data = JSON.parse(localStorage.getItem("nura"));
           if(data) {return data} else {return [] };
        }
+
+      
+       
     const [count,setCount]=useState(0)
-    const [count2,setCount2]=useState()
+    const [count2,setCount2]=useState(10)
     const [selects,setSelects]=useState(getData())
-    const [select,setSelect]=useState('')
+    const [select,setSelect]=useState(0)
     const [select1,setSelect1]=useState()
     const [select2,setSelect2]=useState()
     const [select3,setSelect3]=useState()
@@ -50,7 +53,10 @@ const test =[{questions :["what is you name?",
       if(answer === select){
         setCount2(count2 => count2 + 10)
         alert(count2)
-      } else return alert(count2)
+      } else  {
+        setCount((count2)=> 0)
+        alert(count2)
+      }
     }
     
 
