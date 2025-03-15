@@ -6,17 +6,13 @@ import { Link } from 'react-router-dom'
 
 const Activity = () => {
 
-    const getData = () => {
-        const data = JSON.parse(localStorage.getItem("nura"));
-          if(data) {return data} else {return [] };
-       }
-
+    let score = 0
       
        
     const [count,setCount]=useState(0)
-    const [count2,setCount2]=useState(10)
-    const [selects,setSelects]=useState(getData())
-    const [select,setSelect]=useState(0)
+    const [count2,setCount2]=useState(5)
+    const [selects,setSelects]=useState()
+    const [select,setSelect]=useState()
     const [select1,setSelect1]=useState()
     const [select2,setSelect2]=useState()
     const [select3,setSelect3]=useState()
@@ -35,33 +31,37 @@ const test =[{questions :["what is you name?",
 
             answers:["D","C","B","A"]
             }]
-   useEffect(() => {
-    if(select !== ''){setSelects(selects => [...selects,select])}
-   }, [select])
-   
-
+  
+    
+    
     const name = (answer) => {
        setCount((count)=> count + 1)
-       localStorage.setItem("nura",JSON.stringify(selects))
-       alert(selects)
        setSelect('')
        handleAnswer(answer)
     }
       
-   
+  
+      
     const handleAnswer = (answer) => {
+
       if(answer === select){
+        
         setCount2(count2 => count2 + 10)
         alert(count2)
       } else  {
-        setCount((count2)=> 0)
+        setCount2(()=>count2)
         alert(count2)
       }
     }
     
+const name3 = (params) => {
+  score++
+  alert(score)
+}
 
 
      return (
+      <div className='center'>
     <div className='bgUser'> 
         <div  className="two">
         <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
@@ -131,7 +131,7 @@ const test =[{questions :["what is you name?",
             <div  onClick={()=>name(item.answers[count])}> Next</div></div>)
     })}
    
-</div>
+</div></div>
   )
 }
 

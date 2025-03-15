@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const User = () => {
   const [select, setSelect]=useState()
   return (
-    <>
+    <><div className='center'>
  <div className='bgUser'>
   <div className='two'>
  <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
@@ -60,7 +60,7 @@ const User = () => {
      </div>
    </div>
    
-</div>
+</div></div>
   </>)
 }
 

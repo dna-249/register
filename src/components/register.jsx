@@ -25,8 +25,8 @@ const Register = () => {
     return (
     <>
    
-
-<div className='bgUser'>
+ <div className='center'>
+<div className='bgUser'> 
     <h3>Take Attendance</h3>
     <div ><FaUser className='img'/></div>
     name: <br />
@@ -167,7 +167,7 @@ const Register = () => {
     </div>)}</div>)}
     </div>
 </div>
-  </>)
+  </div></>)
 }
 
 export default Register
