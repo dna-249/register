@@ -10,7 +10,8 @@ const User = () => {
   <div className='two'>
  <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
  <div  className='three2'>
-        <div>Report Sheet</div>
+
+          <div><Link to="/staff">Activity</Link></div>
         <div><Link to="/register">Attendance</Link> </div>
         <div><Link to="/activity">Activity</Link></div>
  </div>
