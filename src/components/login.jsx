@@ -19,7 +19,7 @@ const Login = () => {
         headers:{
           Authorization:token
         }
-      }).then(res => alert(user + "is verified")).catch(err => {alert(user + "is not verified");console.log(err)})
+      }).then(res => console.log(res.data)).catch(err => {alert(user + "is not verified");console.log(err)})
     }
   }
   
