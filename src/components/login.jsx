@@ -9,8 +9,8 @@ const Login = () => {
   const handleLogin = async (params) => {
     await axios.post("https://register-api-cloud.vercel.app/staff/login",{
       name:user,
-    }).then(res => { console.log(res)}).catch(err => console.log(err))
-    handleVerify(res.data);
+    }).then(res => { handleVerify(res.data);alert(res.data) ;console.log(res)}).catch(err => console.log(err))
+   
   }
  
   const handleVerify = (token) => {
