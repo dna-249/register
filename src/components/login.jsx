@@ -19,7 +19,7 @@ const Login = () => {
       await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
         name:user,
         headers:{
-          Authorization:token
+          Authorization:`Bearer ${token}`
         }
       }).then(res => console.log(res.data)).catch(err => {alert(user + "is not verified");console.log(err)})
     }
