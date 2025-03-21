@@ -13,15 +13,7 @@ const Login = () => {
     }).then(res => {alert("your token is available" + res.data.token);
       handleVerify(res.data.token)}).catch(err => console.log(err))
   }
-  const handleVerify = (token) => {
-    axios.post("/https://register-api2.vercel.app/staff/verify",{
-      name:user,
-      password:password,
-      headers:{
-        Authorization:token
-      }
-    }).then(res =>{console.log(res);alert(res.data)})
-  }
+ 
   
 
   return (
