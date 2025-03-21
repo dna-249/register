@@ -7,28 +7,20 @@ const Login = () => {
   const [user,setUser]=useState()
   const [token,setToken]=useState()
   const [password,setPassword]=useState()
-  const handleLogin = async (params) => {
-    await axios.post("https://register-api-cloud.vercel.app/staff/login",{
-      name:user,
-    }).then(res => {setToken(res.data) ;console.log(res)}).catch(err => console.log(err))
-   
-  }
+  
  
   const handleVerify = () => {
     {
       await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
         name:user,
         headers:{
-          "Authorization":`Bearer ${token}`
+          "Authorization":`Bearer `
         }
       }).then(res => console.log(res.data)).catch(err => {alert(user + "is not verified");console.log(err)})
     }
   }
   
-  useEffect(() => {
-    handleVerify()
-  }, [token])
-  
+ 
 
   return (
     <div className='signUp'>
@@ -36,7 +28,7 @@ const Login = () => {
            <div><FaUser className='img'/> <br /><span  style={{color:"green",fontWeight:"bolder"}}> Login</span> </div>
            <div> Username: <input onChange={(e)=>setUser(e.target.value)} placeholder='username...' type="text" /></div>
            <div> Password: <input onChange={(e)=>setPassword(e.target.value)} placeholder='password... ' type="password" /></div>
-           <div><button onClick={()=>handleLogin()}>Login</button></div> 
+           <div><button onClick={()=>handleVerify()}>Login</button></div> 
         </div>
     </div>
   )
