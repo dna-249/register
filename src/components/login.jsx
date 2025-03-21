@@ -6,12 +6,11 @@ import {useState } from "react"
 const Login = () => {
   const [user,setUser]=useState()
   const [password,setPassword]=useState()
-  const handleLogin = (params) => {
-    axios.post("/https://register-api2.vercel.app/staff/login",{
+  const handleLogin = async (params) => {
+    await axios.post("/https://register-api2.vercel.app/staff/login",{
       name:user,
       password:password,
-    }).then(res => {alert("your token is available" + res.data.token);
-      handleVerify(res.data.token)}).catch(err => console.log(err))
+    }).then(res => {alert("your token is available" + res.data.token)}).catch(err => console.log(err))
   }
  
   
