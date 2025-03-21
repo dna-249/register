@@ -7,7 +7,7 @@ const Login = () => {
   const [user,setUser]=useState()
   const [password,setPassword]=useState()
   const handleLogin = async (params) => {
-    await axios.post("/https://register-api2.vercel.app/staff/login",{
+    await axios.post("/https://register-api-cloud.vercel.app/staff/login",{
       name:user,
     }).then(res => {alert("your token is available" + res.data.token)}).catch(err => console.log(err))
   }
