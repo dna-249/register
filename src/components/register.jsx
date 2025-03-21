@@ -6,6 +6,7 @@ const Register = () => {
   const [day, setDay]= useState()
   const [select, setSelect]= useState()
   const [isNew, setIsNew]= useState(false)
+  const [update, setUpdate]= useState("Check the update type above...")
   const [isUpdate, setIsUpdate]= useState(true)
 
 
@@ -27,19 +28,21 @@ const Register = () => {
    
  <div className='center'>
 <div className='bgUser'> 
-    <h3>Take Attendance</h3>
+    <h3>REGISTER</h3>
     <div ><FaUser className='img'/></div>
     name: <br />
     class: <br />
     Term:
     
-    <div style={{width:"300px"}} className='three'>
-    <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
-    <div className='click' onClick={()=>setIsUpdate((pre)=>!pre)}>Update </div>
-    <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}>New </div>
-    </div>
+    
     <div className='white'>{isNew?(
-        <div>{array.map((data, index)=><div key={index}>
+      
+        <div>
+          <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
+    <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> New </div>
+    </div>
+    <h3>Student Attendance</h3>
+          {array.map((data, index)=><div key={index}>
                               <thead>
                                 <tr>
                                     <th>S/A</th>
@@ -85,7 +88,13 @@ const Register = () => {
                                                      
     </div>)}</div>):isUpdate?(
         
-        <div><h2>
+        <div style={{padding:"5px"}}>
+          <div style={{width:"fit-content",}} className='three'>
+    <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
+    <div className='click2' onClick={()=>setIsUpdate((pre)=>!pre)}>Update </div>
+    <div  className='click2'  onClick={()=>setIsNew(false)}>New </div>
+    </div>
+          <h2>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
             <br />{Date().slice(0,21)}</h2>
     <label htmlFor=""> 
@@ -111,15 +120,18 @@ const Register = () => {
          </div> <div style={{width :"200px",justifySelf:"center" }} className='click save'  onClick={()=>name()}>Save Attendance</div>
          </div>):(    
              <div>
+               <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
+    <div  className='click'  onClick={()=>setIsUpdate((pre)=>!pre)}>New </div>
+    </div>
              <label htmlFor=""> 
         Deleting:
-        <input checked={day === "DELETING"} onChange={(e)=>setDay(e.target.value)} value="DELETING"  type='radio' />
+        <input checked={update === "DELETING"} onChange={(e)=>setUpdate(e.target.value)} value="DELETING"  type='radio' />
         Updating:
-        <input checked={day === "UPDATING"} onChange={(e)=>setDay(e.target.value)} value="UPDATING" type='radio' />
+        <input checked={update === "UPDATING"} onChange={(e)=>setUpdate(e.target.value)} value="UPDATING" type='radio' />
        
             
     </label>
-      <h3>{day}</h3>
+      <h3>{update}</h3>
           {array.map((data, index)=><div key={index}>
                               <thead>
                                 <tr>
@@ -151,11 +163,11 @@ const Register = () => {
                   <tr>
                        <th>{index}</th>
                        <th>{Date().slice(0,16)}</th>
-                       <th onClick={(e)=>setSelect(alert(item))}><FaTimes /></th>
-                                    <th onClick={(e)=>setSelect(alert(item))}><FaTimes /></th>
-                                    <th onClick={(e)=>setSelect(alert(item))}><FaTimes /></th>
-                                    <th onClick={(e)=>setSelect(alert(item))}><FaTimes /></th>
-                                    <th onClick={(e)=>setSelect(alert(item))}><FaTimes /></th>
+                       <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
+                                    <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
+                                    <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
+                                    <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
+                                    <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
                                 </tr>
                 </tbody>
                      ) })}

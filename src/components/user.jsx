@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const User = () => {
   const [select, setSelect]=useState()
+  const [toggle, setToggle]=useState()
   return (
     <><div className='center'>
  <div className='bgUser'>
@@ -14,13 +15,21 @@ const User = () => {
           <div><Link to="/staff">Activity</Link></div>
         <div><Link to="/register">Attendance</Link> </div>
         <div><Link to="/activity">Activity</Link></div>
+ </div >
+ <div>{toggle?(
+  <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
+    <div className="icons bars">
+  <div><Link to="/staff">Activity</Link></div>
+        <div><Link to="/register">Attendance</Link> </div>
+        <div><Link to='/profile' >profile</Link></div>
+    </div>)}
  </div>
- <div className='bars'><FaBars/></div>
+ 
  </div>
    <div className='two'>
   
    <div> <h4>Nuraalhaji</h4> </div> 
-   <div><span style={{color:"blue", textDecoration:"underline"}}><Link to='/profile' >user profile</Link></span></div>
+   <div><span style={{color:"blue", textDecoration:"underline"}}></span></div>
  
    </div>
  

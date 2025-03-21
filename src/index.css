@@ -71,12 +71,21 @@ body {
   grid-template-columns: auto auto auto;
   justify-content:baseline;
   width: 320px;
+  
 }
+.three div{
+  text-align: center;
+  font-weight: bolder;
+  align-items: center;
+}.three div:hover{
+  color: #fff;
+  background-color:green ;
+}
+
 .four{
   display: grid;
   grid-template-columns: auto auto auto auto;
   justify-content:baseline;
-
   width: 420px;
 }
 
@@ -109,6 +118,30 @@ body {
 }
 .bars{
   display: none;
+}
+.icons{
+  position: absolute;
+ 
+ 
+  
+  padding: 10px;
+  height: fit-content;
+  right: 0px;
+}
+.icons div{ 
+  width: 50px; 
+  background-color: aliceblue;
+  padding: 6px;
+  border:1px solid rgba(68, 68, 68, 0.343);
+  border-radius: 5px;
+  text-align: center;
+  }
+.icons a{
+  font-size:x-small ;
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+
 }
 .two2{
   display: grid;
@@ -221,7 +254,7 @@ th:hover{
 .white{
   background-color: #fff;
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid rgba(132, 131, 131, 0.316);
 }
 .red{
@@ -261,6 +294,18 @@ color: #fff;
   display: grid;
   margin: 2px;
   justify-self: flex-end;
+
+}
+.click2{
+  
+  background-color: rgb(212, 207, 207);
+  border-radius: 5px;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  text-align: center;
+  display: grid;
+  margin: 2px;
 
 }
 .center{
