@@ -11,12 +11,9 @@ const Login = () => {
  
   const handleVerify = () => {
     {
-      await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
+      await axios.post("https://register-api-cloud.vercel.app/staff/login",{
         name:user,
-        headers:{
-          "Authorization":`Bearer `
-        }
-      }).then(res => console.log(res.data)).catch(err => {alert(user + "is not verified");console.log(err)})
+      }).then(res => {alert("access granted");console.log(res.data)}).catch(err => {alert(user + "is not verified");console.log(err)})
     }
   }
   
@@ -28,7 +25,7 @@ const Login = () => {
            <div><FaUser className='img'/> <br /><span  style={{color:"green",fontWeight:"bolder"}}> Login</span> </div>
            <div> Username: <input onChange={(e)=>setUser(e.target.value)} placeholder='username...' type="text" /></div>
            <div> Password: <input onChange={(e)=>setPassword(e.target.value)} placeholder='password... ' type="password" /></div>
-           <div><button onClick={()=>handleVerify()}>Login</button></div> 
+           <div><button onClick={()=>handleLogin()}>Login</button></div> 
         </div>
     </div>
   )
