@@ -2,18 +2,19 @@ import React from 'react'
 import { FaUser } from 'react-icons/fa'
 import {Link} from "react-router-dom"
 import axios from "axios"
-import {useState } from "react"
+import {useState ,useEffect} from "react"
 const Login = () => {
   const [user,setUser]=useState()
+  const [token,setToken]=useState()
   const [password,setPassword]=useState()
   const handleLogin = async (params) => {
     await axios.post("https://register-api-cloud.vercel.app/staff/login",{
       name:user,
-    }).then(res => {alert(res.data) ;console.log(res)}).catch(err => console.log(err))
+    }).then(res => {setToken(res.data) ;console.log(res)}).catch(err => console.log(err))
    
   }
  
-  const handleVerify = (token) => {
+  const handleVerify = () => {
     {
       await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
         name:user,
@@ -24,6 +25,9 @@ const Login = () => {
     }
   }
   
+  useEffect(() => {
+    handleVerify()
+  }, [token])
   
 
   return (
