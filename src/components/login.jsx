@@ -9,7 +9,7 @@ const Login = () => {
   const [password,setPassword]=useState()
   
  
-  const handleVerify = () => {
+  const handleLogin = () => {
     {
       await axios.post("https://register-api-cloud.vercel.app/staff/login",{
         name:user,
