@@ -13,7 +13,10 @@ const StaffSignup = ({setLogin}) => {
   
   const handleSignUp =()=>{
     axios.post("https://register-api2.vercel.app/staff",
-      {name:key,user:user,password:password,confirm:confirm})
+      { name:key,
+        user:user,
+        password:password,
+        confirm:confirm})
       .then((res)=> console.log(res))
       .catch((err)=> console.log(err))
   }
