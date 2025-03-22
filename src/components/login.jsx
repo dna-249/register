@@ -21,11 +21,11 @@ const Login = () => {
    
   }
   useEffect(() => {
-  if(typeof users !== "undefined" && users !== "") {handleLogin();setUsers("")}
+  if(typeof users !== "undefined" && users !== "") {handleLogin();}
   }, [users])
 
   useEffect(() => {
-    if(typeof token !== "undefined") {handleVerify();setToken("")}
+    if(typeof token !== "undefined") {handleVerify();}
   }, [token])
 
   const handleVerify = async(tokens) => {
