@@ -21,7 +21,7 @@ const Login = () => {
    
   }
   useEffect(() => {
-  if(typeof users !== "undefined") {handleLogin();}
+  if(typeof users !== "undefined" && users !== "") {handleLogin();}
   }, [users])
 
   useEffect(() => {
