@@ -13,8 +13,15 @@ const Login = () => {
     
     await axios.post("https://register-api-cloud.vercel.app/staff/login",{
         name:user,
-      }).then(res => alert("access granted")).catch(err => {alert(user + "is not verified");console.log(err)})
-    
+      }).then(res => {alert("access granted");setToken(res.data)}).catch(err => {alert(user + "is not verified");console.log(err)})
+   
+      await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
+        name:user,
+        headers:{
+          Authourization:token
+        }
+      }).then(res => alert(user + "is verified successfully")).catch(err => {alert(user + "is not verified");console.log(err)})
+   
   }
   
  
