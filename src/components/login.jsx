@@ -25,7 +25,7 @@ const Login = () => {
   }, [users])
 
   useEffect(() => {
-    if(typeof token !== "undefined") {handleVerify();}
+    if(typeof token !== "undefined") {handleVerify();setToken("")}
   }, [token])
 
   const handleVerify = async(tokens) => {
