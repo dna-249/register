@@ -5,22 +5,34 @@ import axios from "axios"
 import {useState ,useEffect} from "react"
 const Login = () => {
   const [user,setUser]=useState()
+  const [users,setUsers]=useState()
   const [token,setToken]=useState()
   const [password,setPassword]=useState()
   
+ useEffect(() => {
+   handleLogin()
+ }, [users])
  
   const handleLogin = async () => {
     
     await axios.post("https://register-api-cloud.vercel.app/staff/login",{
-        name:user,
-      }).then(res => {alert("access granted");handleVerify(res.data)}).catch(err => {alert(user + "is not verified");console.log(err)})
+        name:users,
+      }).then(res => {alert("access granted");setToken(res.data)}).catch(err => {alert(user + "is not verified");console.log(err)})
    
   }
+  useEffect(() => {
+    handleLogin()
+  }, [users])
+
+  useEffect(() => {
+    handleVerify()
+  }, [token])
 
   const handleVerify = async(tokens) => {
     await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
       name:user,
-    }).then(res => alert(user + "is verified successfully" )).catch(err => {alert(user + "is not verified"+""+ token);console.log(err)})
+      header:token
+    }).then(res => alert(user + "is verified successfully" +""+ token)).catch(err => {alert(user + "is not verified");console.log(err)})
  
   }
   
@@ -33,7 +45,7 @@ const Login = () => {
            <div><FaUser className='img'/> <br /><span  style={{color:"green",fontWeight:"bolder"}}> Login</span> </div>
            <div> Username: <input onChange={(e)=>setUser(e.target.value)} placeholder='username...' type="text" /></div>
            <div> Password: <input onChange={(e)=>setPassword(e.target.value)} placeholder='password... ' type="password" /></div>
-           <div><button onClick={()=>handleLogin()}>Login</button></div> 
+           <div><button onClick={()=>setUsers(()=>user)}>Login</button></div> 
         </div>
     </div>
   )
