@@ -21,7 +21,7 @@ const Login = () => {
    
   }
   useEffect(() => {
-   if(users !== "") {handleLogin()}
+   (!users) {handleLogin()}
   }, [users])
 
   useEffect(() => {
