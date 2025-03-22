@@ -12,7 +12,8 @@ const Login = ({setLogin}) => {
         
         <button ><Link to="/managementLogin">Management</Link></button>
         <button ><Link to="/staffLogin">Staff</Link></button>
-        <button ><Link to="/studentLogin">Student</Link></button>
+        <button ><Link to="/studentLogin">Student</Link></button> <br/>
+        <div> <Link to="/signUp">SignUp Here</Link></div>
     </div>
     
     
