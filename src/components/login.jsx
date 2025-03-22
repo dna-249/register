@@ -20,7 +20,7 @@ const Login = () => {
   const handleVerify = async(tokens) => {
     await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
       name:user,
-    }).then(res => alert(user + "is verified successfully" +""+ token)).catch(err => {alert(user + "is not verified");console.log(err)})
+    }).then(res => alert(user + "is verified successfully" )).catch(err => {alert(user + "is not verified"+""+ token);console.log(err)})
  
   }
   
