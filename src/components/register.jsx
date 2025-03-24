@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
-import { FaCheck, FaTimes, FaUser } from 'react-icons/fa'
+import React, { useState, useEffect } from 'react'
+import { FaCheck, FaPlus, FaTimes, FaUser } from 'react-icons/fa'
+import axios from 'axios'
 
 const Register = () => {
   const [data, setData]= useState(false)
   const [day, setDay]= useState()
   const [select, setSelect]= useState()
   const [isNew, setIsNew]= useState(false)
+  const [items, setItems]= useState([])
   const [update, setUpdate]= useState("Check the update type above...")
   const [isUpdate, setIsUpdate]= useState(true)
 
@@ -19,7 +21,26 @@ const Register = () => {
     }
  }
  
+useEffect(() => {
  
+   axios.get(`https://register-api-cloud.vercel.app/student`)
+             .then((res)=> {console.log(res.data);setItems(res.data)})
+             .catch((err)=> console.log(err))
+ 
+}, [])
+
+
+ const handleRegister = async(add)=>{
+       await axios.put(`https://register-api-cloud.vercel.app/student/push/67d9abaface20315ae8e21bc`,{
+        mon:'',
+        tue:'',
+        wed:'',
+        thu:'',
+        fri:''
+       })
+                 .then((res)=> console.log(res.data))
+                 .catch((err)=> console.log(err))
+ }
  
  
  
@@ -42,7 +63,7 @@ const Register = () => {
     <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> New </div>
     </div>
     <h3>Student Attendance</h3>
-          {array.map((data, index)=><div key={index}>
+          {items.map((data, index)=><div key={index}>
                               <thead>
                                 <tr>
                                     <th>S/A</th>
@@ -58,7 +79,7 @@ const Register = () => {
                              
                               <tbody key={index} className='red'>
                                 <tr>
-                                    <th>{index}</th>
+                                    <th >{index}</th>
                                     <th>{Date().slice(0,16)}</th>
                                     <th><FaTimes /></th>
                                     <th><FaTimes /></th>
@@ -66,8 +87,9 @@ const Register = () => {
                                     <th><FaTimes /></th>
                                     <th><FaTimes /></th>
                                 </tr>
+                                
                               </tbody>
-                                    ); else return (
+                                    );  else return (
                
                 <tbody className='green' key={index}>
                   <tr>
@@ -86,7 +108,7 @@ const Register = () => {
            
                                    
                                                      
-    </div>)}</div>):isUpdate?(
+          <div onClick={()=>handleRegister(data._id)}><FaPlus  className='click2'/></div></div>)}</div>):isUpdate?(
         
         <div style={{padding:"5px"}}>
           <div style={{width:"fit-content",}} className='three'>

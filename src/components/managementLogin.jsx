@@ -17,7 +17,8 @@ const  ManagementLogin = () => {
     
     await axios.post("https://register-api-cloud.vercel.app/management/login",{
         name:users,
-      }).then(res => {alert("access granted");setToken(res.data)}).catch(err => {alert(user + "is not verified");console.log(err)})
+      }).then(res => {alert("access granted");setToken(res.data)})
+        .catch(err => {alert(user + "is not verified");console.log(err)})
    
   }
   useEffect(() => {
@@ -32,7 +33,8 @@ const  ManagementLogin = () => {
     await axios.post("https://register-api-cloud.vercel.app/management/verify",{
       name:user,
       header:token
-    }).then(res => alert(user + "is verified successfully" +""+ token)).catch(err => {alert(user + "is not verified");console.log(err)})
+    }).then(res => alert(user + "is verified successfully" +""+ token))
+      .catch(err => {alert(user + "is not verified");console.log(err)})
  
   }
   
