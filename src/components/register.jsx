@@ -31,7 +31,7 @@ useEffect(() => {
 
 
  const handleRegister = async(add)=>{
-       await axios.put(`https://register-api-cloud.vercel.app/student/push/67d9abaface20315ae8e21bc`,{
+       await axios.put(`https://register-api-cloud.vercel.app/student/push/${add}`,{
         date:Date().slice(0,21),
         mon:'n',
         tue:'n',
