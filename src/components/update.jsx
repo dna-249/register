@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
 
-const Update =({datas, handleRegister})=>{
+const Update =({datas})=>{
     const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
@@ -15,6 +15,12 @@ const Update =({datas, handleRegister})=>{
       setSelect(item)
     }
     
+    const handleRegister = async(add)=>{
+           await axios.delete(`https://register-api-cloud.vercel.app/student/delete/${add}`
+            )
+                     .then((res)=> console.log(res.data))
+                     .catch((err)=> console.log(err))
+     }
      
     return (<>
        <div>{isNew? (
@@ -43,24 +49,24 @@ const Update =({datas, handleRegister})=>{
                                             <th>Fri:</th>
                                         </tr>
                                       </thead>
-                    {datas.id.map((item,index)=>{return (
+                    {datas.attend.map((item,index)=>{return (
                                      
                                       <tbody key={index} className='green'>
                                         <tr>
                                                     <th >{index}</th>
                                                     <th>{item.date}</th>
-                                                    <th  onClick={()=>handleSelect(item.mon)}>{item.mon === "n" && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
-                                                    <th  onClick={()=>handleSelect(item.tue)}>{item.tue}</th>
-                                                    <th  onClick={()=>handleSelect(item.wed)}>{item.wed}</th>
-                                                    <th  onClick={()=>handleSelect(item.thu)}>{item.thu}</th>
-                                                    <th  onClick={()=>handleSelect(item.fri)}>{item.id}</th>
+                                                    <th  onClick={()=>handleSelect(item._id)}>{item.mon === "n" && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
+                                                    <th  onClick={()=>handleSelect(item._id)}>{item.tue}</th>
+                                                    <th  onClick={()=>handleSelect(item._id)}>{item.wed}</th>
+                                                    <th  onClick={()=>handleSelect(item._id)}>{item.thu}</th>
+                                                    <th  onClick={()=>handleSelect(item._id)}>{item.id}</th>
                                                 </tr>
                                                 </tbody>
                                             )})}
                   
                     
                    
-     <div onClick={()=>handleRegister(data._id)}><FaPlus  className='click2'/></div>
+     <div onClick={()=>handleRegister(datas._id)}><FaPlus  className='click2'/></div>
                                       
                              
                                                              

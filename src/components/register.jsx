@@ -33,13 +33,13 @@ useEffect(() => {
 
 
  const handleRegister = async(add)=>{
-       await axios.put(`https://register-api-cloud.vercel.app/student/student/push/${add}`,{
+       await axios.put(`https://register-api-cloud.vercel.app/student/push/${add}`,{
         date:Date().slice(0,21),
-        mon:'n',
-        tue:'n',
-        wed:'n',
-        thu:'n',
-        fri:'n'
+        mon:'',
+        tue:'',
+        wed:'',
+        thu:'',
+        fri:''
        })
                  .then((res)=> console.log(res.data))
                  .catch((err)=> console.log(err))
@@ -66,7 +66,7 @@ useEffect(() => {
     <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> New </div>
     </div>
     <h3>Student Attendance</h3>
-          {array.map((data, index)=><div key={index}>
+          {items.map((data, index)=><div key={index}>
                              <Attendance datas ={data} handleRegister={handleRegister} />
           </div>)}</div>):isUpdate?(
         <div style={{padding:"5px"}}>
@@ -102,7 +102,7 @@ useEffect(() => {
          </div>):( 
          <div>
       
-         {array.map((data, index)=><div key={index}>
+         {items.map((data, index)=><div key={index}>
                             <Update datas={data} handleRegister={handleRegister} />
          </div>)}</div>  )}
     </div>
