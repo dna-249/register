@@ -81,12 +81,12 @@ useEffect(() => {
                               <tbody key={index} className='red'>
                                 <tr>
                                     <th >{index}</th>
-                                    <th>{Date().slice(0,16)}</th>
-                                    <th><FaTimes /></th>
-                                    <th><FaTimes /></th>
-                                    <th><FaTimes /></th>
-                                    <th><FaTimes /></th>
-                                    <th><FaTimes /></th>
+                                    <th>{item.data}</th>
+                                    <th>{item.mon === 1 && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
+                                    <th>{item.tue}</th>
+                                    <th>{item.wed}</th>
+                                    <th>{item.thu}</th>
+                                    <th>{item.fri}</th>
                                 </tr>
                                 
                               </tbody>
