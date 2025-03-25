@@ -14,16 +14,15 @@ const Attendance =({datas , handleRegister})=>{
       const [isUpdate, setIsUpdate]= useState(true)
 
     const handleSelect = (item) => {
-        const id = datas._id
+       
       setIsNew(pre => !pre)
       setSelect2(item)
-      setSelect(id)
 
     }
     
     
     const handleSave = async(add)=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/${select}/${select2}`,{
+           await axios.put(`https://register-api-cloud.vercel.app/student/${select2}`,{
             day:setSelect3
            })
                      .then((res)=> console.log(res.data))
