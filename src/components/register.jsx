@@ -76,9 +76,9 @@ useEffect(() => {
                                     <th>Fri:</th>
                                 </tr>
                               </thead>
-            {data.attend.map((item,index)=>{if(Object.values(item) === "n") return (
+            {data.attend.map((item,index)=>{return (
                              
-                              <tbody key={index} className='red'>
+                              <tbody key={index} className='green'>
                                 <tr>
                                     <th >{index}</th>
                                     <th>{item.data}</th>
@@ -90,24 +90,11 @@ useEffect(() => {
                                 </tr>
                                 
                               </tbody>
-                                    );  else return (
-               
-                <tbody className='green' key={index}>
-                  <tr>
-                       <th>{index}</th>
-                       <th>{Date().slice(0,16)}</th>
-                       <th><FaCheck /></th>
-                       <th><FaCheck /></th>
-                      <th><FaCheck /></th>
-                      <th><FaCheck /></th>
-                      <th><FaCheck /></th>
-                  </tr>
-                </tbody>
-                     ) })}
+                                    )}
           
             
            
-                                   
+                                  )}                 
                                                      
           <div onClick={()=>handleRegister(data._id)}><FaPlus  className='click2'/></div></div>)}</div>):isUpdate?(
         
