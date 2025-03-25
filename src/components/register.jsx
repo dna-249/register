@@ -76,7 +76,7 @@ useEffect(() => {
                                     <th>Fri:</th>
                                 </tr>
                               </thead>
-            {data.attend.map((item,index)=>{if(item === 1) return (
+            {data.attend.map((item,index)=>{if(item === "n") return (
                              
                               <tbody key={index} className='red'>
                                 <tr>
