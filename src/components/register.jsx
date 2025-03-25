@@ -81,8 +81,8 @@ useEffect(() => {
                               <tbody key={index} className='green'>
                                 <tr>
                                     <th >{index}</th>
-                                    <th>{item.data}</th>
-                                    <th>{item.mon === 1 && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
+                                    <th>{item.date}</th>
+                                    <th>{item.mon === "n" && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
                                     <th>{item.tue}</th>
                                     <th>{item.wed}</th>
                                     <th>{item.thu}</th>
