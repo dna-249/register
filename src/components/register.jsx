@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy } from 'react'
 import { FaCheck, FaPlus, FaTimes, FaUser } from 'react-icons/fa'
 import axios from 'axios'
+const Update =lazy(()=>import('./update'))
+const Attendance =lazy(()=>import('./attendance'))
 
 const Register = () => {
   const [data, setData]= useState(false)
@@ -64,40 +66,9 @@ useEffect(() => {
     <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> New </div>
     </div>
     <h3>Student Attendance</h3>
-          {items.map((data, index)=><div key={index}>
-                              <thead>
-                                <tr>
-                                    <th>S/A</th>
-                                    <th>Date:</th>
-                                    <th>Mon:</th>
-                                    <th>Tue:</th>
-                                    <th>Wed:</th>
-                                    <th>Thu:</th>
-                                    <th>Fri:</th>
-                                </tr>
-                              </thead>
-            {data.attend.map((item,index)=>{return (
-                             
-                              <tbody key={index} className='green'>
-                                <tr>
-                                    <th >{index}</th>
-                                    <th>{item.date}</th>
-                                    <th>{item.mon === "n" && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
-                                    <th>{item.tue}</th>
-                                    <th>{item.wed}</th>
-                                    <th>{item.thu}</th>
-                                    <th>{item.fri}</th>
-                                </tr>
-                                
-                              </tbody>
-                                    )}
-          
-            
-           
-                                  )}                 
-                                                     
-          <div onClick={()=>handleRegister(data._id)}><FaPlus  className='click2'/></div></div>)}</div>):isUpdate?(
-        
+          {array.map((data, index)=><div key={index}>
+                             <Attendance datas ={data} handleRegister={handleRegister} />
+          </div>)}</div>):isUpdate?(
         <div style={{padding:"5px"}}>
           <div style={{width:"fit-content",}} className='three'>
     <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
@@ -128,65 +99,12 @@ useEffect(() => {
         <div className='click' onClick={()=>setData(pre => !pre)}>{data? (<div></div>):(<div className='green2'><FaCheck/></div>)}</div>
         <div style={{justifySelf:"flex-start"}} className='click' onClick={()=>setData(pre => !pre)}>{data? (<div className='red2'><FaTimes/></div>):(<div></div>)}</div>
          </div> <div style={{width :"200px",justifySelf:"center" }} className='click save'  onClick={()=>name()}>Save Attendance</div>
-         </div>):(    
-             <div>
-               <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
-    <div  className='click'  onClick={()=>setIsUpdate((pre)=>!pre)}>New </div>
-    </div>
-             <label htmlFor=""> 
-        Deleting:
-        <input checked={update === "DELETING"} onChange={(e)=>setUpdate(e.target.value)} value="DELETING"  type='radio' />
-        Updating:
-        <input checked={update === "UPDATING"} onChange={(e)=>setUpdate(e.target.value)} value="UPDATING" type='radio' />
-       
-            
-    </label>
-      <h3>{update}</h3>
-          {array.map((data, index)=><div key={index}>
-                              <thead>
-                                <tr>
-                                    <th>S/A</th>
-                                    <th>Date:</th>
-                                    <th>Mon:</th>
-                                    <th>Tue:</th>
-                                    <th>Wed:</th>
-                                    <th>Thu:</th>
-                                    <th>Fri:</th>
-                                </tr>
-                              </thead>
-            {data.name.map((item,index)=>{if(item === 1) return (
-                             
-                              <tbody key={index} className='green'>
-                                <tr>
-                                    <th>{index}</th>
-                                    <th>{Date().slice(0,16)}</th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaCheck /></th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaCheck /></th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaCheck /></th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaCheck /></th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaCheck /></th>
-                                </tr>
-                              </tbody>
-                                    ); else return (
-               
-                <tbody className='red' key={index}>
-                  <tr>
-                       <th>{index}</th>
-                       <th>{Date().slice(0,16)}</th>
-                       <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
-                                    <th onClick={()=>setSelect(alert(item))}><FaTimes /></th>
-                                </tr>
-                </tbody>
-                     ) })}
-          
-            
-           
-                                   
-                                                     
-    </div>)}</div>)}
+         </div>):( 
+         <div>
+      
+         {array.map((data, index)=><div key={index}>
+                            <Update datas={data} handleRegister={handleRegister} />
+         </div>)}</div>  )}
     </div>
 </div>
   </div></>)
