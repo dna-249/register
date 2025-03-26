@@ -17,7 +17,7 @@ const Attendance =({datas , handleRegister})=>{
        
       setIsNew(pre => !pre)
       setSelect2(item)
-
+      alert(item)
     }
     
     
