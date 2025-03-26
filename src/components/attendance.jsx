@@ -2,7 +2,7 @@ import { useState } from "react"
 import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
 import axios from "axios"
 
-const Attendance =({datas , handleRegister})=>{
+const Attendance =({datas})=>{
     const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
@@ -18,6 +18,21 @@ const Attendance =({datas , handleRegister})=>{
       setIsNew(pre => !pre)
       setSelect2(item)
     }
+
+    const handleRegister = async(add)=>{
+           await axios.put(`https://register-api-cloud.vercel.app/student/push/${add}`,{
+            date:Date().slice(0,21),
+            mon:'',
+            tue:'',
+            wed:'',
+            thu:'',
+            fri:''
+           })
+                     .then((res)=> console.log(res.data))
+                     .catch((err)=> console.log(err))
+     }
+     
+     
     
     
     const handleSave = async()=>{
