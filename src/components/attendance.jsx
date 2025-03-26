@@ -78,7 +78,7 @@ const Attendance =({datas})=>{
                             
                 )}                 
                                                                                    
-             <div onClick={()=>handleRegister(data._id)}><FaPlus  className='click2'/></div>
+             <div onClick={()=>handleRegister(datas._id)}><FaPlus  className='click2'/></div>
                                       
 
         </div>):(
