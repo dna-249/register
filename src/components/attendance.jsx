@@ -21,8 +21,8 @@ const Attendance =({datas , handleRegister})=>{
     }
     
     
-    const handleSave = async(add)=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/${select2}`,{
+    const handleSave = async()=>{
+           await axios.put(`https://register-api-cloud.vercel.app/student/${select2}/${day}`,{
             day:setSelect3
            })
                      .then((res)=> console.log(res.data))
@@ -57,7 +57,7 @@ const Attendance =({datas , handleRegister})=>{
                                                     <th  onClick={()=>handleSelect(item._id)}>{item.id}</th>
                                                 </tr>
                                                 
-                                            </tbody>
+                                           </tbody>
                                                     )}
                         
                             
@@ -69,7 +69,7 @@ const Attendance =({datas , handleRegister})=>{
 
         </div>):(
 
-        <div>
+        <div> 
             <div style={{padding:"5px"}}>
           <div style={{width:"fit-content",}} className='three'>
     <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
