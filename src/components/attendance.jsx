@@ -23,7 +23,7 @@ const Attendance =({datas})=>{
            await axios.put(`https://register-api-cloud.vercel.app/student/push/${add}`,{
             date:Date().slice(0,21),
             mon:'',
-            tue:'',
+            tue:tue,
             wed:'',
             thu:'',
             fri:''
