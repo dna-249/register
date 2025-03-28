@@ -20,7 +20,7 @@ const Attendance =({datas})=>{
     }
 
     const handleRegister = async(add)=>{
-           await axios.put(`https://localhost:3000/student/push/${add}`,{
+           await axios.put(`http://localhost:3000/student/push/${add}`,{
             date:Date().slice(0,21),
             mon:'',
             tue:'',
