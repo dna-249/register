@@ -20,10 +20,10 @@ const Attendance =({datas})=>{
     }
 
     const handleRegister = async(add)=>{
-           await axios.post(`https://register-api-cloud.vercel.app/student`,{
+           await axios.put(`https://register-api-cloud.vercel.app/student/push/${add}`,{
             date:Date().slice(0,21),
             mon:'',
-            tue:"",
+            tue:select3,
             wed:'',
             thu:'',
             fri:''
