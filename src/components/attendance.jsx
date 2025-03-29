@@ -13,8 +13,8 @@ const Attendance =({datas})=>{
       const [update, setUpdate]= useState("Check the update type above...")
       const [isUpdate, setIsUpdate]= useState(true)
 
-    const handleSelect = (item) => {
-       
+    const handleSelect = (item,key) => {
+      alert(key) 
       setIsNew(pre => !pre)
       setSelect2(item)
     }
@@ -69,11 +69,11 @@ const Attendance =({datas})=>{
                                                 <tr>
                                                     <th >{index}</th>
                                                     <th>{item.date}</th>
-                                                    <th  onClick={()=>handleSelect(item._id)}>{item.mon === 1 && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
-                                                    <th  onClick={()=>handleSelect(item._id)}>{item.tue}</th>
-                                                    <th  onClick={()=>handleSelect(item._id)}>{item.wed}</th>
-                                                    <th  onClick={()=>handleSelect(item._id)}>{item.thu}</th>
-                                                    <th  onClick={()=>handleSelect(item._id)}>{item.id}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,Object.key(item))}>{item.mon === 1 && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,Object.key(item))}>{item.tue}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,Object.key(item))}>{item.wed}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,Object.key(item))}>{item.thu}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,Object.key(item))}>{item.id}</th>
                                                 </tr>
                                                 
                                            </tbody>
