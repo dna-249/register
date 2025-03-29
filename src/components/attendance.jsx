@@ -6,6 +6,8 @@ const Attendance =({datas})=>{
     const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
+      const [key, setkey]= useState()
+      const [index, setIndex]= useState()
       const [select2, setSelect2]= useState()
       const [select3, setSelect3]= useState(1)
       const [isNew, setIsNew]= useState(true)
@@ -13,8 +15,9 @@ const Attendance =({datas})=>{
       const [update, setUpdate]= useState("Check the update type above...")
       const [isUpdate, setIsUpdate]= useState(true)
 
-    const handleSelect = (item,key) => {
-      alert(key) 
+    const handleSelect = (item,key,index) => {
+      setkey(key) 
+      setkey(index) 
       setIsNew(pre => !pre)
       setSelect2(item)
     }
@@ -36,13 +39,9 @@ const Attendance =({datas})=>{
     
     
     const handleSave = async()=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/set/${datas._id}/0`,{
+           await axios.put(`https://register-api-cloud.vercel.app/student/set/${datas._id}/${index}/${key}`,{
             date:Date().slice(0,21),
-            mon:select3,
-            tue:select3,
-            wed:select3,
-            thu:select3,
-            fri:select3
+            
            })
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
@@ -69,11 +68,11 @@ const Attendance =({datas})=>{
                                                 <tr>
                                                     <th >{index}</th>
                                                     <th>{item.date}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'mon')}>{item.mon === 1 && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'tue')}>{item.tue}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'wed')}>{item.wed}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'thu')}>{item.thu}</th>
-                                                    <th  onClick={()=>handleSelect(item._id, 'fri')}>{item.fri}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'mon',index)}>{item.mon === 1 && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)}>{item.tue}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'wed',index)}>{item.wed}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'thu',index)}>{item.thu}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'fri',index)}>{item.fri}</th>
                                                 </tr>
                                                 
                                            </tbody>
