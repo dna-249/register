@@ -38,11 +38,11 @@ const Attendance =({datas})=>{
     const handleSave = async()=>{
            await axios.put(`https://register-api-cloud.vercel.app/student/set/${datas._id}/0`,{
             date:Date().slice(0,21),
-            mon:'a',
-            tue:'b',
-            wed:'c',
-            thu:'d',
-            fri:'e'
+            mon:select3,
+            tue:select3,
+            wed:select3,
+            thu:select3,
+            fri:select3
            })
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
