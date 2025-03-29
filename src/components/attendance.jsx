@@ -36,7 +36,7 @@ const Attendance =({datas})=>{
     
     
     const handleSave = async()=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/set/${datas._id}/${select2}`,{
+           await axios.put(`https://register-api-cloud.vercel.app/student/pull/${datas._id}/${select2}`,{
             date:Date().slice(0,21),
             mon:'a',
             tue:'b',
