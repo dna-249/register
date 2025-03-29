@@ -17,7 +17,7 @@ const Attendance =({datas})=>{
 
     const handleSelect = (item,key,index) => {
       setkey(key) 
-      setkey(index) 
+      setIndex(index) 
       setIsNew(pre => !pre)
       setSelect2(item)
     }
