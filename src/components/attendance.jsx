@@ -69,7 +69,7 @@ const Attendance =({datas})=>{
                                                 <tr>
                                                     <th >{index}</th>
                                                     <th>{item.date}</th>
-                                                    <th  onClick={()=>handleSelect(item._id)}>{item.mon === "n" && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
+                                                    <th  onClick={()=>handleSelect(item._id)}>{item.mon === 1 && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
                                                     <th  onClick={()=>handleSelect(item._id)}>{item.tue}</th>
                                                     <th  onClick={()=>handleSelect(item._id)}>{item.wed}</th>
                                                     <th  onClick={()=>handleSelect(item._id)}>{item.thu}</th>
