@@ -6,7 +6,7 @@ const Attendance =({datas})=>{
     const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
-      const [select2, setSelect2]= useState(0)
+      const [select2, setSelect2]= useState()
       const [select3, setSelect3]= useState(1)
       const [isNew, setIsNew]= useState(true)
       
