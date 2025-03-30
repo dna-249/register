@@ -68,7 +68,7 @@ const Attendance =({datas})=>{
                                             <tbody key={index} className='green'>
                                                 <tr>
                                                     <th >{index}</th>
-                                                    <th>{item.date}</th> === 1
+                                                    <th>{item.date}</th>
                                                     <th  onClick={()=>handleSelect(item._id,'mon',index)}>{item.mon  === 0 && <div><FaCheck /></div>}</th>
                                                     <th  onClick={()=>handleSelect(item._id,'tue',index)}>{item.tue}</th>
                                                     <th  onClick={()=>handleSelect(item._id,'wed',index)}>{item.wed}</th>
