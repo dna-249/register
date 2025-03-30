@@ -20,6 +20,8 @@ const Attendance =({datas})=>{
       setIndex(index) 
       setIsNew(pre => !pre)
       setSelect2(item)
+
+      console.log(key,index,item)
     }
 
     const handleRegister = async(add)=>{
