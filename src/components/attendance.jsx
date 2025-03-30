@@ -63,17 +63,30 @@ const Attendance =({datas})=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {datas.attend.map((item,index)=>{return (
+                {datas.attend.map((item,index)=>{if(item === 1)return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
                                                     <th >{index}</th>
-                                                    <th>{item.date}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'mon',index)}>{item.mon === 1 && <div><FaCheck /></div> || item.mon === 0 && <div><FaCheck /></div>}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)}>{item.tue}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'wed',index)}>{item.wed}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'thu',index)}>{item.thu}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'fri',index)}>{item.fri}</th>
+                                                    <th> {item.date}</th> 
+                                                    <th  onClick={()=>handleSelect(item._id,'mon',index)}><FaCheck /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)}><FaCheck /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'wed',index)}><FaCheck /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'thu',index)}><FaCheck /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'fri',index)}><FaCheck /></th>
+                                                </tr>
+                                                
+                                           </tbody>
+                                                    ); else return(
+                                                      <tbody key={index} className='green'>
+                                                <tr>
+                                                    <th >{index}</th>
+                                                    <th> {item.date}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'mon',index)} className="red"><FaTimes /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)} className="red"><FaTimes /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'wed',index)} className="red"><FaTimes /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'thu',index)} className="red"><FaTimes /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'fri',index)} className="red"><FaTimes /></th>
                                                 </tr>
                                                 
                                            </tbody>
