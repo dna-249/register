@@ -3,7 +3,7 @@ import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
 import axios from "axios"
 
 const Attendance =({datas})=>{
-    const [data, setData]= useState(false)
+      const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
       const [key, setkey]= useState()
@@ -63,7 +63,7 @@ const Attendance =({datas})=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {datas.attend.map((item,index)=>{if(Object.values(item) === 1)return (
+                {datas.attend.map((item,index)=>{if(Object.values(item)[index] === 1) return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
