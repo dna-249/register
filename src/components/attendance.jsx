@@ -3,7 +3,7 @@ import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
 import axios from "axios"
 
 const Attendance =({datas})=>{
-      const [data, setData]= useState(false)
+    const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
       const [key, setkey]= useState()
@@ -63,30 +63,17 @@ const Attendance =({datas})=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {datas.attend.map((item,index)=>{if(Object.values(item)[index] === 1) return (
+                {datas.attend.map((item,index)=>{return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
                                                     <th >{index}</th>
-                                                    <th> {item.date}</th> 
-                                                    <th  onClick={()=>handleSelect(item._id,'mon',index)}><FaCheck /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)}><FaCheck /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'wed',index)}><FaCheck /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'thu',index)}><FaCheck /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'fri',index)}><FaCheck /></th>
-                                                </tr>
-                                                
-                                           </tbody>
-                                                    ); else return(
-                                                      <tbody key={index} className='green'>
-                                                <tr>
-                                                    <th >{index}</th>
-                                                    <th> {item.date}</th>
-                                                    <th  onClick={()=>handleSelect(item._id,'mon',index)} className="red"><FaTimes /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)} className="red"><FaTimes /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'wed',index)} className="red"><FaTimes /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'thu',index)} className="red"><FaTimes /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'fri',index)} className="red"><FaTimes /></th>
+                                                    <th>{item.date}</th> === 1
+                                                    <th  onClick={()=>handleSelect(item._id,'mon',index)}>{item.mon  === 0 && <div><FaCheck /></div>}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)}>{item.tue}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'wed',index)}>{item.wed}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'thu',index)}>{item.thu}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'fri',index)}>{item.fri}</th>
                                                 </tr>
                                                 
                                            </tbody>
