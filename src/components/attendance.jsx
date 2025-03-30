@@ -63,13 +63,7 @@ const Attendance =({datas})=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {datas.attend.map((item,index)=>{if(item.mon === 1 ||
-                                                    item.tue === 1 ||
-                                                    item.wed === 1 ||   
-                                                    item.thu === 1 ||
-                                                    item.fri === 1 ||
-                                                    
-                                               ){return (
+                {datas.attend.map((item,index)=>{if(Object.values(item) === 1)return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
@@ -83,7 +77,7 @@ const Attendance =({datas})=>{
                                                 </tr>
                                                 
                                            </tbody>
-                                                    )}; else {return(
+                                                    ); else return(
                                                       <tbody key={index} className='green'>
                                                 <tr>
                                                     <th >{index}</th>
@@ -96,7 +90,7 @@ const Attendance =({datas})=>{
                                                 </tr>
                                                 
                                            </tbody>
-                                                    )}}
+                                                    )}
                         
                             
                             
