@@ -63,38 +63,35 @@ const Attendance =({datas})=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {datas.attend.map((item,index)=>
-                {if(Object.values(item)=== "1") return (
+                {datas.attend.map((item,index)=>{if(Object.values(item) === '1') return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
                                                     <th >{index}</th>
                                                     <th>{item.date}</th>
                                                     <th  onClick={()=>handleSelect(item._id,'mon',index)}><FaCheck /></th>
-                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)}><FaCheck />}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)}><FaCheck /></th>
                                                     <th  onClick={()=>handleSelect(item._id,'wed',index)}><FaCheck /></th>
                                                     <th  onClick={()=>handleSelect(item._id,'thu',index)}><FaCheck /></th>
                                                     <th  onClick={()=>handleSelect(item._id,'fri',index)}><FaCheck /></th>
                                                 </tr>
                                                 
-                                           </tbody>); else return(
-                                            <tbody key={index} className='green'>
-                                            <tr>
-                                                <th >{index}</th>
-                                                <th>{item.date}</th>
-                                                <th  onClick={()=>handleSelect(item._id,'mon',index)}><FaTimes /></th>
-                                                <th  onClick={()=>handleSelect(item._id,'tue',index)}><FaTimes />}</th>
-                                                <th  onClick={()=>handleSelect(item._id,'wed',index)}><FaTimes /></th>
-                                                <th  onClick={()=>handleSelect(item._id,'thu',index)}><FaTimes /></th>
-                                                <th  onClick={()=>handleSelect(item._id,'fri',index)}><FaTimes /></th>
-                                            </tr>
-                                            
-                                       </tbody>
-                                           )
+                                           </tbody>
+                                                    ); else return(
+                                                      <tbody key={index} className='green'>
+                                                <tr>
+                                                    <th >{index}</th>
+                                                    <th>{item.date}</th>
+                                                    <th  onClick={()=>handleSelect(item._id,'mon',index)}><FaTimes /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'tue',index)}><FaTimes /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'wed',index)}><FaTimes /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'thu',index)}><FaTimes /></th>
+                                                    <th  onClick={()=>handleSelect(item._id,'fri',index)}><FaTimes /></th>
+                                                </tr>
+                                                
+                                           </tbody>
                                                     )}
-                        
-                            
-                            
+         
                 )}                 
                                                                                    
              <div onClick={()=>handleRegister(datas._id)}><FaPlus  className='click2'/></div>
