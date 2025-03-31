@@ -247,7 +247,10 @@ th{
   
 }
 
-th:hover{
+.green th:hover{
+  background-color: #938e8ea1;
+}
+.green1 tr:hover{
   background-color: #938e8ea1;
 }
 
@@ -266,6 +269,9 @@ th:hover{
   border: 3px solid red;
   height: 25px;
 
+}
+.green1{
+  color: green;
 }
 .green{
   color: green;

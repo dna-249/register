@@ -78,7 +78,7 @@ const Update =({datas})=>{
             </thead>
                 {datas.attend.map((item,index)=>{return (
                                             
-                                            <tbody key={index} className='green'>
+                                            <tbody key={index} className='green1'>
                                                 <tr>
                                                     <th >{index}</th>
                                                     <th>{item.date}</th>
