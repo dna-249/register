@@ -41,7 +41,7 @@ useEffect(() => {
     <div className='white'>{isNew?(
       
         <div>
-          <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
+          <div style={{display:"grid",justifyContent:"flex-end"}} >
     <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> New </div>
     </div>
     <h2>Student Attendance</h2>

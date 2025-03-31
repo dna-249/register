@@ -36,7 +36,7 @@ const Update =({datas,setIsNews})=>{
     return (<>
        <div>{isNew? (
         <div>
-          <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
+          <div style={{display:"grid",justifyContent:"flex-end"}}>
   <div  className='click'  onClick={()=>setIsNews((pre)=>!pre)}>New </div>
   </div>
   <h3>Student Attendance Updating</h3>
