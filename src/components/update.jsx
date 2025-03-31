@@ -73,12 +73,7 @@ const Update =({datas})=>{
               </div>):(
 
         <div> 
-            <div style={{padding:"5px"}}>
-          <div style={{width:"fit-content",}} className='three'>
-    <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
-    <div className='click2' onClick={()=>setIsUpdate((pre)=>!pre)}>Update </div>
-    <div  className='click2'  onClick={()=>setIsNew(false)}>New </div>
-    </div>
+            <div className="center2" >
           <h2>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
             <br />{Date().slice(0,21)}</h2>

@@ -321,6 +321,13 @@ color: #fff;
   margin: auto;
  
 }
+.center2{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+}
  button a{
   text-decoration:none;
   color:white;
