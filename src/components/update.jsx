@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { FaPlus,FaTimes,FaCheck, FaDatabase, FaJava, FaTrash } from "react-icons/fa"
+import { FaPlus,FaTimes,FaCheck, FaDatabase, } from "react-icons/fa"
 import axios from "axios"
 
-const Update =({datas})=>{
+const Update =({datas,setIsNews})=>{
     const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
@@ -37,7 +37,7 @@ const Update =({datas})=>{
        <div>{isNew? (
         <div>
           <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
-  <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}>New </div>
+  <div  className='click'  onClick={()=>setIsNews((pre)=>!pre)}>New </div>
   </div>
   <h3>Student Attendance Updating</h3>
           
@@ -74,7 +74,7 @@ const Update =({datas})=>{
 
         <div> 
           <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
-    <div  className='click'  onClick={()=>setIsNew(true)}> New </div>
+    <div  className='click'  onClick={()=>setIsNew(true)}> BAck </div>
     </div>
             <div className="center2" >
                <FaDatabase style={{width:"50px",height:"50px"}} className='img'/>

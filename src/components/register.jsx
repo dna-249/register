@@ -46,7 +46,7 @@ useEffect(() => {
     </div>
     <h2>Student Attendance</h2>
           {items.map((data, index)=><div key={index}>
-                             <Attendance datas ={data}  />
+                             <Attendance datas ={data} setIsNews ={setIsNew} />
           </div>)}</div>):isUpdate?(
         <div style={{padding:"5px"}}>
           <div style={{width:"fit-content",}} className='three'>
@@ -82,7 +82,7 @@ useEffect(() => {
          <div>
       
          {items.map((data, index)=><div key={index}>
-                            <Update datas={data}  />
+                            <Update datas={data}   setIsNews ={setIsNew}/>
          </div>)}</div>  )}
     </div>
 </div>
