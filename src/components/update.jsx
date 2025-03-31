@@ -73,16 +73,14 @@ const Update =({datas})=>{
               </div>):(
 
         <div> 
+          <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
+    <div  className='click'  onClick={()=>setIsNew(true)}> New </div>
+    </div>
             <div className="center2" >
-          <h2>
-            {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
-            <br />{Date().slice(0,21)}</h2>
                <FaDatabase style={{width:"50px",height:"50px"}} className='img'/>
-            <h3 className="red">Your are about to delete Row {index}</h3>
-            <h3 className="red">Row Id:{select2}</h3>
-          <div className='two'>
-           
-          </div>
+            <h3 className="red">Your are about to delete Row {index}<br/>
+            Row Id:{select2}</h3>
+         
            <div className='two '>
                 </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Delete</div>
                 </div>
