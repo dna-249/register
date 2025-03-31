@@ -44,7 +44,7 @@ useEffect(() => {
           <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
     <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> New </div>
     </div>
-    <h3>Student Attendance</h3>
+    <h2>Student Attendance</h2>
           {items.map((data, index)=><div key={index}>
                              <Attendance datas ={data}  />
           </div>)}</div>):isUpdate?(

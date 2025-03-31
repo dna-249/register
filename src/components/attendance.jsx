@@ -90,9 +90,7 @@ const Attendance =({datas})=>{
         </div>):(
 
         <div> 
-            <div style={{padding:"5px"}}>
-          <div style={{width:"fit-content",}} className='three'>
-          </div>
+            <div >
           <h2>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
             <br />{Date().slice(0,21)}</h2>
