@@ -111,28 +111,16 @@ const Update =({datas})=>{
           <h2>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
             <br />{Date().slice(0,21)}</h2>
-            <h3>day:{day} point:{select3}</h3>
-    <label htmlFor=""> 
-        Mon
-        <input checked={day === "mon"} onChange={(e)=>setDay(e.target.value)} value="mon"  type='radio' />
-        Tue
-        <input checked={day === "tue"} onChange={(e)=>setDay(e.target.value)} value="tue" type='radio' />
-        Wed
-       <input checked={day === "wed"} onChange={(e)=>setDay(e.target.value)} value="wed" type='radio' />
-               Thu
-               <input checked={day === "thu"} onChange={(e)=>setDay(e.target.value)} value="thu" type='radio' />
-               Fri
-               <input checked={day === "fri"} onChange={(e)=>setDay(e.target.value)} value="fri" type='radio' />
-              
-           </label>
+            <h3 className="red">Your are about to delete row:{index}</h3>
+            <h3 className="red">Row:{select2}</h3>
           <div className='two'>
            <div style={{justifySelf:"flex-end",display:"grid",marginRight:"40px"}}>Present</div>
            <div> Absent</div>
           </div>
            <div className='two '>
-               <div className='click' onClick={()=>{setData(false); setSelect3(1)}}>{data? (<div></div>):(<div className='green2'><FaCheck/></div>)}</div>
-               <div style={{justifySelf:"flex-start"}} className='click' onClick={()=>{setData(true); setSelect3(0)}}>{data? (<div className='red2'><FaTimes/></div>):(<div></div>)}</div>
-                </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Save Attendance</div>
+               <div className='click' onClick={()=>{setData(false); setSelect3(1)}}>{data? (<div></div>):(<div className='green2'>Cancel</div>)}</div>
+               <div style={{justifySelf:"flex-start"}} className='click' onClick={()=>{setData(true); setSelect3(0)}}>{data? (<div className='red2'>Back</div>):(<div></div>)}</div>
+                </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Delete</div>
                 </div>
         </div>)}
     </div>
