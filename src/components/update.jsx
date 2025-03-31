@@ -23,6 +23,16 @@ const Update =({datas})=>{
 
       console.log(key,index,item)
     }
+
+    const handleRegister = async(add)=>{
+           await axios.delete(`https://register-api-cloud.vercel.app/student/delete/${add}`,
+           )
+                     .then((res)=> console.log(res.data))
+                     .catch((err)=> console.log(err))
+     }
+     
+     
+    
     
     const handleSave = async()=>{
            await axios.put(`https://register-api-cloud.vercel.app/student/pull/${datas._id}/${select2}`)
@@ -79,6 +89,9 @@ const Update =({datas})=>{
                             
                 )}                 
                                                                                    
+             <div onClick={()=>handleRegister(datas._id)}><FaPlus  className='click2'/></div>
+                                      
+
         </div>):(
 
         <div> 
