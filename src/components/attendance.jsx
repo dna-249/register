@@ -91,9 +91,9 @@ const Attendance =({datas})=>{
 
         <div> 
             <div >
-          <h2>
+          <h3>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
-            <br />{Date().slice(0,21)}</h2>
+            <br />{Date().slice(0,21)}</h3>
            
          <div className='two'>
            <div style={{justifySelf:"flex-end",display:"grid",marginRight:"40px"}}>Present</div>
