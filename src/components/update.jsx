@@ -39,7 +39,9 @@ const Update =({datas})=>{
           <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
   <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}>New </div>
   </div>
-  
+  <h3>Student Attendance Updating</h3>
+          
+ 
              <thead>
                     <tr>
                         <th>S/A</th>
