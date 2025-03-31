@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
+import { FaPlus,FaTimes,FaCheck, FaDatabase, FaJava, FaTrash } from "react-icons/fa"
 import axios from "axios"
 
 const Update =({datas})=>{
@@ -111,6 +111,8 @@ const Update =({datas})=>{
           <h2>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
             <br />{Date().slice(0,21)}</h2>
+               <FaDatabase className='img'/>
+               <FaTrash className='img'/>
             <h3 className="red">Your are about to delete row:{index}</h3>
             <h3 className="red">Row:{select2}</h3>
           <div className='two'>
@@ -118,8 +120,6 @@ const Update =({datas})=>{
            <div> Absent</div>
           </div>
            <div className='two '>
-               <div className='click' onClick={()=>{setData(false); setSelect3(1)}}>{data? (<div></div>):(<div className='green2'>Cancel</div>)}</div>
-               <div style={{justifySelf:"flex-start"}} className='click' onClick={()=>{setData(true); setSelect3(0)}}>{data? (<div className='red2'>Back</div>):(<div></div>)}</div>
                 </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Delete</div>
                 </div>
         </div>)}
