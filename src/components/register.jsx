@@ -14,15 +14,7 @@ const Register = () => {
   const [isUpdate, setIsUpdate]= useState(true)
 
 
-    const array = [{id:["z","l","d","c","e","f","g"],name:[1,0,0,1,1,0,1,0,0]}]
- 
- const name = (params) => {
-   if(day === undefined){
-    alert("you haven't select the day ")} else {
-    alert("save the attendance"+ day)
-    }
- }
- 
+  
 useEffect(() => {
  
    axios.get(`https://register-api-cloud.vercel.app/student`)
