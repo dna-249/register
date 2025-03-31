@@ -39,17 +39,7 @@ const Update =({datas})=>{
           <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
   <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}>New </div>
   </div>
-  <h3>Student Attendance Updating</h3>
-           <label htmlFor=""> 
-      Deleting:
-      <input checked={update === "DELETING"} onChange={(e)=>setUpdate(e.target.value)} value="DELETING"  type='radio' />
-      Updating:
-      <input checked={update === "UPDATING"} onChange={(e)=>setUpdate(e.target.value)} value="UPDATING" type='radio' />
-     
-          
-  </label>
-    <h3>{update}</h3>
- 
+  
              <thead>
                     <tr>
                         <th>S/A</th>
