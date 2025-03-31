@@ -25,8 +25,7 @@ const Update =({datas})=>{
     }
 
     const handleRegister = async(add)=>{
-           await axios.delete(`https://register-api-cloud.vercel.app/student/delete/${add}`,
-           )
+           await axios.delete(`https://register-api-cloud.vercel.app/student/delete/${add}`)
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
      }
