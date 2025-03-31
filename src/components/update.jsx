@@ -42,9 +42,7 @@ const Update =({datas})=>{
     
     
     const handleSave = async()=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/set/${datas._id}/${index}/${key}`,{
-            value:select3
-           })
+           await axios.put(`https://register-api-cloud.vercel.app/student/pull/${datas._id}/${select2}`)
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
      }
