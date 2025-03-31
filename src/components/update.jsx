@@ -111,13 +111,11 @@ const Update =({datas})=>{
           <h2>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
             <br />{Date().slice(0,21)}</h2>
-               <FaDatabase className='img'/>
-               <FaTrash className='img'/>
-            <h3 className="red">Your are about to delete row:{index}</h3>
-            <h3 className="red">Row:{select2}</h3>
+               <FaDatabase style={{width:"50px",height:"50px"}} className='img'/>
+            <h3 className="red">Your are about to delete Row {index}</h3>
+            <h3 className="red">Row Id:{select2}</h3>
           <div className='two'>
-           <div style={{justifySelf:"flex-end",display:"grid",marginRight:"40px"}}>Present</div>
-           <div> Absent</div>
+           
           </div>
            <div className='two '>
                 </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Delete</div>
