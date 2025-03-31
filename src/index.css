@@ -67,10 +67,12 @@ body {
   justify-content:baseline;
 }
 .three{
+  width:100%;
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content:baseline;
-  width: 320px;
+  min-width: 320px;
+  max-width: 1000px;
   
 }
 .three div{
