@@ -92,28 +92,12 @@ const Attendance =({datas})=>{
         <div> 
             <div style={{padding:"5px"}}>
           <div style={{width:"fit-content",}} className='three'>
-    <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
-    <div className='click2' onClick={()=>setIsUpdate((pre)=>!pre)}>Update </div>
-    <div  className='click2'  onClick={()=>setIsNew(false)}>New </div>
-    </div>
+          </div>
           <h2>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
             <br />{Date().slice(0,21)}</h2>
-            <h3>day:{day} point:{select3}</h3>
-    <label htmlFor=""> 
-        Mon
-        <input checked={day === "mon"} onChange={(e)=>setDay(e.target.value)} value="mon"  type='radio' />
-        Tue
-        <input checked={day === "tue"} onChange={(e)=>setDay(e.target.value)} value="tue" type='radio' />
-        Wed
-       <input checked={day === "wed"} onChange={(e)=>setDay(e.target.value)} value="wed" type='radio' />
-               Thu
-               <input checked={day === "thu"} onChange={(e)=>setDay(e.target.value)} value="thu" type='radio' />
-               Fri
-               <input checked={day === "fri"} onChange={(e)=>setDay(e.target.value)} value="fri" type='radio' />
-              
-           </label>
-          <div className='two'>
+           
+         <div className='two'>
            <div style={{justifySelf:"flex-end",display:"grid",marginRight:"40px"}}>Present</div>
            <div> Absent</div>
           </div>
