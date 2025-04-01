@@ -104,7 +104,7 @@ const User = ({name}) => {
        
          <div>
            <div style={{display:"grid",justifyContent:"flex-end"}} >
-     <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> New </div>
+     <div  className='click'    onClick={()=>setIsNew((pre)=>!pre)}> New </div>
      </div>
      <h2>Student Attendance</h2>
            
