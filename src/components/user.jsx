@@ -10,7 +10,6 @@ const User = ({name}) => {
   const [show,setShow] = useState(true)
   const [data, setData]= useState(false)
   const [day, setDay]= useState()
-  const [select, setSelect]= useState()
   const [isNew, setIsNew]= useState(false)
   const [items, setItems]= useState([])
   const [update, setUpdate]= useState("Check the update type above...")
