@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars,FaUser } from 'react-icons/fa'
 import Register from './register'
-import {useEffect} from "react"
+import {useState,useEffect} from "react"
 
 const Staff = () => {
   const [items,setItems] = useState()
