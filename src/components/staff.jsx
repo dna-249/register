@@ -2,11 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars,FaUser } from 'react-icons/fa'
 import Register from './register'
-import {useState,useEffect,lazy} from "react"
-import axios from 'axios'
-const User =lazy(()=>import('./user'))
 const Staff = () => {
+
+
+  useEffect(() => {
  
+    axios.get(`https://register-api-cloud.vercel.app/student`)
+              .then((res)=> {console.log(res.data);setItems(res.data)})
+              .catch((err)=> console.log(err))
+  
+ }, [])
  
   return (
     <div className='center' >
@@ -26,16 +31,13 @@ const Staff = () => {
         <div>Name:</div>
         <div>Class:</div>
         <div>Subject:</div>
-      </div> 
-      <div>
-         <h2> Student List </h2>
-        
-                 <User />
-          </div>
-
-    </div>  
+      </div>  
     </div>
-   
+    <div>
+         <h2> Student List </h2>
+
+
+    </div>
 </div>
 
   )
