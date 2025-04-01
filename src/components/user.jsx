@@ -8,6 +8,13 @@ const User = ({name}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(true)
+  const [data, setData]= useState(false)
+  const [day, setDay]= useState()
+  const [select, setSelect]= useState()
+  const [isNew, setIsNew]= useState(false)
+  const [items, setItems]= useState([])
+  const [update, setUpdate]= useState("Check the update type above...")
+  const [isUpdate, setIsUpdate]= useState(true)
 
 
   return (
@@ -100,9 +107,9 @@ const User = ({name}) => {
      <div  className='click'  onClick={()=>setIsNew((pre)=>!pre)}> New </div>
      </div>
      <h2>Student Attendance</h2>
-           {items.map((data, index)=><div key={index}>
-                              <Attendance datas ={data} setIsNews ={setIsNew} />
-           </div>)}</div>):isUpdate?(
+           
+                              <Attendance datas ={name} setIsNews ={setIsNew} />
+           </div>):isUpdate?(
          <div style={{padding:"5px"}}>
            <div style={{width:"fit-content",}} className='three'>
      <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
@@ -136,9 +143,9 @@ const User = ({name}) => {
           </div>):( 
           <div>
        
-          {items.map((data, index)=><div key={index}>
-                             <Update datas={data}   setIsNews ={setIsNew}/>
-          </div>)}</div>  )}
+         
+                             <Update datas={name}   setIsNews ={setIsNew}/>
+          </div>  )}
      </div>
  </div>
    </div></>
