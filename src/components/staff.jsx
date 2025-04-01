@@ -2,7 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars,FaUser } from 'react-icons/fa'
 import Register from './register'
+import {useEffect} from "react"
+
 const Staff = () => {
+  const [items,setItems] = useState()
+
+  useEffect(() => {
+ 
+    axios.get(`https://register-api-cloud.vercel.app/student`)
+              .then((res)=> {console.log(res.data);setItems(res.data)})
+              .catch((err)=> console.log(err))
+  
+ }, [])
+ 
   return (
     <div className='center' >
       <div className="bgUser">
@@ -23,8 +35,14 @@ const Staff = () => {
         <div>Subject:</div>
       </div>  
     </div>
-    
+    <div>
+         <h2> Student List </h2>
+         {items.map((item, index)=><div key={index}>
+                 {item.name}
+          </div>)}
+
     </div>
+</div>
 
   )
 }
