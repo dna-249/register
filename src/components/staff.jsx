@@ -5,7 +5,7 @@ import Register from './register'
 import {useEffect,useState} from "react"
 import axios from 'axios'
 const Staff = () => {
-  const [names,setNames] = useState('')
+  const [names,setNames] = useState([])
 
 
   useEffect(() => {
