@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaBars, FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-const User = () => {
+const User = ({name}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   return (
@@ -28,7 +28,7 @@ const User = () => {
  </div>
    <div className='two'>
   
-   <div> <h4>Nuraalhaji</h4> </div> 
+   <div> <h4>{name.name}</h4> </div> 
    <div><span style={{color:"blue", textDecoration:"underline"}}></span></div>
  
    </div>

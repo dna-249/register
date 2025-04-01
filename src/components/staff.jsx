@@ -7,6 +7,8 @@ import axios from 'axios'
 import User from "./user"
 const Staff = () => {
   const [names,setNames] = useState([])
+  const [name,setName] = useState('')
+  const [show,setShow] = useState('')
 
 
   useEffect(() => {
@@ -16,8 +18,15 @@ const Staff = () => {
               .catch((err)=> console.log(err))
   
  }, [])
+ const handleSelect = (name) => {
+  setName(name)
+  setShow(true)
+ }
+ 
  
   return (
+  <div>
+     {show?(
     <div className='center' >
       <div className="bgUser">
         <h3> STAFF DASHBOARD</h3>
@@ -40,13 +49,14 @@ const Staff = () => {
     <div>
          <h2> Student List </h2>
          {names?.map((name,index) => <div key={index}>
-          {name.name}
-          <User />
+         <div onClick={()=>handleSelect(name)}> {name.name} </div>
          </div>)}
 
     </div>
-</div></div>
-
+ </div>
+</div>
+):( <div><User name={name}/></div>)}
+</div>
 
   )
 }
