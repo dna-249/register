@@ -4,6 +4,7 @@ import { FaBars,FaUser } from 'react-icons/fa'
 import Register from './register'
 import {useEffect,useState} from "react"
 import axios from 'axios'
+import User from "./user"
 const Staff = () => {
   const [names,setNames] = useState([])
 
@@ -40,6 +41,7 @@ const Staff = () => {
          <h2> Student List </h2>
          {names?.map((name,index) => <div key={index}>
           {name.name}
+          <User />
          </div>)}
 
     </div>
