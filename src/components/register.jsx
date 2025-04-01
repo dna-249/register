@@ -4,7 +4,7 @@ import axios from 'axios'
 const Update =lazy(()=>import('./update'))
 const Attendance =lazy(()=>import('./attendance'))
 
-const Register = () => {
+const Register = ({items}) => {
   const [data, setData]= useState(false)
   const [day, setDay]= useState()
   const [select, setSelect]= useState()
@@ -15,14 +15,6 @@ const Register = () => {
 
 
   
-useEffect(() => {
- 
-   axios.get(`https://register-api-cloud.vercel.app/student`)
-             .then((res)=> {console.log(res.data);setItems(res.data)})
-             .catch((err)=> console.log(err))
- 
-}, [])
-
 
  
  

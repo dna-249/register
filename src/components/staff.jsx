@@ -39,6 +39,7 @@ const Staff = () => {
          <h2> Student List </h2>
          {items?.map((item, index)=><div key={index}>
                  {item.name}
+                 <Register items ={item} />
           </div>)}
 
     </div>  
