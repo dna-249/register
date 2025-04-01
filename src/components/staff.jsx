@@ -6,15 +6,7 @@ import {useState,useEffect,lazy} from "react"
 import axios from 'axios'
 const Attendance =lazy(()=>import('./attendance'))
 const Staff = () => {
-  const [items,setItems] = useState()
-
-  useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/student`)
-              .then((res)=> {console.log(res.data);setItems(res.data)})
-              .catch((err)=> console.log(err))
-  
- }, [])
  
   return (
     <div className='center' >
@@ -37,10 +29,9 @@ const Staff = () => {
       </div> 
       <div>
          <h2> Student List </h2>
-         {items?.map((item, index)=><div key={index}>
-                 {item.name}
+        
                  <Attendance />
-          </div>)}
+          </div>
 
     </div>  
     </div>
