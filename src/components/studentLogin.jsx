@@ -3,6 +3,8 @@ import { FaUser } from 'react-icons/fa'
 import {Link} from "react-router-dom"
 import axios from "axios"
 import {useState ,useEffect} from "react"
+
+
 const StudentLogin = () => {
   const [user,setUser]=useState()
   const [users,setUsers]=useState()
@@ -14,12 +16,12 @@ const StudentLogin = () => {
  }, [users])
  
   const handleLogin = async () => {
-    
     await axios.post("https://register-api-cloud.vercel.app/student/login",{
         name:users,
       }).then(res => {alert("access granted");setToken(res.data)}).catch(err => {alert(user + "is not verified");console.log(err)})
-   
   }
+
+
   useEffect(() => {
   if(typeof users !== "undefined" && users !== "") {handleLogin();}
   }, [users])

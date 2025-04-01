@@ -19,7 +19,7 @@ const User = () => {
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
-  <div><Link to="/staff">Activity</Link></div>
+  <div><Link to="/activity">Activity</Link></div>
         <div><Link to="/register">Attendance</Link> </div>
         <div><Link to='/profile' >profile</Link></div>
     </div>)}
