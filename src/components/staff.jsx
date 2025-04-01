@@ -37,7 +37,7 @@ const Staff = () => {
     </div>
     <div>
          <h2> Student List </h2>
-         {items.map((item, index)=><div key={index}>
+         {items?.map((item, index)=><div key={index}>
                  {item.name}
           </div>)}
 
