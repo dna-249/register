@@ -4,14 +4,6 @@ import { FaBars,FaUser } from 'react-icons/fa'
 import Register from './register'
 const Staff = () => {
 
-
-  useEffect(() => {
- 
-    axios.get(`https://register-api-cloud.vercel.app/student`)
-              .then((res)=> {console.log(res.data);setItems(res.data)})
-              .catch((err)=> console.log(err))
-  
- }, [])
  
   return (
     <div className='center' >
@@ -35,8 +27,7 @@ const Staff = () => {
     </div>
     <div>
          <h2> Student List </h2>
-
-
+         <Register />
     </div>
 </div>
 
