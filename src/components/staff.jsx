@@ -8,7 +8,7 @@ import User from "./user"
 const Staff = () => {
   const [names,setNames] = useState([])
   const [name,setName] = useState('')
-  const [show,setShow] = useState('')
+  const [show,setShow] = useState(true)
 
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Staff = () => {
  }, [])
  const handleSelect = (name) => {
   setName(name)
-  setShow(true)
+  setShow(false)
  }
  
  
