@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaBars, FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Attendance from "./attendance"
 
 const User = ({name}) => {
   const [select, setSelect]=useState()
