@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars,FaUser } from 'react-icons/fa'
 import Register from './register'
-import {useState,useEffect} from "react"
+import {useState,useEffect,lazy} from "react"
 import axios from 'axios'
 const Attendance =lazy(()=>import('./attendance'))
 const Staff = () => {
