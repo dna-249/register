@@ -20,7 +20,7 @@ const User = ({name}) => {
  <div  className='three2'>
 
           <div><Link to="/staff">Activity</Link></div>
-        <div onClick={()=>setShow(false)}>Attendance </div>
+        <div onClick={()=>setShow(false)}>Attendance  student</div>
         <div><Link to="/activity">Activity</Link></div>
  </div >
  <div>{toggle?(
@@ -80,7 +80,7 @@ const User = ({name}) => {
 </div></div>
 </div>
 ):(
-  <div><Attendance datas = {name} /></div>
+  <div><Attendance datas= {name} /></div>
 )}
 
 </div>
