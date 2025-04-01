@@ -24,7 +24,7 @@ return (<div>
     <Routes>
       <Route path='/' element={<Login/>}/>
       <Route path='/signUp' element={<SignUp/>}/>
-      
+      <Route path='/user' element={<User />}/>
       <Route path='/studentSignup' element={<StudentSignup />}/>
       <Route path='/studentLogin' element={<StudentLogin />}/>
       <Route path='/staffSignup' element={<StaffSignup />}/>
@@ -33,7 +33,7 @@ return (<div>
       <Route path='/managementLogin'element={<ManagementLogin />}/>
       <Route path='/staff' element={<Staff />}/>
       <Route path='/activity' element={<Activity />}/>
-      
+      <Route path='/register' element={<Register />}/>
       <Route path='/profile' element={<Profile/>}/>
     </Routes>
   </div>)
