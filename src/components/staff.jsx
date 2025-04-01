@@ -40,10 +40,10 @@ const Staff = () => {
          <h2> Student List </h2>
          {items?.map((item, index)=><div key={index}>
                  {item.name}
-                 <User items ={item} />
+                
           </div>)}
 
-    </div>  
+    </div>   <User  />
     </div>
    
 </div>
