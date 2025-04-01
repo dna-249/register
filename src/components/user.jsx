@@ -5,15 +5,22 @@ import { Link } from 'react-router-dom'
 const User = ({name}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
+  const [show,setShow] = useState(true)
+
+
   return (
-    <><div className='center'>
+    <>
+    <div>{show?(
+       <div>
+
+    <div className='center'>
  <div className='bgUser'>
   <div className='two'>
  <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
  <div  className='three2'>
 
           <div><Link to="/staff">Activity</Link></div>
-        <div><Link to="/register">Attendance</Link> </div>
+        <div onClick={()=>setShow(false)}>Attendance </div>
         <div><Link to="/activity">Activity</Link></div>
  </div >
  <div>{toggle?(
@@ -33,7 +40,7 @@ const User = ({name}) => {
  
    </div>
  
- <div></div>
+ 
    <div className='user2 '>
     <div className='three'>
     <div>Student Results</div>
@@ -71,6 +78,12 @@ const User = ({name}) => {
    </div>
    
 </div></div>
+</div>
+):(
+  <div><Attendance datas = {name} /></div>
+)}
+
+</div>
   </>)
 }
 
