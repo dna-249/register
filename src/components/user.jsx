@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaUser } from 'react-icons/fa'
+import { FaBars, FaUser ,FaCheck, FaPlus, FaTimes} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Attendance from "./attendance"
 import Update from "./update"
