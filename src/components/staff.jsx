@@ -4,7 +4,7 @@ import { FaBars,FaUser } from 'react-icons/fa'
 import Register from './register'
 import {useState,useEffect,lazy} from "react"
 import axios from 'axios'
-const Attendance =lazy(()=>import('./attendance'))
+const User =lazy(()=>import('./user'))
 const Staff = () => {
  
  
@@ -30,7 +30,7 @@ const Staff = () => {
       <div>
          <h2> Student List </h2>
         
-                 <Attendance />
+                 <User />
           </div>
 
     </div>  
