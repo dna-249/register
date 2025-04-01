@@ -34,7 +34,7 @@ const Staff = () => {
         <div>Name:</div>
         <div>Class:</div>
         <div>Subject:</div>
-      </div>  
+        
     </div>
     <div>
          <h2> Student List </h2>
@@ -43,7 +43,8 @@ const Staff = () => {
          </div>)}
 
     </div>
-</div>
+</div></div>
+
 
   )
 }
