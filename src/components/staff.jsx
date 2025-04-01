@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaBars,FaUser } from 'react-icons/fa'
 import Register from './register'
 import {useEffect,useState} from "react"
+import axios from 'axios'
 const Staff = () => {
   const [names,setNames] = useState('')
 
@@ -37,7 +38,10 @@ const Staff = () => {
     </div>
     <div>
          <h2> Student List </h2>
-        
+         {names.map((name,index) => <div key={index}>
+          {name.name}
+         </div>)}
+
     </div>
 </div>
 
