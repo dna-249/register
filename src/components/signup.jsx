@@ -2,7 +2,7 @@ import React from 'react'
 import {FaUser,} from "react-icons/fa"
 import { Link } from "react-router-dom"
 
-const SignUp = ({setLogin}) => {
+const SignUp = () => {
   return (
     <div className='signUp'>
         

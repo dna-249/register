@@ -4,18 +4,13 @@ import { Link } from 'react-router-dom'
 import Attendance from "./attendance"
 import Update from "./update"
 import Activity from './activity'
+import StudentAttendance from './studentAttendance'
 
 const Student = ({name}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(0)
-  const [data, setData]= useState(false)
-  const [day, setDay]= useState()
-  const [isNew, setIsNew]= useState(false)
-  const [items, setItems]= useState([])
-  const [update, setUpdate]= useState("Check the update type above...")
-  const [isUpdate, setIsUpdate]= useState(true)
-
+ 
 
  if(show === 0) return (
     <>
@@ -105,7 +100,7 @@ const Student = ({name}) => {
      <div className='white'>
      <h2>Student Attendance</h2>
            
-                              <Attendance datas ={name} setIsNews ={setIsNew} />
+       <StudentAttendance datas ={name} />
      </div>
       </div>
    </div></>
