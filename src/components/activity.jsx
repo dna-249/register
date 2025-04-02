@@ -116,7 +116,7 @@ const name3 = (params) => {
     {test.map((item, index)=> {
         return (
         <div  key={index} >{item.questions[count]}
-            {item.options.map((item,index)=> {if(count !== item.length) return(<div key={index}>
+            {item.options.map((item,index)=> {if(count < item.length) return(<div key={index}>
              <div>Select: {select}
              <select onChange={(e)=>setSelect(e.target.value)}>
               <option value="">select</option>
