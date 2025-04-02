@@ -11,7 +11,7 @@ const StudentLogin = () => {
   const [users,setUsers]=useState()
   const [token,setToken]=useState()
   const [name,setName]=useState()
-  const [login,setLogin]=useState()
+  const [login,setLogin]=useState(true)
   const [password,setPassword]=useState()
   
  useEffect(() => {
