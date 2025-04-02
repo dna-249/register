@@ -35,6 +35,7 @@ const test =[{questions :["what is you name?",
     
     
     const name = (answer) => {
+      if(count > test.questions.length -1 )
        setCount((count)=> count + 1)
        setSelect('')
        handleAnswer(answer)
