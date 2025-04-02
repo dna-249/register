@@ -152,7 +152,7 @@ const User = ({name}) => {
 )
  else if(show === 2) return(
   <div>
-    <Activity name={name} />
+    <Activity names={name} />
   </div>
 )
 
