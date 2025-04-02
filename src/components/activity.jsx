@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 
-const Activity = () => {
+const Activity = ({name}) => {
 
     let score = 0
       
@@ -66,7 +66,7 @@ const name3 = (params) => {
         <div  className="two">
         <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
       <div> Admission No: <br />
-       Name: <br />
+       Name:{name.name} <br />
        Class: <br />
        Subject: {select3} <br />
        Activity: {select} <br />

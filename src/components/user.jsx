@@ -150,9 +150,9 @@ const User = ({name}) => {
  </div>
    </div></>
 )
-else if(show === 2) return(
+ else if(show === 2) return(
   <div>
-    <Activity />
+    <Activity name={name} />
   </div>
 )
 
