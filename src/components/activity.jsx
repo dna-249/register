@@ -53,6 +53,7 @@ const test =[{questions :["what is you name?",
         setCount2(()=>count2)
         alert(count2)
       }
+      name3()
     }
     
 const name3 = (params) => {
@@ -113,10 +114,10 @@ const name3 = (params) => {
     <div><h3>Remaining: 45mins </h3></div>
     </div>
 
-    {test.map((item, index)=> {
+    {test.map((item, index)=> {if(count < item.length)
         return (
         <div  key={index} >{item.questions[count]}
-            {item.options.map((item,index)=> {if(count < item.length) return(<div key={index}>
+            {item.options.map((item,index)=> { return(<div key={index}>
              <div>Select: {select}
              <select onChange={(e)=>setSelect(e.target.value)}>
               <option value="">select</option>
@@ -128,9 +129,9 @@ const name3 = (params) => {
             {Object.values(item)[count]
             .map((item, index)=>{return (<div  key={index}>
                  {item}
-            </div>)})}</div>);else return (<div> {score}</div>)})}
+            </div>)})}</div>)})}
             <div  onClick={()=>name(item.answers[count])}> Next</div></div>)
-    })}
+    ;else return (<div> {score}</div>)})}
    
 </div></div>
   )
