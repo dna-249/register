@@ -5,7 +5,7 @@ import Register from './register'
 import {useEffect,useState} from "react"
 import axios from 'axios'
 import User from "./user"
-const Staff = () => {
+const Staff = ({staff}) => {
   const [names,setNames] = useState([])
   const [name,setName] = useState('')
   const [show,setShow] = useState(true)

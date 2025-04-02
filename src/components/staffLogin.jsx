@@ -1,14 +1,17 @@
 import React from 'react'
 import { FaUser } from 'react-icons/fa'
-import {Link} from "react-router-dom"
 import axios from "axios"
 import {useState ,useEffect} from "react"
+import Staff from './staff'
+
 const StaffLogin = () => {
   const [user,setUser]=useState()
-  const [users,setUsers]=useState()
-  const [token,setToken]=useState()
-  const [password,setPassword]=useState()
-  
+   const [users,setUsers]=useState()
+   const [token,setToken]=useState()
+   const [name,setName]=useState()
+   const [login,setLogin]=useState(true)
+   const [password,setPassword]=useState()
+   
  useEffect(() => {
    handleLogin()
  }, [users])
@@ -17,7 +20,7 @@ const StaffLogin = () => {
     
     await axios.post("https://register-api-cloud.vercel.app/staff/login",{
         name:users,
-      }).then(res => {alert("access granted");setToken(res.data)}).catch(err => {alert(user + "is not verified");console.log(err)})
+      }).then(res => setToken(res.data)).catch(err => {alert(user + "" + "access denied");console.log(err)})
    
   }
   useEffect(() => {
@@ -32,14 +35,14 @@ const StaffLogin = () => {
     await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
       name:user,
       header:token
-    }).then(res => alert(user + "is verified successfully" +""+ token)).catch(err => {alert(user + "is not verified");console.log(err)})
+    }).then(res =>{setLogin(false); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert(user + "is not verified");console.log(err)})
  
   }
   
   
  
 
-  return (
+  if(login === true) return (
     <div className='signUp'>
         <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
            <div><FaUser className='img'/> <br /><span  style={{color:"green",fontWeight:"bolder"}}>Staff Login</span> </div>
@@ -49,6 +52,9 @@ const StaffLogin = () => {
         </div>
     </div>
   )
+
+  if(login === false) return(<div><Staff staff={name}/></div>)
+  
 }
 
 export default StaffLogin
