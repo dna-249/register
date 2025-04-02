@@ -3,6 +3,7 @@ import { FaBars, FaUser ,FaCheck, FaPlus, FaTimes} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Attendance from "./attendance"
 import Update from "./update"
+import Activity from './activity'
 
 const User = ({name}) => {
   const [select, setSelect]=useState()
@@ -16,7 +17,7 @@ const User = ({name}) => {
   const [isUpdate, setIsUpdate]= useState(true)
 
 
- if(show === true) return (
+ if(show === 0) return (
     <>
     <div>
        <div>
@@ -27,9 +28,9 @@ const User = ({name}) => {
  <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
  <div  className='three2'>
 
-          <div><Link to="/staff">Activity</Link></div>
-        <div onClick={()=>setShow(false)}>Attendance  student</div>
-        <div><Link to="/activity">Activity</Link></div>
+          <div onClick={()=>setShow(3)}>Activity</div>
+        <div onClick={()=>setShow(1)}>Attendance </div>
+        <div onClick={()=>setShow(2)}> Activity</div>
  </div >
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
@@ -90,7 +91,7 @@ const User = ({name}) => {
 </div>
   </>)
 
-if(show === false) return (
+if(show === 1) return (
   <>
   <div className='center'>
  <div className='bgUser'> 
@@ -148,6 +149,11 @@ if(show === false) return (
      </div>
  </div>
    </div></>
+)
+if(show === 2) return(
+  <div>
+    <Activity />
+  </div>
 )
 
 
