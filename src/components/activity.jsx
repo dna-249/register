@@ -114,7 +114,7 @@ const name3 = (params) => {
     <div><h3>Remaining: 45mins </h3></div>
     </div>
 
-    {test.map((item, index)=> {if(count < item.length)
+    {test.map((item, index)=> {if(count !== 4)
         return (
         <div  key={index} >{item.questions[count]}
             {item.options.map((item,index)=> { return(<div key={index}>
