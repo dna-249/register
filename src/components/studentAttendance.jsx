@@ -6,7 +6,7 @@ const StudentAttendance =({datas})=>{
 
       
     return (<>
-       <div>(
+       <div>
         <div>
              <thead>
                     <tr>
@@ -36,7 +36,7 @@ const StudentAttendance =({datas})=>{
                                                     )}
                       
                 )}                 
-        </div>)
+        </div>
     </div>
   </>  )
 }
