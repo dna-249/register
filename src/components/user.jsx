@@ -16,9 +16,9 @@ const User = ({name}) => {
   const [isUpdate, setIsUpdate]= useState(true)
 
 
-  return (
+ if(show === true) return (
     <>
-    <div>{show?(
+    <div>
        <div>
 
     <div className='center'>
@@ -87,9 +87,11 @@ const User = ({name}) => {
    
 </div></div>
 </div>
-):(
+</div>
+  </>)
+
+if(show === false) return (
   <>
-   
   <div className='center'>
  <div className='bgUser'> 
      <h3>REGISTER</h3>
@@ -141,17 +143,15 @@ const User = ({name}) => {
           </div> <div style={{width :"200px",justifySelf:"center" }} className='click save'  onClick={()=>name()}>Save Attendance</div>
           </div>):( 
           <div>
-       
-         
-                             <Update datas={name}   setIsNews ={setIsNew}/>
+                 <Update datas={name}   setIsNews ={setIsNew}/>
           </div>  )}
      </div>
  </div>
    </div></>
-)}
+)
 
-</div>
-  </>)
+
+
 }
 
 export default User
