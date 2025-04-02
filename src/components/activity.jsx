@@ -6,9 +6,6 @@ import { Link } from 'react-router-dom'
 
 const Activity = ({names}) => {
 
-    let score = 0
-      
-       
     const [count,setCount]=useState(0)
     const [count2,setCount2]=useState(5)
     const [selects,setSelects]=useState()
@@ -46,20 +43,15 @@ const test =[{questions :["what is you name?",
     const handleAnswer = (answer) => {
 
       if(answer === select){
-        
         setCount2(count2 => count2 + 10)
         alert(count2)
       } else  {
         setCount2(()=>count2)
         alert(count2)
       }
-      name3()
     }
     
-const name3 = (params) => {
-  score++
-  alert(score)
-}
+
 
 
      return (
@@ -131,7 +123,7 @@ const name3 = (params) => {
                  {item}
             </div>)})}</div>)})}
             <div  onClick={()=>name(item.answers[count])}> Next</div></div>)
-    ;else return (<div> {score}</div>)})}
+    ;else return (<div> {count2}</div>)})}
    
 </div></div>
   )
