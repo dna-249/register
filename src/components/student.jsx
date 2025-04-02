@@ -103,18 +103,11 @@ const Student = ({name}) => {
      
      
      <div className='white'>
-       
-         <div>
-           <div style={{display:"grid",justifyContent:"flex-end"}} >
-     <div  className='click'    onClick={()=>setIsNew((pre)=>!pre)}> New </div>
-     </div>
      <h2>Student Attendance</h2>
            
                               <Attendance datas ={name} setIsNews ={setIsNew} />
-           </div>
-           
      </div>
- </div>
+      </div>
    </div></>
 )
  else if(show === 2) return(
