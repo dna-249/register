@@ -21,7 +21,7 @@ const StudentLogin = () => {
   const handleLogin = async () => {
     await axios.post("https://register-api-cloud.vercel.app/student/login",{
         name:users,
-      }).then(res => {alert("access granted");setToken(res.data)}).catch(err => {alert(user + "is not verified");console.log(err)})
+      }).then(res => {alert("access granted");setToken(res.data);setLogin(false); setName(res.data); console.log(res.data); alert(user + "is verified successfully" +""+ token)}).catch(err => {alert(user + "is not verified");console.log(err)})
   }
 
 
