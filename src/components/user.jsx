@@ -8,7 +8,7 @@ import Activity from './activity'
 const User = ({name}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
-  const [show,setShow] = useState(true)
+  const [show,setShow] = useState(0)
   const [data, setData]= useState(false)
   const [day, setDay]= useState()
   const [isNew, setIsNew]= useState(false)
@@ -91,7 +91,7 @@ const User = ({name}) => {
 </div>
   </>)
 
-if(show === 1) return (
+ else if(show === 1) return (
   <>
   <div className='center'>
  <div className='bgUser'> 
@@ -150,7 +150,7 @@ if(show === 1) return (
  </div>
    </div></>
 )
-if(show === 2) return(
+else if(show === 2) return(
   <div>
     <Activity />
   </div>
