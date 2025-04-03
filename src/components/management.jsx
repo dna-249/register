@@ -31,8 +31,20 @@ const Management = ({management}) => {
       <div className="bgUser">
         <h3> MANAGEMENT DASHBOARD</h3>
          <div className='two'>
-         <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
-        <div className="row2"> 
+            <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
+            
+            <div className='bars'><FaBars/></div>
+        
+            <div>
+                <div>Name:{management?.name}</div>
+                <div>Class:</div>
+                <div>Subject:</div>
+                
+            </div>
+    </div>
+
+
+    <div className="two"> 
             <div  className='three2'>
         
                 <div>Admissions</div>
@@ -44,16 +56,9 @@ const Management = ({management}) => {
                 <div>Results</div>
                 <div>Reports </div>
                 <div>Notice</div>
-         </div></div>
-         <div className='bars'><FaBars/></div>
          </div>
-      <div>
-        <div>Name:{management?.name}</div>
-        <div>Class:</div>
-        <div>Subject:</div>
-        
-    </div>
-    <div className="white three4">
+ </div>
+<div className="white three4">
         
         <div><h3>Management</h3></div>
         <div>
