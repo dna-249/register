@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaUser ,FaCheck, FaPlus, FaTimes} from 'react-icons/fa'
+import { FaBars, FaUser ,FaCheck, FaArrowCircleLeft, FaTimes} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Attendance from "./attendance"
 import Update from "./update"
@@ -26,7 +26,7 @@ const User = ({name}) => {
  <div className='bgUser'>
    <div className='two'>
           <h3> STUDENT DASHBOARD</h3>
-          <div className='click2' onClick={()=>setBack(true)}><FaArrowLeft /></div>
+          <div className='click2' onClick={()=>setBack(true)}><FaArrowCircleLeft /></div>
     </div>     
   <div className='two'>
  <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
