@@ -52,7 +52,7 @@ const Management = ({management}) => {
         <div>Subject:</div>
         
     </div>
-    <div className="white three2">
+    <div className="white three4">
         
         <div>Management</div>
         <div>
