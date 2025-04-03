@@ -30,7 +30,7 @@ const Staff = ({staff,setBack}) => {
       <div className="bgUser">
         <div className='two'>
         <h3> STAFF DASHBOARD</h3>
-        <div  onClick={()=>setBack(true)}><FaArrowLeft /></div>
+        <div className='click2' onClick={()=>setBack(true)}><FaArrowLeft /></div>
         </div>
          <div className='two'>
          <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
