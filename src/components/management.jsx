@@ -52,11 +52,18 @@ const Management = ({management}) => {
         <div>Subject:</div>
         
     </div>
-    <div className="white">
-         <h2> STAFF LIST </h2>
+    <div className="white three2">
+        
+        <div>Management</div>
+        <div>
+         <h2> Staff  </h2>
          {names?.map((name,index) => <div key={index}>
          <div onClick={()=>handleSelect(name)}> {name.name} </div>
          </div>)}
+        </div>
+        
+        <div> Students</div>
+
 
     </div>
  </div>
