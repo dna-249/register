@@ -34,6 +34,7 @@ const Attendance =({datas,setChange})=>{
            })
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
+                setChange((pre)=>!pre)
      }
      
      
