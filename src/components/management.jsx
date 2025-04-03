@@ -32,7 +32,7 @@ const Management = ({management}) => {
         <h3> MANAGEMENT DASHBOARD</h3>
          <div className='two'>
          <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
-         <div  className='three2'>
+        <div className="two"> <div  className='three2'>
         
                 <div>Admissions</div>
                 <div>Secret_Keys </div>
@@ -43,7 +43,7 @@ const Management = ({management}) => {
                 <div>Results</div>
                 <div>Reports </div>
                 <div>Notice</div>
-         </div>
+         </div></div>
          <div className='bars'><FaBars/></div>
          </div>
       <div>
