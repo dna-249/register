@@ -24,6 +24,10 @@ const User = ({name}) => {
 
     <div className='center'>
  <div className='bgUser'>
+   <div className='two'>
+          <h3> STUDENT DASHBOARD</h3>
+          <div className='click2' onClick={()=>setBack(true)}><FaArrowLeft /></div>
+    </div>     
   <div className='two'>
  <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
  <div  className='three2'>

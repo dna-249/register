@@ -57,7 +57,7 @@ const Staff = ({staff,setBack}) => {
     </div>
  </div>
 </div>
-):( <div><User name={name}/></div>)}
+):( <div><User name={name}  setBack = {setShow} /></div>)}
 </div>
 
   )
