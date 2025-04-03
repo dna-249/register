@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaBars,FaUser } from 'react-icons/fa'
-import Register from './register'
+import { FaArrowLeft, FaBars,FaUser } from 'react-icons/fa'
 import {useEffect,useState} from "react"
 import axios from 'axios'
 import User from "./user"
-const Staff = ({staff}) => {
+const Staff = ({staff,setBack}) => {
   const [names,setNames] = useState([])
   const [name,setName] = useState('')
   const [show,setShow] = useState(true)
@@ -29,7 +28,10 @@ const Staff = ({staff}) => {
      {show?(
     <div className='center' >
       <div className="bgUser">
+        <div className='two'>
         <h3> STAFF DASHBOARD</h3>
+        <div onClick={setBack(true)}><FaArrowLeft /></div>
+        </div>
          <div className='two'>
          <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
          <div  className='three2'>
@@ -41,7 +43,7 @@ const Staff = ({staff}) => {
          <div className='bars'><FaBars/></div>
          </div>
       <div>
-        <div>Name:</div>
+        <div>Name:{staff.name}</div>
         <div>Class:</div>
         <div>Subject:</div>
         

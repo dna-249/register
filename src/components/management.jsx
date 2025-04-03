@@ -55,7 +55,7 @@ const Management = ({management}) => {
     </div>
  </div>
 </div>
-):( <div><Staff name={name}/></div>)}
+):( <div><Staff name={name} setBack ={setShow}/></div>)}
 </div>
 
   )
