@@ -41,7 +41,7 @@ const Management = ({management}) => {
          <div className='bars'><FaBars/></div>
          </div>
       <div>
-        <div>Name:{management.name}</div>
+        <div>Name:{management?.name}</div>
         <div>Class:</div>
         <div>Subject:</div>
         
