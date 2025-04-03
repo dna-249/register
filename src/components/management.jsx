@@ -34,9 +34,15 @@ const Management = ({management}) => {
          <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
          <div  className='three2'>
         
-                <div><Link to="/staff">Results</Link></div>
-                <div><Link to="/register">Attendances</Link> </div>
-                <div><Link to="/activity">Activities</Link></div>
+                <div>Admissions</div>
+                <div>Secret_Keys </div>
+                <div>Classes</div>
+         </div>
+         <div  className='three2'>
+        
+                <div>Results</div>
+                <div>Reports </div>
+                <div>Notice</div>
          </div>
          <div className='bars'><FaBars/></div>
          </div>
@@ -46,7 +52,7 @@ const Management = ({management}) => {
         <div>Subject:</div>
         
     </div>
-    <div>
+    <div className="white">
          <h2> STAFF LIST </h2>
          {names?.map((name,index) => <div key={index}>
          <div onClick={()=>handleSelect(name)}> {name.name} </div>
