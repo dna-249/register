@@ -47,7 +47,7 @@ const Staff = ({staff}) => {
         
     </div>
     <div>
-         <h2> Student List </h2>
+         <h2> STUDENT LIST</h2>
          {names?.map((name,index) => <div key={index}>
          <div onClick={()=>handleSelect(name)}> {name.name} </div>
          </div>)}

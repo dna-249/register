@@ -29,7 +29,7 @@ const Management = ({management}) => {
      {show?(
     <div className='center' >
       <div className="bgUser">
-        <h3> STAFF DASHBOARD</h3>
+        <h3> MANAGEMENT DASHBOARD</h3>
          <div className='two'>
          <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
          <div  className='three2'>
@@ -47,7 +47,7 @@ const Management = ({management}) => {
         
     </div>
     <div>
-         <h2> Student List </h2>
+         <h2> STAFF LIST </h2>
          {names?.map((name,index) => <div key={index}>
          <div onClick={()=>handleSelect(name)}> {name.name} </div>
          </div>)}
