@@ -54,15 +54,15 @@ const Management = ({management}) => {
     </div>
     <div className="white three4">
         
-        <div>Management</div>
+        <div><h3>Management</h3></div>
         <div>
-         <h2> Staff  </h2>
+         <h3> Staff  </h3>
          {names?.map((name,index) => <div key={index}>
          <div onClick={()=>handleSelect(name)}> {name.name} </div>
          </div>)}
         </div>
         
-        <div> Students</div>
+        <div><h3> Students</h3></div>
 
 
     </div>
