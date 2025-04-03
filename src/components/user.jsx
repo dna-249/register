@@ -99,14 +99,18 @@ const User = ({name,setBack}) => {
   <>
   <div className='center'>
  <div className='bgUser'> 
-     <h3>REGISTER</h3>
+ <div className='two'>
+          <h3> STUDENT REGISTER</h3>
+          <div className='click2' onClick={()=>setShow(0)}><FaArrowCircleLeft /></div>
+    </div>     
+  
      <div ><FaUser className='img'/></div>
      name: {name?.name}<br />
      class: <br />
      Term:
      
      
-     <div className='white'>{isNew?(
+     <div className='white'> {isNew?(
        
          <div>
            <div style={{display:"grid",justifyContent:"flex-end"}} >
@@ -114,7 +118,7 @@ const User = ({name,setBack}) => {
      </div>
      <h2>Student Attendance</h2>
            
-                              <Attendance datas ={name} setIsNews ={setIsNew} />
+                              <Attendance setBack={setShow} datas ={name} setIsNews ={setIsNew} />
            </div>):isUpdate?(
          <div style={{padding:"5px"}}>
            <div style={{width:"fit-content",}} className='three'>
@@ -156,7 +160,7 @@ const User = ({name,setBack}) => {
 )
  else if(show === 2) return(
   <div>
-    <Activity names={name} />
+    <Activity setBack={setShow} names={name} />
   </div>
 )
 

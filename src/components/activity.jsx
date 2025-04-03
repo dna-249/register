@@ -1,10 +1,10 @@
 import React from 'react'
-import { FaHome, FaUser } from 'react-icons/fa'
+import { FaArrowCircleLeft, FaHome, FaUser } from 'react-icons/fa'
 import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 
-const Activity = ({names}) => {
+const Activity = ({names,setBack}) => {
 
     const [count,setCount]=useState(0)
     const [count2,setCount2]=useState(5)
@@ -56,7 +56,12 @@ const test =[{questions :["what is you name?",
 
      return (
       <div className='center'>
-    <div className='bgUser'> 
+    <div className='bgUser'>
+      <div className='two'>
+                <h3> STUDENT HALL</h3>
+                <div className='click2' onClick={()=>setBack(0)}><FaArrowCircleLeft /></div>
+          </div>     
+         
         <div  className="two">
         <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
       <div> Admission No: <br />
