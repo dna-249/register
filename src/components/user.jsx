@@ -5,7 +5,7 @@ import Attendance from "./attendance"
 import Update from "./update"
 import Activity from './activity'
 
-const User = ({name}) => {
+const User = ({name,setBack}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(0)

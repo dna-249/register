@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaArrowLeft, FaBars,FaUser } from 'react-icons/fa'
+import { FaArrowCircleLeft, FaArrowLeft, FaBars,FaUser } from 'react-icons/fa'
 import {useEffect,useState} from "react"
 import axios from 'axios'
 import User from "./user"
@@ -30,7 +30,7 @@ const Staff = ({staff,setBack}) => {
       <div className="bgUser">
         <div className='two'>
         <h3> STAFF DASHBOARD</h3>
-        <div className='click2' onClick={()=>setBack(true)}><FaArrowLeft /></div>
+        <div className='click2' onClick={()=>setBack(true)}><FaArrowCircleLeft /></div>
         </div>
          <div className='two'>
          <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
