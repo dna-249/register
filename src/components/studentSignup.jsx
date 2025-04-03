@@ -36,7 +36,7 @@ const StudentSignup = ({setLogin}) => {
         <div>Create Username:<input onChange={(e)=>setUser(e.target.value)} placeholder='write username...' type='text'/></div>
         <div>Create Password:<input onChange={(e)=>setPassword(e.target.value)} placeholder='write password...' type='password'/></div>
         <div>Email:<input onChange={(e)=>setEmail(e.target.value)} placeholder='confirm password...' type='email'/></div>
-        <button onClick={()=>handleSignUp()} ><Link to={"/user"}>user</Link></button>
+        <button onClick={()=>handleSignUp()} > Sign Up</button>
     </div>
     
     
