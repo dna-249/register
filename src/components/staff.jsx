@@ -7,6 +7,7 @@ import User from "./user"
 const Staff = ({staff,setBack}) => {
   const [names,setNames] = useState([])
   const [name,setName] = useState('')
+  const [change,setChange] = useState(false)
   const [show,setShow] = useState(true)
 
 
@@ -16,7 +17,7 @@ const Staff = ({staff,setBack}) => {
               .then((res)=> {console.log(res.data);setNames(res.data)})
               .catch((err)=> console.log(err))
   
- }, [])
+ }, [change])
  const handleSelect = (name) => {
   setName(name)
   setShow(false)
@@ -57,7 +58,7 @@ const Staff = ({staff,setBack}) => {
     </div>
  </div>
 </div>
-):( <div><User name={name}  setBack = {setShow} /></div>)}
+):( <div><User name={name}  setBack = {setShow} setChange={setChange} /></div>)}
 </div>
 
   )

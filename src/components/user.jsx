@@ -5,7 +5,7 @@ import Attendance from "./attendance"
 import Update from "./update"
 import Activity from './activity'
 
-const User = ({name,setBack}) => {
+const User = ({name,setBack,setChange}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(0)
@@ -116,7 +116,7 @@ const User = ({name,setBack}) => {
      </div>
      <h2>Student Attendance</h2>
            
-                              <Attendance setBack={setShow} datas ={name} setIsNews ={setIsNew} />
+                              <Attendance setBack={setShow} datas ={name} setChange={setChange} setIsNews ={setIsNew} />
            </div>):isUpdate?(
          <div style={{padding:"5px"}}>
            <div style={{width:"fit-content",}} className='three'>
@@ -150,7 +150,7 @@ const User = ({name,setBack}) => {
           </div> <div style={{width :"200px",justifySelf:"center" }} className='click save'  onClick={()=>name()}>Save Attendance</div>
           </div>):( 
           <div>
-                 <Update datas={name}   setIsNews ={setIsNew}/>
+                 <Update datas={name} setChange={setChange}  setIsNews ={setIsNew}/>
           </div>  )}
      </div>
  </div>

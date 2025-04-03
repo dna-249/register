@@ -2,25 +2,23 @@ import { useState } from "react"
 import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
 import axios from "axios"
 
-const Attendance =({datas})=>{
+const Attendance =({datas,setChange})=>{
     const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
-      const [key, setkey]= useState()
+      const [key, setKey]= useState()
       const [index, setIndex]= useState()
       const [select2, setSelect2]= useState()
       const [select3, setSelect3]= useState(1)
       const [isNew, setIsNew]= useState(true)
       
-      const [update, setUpdate]= useState("Check the update type above...")
-      const [isUpdate, setIsUpdate]= useState(true)
-
+      
     const handleSelect = (item,key,index) => {
-      setkey(key) 
+      setKey(key) 
       setIndex(index) 
       setIsNew(pre => !pre)
       setSelect2(item)
-
+      setChange((pre)=>!pre)
       console.log(key,index,item)
     }
 
@@ -47,6 +45,7 @@ const Attendance =({datas})=>{
            })
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
+          setChange((pre)=>!pre)
      }
     
      
