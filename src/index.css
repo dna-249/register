@@ -170,6 +170,12 @@ body {
   height: 170px;
   padding: 10px;
 }
+.row2{
+  display: grid;
+  grid-template-rows: auto auto ;
+  justify-content:baseline;
+ 
+}
 
 .user{
   background-color: #f5f5dc;
