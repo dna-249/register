@@ -4,7 +4,6 @@ import { FaBars,FaUser } from 'react-icons/fa'
 import {useEffect,useState} from "react"
 import axios from 'axios'
 import Staff from './staff';
-import Management from "./management";
 import Student from './student'
 
 const Management = ({management}) => {
