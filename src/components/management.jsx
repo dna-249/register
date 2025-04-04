@@ -84,7 +84,7 @@ const Management = ({management}) => {
  </div>
 <div className="white three4">
        {select =="1" &&
-               <div>
+               <div className="white three4">
                     <div><h3>Management</h3>
                           {names1?.map((name,index) => <div key={index}>
                           <div onClick={()=>handleSelect(name,'1')}> {name.name} </div>
