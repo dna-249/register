@@ -5,7 +5,7 @@ import {useEffect,useState} from "react"
 import axios from 'axios'
 import Staff from './staff';
 import Student from './student'
-import Admissions from './admission'
+import Admission from './admission'
 import Secret from './secret'
 
 const Management = ({management}) => {
@@ -72,8 +72,8 @@ const Management = ({management}) => {
 
     <div className="two"> 
             <div  className='three2'>
-                <div onClick={()=>setSelect(2)}> Admissions</div>
-                <div onClick={()=>setSelect(3)}>Secret_Keys </div>
+                <div onClick={()=>setSelect('2')}> Admissions</div>
+                <div onClick={()=>setSelect('3')}>Secret_Keys </div>
                 <div>Classes</div>
          </div>
          <div  className='three2'>
@@ -105,7 +105,7 @@ const Management = ({management}) => {
                             
                        </div> 
                 </div>
-                || select === "2" && <div><Admissions /></div>
+                || select === "2" && <div><Admission /></div>
                 || select === "3" && <div> <Secret /></div>
       }
     </div>

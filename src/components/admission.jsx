@@ -1,6 +1,6 @@
 import React from 'react'
 import {FaUser,FaBars} from "react-icons/fa"
-const Admissions = () => {
+const Admission = () => {
   return (
     <div className='center' >
         <div className="bgUser">
@@ -23,4 +23,4 @@ const Admissions = () => {
   )
 }
 
-export default Admissions
+export default Admission
