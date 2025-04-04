@@ -6,16 +6,28 @@ import axios from 'axios'
 import Staff from './staff'
 
 const Management = ({management}) => {
-  const [names,setNames] = useState([])
+  const [names1,setNames1] = useState([])
+  const [names2,setNames2] = useState([])
+  const [names3,setNames3] = useState([])
   const [name,setName] = useState('')
   const [show,setShow] = useState(true)
 
 
   useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/staff`)
-              .then((res)=> {console.log(res.data);setNames(res.data)})
+    axios.get(`https://register-api-cloud.vercel.app/management`)
+              .then((res)=> {console.log(res.data);setNames1(res.data)})
               .catch((err)=> console.log(err))
+
+    axios.get(`https://register-api-cloud.vercel.app/staff`)
+              .then((res)=> {console.log(res.data);setNames2(res.data)})
+              .catch((err)=> console.log(err))
+
+    axios.get(`https://register-api-cloud.vercel.app/student`)
+              .then((res)=> {console.log(res.data);setNames3(res.data)})
+              .catch((err)=> console.log(err))
+  
+  
   
  }, [])
  const handleSelect = (name) => {
@@ -46,33 +58,38 @@ const Management = ({management}) => {
 
     <div className="two"> 
             <div  className='three2'>
-        
                 <div>Admissions</div>
                 <div>Secret_Keys </div>
                 <div>Classes</div>
          </div>
          <div  className='three2'>
-        
                 <div>Results</div>
                 <div>Reports </div>
                 <div>Notice</div>
          </div>
  </div>
 <div className="white three4">
-        
-        <div><h3>Management</h3></div>
+        <div><h3>Management</h3>
+            {names1?.map((name,index) => <div key={index}>
+            <div onClick={()=>handleSelect(name)}> {name.name} </div>
+            </div>)}
+        </div>
+
         <div>
          <h3> Staff  </h3>
-         {names?.map((name,index) => <div key={index}>
-         <div onClick={()=>handleSelect(name)}> {name.name} </div>
-         </div>)}
+            {names2?.map((name,index) => <div key={index}>
+            <div onClick={()=>handleSelect(name)}> {name.name} </div>
+            </div>)}
         </div>
         
-        <div><h3> Students</h3></div>
-
-
+        <div><h3> Students</h3>
+              {names3?.map((name,index) => <div key={index}>
+              <div onClick={()=>handleSelect(name)}> {name.name} </div>
+              </div>)}
+              
+          </div>
     </div>
- </div>
+  </div>
 </div>
 ):( <div><Staff name={name} setBack ={setShow}/></div>)}
 </div>
