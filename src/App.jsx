@@ -1,5 +1,7 @@
 import React, { useState,lazy } from 'react'
 import { Route,Routes } from 'react-router-dom'
+const Admissions  = lazy(()=>import( './components/admission'))
+const Secret  = lazy(()=>import( './components/secret'))
 const SignUp =lazy(()=>import('./components/signup'))
 const Login =lazy(()=>import('./components/login'))
 const User =lazy(()=>import('./components/user'))
@@ -32,6 +34,8 @@ return (<div>
       <Route path='/managementSignup'element={<ManagementSignup />}/>
       <Route path='/managementLogin'element={<ManagementLogin />}/>
       <Route path='/staff' element={<Staff />}/>
+      <Route path='/secret' element={<Secret />}/>
+      <Route path='/admission' element={<Admissions />}/>
       <Route path='/activity' element={<Activity />}/>
       <Route path='/register' element={<Register />}/>
       <Route path='/profile' element={<Profile/>}/>

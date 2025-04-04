@@ -34,15 +34,16 @@ const Management = ({management}) => {
  }, [])
  const handleSelect = (name,view) => {
   setName(name)
-  if(view === "3"){
-  setView(()=>{return <Student  name={name} setBack ={setShow}/>})
-  } 
+  setView(()=>{if(view ===  "3")
+  return <Student  name={name} setBack ={setShow}/> 
+
   else if (view === "2"){
-    setView(()=>{return <Staff  staff={name} setBack ={setShow}/>})
+    return <Staff  staff={name} setBack ={setShow}/>
  }
+
  else if(view === "1"){
-  setView(()=>{return <Management  management={name} setBack ={setShow}/>})
-  }
+  return <Management  management={name} setBack ={setShow}/>}
+  })
    setShow(false)
 }
  
@@ -68,7 +69,7 @@ const Management = ({management}) => {
 
     <div className="two"> 
             <div  className='three2'>
-                <div>Admissions</div>
+                <div> Admissions</div>
                 <div>Secret_Keys </div>
                 <div>Classes</div>
          </div>
