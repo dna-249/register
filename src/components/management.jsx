@@ -33,21 +33,17 @@ const Management = ({management}) => {
   
  }, [])
  const handleSelect = (name,view) => {
-  if(view === "3"){
   setName(name)
+  if(view === "3"){
   setView(()=>{return <Student  name={name} setBack ={setShow}/>})
-  setShow(false)
   } 
   else if (view === "2"){
-    setName(name)
     setView(()=>{return <Staff  name={name} setBack ={setShow}/>})
-    setShow(false)
  }
- else if(view === "3"){
-  setName(name)
+ else if(view === "1"){
   setView(()=>{return <Management  name={name} setBack ={setShow}/>})
-  setShow(false)
- }
+  }
+   setShow(false)
 }
  
   return (
