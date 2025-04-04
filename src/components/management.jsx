@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom'
 import { FaBars,FaUser } from 'react-icons/fa'
 import {useEffect,useState} from "react"
 import axios from 'axios'
-import Staff from './staff'
+import Staff from './staff';
+import Management from "./management";
+import Student from './student'
 
 const Management = ({management}) => {
   const [names1,setNames1] = useState([])
   const [names2,setNames2] = useState([])
   const [names3,setNames3] = useState([])
   const [name,setName] = useState('')
+  const [view,setView] = useState('')
   const [show,setShow] = useState(true)
 
 
@@ -30,9 +33,11 @@ const Management = ({management}) => {
   
   
  }, [])
- const handleSelect = (name) => {
+ const handleSelect = (name,view) => {
   setName(name)
+  setView(view)
   setShow(false)
+
  }
  
  
@@ -71,27 +76,27 @@ const Management = ({management}) => {
 <div className="white three4">
         <div><h3>Management</h3>
             {names1?.map((name,index) => <div key={index}>
-            <div onClick={()=>handleSelect(name)}> {name.name} </div>
+            <div onClick={()=>handleSelect(name,Management)}> {name.name} </div>
             </div>)}
         </div>
 
         <div>
          <h3> Staff  </h3>
             {names2?.map((name,index) => <div key={index}>
-            <div onClick={()=>handleSelect(name)}> {name.name} </div>
+            <div onClick={()=>handleSelect(name,Staff)}> {name.name} </div>
             </div>)}
         </div>
         
         <div><h3> Students</h3>
               {names3?.map((name,index) => <div key={index}>
-              <div onClick={()=>handleSelect(name)}> {name.name} </div>
+              <div onClick={()=>handleSelect(name,Student)}> {name.name} </div>
               </div>)}
               
           </div>
     </div>
   </div>
 </div>
-):( <div><Staff name={name} setBack ={setShow}/></div>)}
+):( <div><view name={name} setBack ={setShow}/></div>)}
 </div>
 
   )
