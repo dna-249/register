@@ -4,19 +4,8 @@ const Admissions = () => {
   return (
     <div className='center' >
         <div className="bgUser">
-            <h3> MANAGEMENT DASHBOARD</h3>
-             <div className='two'>
-                <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
-                
-                <div className='bars'><FaBars/></div>
+           
             
-                <div>
-                    <div>Name:</div>
-                    <div>Class:</div>
-                    <div>Subject:</div>
-                    
-                </div>
-            </div>
             <div className='white'>
                  <h4>Admissions</h4>
                  <div>

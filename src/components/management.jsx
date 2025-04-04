@@ -5,6 +5,8 @@ import {useEffect,useState} from "react"
 import axios from 'axios'
 import Staff from './staff';
 import Student from './student'
+import Admissions from './admission'
+import Secret from './secret'
 
 const Management = ({management}) => {
   const [names1,setNames1] = useState([])
@@ -12,6 +14,7 @@ const Management = ({management}) => {
   const [names3,setNames3] = useState([])
   const [name,setName] = useState('')
   const [view,setView] = useState('')
+  const [select,setSelect] = useState('1')
   const [show,setShow] = useState(true)
 
 
@@ -69,8 +72,8 @@ const Management = ({management}) => {
 
     <div className="two"> 
             <div  className='three2'>
-                <div> Admissions</div>
-                <div>Secret_Keys </div>
+                <div onClick={()=>setSelect(2)}> Admissions</div>
+                <div onClick={()=>setSelect(3)}>Secret_Keys </div>
                 <div>Classes</div>
          </div>
          <div  className='three2'>
@@ -80,25 +83,31 @@ const Management = ({management}) => {
          </div>
  </div>
 <div className="white three4">
-        <div><h3>Management</h3>
-            {names1?.map((name,index) => <div key={index}>
-            <div onClick={()=>handleSelect(name,'1')}> {name.name} </div>
-            </div>)}
-        </div>
+       {select =="1" &&
+               <div>
+                    <div><h3>Management</h3>
+                          {names1?.map((name,index) => <div key={index}>
+                          <div onClick={()=>handleSelect(name,'1')}> {name.name} </div>
+                          </div>)}
+                      </div>
 
-        <div>
-         <h3> Staff  </h3>
-            {names2?.map((name,index) => <div key={index}>
-            <div onClick={()=>handleSelect(name,"2")}> {name.name} </div>
-            </div>)}
-        </div>
-        
-        <div><h3> Students</h3>
-              {names3?.map((name,index) => <div key={index}>
-              <div onClick={()=>handleSelect(name,"3")}> {name.name} </div>
-              </div>)}
-              
-          </div>
+                      <div>
+                      <h3> Staff  </h3>
+                          {names2?.map((name,index) => <div key={index}>
+                          <div onClick={()=>handleSelect(name,"2")}> {name.name} </div>
+                          </div>)}
+                      </div>
+                      
+                      <div><h3> Students</h3>
+                            {names3?.map((name,index) => <div key={index}>
+                            <div onClick={()=>handleSelect(name,"3")}> {name.name} </div>
+                            </div>)}
+                            
+                       </div> 
+                </div>
+                || select === "2" && <div><Admissions /></div>
+                || select === "3" && <div> <Secret /></div>
+      }
     </div>
   </div>
 </div>
