@@ -75,20 +75,20 @@ const Management = ({management}) => {
 <div className="white three4">
         <div><h3>Management</h3>
             {names1?.map((name,index) => <div key={index}>
-            <div onClick={()=>handleSelect(name,Management)}> {name.name} </div>
+            <div onClick={()=>handleSelect(name,'Management')}> {name.name} </div>
             </div>)}
         </div>
 
         <div>
          <h3> Staff  </h3>
             {names2?.map((name,index) => <div key={index}>
-            <div onClick={()=>handleSelect(name,Staff)}> {name.name} </div>
+            <div onClick={()=>handleSelect(name,'Staff')}> {name.name} </div>
             </div>)}
         </div>
         
         <div><h3> Students</h3>
               {names3?.map((name,index) => <div key={index}>
-              <div onClick={()=>handleSelect(name,Student)}> {name.name} </div>
+              <div onClick={()=>handleSelect(name,'Student')}> {name.name} </div>
               </div>)}
               
           </div>
