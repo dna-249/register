@@ -38,10 +38,10 @@ const Management = ({management}) => {
   setView(()=>{return <Student  name={name} setBack ={setShow}/>})
   } 
   else if (view === "2"){
-    setView(()=>{return <Staff  name={name} setBack ={setShow}/>})
+    setView(()=>{return <Staff  staff={name} setBack ={setShow}/>})
  }
  else if(view === "1"){
-  setView(()=>{return <Management  name={name} setBack ={setShow}/>})
+  setView(()=>{return <Management  management={name} setBack ={setShow}/>})
   }
    setShow(false)
 }
