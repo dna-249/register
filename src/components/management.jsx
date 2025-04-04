@@ -11,7 +11,7 @@ const Management = ({management}) => {
   const [names2,setNames2] = useState([])
   const [names3,setNames3] = useState([])
   const [name,setName] = useState('')
-  const [view,setView] = useState('')
+  const [View,setView] = useState('')
   const [show,setShow] = useState(true)
 
 
@@ -95,7 +95,7 @@ const Management = ({management}) => {
     </div>
   </div>
 </div>
-):( <div><view name={name} setBack ={setShow}/></div>)}
+):( <div><View name={name} setBack ={setShow}/></div>)}
 </div>
 
   )
