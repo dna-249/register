@@ -2,8 +2,7 @@ import React from 'react'
 import {FaUser,FaBars} from "react-icons/fa"
 const Admission = () => {
   return (
-    <div className='center' >
-        <div className="bgUser">
+    
            
             
             <div className='white'>
@@ -18,8 +17,7 @@ const Admission = () => {
                    <h5>Previous Admissions</h5> 
                  </div>
             </div>
-        </div>
-    </div>
+    
   )
 }
 
