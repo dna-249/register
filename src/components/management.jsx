@@ -11,7 +11,7 @@ const Management = ({management}) => {
   const [names2,setNames2] = useState([])
   const [names3,setNames3] = useState([])
   const [name,setName] = useState('')
-  const [View,setView] = useState('')
+  const [view,setView] = useState('')
   const [show,setShow] = useState(true)
 
 
@@ -33,12 +33,22 @@ const Management = ({management}) => {
   
  }, [])
  const handleSelect = (name,view) => {
+  if(view === "3"){
   setName(name)
-  setView(view)
+  setView(()=>{return <Student  name={name} setBack ={setShow}/>})
   setShow(false)
-
+  } 
+  else if (view === "2"){
+    setName(name)
+    setView(()=>{return <Staff  name={name} setBack ={setShow}/>})
+    setShow(false)
  }
- 
+ else if(view === "3"){
+  setName(name)
+  setView(()=>{return <Management  name={name} setBack ={setShow}/>})
+  setShow(false)
+ }
+}
  
   return (
   <div>
@@ -75,27 +85,27 @@ const Management = ({management}) => {
 <div className="white three4">
         <div><h3>Management</h3>
             {names1?.map((name,index) => <div key={index}>
-            <div onClick={()=>handleSelect(name,'Management')}> {name.name} </div>
+            <div onClick={()=>handleSelect(name,'1')}> {name.name} </div>
             </div>)}
         </div>
 
         <div>
          <h3> Staff  </h3>
             {names2?.map((name,index) => <div key={index}>
-            <div onClick={()=>handleSelect(name,'Staff')}> {name.name} </div>
+            <div onClick={()=>handleSelect(name,"2")}> {name.name} </div>
             </div>)}
         </div>
         
         <div><h3> Students</h3>
               {names3?.map((name,index) => <div key={index}>
-              <div onClick={()=>handleSelect(name,'Student')}> {name.name} </div>
+              <div onClick={()=>handleSelect(name,"3")}> {name.name} </div>
               </div>)}
               
           </div>
     </div>
   </div>
 </div>
-):( <div><View name={name} setBack ={setShow}/></div>)}
+):( <div>{view}</div>)}
 </div>
 
   )
