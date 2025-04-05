@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const Admission = ({id}) => {
   const [adm,setAdm]= useState('')
   const handleCreate = (params) => {
-    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}`,{adm:adm})
+    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/admissions/adm`,{adm:adm})
                   .then((res)=> alert(`${adm} admission is registered`))
                   .catch((err)=> console.log(err))
      }
