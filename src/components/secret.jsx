@@ -1,5 +1,6 @@
 import React from 'react'
 import{ useState} from "react"
+import axios from "axios"
 const Secret = ({id}) => {
 
    const [adm,setAdm]= useState('')
