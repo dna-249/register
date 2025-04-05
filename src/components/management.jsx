@@ -106,7 +106,7 @@ const Management = ({management}) => {
                        </div> 
                 </div>
                 || select === "2" && <div><Admission id ={management._id}/></div>
-                || select === "3" && <div> <Secret /></div>
+                || select === "3" && <div> <Secret id ={management._id} /></div>
       }
     </div>
   </div>

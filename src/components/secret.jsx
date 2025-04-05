@@ -1,5 +1,6 @@
 import React from 'react'
-const Secret = () => {
+import{ useState} from "react"
+const Secret = ({id}) => {
 
    const [adm,setAdm]= useState('')
    const [adm1,setAdm1]= useState('')
