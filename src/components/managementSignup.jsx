@@ -14,7 +14,7 @@ const ManagementSignup = ({setLogin}) => {
   
   const handleSignUp =()=>{
     axios.post("https://register-api2.vercel.app/management",
-      { name:key,
+      { adm:key,
         user:user,
         password:password,
         email:confirm
@@ -22,7 +22,7 @@ const ManagementSignup = ({setLogin}) => {
       .then((res)=> console.log(res))
       .catch((err)=> console.log(err))
 
-    axios.get("https://register-api2.vercel.app/management")
+    axios.get("https://register-api2.vercel.app/management/management/key")
         .then((res)=> console.log(res))
         .catch((err)=> console.log(err))
   }

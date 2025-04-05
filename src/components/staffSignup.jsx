@@ -12,8 +12,8 @@ const StaffSignup = ({setLogin}) => {
   const [confirm,setConfirm]= useState('')
   
   const handleSignUp =()=>{
-    axios.post("https://register-api2.vercel.app/staff",
-      { name:key,
+    axios.post("https://register-api2.vercel.app/staff/staff/key",
+      { adm:key,
         user:user,
         password:password,
         confirm:confirm})
