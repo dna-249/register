@@ -12,7 +12,7 @@ const Secret = ({id}) => {
        }
        const handleStaffKey = (params) => {
         axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/staff/key`,{adm:adm1})
-                      .then((res)=> alert(`${adm} secret_key is registered`))
+                      .then((res)=> alert(`${adm1} secret_key is registered`))
                       .catch((err)=> console.log(err))
          }
   return (
