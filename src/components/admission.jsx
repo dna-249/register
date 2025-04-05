@@ -1,6 +1,13 @@
-import React from 'react'
-import {FaUser,FaBars} from "react-icons/fa"
-const Admission = () => {
+import axios from 'axios'
+import React, { useState } from 'react'
+const Admission = ({id}) => {
+  const [adm,setAdm]= useState('')
+  const handleCreate = (params) => {
+    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}`,{adm:adm})
+                  .then((res)=> alert(`${adm} admission is registered`))
+                  .catch((err)=> console.log(err))
+     }
+  
   return (
     
            
@@ -9,8 +16,9 @@ const Admission = () => {
                  <h4>Admissions</h4>
                  <div>
                     <h5>Create Admission</h5>
-                    <input type="number" placeholder='new admission no...'/>
-                    <button>Register</button>
+                    <h3>New:{adm}</h3>
+                    <input type="number" onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
+                    <button onClick={()=>handleCreate()}>Register</button>
                  </div>
 
                  <div>
