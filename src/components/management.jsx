@@ -7,6 +7,7 @@ import Staff from './staff';
 import Student from './student'
 import Admission from './admission'
 import Secret from './secret'
+import Classes from './classes'
 
 const Management = ({management}) => {
   const [names1,setNames1] = useState([])
@@ -74,7 +75,7 @@ const Management = ({management}) => {
             <div  className='three2'>
                 <div onClick={()=>setSelect('2')}> Admissions</div>
                 <div onClick={()=>setSelect('3')}>Secret_Keys </div>
-                <div>Classes</div>
+                <div onClick={()=>setSelect('4')}>Classes</div>
          </div>
          <div  className='three2'>
                 <div>Results</div>
@@ -107,6 +108,8 @@ const Management = ({management}) => {
                 </div>
                 || select === "2" && <div><Admission id ={management._id}/></div>
                 || select === "3" && <div> <Secret id ={management._id} /></div>
+                || select === "4" && <div> <Classes id ={management._id} /></div>
+
       }
     </div>
   </div>
