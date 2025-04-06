@@ -18,7 +18,6 @@ const Attendance =({datas,setChange})=>{
       setIndex(index) 
       setIsNew(pre => !pre)
       setSelect2(item)
-      setChange((pre)=>!pre)
       console.log(key,index,item)
     }
 
@@ -46,7 +45,6 @@ const Attendance =({datas,setChange})=>{
            })
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
-          setChange((pre)=>!pre)
      }
     
      
