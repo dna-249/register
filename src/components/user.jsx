@@ -126,7 +126,7 @@ const User = ({name,setBack,setChange,index}) => {
      <div  className='click2'  onClick={()=>setNext((index)=> index + 1)}>New </div>
      </div>
            <h2>
-             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
+             {data === false && <div>{name?.name} Present</div>}{data === true && <div className='red'>{name?.name} Absent</div>} 
              <br />{Date().slice(0,21)}</h2>
      <label htmlFor=""> 
          Mon
