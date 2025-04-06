@@ -123,7 +123,7 @@ const User = ({name,setBack,setChange,index}) => {
            <div style={{width:"fit-content",}} className='three'>
      <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
      <div className='click2' onClick={()=>setIsUpdate((pre)=>!pre)}>Update </div>
-     <div  className='click2'  onClick={()=>setNext((index)=> index + 1)}>New </div>
+     <div  className='click2'  onClick={()=>setNext(()=> index + 1)}>New </div>
      </div>
            <h2>
              {data === false && <div>{name?.name} Present</div>}{data === true && <div className='red'>{name?.name} Absent</div>} 
