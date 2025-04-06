@@ -7,6 +7,7 @@ import User from "./user"
 const Staff = ({staff,setBack}) => {
   const [names,setNames] = useState([])
   const [name,setName] = useState('')
+  const [index,setIndex] = useState('')
   const [change,setChange] = useState(false)
   const [show,setShow] = useState(true)
 
@@ -18,9 +19,10 @@ const Staff = ({staff,setBack}) => {
               .catch((err)=> console.log(err))
   
  }, [change])
- const handleSelect = (name) => {
+ const handleSelect = (name,index) => {
   setName(name)
   setShow(false)
+  setIndex(index)
  }
  
  
@@ -52,13 +54,13 @@ const Staff = ({staff,setBack}) => {
     <div>
          <h2> STUDENT LIST</h2>
          {names?.map((name,index) => <div key={index}>
-         <div onClick={()=>handleSelect(name)}> {name.name} </div>
+         <div onClick={()=>handleSelect(name,index)}> {name.name} </div>
          </div>)}
 
     </div>
  </div>
 </div>
-):( <div><User name={name}  setBack = {setShow} setChange={setChange} /></div>)}
+):( <div><User name={name} index={index} setBack = {setShow} setChange={setChange} /></div>)}
 </div>
 
   )

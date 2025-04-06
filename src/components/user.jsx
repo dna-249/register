@@ -5,12 +5,13 @@ import Attendance from "./attendance"
 import Update from "./update"
 import Activity from './activity'
 
-const User = ({name,setBack,setChange}) => {
+const User = ({name,setBack,setChange,index}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(0)
   const [data, setData]= useState(false)
   const [day, setDay]= useState()
+  const [next, setNext]= useState()
   const [isNew, setIsNew]= useState(false)
   const [isUpdate, setIsUpdate]= useState(true)
 
@@ -27,7 +28,7 @@ const User = ({name,setBack,setChange}) => {
           <div className='click2' onClick={()=>setBack(true)}><FaArrowCircleLeft /></div>
     </div>     
   <div className='two'>
- <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
+ <div style={{marginTop:"20px"}}> <FaUser className='img'/></div>
  <div  className='three2'>
 
           <div onClick={()=>setShow(3)}>Activity</div>
@@ -37,9 +38,9 @@ const User = ({name,setBack,setChange}) => {
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
-  <div><Link to="/activity">Activity</Link></div>
-        <div><Link to="/register">Attendance</Link> </div>
-        <div><Link to='/profile' >profile</Link></div>
+   <div onClick={()=>setShow(3)}>Activity</div>
+        <div onClick={()=>setShow(1)}>Attendance </div>
+        <div onClick={()=>setShow(2)}> Activity</div>
     </div>)}
  </div>
  
@@ -122,7 +123,7 @@ const User = ({name,setBack,setChange}) => {
            <div style={{width:"fit-content",}} className='three'>
      <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
      <div className='click2' onClick={()=>setIsUpdate((pre)=>!pre)}>Update </div>
-     <div  className='click2'  onClick={()=>setIsNew(false)}>New </div>
+     <div  className='click2'  onClick={()=>setNext((index)=> index + 1)}>New </div>
      </div>
            <h2>
              {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
