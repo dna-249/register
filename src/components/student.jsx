@@ -90,7 +90,7 @@ const Student = () => {
  <div className='bgUser'> 
      <h3>REGISTER</h3>
      <div ><FaUser className='img'/></div>
-     name: {name.name.user}<br />
+     name: {name.name.map((name)=>{return <div>{name.name}</div>})}<br />
      class: <br />
      Term:
      
