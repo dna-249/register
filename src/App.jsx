@@ -12,6 +12,8 @@ const StaffLogin =lazy(()=>import('./components/staffLogin'))
 const StudentSignup =lazy(()=>import('./components/studentSignup'))
 const StudentLogin =lazy(()=>import('./components/studentLogin'))
 const Staff =lazy(()=>import('./components/staff'))
+const Student =lazy(()=>import('./components/student'))
+
 const Profile =lazy(()=>import('./components/profile'))
 const Register =lazy(()=>import('./components/register'))
 const Activity =lazy(()=>import('./components/activity'))
@@ -34,6 +36,7 @@ return (<div>
       <Route path='/managementSignup'element={<ManagementSignup />}/>
       <Route path='/managementLogin'element={<ManagementLogin />}/>
       <Route path='/staff' element={<Staff />}/>
+      <Route path='/student/:name' element={<Student />}/>
       <Route path='/secret' element={<Secret />}/>
       <Route path='/admission' element={<Admission />}/>
       <Route path='/activity' element={<Activity />}/>

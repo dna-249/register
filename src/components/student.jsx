@@ -5,11 +5,11 @@ import Activity from './activity'
 import StudentAttendance from './studentAttendance'
 import { useNavigate, useParams } from 'react-router-dom'
 
-const Student = ({name}) => {
+const Student = () => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(0)
-  
+   const {name} = useParams()
  if(show === 0) return (
     <>
     <div>
