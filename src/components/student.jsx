@@ -9,7 +9,7 @@ const Student = () => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(0)
-   const {name} = useParams()
+   const name = useParams
  if(show === 0) return (
     <>
     <div>
@@ -37,7 +37,7 @@ const Student = () => {
  </div>
    <div className='two'>
   
-   <div> <h4>{name?.name}</h4> </div> 
+   <div> <h4>{name.name?.name}</h4> </div> 
    <div><span style={{color:"blue", textDecoration:"underline"}}></span></div>
  
    </div>
@@ -90,7 +90,7 @@ const Student = () => {
  <div className='bgUser'> 
      <h3>REGISTER</h3>
      <div ><FaUser className='img'/></div>
-     name: {name?.name}<br />
+     name: {name.name?.name}<br />
      class: <br />
      Term:
      
@@ -98,14 +98,14 @@ const Student = () => {
      <div className='white'>
      <h2>Student Attendance</h2>
            
-       <StudentAttendance datas ={name} />
+       <StudentAttendance datas ={name.name} />
      </div>
       </div>
    </div></>
 )
  else if(show === 2) return(
   <div>
-    <Activity names={name} />
+    <Activity names={name.name} />
   </div>
 )
 
