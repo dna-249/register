@@ -3,13 +3,13 @@ import { FaBars, FaUser ,FaCheck, FaPlus, FaTimes} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Activity from './activity'
 import StudentAttendance from './studentAttendance'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const Student = ({name}) => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(0)
- 
-
+  
  if(show === 0) return (
     <>
     <div>

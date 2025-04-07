@@ -1,9 +1,9 @@
 import React from 'react'
 import { FaUser } from 'react-icons/fa'
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 import axios from "axios"
 import {useState ,useEffect} from "react"
-import Student from './student'
+
 
 
 const StudentLogin = () => {
@@ -13,6 +13,8 @@ const StudentLogin = () => {
   const [name,setName]=useState()
   const [login,setLogin]=useState(true)
   const [password,setPassword]=useState()
+
+  const nav = useNavigate()
   
  useEffect(() => {
    handleLogin()
@@ -37,14 +39,14 @@ const StudentLogin = () => {
     await axios.post("https://register-api-cloud.vercel.app/student/verify",{
       name:user,
       header:token
-    }).then(res =>{setLogin(false); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert(user + "is not verified");console.log(err)})
+    }).then(res =>{nav(`/student/${res.data}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert(user + "is not verified");console.log(err)})
  
   }
   
   
  
 
- if(login === true) return (
+ return (
     <div className='signUp'>
         <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
            <div><FaUser className='img'/> <br /><span  style={{color:"green",fontWeight:"bolder"}}>Student Login</span> </div>
@@ -55,7 +57,6 @@ const StudentLogin = () => {
     </div>
   )
 
-  if(login === false) return(<div><Student name={name}/></div>)
-}
+ }
 
 export default StudentLogin
