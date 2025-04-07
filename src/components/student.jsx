@@ -37,7 +37,7 @@ const Student = () => {
  </div>
    <div className='two'>
   
-   <div> <h4>{name.name}</h4> </div> 
+   <div> <h4>{name.name.user}</h4> </div> 
    <div><span style={{color:"blue", textDecoration:"underline"}}></span></div>
  
    </div>
@@ -90,7 +90,7 @@ const Student = () => {
  <div className='bgUser'> 
      <h3>REGISTER</h3>
      <div ><FaUser className='img'/></div>
-     name: {name.name}<br />
+     name: {name.name.user}<br />
      class: <br />
      Term:
      
