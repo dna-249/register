@@ -4,30 +4,32 @@ import { FaArrowCircleLeft, FaArrowLeft, FaBars,FaUser } from 'react-icons/fa'
 import {useEffect,useState} from "react"
 import axios from 'axios'
 import User from "./user"
+import {useParams } from "react-router-dom"
 const Staff = ({staff,setBack}) => {
   const [names,setNames] = useState([])
   const [name,setName] = useState('')
+  const [staff,setStaff] = useState('')
   const [next,setNext] = useState(0)
   const [change,setChange] = useState(false)
   const [show,setShow] = useState(true)
 
+  const {id} = useParams()
 
   useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/student`)
+    axios.get(`https://register-api-cloud.vercel.app/staff/${id}`)
+              .then((res)=> {console.log(res.data);setStaff(res.data)})
+              .catch((err)=> console.log(err))
+  
+              axios.get(`https://register-api-cloud.vercel.app/student`)
               .then((res)=> {console.log(res.data);setNames(res.data)})
               .catch((err)=> console.log(err))
   
  }, [])
- const handleSelect = (name,index) => {
-  setName(name)
-  setShow(false)
- }
+ 
  
  
   return (
-  <div>
-     {show?(
     <div className='center' >
       <div className="bgUser">
         <div className='two'>
@@ -53,15 +55,12 @@ const Staff = ({staff,setBack}) => {
     <div>
          <h2> STUDENT LIST</h2>
          {names?.map((name,index) => <div key={index + next}>
-         <div onClick={()=>handleSelect(name,index)}> {name.name} </div>
+         <div onClick={()=>nav(`/user/${name._id}`)}> {name.name} </div>
          </div>)}
 
     </div>
  </div>
 </div>
-):( <div><User name={name} setBack = {setShow} change={next} setChange={setNext} /></div>)}
-</div>
-
   )
 }
 

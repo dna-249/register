@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { FaBars, FaUser ,FaCheck, FaArrowCircleLeft, FaTimes} from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link ,useParams} from 'react-router-dom'
 import Attendance from "./attendance"
 import Update from "./update"
 import Activity from './activity'
 
-const User = ({name,setBack,setChange,change}) => {
+const User = () => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
   const [show,setShow] = useState(0)
@@ -14,6 +14,15 @@ const User = ({name,setBack,setChange,change}) => {
   const [next, setNext]= useState()
   const [isNew, setIsNew]= useState(false)
   const [isUpdate, setIsUpdate]= useState(true)
+
+  const {id} = useParams()
+
+
+  useEffect(() => {
+    axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+         .then((res)=> {alert(res.data.name); setName(res.data)})
+         .catch((err)=> console.log(err))
+  }, [id])
 
 
  if(show === 0) return (

@@ -3,6 +3,7 @@ import { FaUser } from 'react-icons/fa'
 import axios from "axios"
 import {useState ,useEffect} from "react"
 import Staff from './staff'
+import {useNavigate } from "react-router-dom"
 
 const StaffLogin = () => {
   const [user,setUser]=useState()
@@ -11,6 +12,8 @@ const StaffLogin = () => {
    const [name,setName]=useState()
    const [login,setLogin]=useState(true)
    const [password,setPassword]=useState()
+
+  const nav = useNavigate()
    
  useEffect(() => {
    handleLogin()
@@ -35,14 +38,14 @@ const StaffLogin = () => {
     await axios.post("https://register-api-cloud.vercel.app/staff/verify",{
       name:user,
       header:token
-    }).then(res =>{setLogin(false); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert(user + "is not verified");console.log(err)})
- 
+    }).then(res =>{nav(`/staff/${res.data._id}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert(user + "is not verified");console.log(err)})
+  
   }
   
   
  
 
-  if(login === true) return (
+  return (
     <div className='signUp'>
         <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
            <div><FaUser className='img'/> <br /><span  style={{color:"green",fontWeight:"bolder"}}>Staff Login</span> </div>
@@ -52,8 +55,6 @@ const StaffLogin = () => {
         </div>
     </div>
   )
-
-  if(login === false) return(<div><Staff staff={name}/></div>)
   
 }
 
