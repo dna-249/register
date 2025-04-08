@@ -2,7 +2,7 @@ import { useState } from "react"
 import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
 import axios from "axios"
 
-const Attendance =({datas,setChange})=>{
+const Attendance =({datas})=>{
     const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
@@ -33,7 +33,7 @@ const Attendance =({datas,setChange})=>{
            })
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
-                setChange((pre)=>!pre)
+              
      }
      
      

@@ -13,6 +13,7 @@ const User = () => {
   const [data, setData]= useState(false)
   const [day, setDay]= useState()
   const [next, setNext]= useState()
+  const [name, setName]= useState()
   const [isNew, setIsNew]= useState(false)
   const [isUpdate, setIsUpdate]= useState(true)
 
@@ -127,7 +128,7 @@ const User = () => {
      </div>
      <h2>Student Attendance</h2>
            
-                              <Attendance setBack={setShow} datas ={name} setChange={setChange} setIsNews ={setIsNew} />
+                              <Attendance setBack={setShow} datas ={name}  setIsNews ={setIsNew} />
            </div>):isUpdate?(
          <div style={{padding:"5px"}}>
            <div style={{width:"fit-content",}} className='three'>
@@ -161,7 +162,7 @@ const User = () => {
           </div> <div style={{width :"200px",justifySelf:"center" }} className='click save'  onClick={()=>name()}>Save Attendance</div>
           </div>):( 
           <div>
-                 <Update datas={name} setChange={setChange}  setIsNews ={setIsNew}/>
+                 <Update datas={name}   setIsNews ={setIsNew}/>
           </div>  )}
      </div>
  </div>

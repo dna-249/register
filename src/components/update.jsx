@@ -2,7 +2,7 @@ import { useState } from "react"
 import { FaPlus,FaTimes,FaCheck, FaDatabase, } from "react-icons/fa"
 import axios from "axios"
 
-const Update =({datas,setIsNews,setChange})=>{
+const Update =({datas,setIsNews})=>{
     const [data, setData]= useState(false)
       const [day, setDay]= useState()
       const [select, setSelect]= useState()
@@ -18,7 +18,6 @@ const Update =({datas,setIsNews,setChange})=>{
       setIndex(index) 
       setIsNew(pre => !pre)
       setSelect2(item)
-      setChange((pre)=>!pre)
       console.log(key,index,item)
     }
 
@@ -28,8 +27,7 @@ const Update =({datas,setIsNews,setChange})=>{
            await axios.put(`https://register-api-cloud.vercel.app/student/pull/${datas._id}/${select2}`)
                      .then((res)=> console.log(res.data))
                      .catch((err)=> console.log(err))
-                     setChange((pre)=>!pre)
-     }
+                      }
     
      
     return (<>
