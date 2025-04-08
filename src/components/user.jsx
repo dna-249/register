@@ -16,9 +16,6 @@ const User = () => {
   const [name, setName]= useState()
   const [isNew, setIsNew]= useState(false)
   const [isUpdate, setIsUpdate]= useState(true)
-  const [values,setValues]= useState('nura')
-  const [value,setValue]= useState('')
-  const [edit,setEdit]= useState(false)
 
   const {id} = useParams()
   const nav  = useNavigate()
@@ -100,7 +97,7 @@ const User = () => {
      <tbody className='row5 green'>
       <tr>
       <th>Eng</th>
-      <th onClick={()=>setEdit((pre)=>!pre)}><input onChange={(e)=>setValue(e.target.value)} value={edit? value:values} readOnly={edit? false:true} type="text"  /></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
