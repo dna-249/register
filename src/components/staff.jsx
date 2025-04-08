@@ -4,7 +4,7 @@ import { FaArrowCircleLeft, FaArrowLeft, FaBars,FaUser } from 'react-icons/fa'
 import {useEffect,useState} from "react"
 import axios from 'axios'
 import User from "./user"
-import {useParams } from "react-router-dom"
+import {useParams,useNavigate } from "react-router-dom"
 const Staff = ({setBack}) => {
   const [names,setNames] = useState([])
   const [name,setName] = useState('')
@@ -14,7 +14,7 @@ const Staff = ({setBack}) => {
   const [show,setShow] = useState(true)
 
   const {id} = useParams()
-
+  const nav = useNavigate()
   useEffect(() => {
  
     axios.get(`https://register-api-cloud.vercel.app/staff/${id}`)
