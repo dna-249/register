@@ -101,11 +101,15 @@ const User = () => {
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
+      <th></th>
 
       </tr>
       
       <tr>
       <th>Math</th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -119,6 +123,8 @@ const User = () => {
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
+      <th></th>
 
       </tr>
       
@@ -128,11 +134,15 @@ const User = () => {
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
+      <th></th>
 
       </tr>
       
       <tr>
       <th>Bio</th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
