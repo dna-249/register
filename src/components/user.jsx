@@ -92,9 +92,9 @@ const User = () => {
     <th>Grade</th>
     </tr>
     </thead>
-     
+     </div>
 
-     <tbody >
+     <tbody className='row5'>
       <tr>
       <th>Eng</th>
       <th></th>
@@ -151,7 +151,6 @@ const User = () => {
       </tr>
       
      </tbody>
-     </div>
      </div>
    </div>
    

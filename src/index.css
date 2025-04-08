@@ -169,6 +169,7 @@ body {
   justify-content:baseline;
   height: 170px;
   padding: 10px;
+  width: 1000px;
 }
 .row2{
   display: grid;
