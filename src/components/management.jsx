@@ -8,8 +8,10 @@ import Student from './student'
 import Admission from './admission'
 import Secret from './secret'
 import Classes from './classes'
+import {useParams,useNavigate } from "react-router-dom"
 
-const Management = ({management}) => {
+const Management = () => {
+
   const [names1,setNames1] = useState([])
   const [names2,setNames2] = useState([])
   const [names3,setNames3] = useState([])
@@ -17,11 +19,12 @@ const Management = ({management}) => {
   const [view,setView] = useState('')
   const [select,setSelect] = useState('1')
   const [show,setShow] = useState(true)
-
+  const nav = useNavigate()
+  const {id} = useParams()
 
   useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/management`)
+    axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
               .then((res)=> {console.log(res.data);setNames1(res.data)})
               .catch((err)=> console.log(err))
 
@@ -36,24 +39,8 @@ const Management = ({management}) => {
   
   
  }, [])
- const handleSelect = (name,view) => {
-  setName(name)
-  setView(()=>{if(view ===  "3")
-  return <Student  name={name} setBack ={setShow}/> 
-
-  else if (view === "2"){
-    return <Staff  staff={name} setBack ={setShow}/>
- }
-
- else if(view === "1"){
-  return <Management  management={name} setBack ={setShow}/>}
-  })
-   setShow(false)
-}
  
   return (
-  <div>
-     {show?(
     <div className='center' >
       <div className="bgUser">
         <h3> MANAGEMENT DASHBOARD</h3>
@@ -63,7 +50,7 @@ const Management = ({management}) => {
             <div className='bars'><FaBars/></div>
         
             <div>
-                <div>Name:{management?.name}</div>
+                <div>Name:{name1?.name}</div>
                 <div>Class:</div>
                 <div>Subject:</div>
                 
@@ -88,20 +75,20 @@ const Management = ({management}) => {
                <div className="white three4">
                     <div><h3>Management</h3>
                           {names1?.map((name,index) => <div key={index}>
-                          <div onClick={()=>handleSelect(name,'1')}> {name.name} </div>
+                          <div onClick={()=>nav(`/management/${name._id}`)}> {name.name} </div>
                           </div>)}
                       </div>
 
                       <div>
                       <h3> Staff  </h3>
                           {names2?.map((name,index) => <div key={index}>
-                          <div onClick={()=>handleSelect(name,"2")}> {name.name} </div>
+                          <div onClick={()=>nav(`/staff/${name._id}`)}> {name.name} </div>
                           </div>)}
                       </div>
                       
                       <div><h3> Students</h3>
                             {names3?.map((name,index) => <div key={index}>
-                            <div onClick={()=>handleSelect(name,"3")}> {name.name} </div>
+                            <div onClick={()=>nav(`/student/${name._id}`)}> {name.name} </div>
                             </div>)}
                             
                        </div> 
@@ -114,9 +101,6 @@ const Management = ({management}) => {
     </div>
   </div>
 </div>
-):( <div>{view}</div>)}
-</div>
-
   )
 }
 

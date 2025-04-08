@@ -7,6 +7,7 @@ const Login =lazy(()=>import('./components/login'))
 const User =lazy(()=>import('./components/user'))
 const ManagementSignup =lazy(()=>import('./components/managementSignup'))
 const ManagementLogin =lazy(()=>import('./components/managementLogin'))
+const Management =lazy(()=>import('./components/management'))
 const StaffSignup =lazy(()=>import('./components/staffSignup'))
 const StaffLogin =lazy(()=>import('./components/staffLogin'))
 const StudentSignup =lazy(()=>import('./components/studentSignup'))
@@ -18,10 +19,7 @@ const Register =lazy(()=>import('./components/register'))
 const Activity =lazy(()=>import('./components/activity'))
 
 const App = () => {
-  const [login, setLogin]= useState(false)
-  const [data, setData]= useState(true)
-
-
+ 
 
 return (<div>
     <Routes>
@@ -34,6 +32,7 @@ return (<div>
       <Route path='/staffLogin' element={<StaffLogin />}/>
       <Route path='/managementSignup'element={<ManagementSignup />}/>
       <Route path='/managementLogin'element={<ManagementLogin />}/>
+      <Route path='/management/:id'element={<Management />}/>
       <Route path='/staff/:id' element={<Staff />}/>
       <Route path='/student/:id' element={<Student />}/>
       <Route path='/secret' element={<Secret />}/>
