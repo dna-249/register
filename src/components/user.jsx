@@ -80,24 +80,29 @@ const User = () => {
     </select></div>
     </div>  
     <div className='scroll'>
-      <div className='seven'> 
-    <div>Subjects</div>  
-    <div>C/A</div>
-    <div>Exam</div>
-    <div>Total</div>
-    <div>Average</div>
-    <div>Percentage</div>
-    <div>Grade</div>
+      <div className='seven'>
+        <thead>
+          <tr> 
+    <th>Subjects</th>  
+    <th>C/A</th>
+    <th>Exam</th>
+    <th>Total</th>
+    <th>Average</th>
+    <th>Percentage</th>
+    <th>Grade</th>
+    </tr>
+    </thead>
+     </div>
 
-     
-     </div>
-     <div className='row5'>
-      <div>Eng</div>
-      <div>Math</div>
-      <div>Chem</div>
-      <div>Phy</div>
-      <div>Bio</div>
-     </div>
+     <tbody className='row5'>
+      <tr>
+      <th>Eng</th>
+      <th>Math</th>
+      <th>Chem</th>
+      <th>Phy</th>
+      <th>Bio</th>
+      <tr>
+     </tbody>
      </div>
    </div>
    
