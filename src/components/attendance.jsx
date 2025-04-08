@@ -18,7 +18,7 @@ const Attendance =({datas})=>{
       setIndex(index) 
       setIsNew(pre => !pre)
       setSelect2(item)
-      console.log(key,index,item)
+      
     }
 
     const handleRegister = async(add)=>{
@@ -40,7 +40,7 @@ const Attendance =({datas})=>{
     
     
     const handleSave = async()=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/set/${datas._id}/${index}/${key}`,{
+           await axios.put(`https://register-api-cloud.vercel.app/student/set/${datas._id}/attend/${index}/${key}`,{
             value:select3
            })
                      .then((res)=> console.log(res.data))

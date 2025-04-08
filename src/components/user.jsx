@@ -16,6 +16,11 @@ const User = () => {
   const [name, setName]= useState()
   const [isNew, setIsNew]= useState(false)
   const [isUpdate, setIsUpdate]= useState(true)
+  const [object, setObject]= useState()
+  const [key, setKey]= useState()
+  const [value, setValue]= useState()
+  const [index, setIndex]= useState()
+      
 
   const {id} = useParams()
   const nav  = useNavigate()
@@ -27,6 +32,21 @@ const User = () => {
          .catch((err)=> console.log(err))
   }, [id])
 
+  const handleSelect = (object,key,index) => {
+    setKey(key) 
+    setIndex(index) 
+    setObject(object)
+    
+  }
+
+
+const handleResult = async(params) => {
+   await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/${object}/${index}/${key}`,{
+              value:value
+             })
+                       .then((res)=> console.log(res.data))
+                       .catch((err)=> console.log(err))
+}
 
  if(show === 0) return (
     <>
@@ -64,7 +84,9 @@ const User = () => {
  
    </div>
  
- 
+   <div>upload Result:<input type="text" placeholder='write...' onChange={(e)=>setValue(e.target.value)} />
+    <button onClick={()=>handleResult()}>uploadResult</button>
+   </div>
    <div className='user2 '>
     <div className='three'>
     <div>Student Results</div>
@@ -84,7 +106,9 @@ const User = () => {
         <thead>
           <tr> 
     <th>Subjects</th>  
+    <th>Ass</th>
     <th>C/A</th>
+    <th>Test</th>
     <th>Exam</th>
     <th>Total</th>
     <th>Average</th>
@@ -93,14 +117,15 @@ const User = () => {
     </tr>
     </thead>
      </div>
-
-     <tbody className='row5 green'>
+    {name.map((name,index)=>
+     <tbody className='row5 green' key={index}>
       <tr>
       <th>Eng</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{name.ass}</th>
+      <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
+      <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
+      <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
+      
       <th></th>
       <th></th>
 
@@ -108,21 +133,22 @@ const User = () => {
       
       <tr>
       <th>Math</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th onClick={()=>handleSelect("math","ass",index)}>{name.ass}</th>
+      <th onClick={()=>handleSelect("math","ca",index)}>{name.ca}</th>
+      <th onClick={()=>handleSelect("math","test",index)}>{name.test}</th>
+      <th onClick={()=>handleSelect("math","exam",index)}>{name.exam}</th>
+       <th></th>
       <th></th>
 
       </tr>
       
       <tr>
       <th>Chem</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th onClick={()=>handleSelect("chem","ass",index)}>{name.ass}</th>
+      <th onClick={()=>handleSelect("chem","ca",index)}>{name.ca}</th>
+      <th onClick={()=>handleSelect("chem","test",index)}>{name.test}</th>
+      <th onClick={()=>handleSelect("chem","exam",index)}>{name.exam}</th>
+      
       <th></th>
       <th></th>
 
@@ -130,27 +156,27 @@ const User = () => {
       
       <tr>
       <th>Phy</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th onClick={()=>handleSelect("phy","ass",index)}>{name.ass}</th>
+      <th onClick={()=>handleSelect("phy","ca",index)}>{name.ca}</th>
+      <th onClick={()=>handleSelect("phy","test",index)}>{name.test}</th>
+      <th onClick={()=>handleSelect("phy","exam",index)}>{name.exam}</th>
+       <th></th>
       <th></th>
 
       </tr>
       
       <tr>
       <th>Bio</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th onClick={()=>handleSelect("bio","ass",index)}>{name.ass}</th>
+      <th onClick={()=>handleSelect("bio","ca",index)}>{name.ca}</th>
+      <th onClick={()=>handleSelect("bio","test",index)}>{name.test}</th>
+      <th onClick={()=>handleSelect("bio","exam",index)}>{name.exam}</th>
       <th></th>
       <th></th>
 
       </tr>
       
-     </tbody>
+     </tbody>)}
      </div>
    </div>
    
