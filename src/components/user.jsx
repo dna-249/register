@@ -22,7 +22,7 @@ const User = () => {
 
   useEffect(() => {
     axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
-         .then((res)=> {alert(res.data.name); setName(res.data)})
+         .then((res)=>  setName(res.data))
          .catch((err)=> console.log(err))
   }, [id])
 
