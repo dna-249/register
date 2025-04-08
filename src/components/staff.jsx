@@ -5,7 +5,7 @@ import {useEffect,useState} from "react"
 import axios from 'axios'
 import User from "./user"
 import {useParams } from "react-router-dom"
-const Staff = ({staff,setBack}) => {
+const Staff = ({setBack}) => {
   const [names,setNames] = useState([])
   const [name,setName] = useState('')
   const [staff,setStaff] = useState('')
@@ -25,7 +25,7 @@ const Staff = ({staff,setBack}) => {
               .then((res)=> {console.log(res.data);setNames(res.data)})
               .catch((err)=> console.log(err))
   
- }, [])
+ }, [id])
  
  
  

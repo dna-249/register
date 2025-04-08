@@ -34,7 +34,7 @@ return (<div>
       <Route path='/staffLogin' element={<StaffLogin />}/>
       <Route path='/managementSignup'element={<ManagementSignup />}/>
       <Route path='/managementLogin'element={<ManagementLogin />}/>
-      <Route path='/staff' element={<Staff />}/>
+      <Route path='/staff/:id' element={<Staff />}/>
       <Route path='/student/:id' element={<Student />}/>
       <Route path='/secret' element={<Secret />}/>
       <Route path='/admission' element={<Admission />}/>
