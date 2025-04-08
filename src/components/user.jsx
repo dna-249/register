@@ -97,11 +97,24 @@ const User = () => {
      <tbody className='row5'>
       <tr>
       <th>Eng</th>
+      </tr>
+      
+      <tr>
       <th>Math</th>
+      </tr>
+      
+      <tr>
       <th>Chem</th>
+      </tr>
+      
+      <tr>
       <th>Phy</th>
+      </tr>
+      
+      <tr>
       <th>Bio</th>
       </tr>
+      
      </tbody>
      </div>
    </div>
