@@ -27,7 +27,7 @@ return (<div>
     <Routes>
       <Route path='/' element={<Login/>}/>
       <Route path='/signUp' element={<SignUp/>}/>
-      <Route path='/user' element={<User />}/>
+      <Route path='/user/:id' element={<User />}/>
       <Route path='/studentSignup' element={<StudentSignup />}/>
       <Route path='/studentLogin' element={<StudentLogin />}/>
       <Route path='/staffSignup' element={<StaffSignup />}/>
