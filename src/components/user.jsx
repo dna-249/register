@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaUser ,FaCheck, FaArrowCircleLeft, FaTimes} from 'react-icons/fa'
-import { Link ,useParams} from 'react-router-dom'
+import { Link ,useParams,useNavigate} from 'react-router-dom'
 import Attendance from "./attendance"
 import Update from "./update"
 import Activity from './activity'
@@ -18,6 +18,7 @@ const User = () => {
   const [isUpdate, setIsUpdate]= useState(true)
 
   const {id} = useParams()
+  const nav  = useNavigate()
 
 
   useEffect(() => {
