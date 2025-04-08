@@ -4,6 +4,7 @@ import { Link ,useParams} from 'react-router-dom'
 import Attendance from "./attendance"
 import Update from "./update"
 import Activity from './activity'
+import axios from "axios"
 
 const User = () => {
   const [select, setSelect]=useState()
