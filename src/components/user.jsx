@@ -101,7 +101,7 @@ const User = () => {
       <th>Chem</th>
       <th>Phy</th>
       <th>Bio</th>
-      <tr>
+      </tr>
      </tbody>
      </div>
    </div>
