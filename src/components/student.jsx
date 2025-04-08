@@ -1,15 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { FaBars, FaUser ,FaCheck, FaPlus, FaTimes} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Activity from './activity'
 import StudentAttendance from './studentAttendance'
 import { useNavigate, useParams } from 'react-router-dom'
+import axios from "axios"
 
 const Student = () => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
+  const [name,setName]=useState()
   const [show,setShow] = useState(0)
-   const name = useParams().name
+  const {id} = useParams()
+
+
+useEffect(() => {
+  axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+       .then((res)=> {alert(res.data.name); setName(res.data)})
+       .catch((err)=> console.log(err))
+}, [id])
+
+
  if(show === 0) return (
     <>
     <div>
@@ -66,9 +77,8 @@ const Student = () => {
     <div>Average</div>
     <div>Percentage</div>
     <div>Grade</div>
-
-     
      </div>
+
      <div className='row5'>
       <div>Eng</div>
       <div>Math</div>

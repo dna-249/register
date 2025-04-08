@@ -28,18 +28,18 @@ const StudentLogin = () => {
 
 
   useEffect(() => {
-  if(typeof users !== "undefined" && users !== "") {handleLogin();}
+  if(typeof users !== "undefined" && users !== "") {handleLogin()}
   }, [users])
 
   useEffect(() => {
-    if(typeof token !== "undefined") {handleVerify();}
+    if(typeof token !== "undefined") {handleVerify()}
   }, [token])
 
   const handleVerify = async(tokens) => {
     await axios.post("https://register-api-cloud.vercel.app/student/verify",{
       name:user,
       header:token
-    }).then(res =>{nav(`/student/${res.data}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert(user + "is not verified");console.log(err)})
+    }).then(res =>{nav(`/student/${res.data._id}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert(user + "is not verified");console.log(err)})
  
   }
   
