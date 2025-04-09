@@ -43,7 +43,7 @@ const Attendance =()=>{
             thu:'d',
             fri:'e'
            })
-                     .then((res)=> console.log(res.data))
+                     .then((res)=> {setIsNew(pre => !pre);console.log(res.data)})
                      .catch((err)=> console.log(err))
               
      }
