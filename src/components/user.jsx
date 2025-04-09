@@ -64,14 +64,14 @@ const handleResult = async(params) => {
  <div  className='three2'>
 
           <div onClick={()=>setShow(3)}>Activity</div>
-        <div onClick={()=>setShow(1)}>Attendance </div>
+        <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>setShow(2)}> Activity</div>
  </div >
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
    <div onClick={()=>setShow(3)}>Activity</div>
-        <div onClick={()=>setShow(1)}>Attendance </div>
+        <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>setShow(2)}> Activity</div>
     </div>)}
  </div>

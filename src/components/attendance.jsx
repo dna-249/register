@@ -1,10 +1,11 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
 import axios from "axios"
+import {useParams,useNavigate} from "react-router-dom"
 
-const Attendance =({datas})=>{
+const Attendance =()=>{
     const [data, setData]= useState(false)
-      const [day, setDay]= useState()
+      const [name, setName]= useState()
       const [select, setSelect]= useState()
       const [key, setKey]= useState()
       const [index, setIndex]= useState()
@@ -13,6 +14,17 @@ const Attendance =({datas})=>{
       const [isNew, setIsNew]= useState(true)
       
       
+      const {id} = useParams()
+      const nav  = useNavigate()
+    
+    
+      useEffect(() => {
+        axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+             .then((res)=>  setName(res.data))
+             .catch((err)=> console.log(err))
+      }, [id])
+    
+
     const handleSelect = (item,key,index) => {
       setKey(key) 
       setIndex(index) 
@@ -50,6 +62,27 @@ const Attendance =({datas})=>{
      
     return (<>
        <div>{isNew? (
+<div className='center'>
+ <div className='bgUser'> 
+ <div className='two'>
+          <h3> STUDENT REGISTER</h3>
+          <div className='click2' onClick={()=>setShow(0)}><FaArrowCircleLeft /></div>
+    </div>     
+  
+     <div ><FaUser className='img'/></div>
+     name: {name?.name}<br />
+     class: <br />
+     Term:
+     
+     
+     <div className='white'>
+       
+         <div>
+           <div style={{display:"grid",justifyContent:"flex-end"}} >
+     <div  className='click'    onClick={()=>setIsNew((pre)=>!pre)}> New </div>
+     </div>
+     <h2>Student Attendance</h2>
+              </div>
         <div>
              <thead>
                     <tr>
@@ -85,7 +118,10 @@ const Attendance =({datas})=>{
              <div onClick={()=>handleRegister(datas._id)}><FaPlus  className='click2'/></div>
                                       
 
-        </div>):(
+        </div>
+        </div>
+ </div>
+   </div>):(
 
         <div> 
             <div >
