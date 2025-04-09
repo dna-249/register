@@ -72,7 +72,7 @@ const handleResult = async(params) => {
     <div className="icons bars">
    <div onClick={()=>setShow(3)}>Activity</div>
         <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
-        <div onClick={()=>setShow(2)}> Activity</div>
+        <div onClick={()=>nav(`/update/${name._id}`)}> Update</div>
     </div>)}
  </div>
  

@@ -66,7 +66,7 @@ const Attendance =()=>{
  <div className='bgUser'> 
  <div className='two'>
           <h3> STUDENT REGISTER</h3>
-          <div className='click2' onClick={()=>setShow(0)}><FaArrowCircleLeft /></div>
+          <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
     </div>     
   
      <div ><FaUser className='img'/></div>
@@ -95,7 +95,7 @@ const Attendance =()=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {name?.attend.map((item,index)=>{return (
+                 {name?.attend.map((item,index)=>{return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
