@@ -95,7 +95,7 @@ const Attendance =()=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {datas.attend.map((item,index)=>{return (
+                {name.attend?.map((item,index)=>{return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
@@ -115,7 +115,7 @@ const Attendance =()=>{
                             
                 )}                 
                                                                                    
-             <div onClick={()=>handleRegister(datas._id)}><FaPlus  className='click2'/></div>
+             <div onClick={()=>handleRegister(id)}><FaPlus  className='click2'/></div>
                                       
 
         </div>
