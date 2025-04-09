@@ -198,8 +198,11 @@ const handleResult = async(params) => {
         const data2 = parseFloat(digit(name.ca));
         const data3 = parseFloat(digit(name.test));
         const data4 = parseFloat(digit(name.exam));
-           const arr =[data1,data2,data3,data4]
+        const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
+
+       const percent = (total) =>{return (total/100)*100 +"%"}
+       const percents = percent(total)
         return (
      
       
@@ -210,7 +213,7 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("phy","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("phy","exam",index)}>{name.exam}</th>
       <th>{total}</th>
-      <th></th>
+      <th>{percents}</th>
 
       </tr>
      )})}
