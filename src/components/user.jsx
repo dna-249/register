@@ -18,6 +18,7 @@ const User = () => {
   const [isUpdate, setIsUpdate]= useState(true)
   const [object, setObject]= useState()
   const [key, setKey]= useState()
+  const [total, setTotal]= useState(0)
   const [value, setValue]= useState()
   const [index, setIndex]= useState()
       
@@ -118,7 +119,7 @@ const handleResult = async(params) => {
     </thead>
      </div>
      <div className='row5 green'>
-    {name.Eng?.map((name,index)=> {const total =eval(name.ass + name.ca + name.test + name.exam) 
+    {name.Eng?.map((name,index)=> { setTotal(()=>name.ass + name.ca + name.test + name.exam)
                              return (
      
       <tr  key={index}>
