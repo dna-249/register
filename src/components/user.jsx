@@ -201,7 +201,7 @@ const handleResult = async(params) => {
         const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
 
-       const percent = (total) =>{return (total/100)*100 +"%"}
+       const percent = (total) =>{return (100-total/100)*100 +"%"}
        const percents = percent(total)
         return (
      
