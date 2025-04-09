@@ -58,8 +58,6 @@ const Update =()=>{
      
      
      <div className='white'> 
-          <div style={{display:"grid",justifyContent:"flex-end"}}>
-  </div>
   <h3>Student Attendance Updating</h3>
           
  
@@ -94,7 +92,9 @@ const Update =()=>{
               </div></div>
               </div>):(
 
-        <div> 
+<div className='center'>
+<div className='bgUser'> 
+
           <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
     <div  className='click'  onClick={()=>setIsNew(true)}> BAck </div>
     </div>
@@ -105,6 +105,7 @@ const Update =()=>{
          
            <div className='two '>
                 </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Delete</div>
+                </div>
                 </div>
         </div>)}
     </div>

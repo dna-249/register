@@ -6,7 +6,7 @@ import {useParams,useNavigate} from "react-router-dom"
 const Attendance =()=>{
     const [data, setData]= useState(false)
       const [name, setName]= useState()
-      const [select, setSelect]= useState()
+      const [select, setSelect]= useState(false)
       const [key, setKey]= useState()
       const [index, setIndex]= useState()
       const [select2, setSelect2]= useState()
@@ -15,14 +15,14 @@ const Attendance =()=>{
       
       
       const {id} = useParams()
-      const nav  = useNavigate()
+      const nav   = useNavigate()
     
     
       useEffect(() => {
         axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
              .then((res)=>  setName(res.data))
              .catch((err)=> console.log(err))
-      }, [id, isNew])
+      }, [id, isNew,select])
     
 
     const handleSelect = (item,key,index) => {
@@ -43,7 +43,7 @@ const Attendance =()=>{
             thu:'d',
             fri:'e'
            })
-                     .then((res)=> {setIsNew(pre => !pre);console.log(res.data)})
+                     .then((res)=> {setSelect(pre => !pre);console.log(res.data)})
                      .catch((err)=> console.log(err))
               
      }
@@ -78,10 +78,7 @@ const Attendance =()=>{
      <div className='white'>
        
          <div>
-           <div style={{display:"grid",justifyContent:"flex-end"}} >
-     <div  className='click'    onClick={()=>setIsNew((pre)=>!pre)}> New </div>
-     </div>
-     <h2>Student Attendance</h2>
+            <h2>Student Attendance</h2>
               </div>
         <div>
              <thead>
