@@ -55,7 +55,7 @@ const Attendance =()=>{
            await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/attend/${index}/${key}`,{
             value:select3
            })
-                     .then((res)=>{ <a href="#" />; console.log(res.data)})
+                     .then((res)=>{alert("Save successfully"); console.log(res.data)})
                      .catch((err)=> console.log(err))
      }
     
@@ -136,7 +136,7 @@ const Attendance =()=>{
            <div className='two '>
                <div className='click' onClick={()=>{setData(false); setSelect3(1)}}>{data? (<div></div>):(<div className='green2'><FaCheck/></div>)}</div>
                <div style={{justifySelf:"flex-start"}} className='click' onClick={()=>{setData(true); setSelect3(0)}}>{data? (<div className='red2'><FaTimes/></div>):(<div></div>)}</div>
-                </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Save Attendance</div>
+                </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}><a href="#">Save Attendance</a></div>
                 </div>
         </div>)}
     </div>
