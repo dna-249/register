@@ -95,7 +95,7 @@ const Attendance =()=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {name.attend?.map((item,index)=>{return (
+                {name?.attend.map((item,index)=>{return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
