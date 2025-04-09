@@ -118,7 +118,8 @@ const handleResult = async(params) => {
     </thead>
      </div>
      <div className='row5 green'>
-    {name.Eng?.map((name,index)=> {return (
+    {name.Eng?.map((name,index)=> {const total = name.ass + name.ca + test + exam 
+                             return (
      
       <tr  key={index}>
       <th>Eng</th>
@@ -126,8 +127,7 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
-      
-      <th></th>
+      <th>{total}</th>
       <th></th>
 
       </tr>
