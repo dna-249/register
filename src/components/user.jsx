@@ -118,9 +118,14 @@ const handleResult = async(params) => {
     </thead>
      </div>
      <div className='row5 green'>
-    {name.Eng?.map((name,index)=> { const data = [name.ass, name.ca , name.test , name.exam]
+    {name.Eng?.map((name,index)=> { const data1 = parseInt(name.ass);
+                                     const data2 = parseInt(name.ca);
+                                     const data3 = parseInt(name.test);
+                                     const data4 = parseInt(name.exam);
+                                      
+                                     const arr =[data1,data2,data3,data4]
                                     
-                                       const total = data.reduce((sum,current)=>{return sum + current},0)
+                                       const total = arr.reduce((sum,current)=>{return sum + current},0)
                                      
                                        return (
      
