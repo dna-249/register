@@ -118,16 +118,16 @@ const handleResult = async(params) => {
     </thead>
      </div>
      <div className='row5 green'>
-    {name.Eng?.map((name,index)=> { const data1 = parseInt(name.ass);
-                                     const data2 = parseInt(name.ca);
-                                     const data3 = parseInt(name.test);
-                                     const data4 = parseInt(name.exam);
-                                      
-                                     const arr =[data1,data2,data3,data4]
-                                    
-                                       const total = arr.reduce((sum,current)=>{return sum + current},0)
-                                     
-                                       return (
+    {name.Eng?.map((name,index)=> { 
+      const data1 = parseInt(name.ass);
+      const data2 = parseInt(name.ca);
+      const data3 = parseInt(name.test);
+      const data4 = parseInt(name.exam);
+      const arr =[data1,data2,data3,data4]
+     const total = arr.reduce((sum,current)=>
+      {return sum + current},0)
+      
+      return (
      
       <tr  key={index}>
       <th>Eng</th>
@@ -140,7 +140,15 @@ const handleResult = async(params) => {
 
       </tr>
       )})}
-      {name.math?.map((name,index)=> {return (
+      {name.math?.map((name,index)=> {
+        const data1 = parseInt(name.ass);
+        const data2 = parseInt(name.ca);
+        const data3 = parseInt(name.test);
+        const data4 = parseInt(name.exam);
+        const arr =[data1,data2,data3,data4]
+       const total = arr.reduce((sum,current)=>{return sum + current},0)
+        
+        return (
     
       
       <tr key={index}>
@@ -154,7 +162,15 @@ const handleResult = async(params) => {
 
       </tr>
      )})}
-      {name.chem?.map((name,index)=> {return (
+      {name.chem?.map((name,index)=> {
+        
+        const data1 = parseInt(name.ass);
+        const data2 = parseInt(name.ca);
+        const data3 = parseInt(name.test);
+        const data4 = parseInt(name.exam);
+        const arr =[data1,data2,data3,data4]
+      const total = arr.reduce((sum,current)=>{return sum + current},0)
+        return (
      
       
       <tr key={index}>
@@ -169,7 +185,14 @@ const handleResult = async(params) => {
 
       </tr>
       )})}
-      {name.phy?.map((name,index)=> {return (
+      {name.phy?.map((name,index)=> {
+        const data1 = parseInt(name.ass);
+        const data2 = parseInt(name.ca);
+        const data3 = parseInt(name.test);
+        const data4 = parseInt(name.exam);
+        const arr =[data1,data2,data3,data4]
+       const total = arr.reduce((sum,current)=>{return sum + current},0)
+        return (
      
       
       <tr key={index}>
@@ -183,7 +206,14 @@ const handleResult = async(params) => {
 
       </tr>
      )})}
-      {name.bio?.map((name,index)=> {return (
+      {name.bio?.map((name,index)=> {
+        const data1 = parseInt(name.ass);
+        const data2 = parseInt(name.ca);
+        const data3 = parseInt(name.test);
+        const data4 = parseInt(name.exam);
+        const arr =[data1,data2,data3,data4]
+       const total = arr.reduce((sum,current)=>{return sum + current},0)
+        return (
      
       
       <tr key={index}>
