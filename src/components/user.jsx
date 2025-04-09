@@ -157,7 +157,7 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("math","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("math","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("math","exam",index)}>{name.exam}</th>
-       <th></th>
+      <th>{total}</th>
       <th></th>
 
       </tr>
@@ -179,8 +179,7 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("chem","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("chem","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("chem","exam",index)}>{name.exam}</th>
-      
-      <th></th>
+      <th>{total}</th>
       <th></th>
 
       </tr>
@@ -201,7 +200,7 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("phy","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("phy","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("phy","exam",index)}>{name.exam}</th>
-       <th></th>
+      <th>{total}</th>
       <th></th>
 
       </tr>
@@ -222,7 +221,7 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("bio","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("bio","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("bio","exam",index)}>{name.exam}</th>
-      <th></th>
+      <th>{total}</th>
       <th></th>
 
       </tr>
