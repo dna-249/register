@@ -117,8 +117,9 @@ const handleResult = async(params) => {
     </tr>
     </thead>
      </div>
+     <div className='row5 green'>
     {name.Eng?.map((name,index)=> {return (
-     <tbody className='row5 green' key={index}>
+     
       <tr>
       <th>Eng</th>
       <th onClick={()=>handleSelect("Eng","ass",index)}>{name.ass}</th>
@@ -130,9 +131,9 @@ const handleResult = async(params) => {
       <th></th>
 
       </tr>
-      </tbody>)})}
+      )})}
       {name.math?.map((name,index)=> {return (
-     <tbody className='row5 green' key={index}>
+    
       
       <tr>
       <th>Math</th>
@@ -144,9 +145,9 @@ const handleResult = async(params) => {
       <th></th>
 
       </tr>
-      </tbody>)})}
+     )})}
       {name.chem?.map((name,index)=> {return (
-     <tbody className='row5 green' key={index}>
+     
       
       <tr>
       <th>Chem</th>
@@ -159,9 +160,9 @@ const handleResult = async(params) => {
       <th></th>
 
       </tr>
-      </tbody>)})}
+      )})}
       {name.phy?.map((name,index)=> {return (
-     <tbody className='row5 green' key={index}>
+     
       
       <tr>
       <th>Phy</th>
@@ -173,9 +174,9 @@ const handleResult = async(params) => {
       <th></th>
 
       </tr>
-      </tbody>)})}
+     )})}
       {name.bio?.map((name,index)=> {return (
-     <tbody className='row5 green' key={index}>
+     
       
       <tr>
       <th>Bio</th>
@@ -188,9 +189,9 @@ const handleResult = async(params) => {
 
       </tr>
       
-     </tbody>)})}
+     )})}
      </div>
-   </div>
+   </div></div>
    
 </div></div>
 </div>
