@@ -13,7 +13,7 @@ const User = () => {
   const [data, setData]= useState(false)
   const [day, setDay]= useState()
   const [next, setNext]= useState()
-  const [name, setName]= useState()
+  const [name, setName]= useState([''])
   const [isNew, setIsNew]= useState(false)
   const [isUpdate, setIsUpdate]= useState(true)
   const [object, setObject]= useState()
