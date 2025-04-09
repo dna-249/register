@@ -123,8 +123,8 @@ const Attendance =()=>{
  </div>
    </div>):(
 
-        <div> 
-            <div >
+<div className='center'>
+ <div className='bgUser'> 
           <h3>
             {data === false && <div>Nuraalhaji Present</div>}{data === true && <div className='red'>Nuralhaji Absent</div>} 
             <br />{Date().slice(0,21)}</h3>
