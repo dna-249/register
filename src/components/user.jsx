@@ -118,7 +118,7 @@ const handleResult = async(params) => {
     </thead>
      </div>
      <div className='row5 green'>
-    {name.Eng?.map((name,index)=> {const total = name.ass + name.ca + test + exam 
+    {name.Eng?.map((name,index)=> {const total = name.ass + name.ca + name.test + name.exam 
                              return (
      
       <tr  key={index}>
