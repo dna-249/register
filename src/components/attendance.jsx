@@ -55,7 +55,7 @@ const Attendance =()=>{
            await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/attend/${index}/${key}`,{
             value:select3
            })
-                     .then((res)=>{alert("Save successfully");setIsNew(pre => !pre); console.log(res.data)})
+                     .then((res)=>{setIsNew(pre => !pre); console.log(res.data)})
                      .catch((err)=> console.log(err))
      }
     
