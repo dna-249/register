@@ -117,7 +117,7 @@ const handleResult = async(params) => {
     </tr>
     </thead>
      </div>
-    {name.map((name,index)=>
+    {name?.map((name,index)=>
      <tbody className='row5 green' key={index}>
       <tr>
       <th>Eng</th>
