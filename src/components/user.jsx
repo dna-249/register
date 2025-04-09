@@ -117,8 +117,8 @@ const handleResult = async(params) => {
     </tr>
     </thead>
      </div>
-    {name?.map((name,index)=>
-     <tbody className='row5 green' key={index}>
+    {name?.map((name,index)=> <div  key={index}>
+     <tbody className='row5 green'>
       <tr>
       <th>Eng</th>
       <th onClick={()=>handleSelect("Eng","ass",index)}>{name.ass}</th>
@@ -176,7 +176,7 @@ const handleResult = async(params) => {
 
       </tr>
       
-     </tbody>)}
+     </tbody> </div>)}
      </div>
    </div>
    
