@@ -48,7 +48,7 @@ const handleResult = async(params) => {
                        .catch((err)=> console.log(err))
 }
 
- if(show === 0) return (
+  return (
     <>
     <div>
        <div>
@@ -64,9 +64,9 @@ const handleResult = async(params) => {
  <div  className='three2'>
 
           <div onClick={()=>setShow(3)}>Activity</div>
-        <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
-        <div onClick={()=>setShow(2)}> Activity</div>
- </div >
+          <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
+        <div onClick={()=>nav(`/update/${name._id}`)}> Update</div>
+    </div >
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
@@ -248,78 +248,6 @@ const handleResult = async(params) => {
 </div>
 </div>
   </>)
-
- else if(show === 1) return (
-  <>
-  <div className='center'>
- <div className='bgUser'> 
- <div className='two'>
-          <h3> STUDENT REGISTER</h3>
-          <div className='click2' onClick={()=>setShow(0)}><FaArrowCircleLeft /></div>
-    </div>     
-  
-     <div ><FaUser className='img'/></div>
-     name: {name?.name}<br />
-     class: <br />
-     Term:
-     
-     
-     <div className='white'> {isNew?(
-       
-         <div>
-           <div style={{display:"grid",justifyContent:"flex-end"}} >
-     <div  className='click'    onClick={()=>setIsNew((pre)=>!pre)}> New </div>
-     </div>
-     <h2>Student Attendance</h2>
-           
-                              <Attendance setBack={setShow} datas ={name}  setIsNews ={setIsNew} />
-           </div>):isUpdate?(
-         <div style={{padding:"5px"}}>
-           <div style={{width:"fit-content",}} className='three'>
-     <div  className='click2'  onClick={()=>setIsNew((pre)=>!pre)}> Attendance</div>
-     <div className='click2' onClick={()=>setIsUpdate((pre)=>!pre)}>Update </div>
-     <div  className='click2'  onClick={()=>setChange(()=> change + 1)}>New </div>
-     </div>
-           <h2>
-             {data === false && <div>{name?.name} Present</div>}{data === true && <div className='red'>{name?.name} Absent</div>} 
-             <br />{Date().slice(0,21)}</h2>
-     <label htmlFor=""> 
-         Mon
-         <input checked={day === "Mon"} onChange={(e)=>setDay(e.target.value)} value="Mon"  type='radio' />
-         Tue
-         <input checked={day === "Tue"} onChange={(e)=>setDay(e.target.value)} value="Tue" type='radio' />
-         Wed
-         <input checked={day === "Wed"} onChange={(e)=>setDay(e.target.value)} value="Wed" type='radio' />
-         Thu
-         <input checked={day === "Thu"} onChange={(e)=>setDay(e.target.value)} value="Thu" type='radio' />
-         Fri
-         <input checked={day === "Fri"} onChange={(e)=>setDay(e.target.value)} value="Fri" type='radio' />
-        
-     </label>
-    <div className='two'>
-     <div style={{justifySelf:"flex-end",display:"grid",marginRight:"40px"}}>Present</div>
-     <div> Absent</div>
-    </div>
-     <div className='two '>
-         <div className='click' onClick={()=>setData(pre => !pre)}>{data? (<div></div>):(<div className='green2'><FaCheck/></div>)}</div>
-         <div style={{justifySelf:"flex-start"}} className='click' onClick={()=>setData(pre => !pre)}>{data? (<div className='red2'><FaTimes/></div>):(<div></div>)}</div>
-          </div> <div style={{width :"200px",justifySelf:"center" }} className='click save'  onClick={()=>name()}>Save Attendance</div>
-          </div>):( 
-          <div>
-                 <Update datas={name}   setIsNews ={setIsNew}/>
-          </div>  )}
-     </div>
- </div>
-   </div></>
-)
- else if(show === 2) return(
-  <div>
-    <Activity setBack={setShow} names={name} />
-  </div>
-)
-
-
-
 }
 
 export default User
