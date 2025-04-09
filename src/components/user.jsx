@@ -120,7 +120,7 @@ const handleResult = async(params) => {
      <div className='row5 green'>
     {name.Eng?.map((name,index)=> { 
                   
-      const digit = (name)=>{if(name ==="") return "0";else return name}
+      const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
       const data1 = parseFloat(digit(name.ass));
       const data2 = parseFloat(digit(name.ca));
@@ -144,7 +144,7 @@ const handleResult = async(params) => {
       </tr>
       )})}
       {name.math?.map((name,index)=> {
-        const digit = (name)=>{if(name ==="") return "0";else return name}
+        const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
         const data1 = parseFloat(digit(name.ass));
         const data2 = parseFloat(digit(name.ca));
@@ -169,7 +169,7 @@ const handleResult = async(params) => {
      )})}
       {name.chem?.map((name,index)=> {
         
-        const digit = (name)=>{if(name ==="") return "0";else return name}
+        const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
         const data1 = parseFloat(digit(name.ass));
         const data2 = parseFloat(digit(name.ca));
@@ -192,7 +192,7 @@ const handleResult = async(params) => {
       </tr>
       )})}
       {name.phy?.map((name,index)=> {
-        const digit = (name)=>{if(name ==="") return "0";else return name}
+        const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
         const data1 = parseFloat(digit(name.ass));
         const data2 = parseFloat(digit(name.ca));
@@ -215,7 +215,7 @@ const handleResult = async(params) => {
       </tr>
      )})}
       {name.bio?.map((name,index)=> {
-        const digit = (name)=>{if(name ==="") return "0";else return name}
+        const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
         const data1 = parseFloat(digit(name.ass));
         const data2 = parseFloat(digit(name.ca));
