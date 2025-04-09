@@ -52,10 +52,10 @@ const Attendance =()=>{
     
     
     const handleSave = async()=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/set/${datas._id}/attend/${index}/${key}`,{
+           await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/attend/${index}/${key}`,{
             value:select3
            })
-                     .then((res)=> console.log(res.data))
+                     .then((res)=>{nav(`/attendance/${id}`); console.log(res.data)})
                      .catch((err)=> console.log(err))
      }
     
