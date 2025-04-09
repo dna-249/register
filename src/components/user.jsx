@@ -117,7 +117,7 @@ const handleResult = async(params) => {
     </tr>
     </thead>
      </div>
-    {name?.Eng.map((name,index)=> {return (
+    {name.Eng?.map((name,index)=> {return (
      <tbody className='row5 green' key={index}>
       <tr>
       <th>Eng</th>
@@ -131,7 +131,7 @@ const handleResult = async(params) => {
 
       </tr>
       </tbody>)})}
-      {name?.math.map((name,index)=> {return (
+      {name.math?.map((name,index)=> {return (
      <tbody className='row5 green' key={index}>
       
       <tr>
@@ -145,7 +145,7 @@ const handleResult = async(params) => {
 
       </tr>
       </tbody>)})}
-      {name?.chem.map((name,index)=> {return (
+      {name.chem?.map((name,index)=> {return (
      <tbody className='row5 green' key={index}>
       
       <tr>
@@ -160,7 +160,7 @@ const handleResult = async(params) => {
 
       </tr>
       </tbody>)})}
-      {name?.phy.map((name,index)=> {return (
+      {name.phy?.map((name,index)=> {return (
      <tbody className='row5 green' key={index}>
       
       <tr>
@@ -174,7 +174,7 @@ const handleResult = async(params) => {
 
       </tr>
       </tbody>)})}
-      {name?.bio.map((name,index)=> {return (
+      {name.bio?.map((name,index)=> {return (
      <tbody className='row5 green' key={index}>
       
       <tr>
