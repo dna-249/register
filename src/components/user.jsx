@@ -120,7 +120,7 @@ const handleResult = async(params) => {
      <div className='row5 green'>
     {name.Eng?.map((name,index)=> {return (
      
-      <tr>
+      <tr  key={index}>
       <th>Eng</th>
       <th onClick={()=>handleSelect("Eng","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
@@ -135,7 +135,7 @@ const handleResult = async(params) => {
       {name.math?.map((name,index)=> {return (
     
       
-      <tr>
+      <tr key={index}>
       <th>Math</th>
       <th onClick={()=>handleSelect("math","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("math","ca",index)}>{name.ca}</th>
@@ -149,7 +149,7 @@ const handleResult = async(params) => {
       {name.chem?.map((name,index)=> {return (
      
       
-      <tr>
+      <tr key={index}>
       <th>Chem</th>
       <th onClick={()=>handleSelect("chem","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("chem","ca",index)}>{name.ca}</th>
@@ -164,7 +164,7 @@ const handleResult = async(params) => {
       {name.phy?.map((name,index)=> {return (
      
       
-      <tr>
+      <tr key={index}>
       <th>Phy</th>
       <th onClick={()=>handleSelect("phy","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("phy","ca",index)}>{name.ca}</th>
@@ -178,7 +178,7 @@ const handleResult = async(params) => {
       {name.bio?.map((name,index)=> {return (
      
       
-      <tr>
+      <tr key={index}>
       <th>Bio</th>
       <th onClick={()=>handleSelect("bio","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("bio","ca",index)}>{name.ca}</th>
