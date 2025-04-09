@@ -55,7 +55,7 @@ const Attendance =()=>{
            await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/attend/${index}/${key}`,{
             value:select3
            })
-                     .then((res)=>{nav(`/attendance/${id}`); console.log(res.data)})
+                     .then((res)=>{ <a href="" />; console.log(res.data)})
                      .catch((err)=> console.log(err))
      }
     
