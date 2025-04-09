@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react"
-import { FaPlus,FaTimes,FaCheck, FaDatabase, } from "react-icons/fa"
+import { FaArrowCircleLeft,FaTimes,FaCheck, FaDatabase, } from "react-icons/fa"
 import axios from "axios"
 import { useParams,useNavigate } from "react-router-dom"
 
@@ -48,7 +48,7 @@ const Update =()=>{
  <div className='bgUser'> 
  <div className='two'>
           <h3> STUDENT REGISTER</h3>
-          <div className='click2' onClick={()=>setShow(0)}><FaArrowCircleLeft /></div>
+          <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
     </div>     
   
      <div ><FaUser className='img'/></div>
