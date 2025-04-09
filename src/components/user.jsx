@@ -119,10 +119,13 @@ const handleResult = async(params) => {
      </div>
      <div className='row5 green'>
     {name.Eng?.map((name,index)=> { 
-      const data1 = parseFloat(()=>{if(name.ass ==="") return "0";else return name.ass});
-      const data2 = parseFloat(()=>{if(name.ca ==="") return "0";else return name.ca});
-      const data3 = parseFloat(()=>{if(name.test ==="") return "0";else return name.test});
-      const data4 = parseFloat(()=>{if(name.exam ==="") return "0";else return name.exam});
+                  
+      const digit = (name)=>{if(name ==="") return "0";else return name}
+
+      const data1 = parseFloat(digit(name.ass));
+      const data2 = parseFloat(digit(name.ca));
+      const data3 = parseFloat(digit(name.test));
+      const data4 = parseFloat(digit(name.exam));
         const arr =[data1,data2,data3,data4]
      const total = arr.reduce((sum,current)=>
       {return sum + current},0)
@@ -141,10 +144,12 @@ const handleResult = async(params) => {
       </tr>
       )})}
       {name.math?.map((name,index)=> {
-        const data1 = parseFloat(()=>{if(name.ass ==="") return "0";else return name.ass});
-        const data2 = parseFloat(()=>{if(name.ca ==="") return "0";else return name.ca});
-        const data3 = parseFloat(()=>{if(name.test ==="") return "0";else return name.test});
-        const data4 = parseFloat(()=>{if(name.exam ==="") return "0";else return name.exam});
+        const digit = (name)=>{if(name ==="") return "0";else return name}
+
+        const data1 = parseFloat(digit(name.ass));
+        const data2 = parseFloat(digit(name.ca));
+        const data3 = parseFloat(digit(name.test));
+        const data4 = parseFloat(digit(name.exam));
          const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
         
@@ -164,11 +169,13 @@ const handleResult = async(params) => {
      )})}
       {name.chem?.map((name,index)=> {
         
-        const data1 = parseFloat(()=>{if(name.ass ==="") return "0";else return name.ass});
-        const data2 = parseFloat(()=>{if(name.ca ==="") return "0";else return name.ca});
-        const data3 = parseFloat(()=>{if(name.test ==="") return "0";else return name.test});
-        const data4 = parseFloat(()=>{if(name.exam ==="") return "0";else return name.exam});
-         const arr =[data1,data2,data3,data4]
+        const digit = (name)=>{if(name ==="") return "0";else return name}
+
+        const data1 = parseFloat(digit(name.ass));
+        const data2 = parseFloat(digit(name.ca));
+        const data3 = parseFloat(digit(name.test));
+        const data4 = parseFloat(digit(name.exam));
+          const arr =[data1,data2,data3,data4]
       const total = arr.reduce((sum,current)=>{return sum + current},0)
         return (
      
@@ -185,11 +192,13 @@ const handleResult = async(params) => {
       </tr>
       )})}
       {name.phy?.map((name,index)=> {
-        const data1 = parseFloat(()=>{if(name.ass ==="") return "0";else return name.ass});
-        const data2 = parseFloat(()=>{if(name.ca ==="") return "0";else return name.ca});
-        const data3 = parseFloat(()=>{if(name.test ==="") return "0";else return name.test});
-        const data4 = parseFloat(()=>{if(name.exam ==="") return "0";else return name.exam});
-         const arr =[data1,data2,data3,data4]
+        const digit = (name)=>{if(name ==="") return "0";else return name}
+
+        const data1 = parseFloat(digit(name.ass));
+        const data2 = parseFloat(digit(name.ca));
+        const data3 = parseFloat(digit(name.test));
+        const data4 = parseFloat(digit(name.exam));
+           const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
         return (
      
@@ -206,10 +215,12 @@ const handleResult = async(params) => {
       </tr>
      )})}
       {name.bio?.map((name,index)=> {
-        const data1 = parseFloat(()=>{if(name.ass ==="") return "0";else return name.ass});
-        const data2 = parseFloat(()=>{if(name.ca ==="") return "0";else return name.ca});
-        const data3 = parseFloat(()=>{if(name.test ==="") return "0";else return name.test});
-        const data4 = parseFloat(()=>{if(name.exam ==="") return "0";else return name.exam});
+        const digit = (name)=>{if(name ==="") return "0";else return name}
+
+        const data1 = parseFloat(digit(name.ass));
+        const data2 = parseFloat(digit(name.ca));
+        const data3 = parseFloat(digit(name.test));
+        const data4 = parseFloat(digit(name.exam));
         const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
         return (
