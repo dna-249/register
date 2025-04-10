@@ -36,7 +36,7 @@ const User = () => {
     setKey(key) 
     setIndex(index) 
     setObject(object)
-    setShow((prev) => !prev)
+    setShow(false)
     
   }
 
@@ -45,7 +45,7 @@ const handleResult = async(params) => {
    await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/${object}/${index}/${key}`,{
               value:value
              })
-                       .then((res)=>{setIsUpdate(pre => !pre); console.log(res.data)})
+                       .then((res)=>{setIsUpdate(pre => !pre);setShow(true); console.log(res.data)})
                        .catch((err)=> console.log(err))
 }
 
