@@ -69,25 +69,213 @@ useEffect(() => {
     </select></div>
     </div>  
     <div className='scroll'>
-      <div className='seven'> 
-    <div>Subjects</div>  
-    <div>C/A</div>
-    <div>Exam</div>
-    <div>Total</div>
-    <div>Average</div>
-    <div>Percentage</div>
-    <div>Grade</div>
+      <div className='seven'>
+        <thead>
+          <tr> 
+    <th>Subjects</th>  
+    <th>Ass</th>
+    <th>C/A</th>
+    <th>Test</th>
+    <th>Exam</th>
+    <th>Total</th>
+    <th>Percentage</th>
+    <th>Grade</th>
+    </tr>
+    </thead>
      </div>
+     <div className='row5 green'>
+    {name.Eng?.map((name,index)=> { 
+                  
+    const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
-     <div className='row5'>
-      <div>Eng</div>
-      <div>Math</div>
-      <div>Chem</div>
-      <div>Phy</div>
-      <div>Bio</div>
+    const data1 = Number(digit(name.ass));
+    const data2 = Number(digit(name.ca));
+    const data3 = Number(digit(name.test));
+    const data4 = Number(digit(name.exam));
+    const arr =[data1,data2,data3,data4]
+    const total = arr.reduce((sum,current)=>{return sum + current},0)
+      
+     const percent = (total) =>{return (total/100)*100 +"%"}
+     const percents = percent(total)
+     const grade =(total)=>{    
+                           if(total <= 40) return "F";
+                      else if(total <= 55) return "E";
+                      else if(total <= 65) return "D";
+                      else if(total <= 75) return "C";
+                      else if(total <= 85) return "B";
+                      else if(total <= 100) return "A";
+                      else if(total > 100) return "A+";
+                       }
+    const grades = grade(total)
+       
+      return (
+     
+      <tr  key={index}>
+      <th>Eng</th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input type='number'value={value && value || name.ass} width={100} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
+      <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
+      <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
+      <th>{total}</th>
+      <th>{percents}</th>
+       <th>{grades}</th>
+      </tr>
+      )})}
+      {name.math?.map((name,index)=> {
+        const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
+
+        const data1 = Number(digit(name.ass));
+        const data2 = Number(digit(name.ca));
+        const data3 = Number(digit(name.test));
+        const data4 = Number(digit(name.exam));
+         const arr =[data1,data2,data3,data4]
+       const total = arr.reduce((sum,current)=>{return sum + current},0)
+
+       const percent = (total) =>{return (total/100)*100 +"%"}
+       const percents = percent(total)
+
+       const grade =(total)=>{    
+        if(total <= 40) return "F";
+   else if(total <= 55) return "E";
+   else if(total <= 65) return "D";
+   else if(total <= 75) return "C";
+   else if(total <= 85) return "B";
+   else if(total <= 100) return "A";
+   else if(total > 100) return "A+";
+                       }
+   const grades = grade(total)
+        
+        return (
+    
+      
+      <tr key={index}>
+      <th>Math</th>
+      <th >{name.ass}</th>
+      <th>{name.ca}</th>
+      <th >{name.test}</th>
+      <th >{name.exam}</th>
+      <th>{total}</th>
+      <th>{percents}</th>
+       <th>{grades}</th>
+      </tr>
+     )})}
+      {name.chem?.map((name,index)=> {
+        
+        const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
+
+        const data1 = Number(digit(name.ass));
+        const data2 = Number(digit(name.ca));
+        const data3 = Number(digit(name.test));
+        const data4 = Number(digit(name.exam));
+          const arr =[data1,data2,data3,data4]
+      const total = arr.reduce((sum,current)=>{return sum + current},0)
+
+      const percent = (total) =>{return (total/100)*100 +"%"}
+       const percents = percent(total)
+
+       const grade =(total)=>{    
+                           if(total <= 40) return "F";
+                      else if(total <= 55) return "E";
+                      else if(total <= 65) return "D";
+                      else if(total <= 75) return "C";
+                      else if(total <= 85) return "B";
+                      else if(total <= 100) return "A";
+                      else if(total > 100) return "A+";
+                       }
+                       const grades = grade(total)
+       
+        return (
+     
+      
+      <tr key={index}>
+      <th>Chem</th>
+      <th >{name.ass}</th>
+      <th>{name.ca}</th>
+      <th >{name.test}</th>
+      <th >{name.exam}</th> 
+      <th>{total}</th>
+      <th>{percents}</th>
+       <th>{grades}</th>
+      </tr>
+      )})}
+      {name.phy?.map((name,index)=> {
+        const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
+
+        const data1 = Number(digit(name.ass));
+        const data2 = Number(digit(name.ca));
+        const data3 = Number(digit(name.test));
+        const data4 = Number(digit(name.exam));
+        const arr =[data1,data2,data3,data4]
+       const total = arr.reduce((sum,current)=>{return sum + current},0)
+
+       const percent = (total) =>{return (total/100)*100 +"%"}
+       const percents = percent(total)
+
+       const grade =(total)=>{    
+                          if(total <= 40) return "F";
+                    else if(total <= 55) return "E";
+                    else if(total <= 65) return "D";
+                    else if(total <= 75) return "C";
+                    else if(total <= 85) return "B";
+                    else if(total <= 100) return "A";
+                      else if(total > 100) return "A+";
+                       }
+                  const grades = grade(total)
+                          return (
+     
+      
+      <tr key={index}>
+      <th>Phy</th>
+      <th >{name.ass}</th>
+      <th>{name.ca}</th>
+      <th >{name.test}</th>
+      <th >{name.exam}</th>
+         <th>{total}</th>
+      <th>{percents}</th>
+       <th>{grades}</th>
+      </tr>
+     )})}
+      {name.bio?.map((name,index)=> {
+        const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
+
+        const data1 = Number(digit(name.ass));
+        const data2 = Number(digit(name.ca));
+        const data3 = Number(digit(name.test));
+        const data4 = Number(digit(name.exam));
+        const arr =[data1,data2,data3,data4]
+       const total = arr.reduce((sum,current)=>{return sum + current},0)
+
+       const percent = (total) =>{return (total/100)*100 +"%"}
+       const percents = percent(total)
+
+       const grade =(total)=>{    
+        if(total <= 40) return "F";
+   else if(total <= 55) return "E";
+   else if(total <= 65) return "D";
+   else if(total <= 75) return "C";
+   else if(total <= 85) return "B";
+   else if(total <= 100) return "A";
+   else if(total < 100) return "A+";
+    }
+   const grades = grade(total)
+       
+        return (
+     
+      
+      <tr key={index}>
+      <th>Bio</th>
+      <th >{name.ass}</th>
+      <th>{name.ca}</th>
+      <th >{name.test}</th>
+      <th >{name.exam}</th>
+        <th>{total}</th>
+      <th>{percents}</th>
+        <th>{grades}</th>
+      </tr>
+      
+     )})}
      </div>
-     </div>
-   </div>
+   </div></div>
    
 </div></div>
 </div>
