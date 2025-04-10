@@ -30,7 +30,7 @@ const User = () => {
     axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
          .then((res)=>  setName(res.data))
          .catch((err)=> console.log(err))
-  }, [id])
+  }, [id,isUpdate])
 
   const handleSelect = (object,key,index) => {
     setKey(key) 
@@ -44,7 +44,7 @@ const handleResult = async(params) => {
    await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/${object}/${index}/${key}`,{
               value:value
              })
-                       .then((res)=> console.log(res.data))
+                       .then((res)=>{setIsUpdate(pre => !pre); console.log(res.data)})
                        .catch((err)=> console.log(err))
 }
 
@@ -121,10 +121,10 @@ const handleResult = async(params) => {
                   
     const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
-    const data1 = parseFloat(digit(name.ass));
-    const data2 = parseFloat(digit(name.ca));
-    const data3 = parseFloat(digit(name.test));
-    const data4 = parseFloat(digit(name.exam));
+    const data1 = Number(digit(name.ass));
+    const data2 = Number(digit(name.ca));
+    const data3 = Number(digit(name.test));
+    const data4 = Number(digit(name.exam));
     const arr =[data1,data2,data3,data4]
     const total = arr.reduce((sum,current)=>{return sum + current},0)
       
@@ -157,10 +157,10 @@ const handleResult = async(params) => {
       {name.math?.map((name,index)=> {
         const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
-        const data1 = parseFloat(digit(name.ass));
-        const data2 = parseFloat(digit(name.ca));
-        const data3 = parseFloat(digit(name.test));
-        const data4 = parseFloat(digit(name.exam));
+        const data1 = Number(digit(name.ass));
+        const data2 = Number(digit(name.ca));
+        const data3 = Number(digit(name.test));
+        const data4 = Number(digit(name.exam));
          const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
 
@@ -196,10 +196,10 @@ const handleResult = async(params) => {
         
         const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
-        const data1 = parseFloat(digit(name.ass));
-        const data2 = parseFloat(digit(name.ca));
-        const data3 = parseFloat(digit(name.test));
-        const data4 = parseFloat(digit(name.exam));
+        const data1 = Number(digit(name.ass));
+        const data2 = Number(digit(name.ca));
+        const data3 = Number(digit(name.test));
+        const data4 = Number(digit(name.exam));
           const arr =[data1,data2,data3,data4]
       const total = arr.reduce((sum,current)=>{return sum + current},0)
 
@@ -234,10 +234,10 @@ const handleResult = async(params) => {
       {name.phy?.map((name,index)=> {
         const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
-        const data1 = parseFloat(digit(name.ass));
-        const data2 = parseFloat(digit(name.ca));
-        const data3 = parseFloat(digit(name.test));
-        const data4 = parseFloat(digit(name.exam));
+        const data1 = Number(digit(name.ass));
+        const data2 = Number(digit(name.ca));
+        const data3 = Number(digit(name.test));
+        const data4 = Number(digit(name.exam));
         const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
 
@@ -271,10 +271,10 @@ const handleResult = async(params) => {
       {name.bio?.map((name,index)=> {
         const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
-        const data1 = parseFloat(digit(name.ass));
-        const data2 = parseFloat(digit(name.ca));
-        const data3 = parseFloat(digit(name.test));
-        const data4 = parseFloat(digit(name.exam));
+        const data1 = Number(digit(name.ass));
+        const data2 = Number(digit(name.ca));
+        const data3 = Number(digit(name.test));
+        const data4 = Number(digit(name.exam));
         const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
 
