@@ -344,6 +344,8 @@ color: #fff;
 .input{
   background-color: transparent;
   width:100px;
+  outline: none;
+  
 }
 
 
