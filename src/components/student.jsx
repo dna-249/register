@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { FaBars, FaUser ,FaCheck, FaPlus, FaTimes} from 'react-icons/fa'
+import { FaBars, FaUser} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Activity from './activity'
 import StudentAttendance from './studentAttendance'
@@ -84,7 +84,7 @@ useEffect(() => {
     </thead>
      </div>
      <div className='row5 green'>
-    {name.Eng?.map((name,index)=> { 
+    {name?.Eng.map((name,index)=> { 
                   
     const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
@@ -121,7 +121,7 @@ useEffect(() => {
        <th>{grades}</th>
       </tr>
       )})}
-      {name.math?.map((name,index)=> {
+      {name?.math.map((name,index)=> {
         const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
         const data1 = Number(digit(name.ass));
@@ -159,7 +159,7 @@ useEffect(() => {
        <th>{grades}</th>
       </tr>
      )})}
-      {name.chem?.map((name,index)=> {
+      {name?.chem.map((name,index)=> {
         
         const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
@@ -198,7 +198,7 @@ useEffect(() => {
        <th>{grades}</th>
       </tr>
       )})}
-      {name.phy?.map((name,index)=> {
+      {name?.phy.map((name,index)=> {
         const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
         const data1 = Number(digit(name.ass));
@@ -235,7 +235,7 @@ useEffect(() => {
        <th>{grades}</th>
       </tr>
      )})}
-      {name.bio?.map((name,index)=> {
+      {name?.bio.map((name,index)=> {
         const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
         const data1 = Number(digit(name.ass));
