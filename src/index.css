@@ -341,6 +341,10 @@ color: #fff;
   color:white;
   font-size:larger;
 }
+.input{
+  background-color: transparent;
+  width:100px;
+}
 
 
 
