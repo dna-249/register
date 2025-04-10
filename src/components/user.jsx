@@ -136,7 +136,9 @@ const handleResult = async(params) => {
                       else if(total <= 65) return "D";
                       else if(total <= 75) return "C";
                       else if(total <= 85) return "B";
-                      else if(total <= 100) return "A";}
+                      else if(total <= 100) return "A";
+                      else if(total < 100) return "A+";
+                       }
     const grades = grade(total)
        
       return (
@@ -171,8 +173,10 @@ const handleResult = async(params) => {
    else if(total <= 65) return "D";
    else if(total <= 75) return "C";
    else if(total <= 85) return "B";
-   else if(total <= 100) return "A";}
-const grades = grade(total)
+   else if(total <= 100) return "A";
+   else if(total < 100) return "A+";
+                       }
+   const grades = grade(total)
         
         return (
     
@@ -208,7 +212,9 @@ const grades = grade(total)
                       else if(total <= 65) return "D";
                       else if(total <= 75) return "C";
                       else if(total <= 85) return "B";
-                      else if(total <= 100) return "A";}
+                      else if(total <= 100) return "A";
+                      else if(total < 100) return "A+";
+                       }
                        const grades = grade(total)
        
         return (
@@ -244,7 +250,9 @@ const grades = grade(total)
                     else if(total <= 65) return "D";
                     else if(total <= 75) return "C";
                     else if(total <= 85) return "B";
-                    else if(total <= 100) return "A";}
+                    else if(total <= 100) return "A";
+                      else if(total < 100) return "A+";
+                       }
                   const grades = grade(total)
                           return (
      
@@ -279,7 +287,9 @@ const grades = grade(total)
    else if(total <= 65) return "D";
    else if(total <= 75) return "C";
    else if(total <= 85) return "B";
-   else if(total <= 100) return "A";}
+   else if(total <= 100) return "A";
+   else if(total < 100) return "A+";
+    }
    const grades = grade(total)
        
         return (
