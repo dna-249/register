@@ -111,7 +111,6 @@ const handleResult = async(params) => {
     <th>Test</th>
     <th>Exam</th>
     <th>Total</th>
-    <th>Average</th>
     <th>Percentage</th>
     <th>Grade</th>
     </tr>
@@ -120,16 +119,26 @@ const handleResult = async(params) => {
      <div className='row5 green'>
     {name.Eng?.map((name,index)=> { 
                   
-      const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
+    const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
-      const data1 = parseFloat(digit(name.ass));
-      const data2 = parseFloat(digit(name.ca));
-      const data3 = parseFloat(digit(name.test));
-      const data4 = parseFloat(digit(name.exam));
-        const arr =[data1,data2,data3,data4]
-     const total = arr.reduce((sum,current)=>
-      {return sum + current},0)
+    const data1 = parseFloat(digit(name.ass));
+    const data2 = parseFloat(digit(name.ca));
+    const data3 = parseFloat(digit(name.test));
+    const data4 = parseFloat(digit(name.exam));
+    const arr =[data1,data2,data3,data4]
+    const total = arr.reduce((sum,current)=>{return sum + current},0)
       
+     const percent = (total) =>{return (total/100)*100 +"%"}
+     const percents = percent(total)
+     const grade =(total)=>{    
+                           if(total <= 40) return "F";
+                      else if(total <= 55) return "E";
+                      else if(total <= 65) return "D";
+                      else if(total <= 75) return "C";
+                      else if(total <= 85) return "B";
+                      else if(total <= 100) return "A";}
+    const grades = grade(total)
+       
       return (
      
       <tr  key={index}>
@@ -139,8 +148,8 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
       <th>{total}</th>
-      <th></th>
-
+      <th>{percents}</th>
+       <th>{grades}</th>
       </tr>
       )})}
       {name.math?.map((name,index)=> {
@@ -152,6 +161,18 @@ const handleResult = async(params) => {
         const data4 = parseFloat(digit(name.exam));
          const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
+
+       const percent = (total) =>{return (total/100)*100 +"%"}
+       const percents = percent(total)
+
+       const grade =(total)=>{    
+        if(total <= 40) return "F";
+   else if(total <= 55) return "E";
+   else if(total <= 65) return "D";
+   else if(total <= 75) return "C";
+   else if(total <= 85) return "B";
+   else if(total <= 100) return "A";}
+const grades = grade(total)
         
         return (
     
@@ -163,8 +184,8 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("math","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("math","exam",index)}>{name.exam}</th>
       <th>{total}</th>
-      <th></th>
-
+      <th>{percents}</th>
+       <th>{grades}</th>
       </tr>
      )})}
       {name.chem?.map((name,index)=> {
@@ -177,6 +198,19 @@ const handleResult = async(params) => {
         const data4 = parseFloat(digit(name.exam));
           const arr =[data1,data2,data3,data4]
       const total = arr.reduce((sum,current)=>{return sum + current},0)
+
+      const percent = (total) =>{return (total/100)*100 +"%"}
+       const percents = percent(total)
+
+       const grade =(total)=>{    
+                           if(total <= 40) return "F";
+                      else if(total <= 55) return "E";
+                      else if(total <= 65) return "D";
+                      else if(total <= 75) return "C";
+                      else if(total <= 85) return "B";
+                      else if(total <= 100) return "A";}
+                       const grades = grade(total)
+       
         return (
      
       
@@ -187,8 +221,8 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("chem","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("chem","exam",index)}>{name.exam}</th>
       <th>{total}</th>
-      <th></th>
-
+      <th>{percents}</th>
+       <th>{grades}</th>
       </tr>
       )})}
       {name.phy?.map((name,index)=> {
@@ -203,7 +237,16 @@ const handleResult = async(params) => {
 
        const percent = (total) =>{return (total/100)*100 +"%"}
        const percents = percent(total)
-        return (
+
+       const grade =(total)=>{    
+                          if(total <= 40) return "F";
+                    else if(total <= 55) return "E";
+                    else if(total <= 65) return "D";
+                    else if(total <= 75) return "C";
+                    else if(total <= 85) return "B";
+                    else if(total <= 100) return "A";}
+                  const grades = grade(total)
+                          return (
      
       
       <tr key={index}>
@@ -214,7 +257,7 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("phy","exam",index)}>{name.exam}</th>
       <th>{total}</th>
       <th>{percents}</th>
-
+       <th>{grades}</th>
       </tr>
      )})}
       {name.bio?.map((name,index)=> {
@@ -226,6 +269,19 @@ const handleResult = async(params) => {
         const data4 = parseFloat(digit(name.exam));
         const arr =[data1,data2,data3,data4]
        const total = arr.reduce((sum,current)=>{return sum + current},0)
+
+       const percent = (total) =>{return (total/100)*100 +"%"}
+       const percents = percent(total)
+
+       const grade =(total)=>{    
+        if(total <= 40) return "F";
+   else if(total <= 55) return "E";
+   else if(total <= 65) return "D";
+   else if(total <= 75) return "C";
+   else if(total <= 85) return "B";
+   else if(total <= 100) return "A";}
+   const grades = grade(total)
+       
         return (
      
       
@@ -236,8 +292,8 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("bio","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("bio","exam",index)}>{name.exam}</th>
       <th>{total}</th>
-      <th></th>
-
+      <th>{percents}</th>
+        <th>{grades}</th>
       </tr>
       
      )})}
