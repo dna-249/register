@@ -145,7 +145,7 @@ const handleResult = async(params) => {
      
       <tr  key={index}>
       <th>Eng</th>
-      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input type='number'value={name.ass} width={100} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input type='number'value={name.ass || ''} width={100} onChange={(e)=>setValue(e.target.value)}/>}</th>
       <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
