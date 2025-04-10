@@ -145,10 +145,10 @@ const handleResult = async(params) => {
      
       <tr  key={index}>
       <th>Eng</th>
-      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input className='input' type='number' value={value && value || name.ass +""} onChange={(e)=>setValue(e.target.value)}/>}</th>
-      <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
-      <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
-      <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input className='input' type='number' value={value && value || name.ass} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","ca",index)}>{show? name.ca : <input className='input' type='number' value={value && value || name.ca} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","test",index)}>{show? name.test : <input className='input' type='number' value={value && value || name.test} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","exam",index)}>{show? name.exam : <input className='input' type='number' value={value && value || name.exam} onChange={(e)=>setValue(e.target.value)}/>}</th>
       <th>{total}</th>
       <th>{percents}</th>
        <th>{grades}</th>
@@ -183,10 +183,10 @@ const handleResult = async(params) => {
       
       <tr key={index}>
       <th>Math</th>
-      <th onClick={()=>handleSelect("math","ass",index)}>{name.ass}</th>
-      <th onClick={()=>handleSelect("math","ca",index)}>{name.ca}</th>
-      <th onClick={()=>handleSelect("math","test",index)}>{name.test}</th>
-      <th onClick={()=>handleSelect("math","exam",index)}>{name.exam}</th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input className='input' type='number' value={value && value || name.ass} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","ca",index)}>{show? name.ca : <input className='input' type='number' value={value && value || name.ca} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","test",index)}>{show? name.test : <input className='input' type='number' value={value && value || name.test} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","exam",index)}>{show? name.exam : <input className='input' type='number' value={value && value || name.exam} onChange={(e)=>setValue(e.target.value)}/>}</th>
       <th>{total}</th>
       <th>{percents}</th>
        <th>{grades}</th>
@@ -222,11 +222,11 @@ const handleResult = async(params) => {
       
       <tr key={index}>
       <th>Chem</th>
-      <th onClick={()=>handleSelect("chem","ass",index)}>{name.ass}</th>
-      <th onClick={()=>handleSelect("chem","ca",index)}>{name.ca}</th>
-      <th onClick={()=>handleSelect("chem","test",index)}>{name.test}</th>
-      <th onClick={()=>handleSelect("chem","exam",index)}>{name.exam}</th>
-      <th>{total}</th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input className='input' type='number' value={value && value || name.ass} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","ca",index)}>{show? name.ca : <input className='input' type='number' value={value && value || name.ca} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","test",index)}>{show? name.test : <input className='input' type='number' value={value && value || name.test} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","exam",index)}>{show? name.exam : <input className='input' type='number' value={value && value || name.exam} onChange={(e)=>setValue(e.target.value)}/>}</th>
+       <th>{total}</th>
       <th>{percents}</th>
        <th>{grades}</th>
       </tr>
@@ -259,10 +259,10 @@ const handleResult = async(params) => {
       
       <tr key={index}>
       <th>Phy</th>
-      <th onClick={()=>handleSelect("phy","ass",index)}>{name.ass}</th>
-      <th onClick={()=>handleSelect("phy","ca",index)}>{name.ca}</th>
-      <th onClick={()=>handleSelect("phy","test",index)}>{name.test}</th>
-      <th onClick={()=>handleSelect("phy","exam",index)}>{name.exam}</th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input className='input' type='number' value={value && value || name.ass} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","ca",index)}>{show? name.ca : <input className='input' type='number' value={value && value || name.ca} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","test",index)}>{show? name.test : <input className='input' type='number' value={value && value || name.test} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","exam",index)}>{show? name.exam : <input className='input' type='number' value={value && value || name.exam} onChange={(e)=>setValue(e.target.value)}/>}</th>
       <th>{total}</th>
       <th>{percents}</th>
        <th>{grades}</th>
@@ -297,11 +297,11 @@ const handleResult = async(params) => {
       
       <tr key={index}>
       <th>Bio</th>
-      <th onClick={()=>handleSelect("bio","ass",index)}>{name.ass}</th>
-      <th onClick={()=>handleSelect("bio","ca",index)}>{name.ca}</th>
-      <th onClick={()=>handleSelect("bio","test",index)}>{name.test}</th>
-      <th onClick={()=>handleSelect("bio","exam",index)}>{name.exam}</th>
-      <th>{total}</th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input className='input' type='number' value={value && value || name.ass} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","ca",index)}>{show? name.ca : <input className='input' type='number' value={value && value || name.ca} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","test",index)}>{show? name.test : <input className='input' type='number' value={value && value || name.test} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect("Eng","exam",index)}>{show? name.exam : <input className='input' type='number' value={value && value || name.exam} onChange={(e)=>setValue(e.target.value)}/>}</th>
+     <th>{total}</th>
       <th>{percents}</th>
         <th>{grades}</th>
       </tr>
