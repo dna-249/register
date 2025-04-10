@@ -343,9 +343,11 @@ color: #fff;
 }
 .input{
   background-color: transparent;
-  width:100px;
+  width:98px;
   outline: none;
-  
+  border: none;
+  text-align: center;
+
 }
 
 
