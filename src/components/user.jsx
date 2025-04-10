@@ -9,7 +9,7 @@ import axios from "axios"
 const User = () => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
-  const [show,setShow] = useState(false)
+  const [show,setShow] = useState(true)
   const [data, setData]= useState(false)
   const [day, setDay]= useState()
   const [next, setNext]= useState()
