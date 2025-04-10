@@ -36,6 +36,7 @@ const User = () => {
     setKey(key) 
     setIndex(index) 
     setObject(object)
+    setShow((prev) => !prev)
     
   }
 
@@ -70,7 +71,7 @@ const handleResult = async(params) => {
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
-   <div onClick={()=>setShow(3)}>Activity</div>
+   <div>Activity</div>
         <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/update/${name._id}`)}> Update</div>
     </div>)}
@@ -84,9 +85,8 @@ const handleResult = async(params) => {
  
    </div>
  
-   <div>upload Result:<input type="text" placeholder='write...' onChange={(e)=>setValue(e.target.value)} />
-    <button onClick={()=>handleResult()}>uploadResult</button>
-   </div>
+    <button className='click2' onClick={()=>handleResult()}>Save</button>
+   
    <div className='user2 '>
     <div className='three'>
     <div>Student Results</div>
@@ -145,7 +145,7 @@ const handleResult = async(params) => {
      
       <tr  key={index}>
       <th>Eng</th>
-      <th onClick={()=>handleSelect("Eng","ass",index)}>{name.ass}</th>
+      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input type='number'value={name.ass} onChange={(e)=>setValue(e.target.value)}/>}</th>
       <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
       <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
