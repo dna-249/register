@@ -25,7 +25,7 @@ const Admission = ({id}) => {
     
            
             
-            <div className='white'>
+            <div >
                  <h4>Admissions</h4>
                  <div className='white'>
                     <h5>Create Admission</h5>
@@ -34,7 +34,7 @@ const Admission = ({id}) => {
                     <button className='click1' onClick={()=>handleCreate()}>Register</button>
                  </div>
 
-                 <div className='white'>
+                 <div >
                    <h5>Previous Admissions</h5>
                    {name?.Admissions?.map((name, index)=>{return (<div  key={index}>{name.adm}</div>)})} 
                  </div>
