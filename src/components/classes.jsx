@@ -2,12 +2,12 @@ import axios from 'axios'
 import React, { useState,useEffect } from 'react'
 const Classes = ({id}) => {
   const [adm,setAdm]= useState('')
-  const [name,setName]= useState('')
+  const [name,setName]= useState([''])
 
 
  useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/management`)
+    axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
               .then((res)=> {console.log(res.data);setName(res.data)})
               .catch((err)=> console.log(err))
   
