@@ -8,7 +8,7 @@ const Classes = ({id}) => {
  useEffect(() => {
  
     axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
-              .then((res)=> {console.log(res.data);setNames(res.data)})
+              .then((res)=> {console.log(res.data);setName(res.data)})
               .catch((err)=> console.log(err))
   
   
@@ -38,7 +38,7 @@ const Classes = ({id}) => {
 
                  <div>
                    <h5>Previous Classes</h5>
-                   {names?.classes.map((name,index)=>{return(
+                   {name?.classes.map((name,index)=>{return(
                     <div key={index}>{name}</div>
                    )})} 
                  </div>
