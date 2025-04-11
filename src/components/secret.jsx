@@ -15,7 +15,7 @@ const Secret = ({id}) => {
                .catch((err)=> console.log(err))
    
    
-   }, [])
+   }, [id])
    const handleManagementKey = (params) => {
 
       axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/management/key`,{adm:adm})
