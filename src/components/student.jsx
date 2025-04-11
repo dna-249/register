@@ -32,7 +32,7 @@ useEffect(() => {
  <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
  <div  className='three2'>
 
- <div><Link to="/activity">Activity</Link></div>
+        <div><Link to="/activity">Activity</Link></div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
         <div><Link to='/profile' >profile</Link></div>
      </div >
