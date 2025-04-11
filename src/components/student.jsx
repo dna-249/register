@@ -12,7 +12,7 @@ const Student = () => {
   const [name,setName]=useState()
   const [show,setShow] = useState(0)
   const {id} = useParams()
-
+  const nav = useNavigate()
 
 useEffect(() => {
   axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
