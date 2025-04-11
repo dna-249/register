@@ -29,7 +29,7 @@ const Secret = ({id}) => {
          }
   return (
     
-            <div>
+            <div className='scroll'>
                  <h4>Secret_Keys</h4>
 
                   <div className='two'>   
