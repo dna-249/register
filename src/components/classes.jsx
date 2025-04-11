@@ -12,7 +12,7 @@ const Classes = ({id}) => {
               .catch((err)=> console.log(err))
   
   
- }, [])
+ }, [id])
  
  
 

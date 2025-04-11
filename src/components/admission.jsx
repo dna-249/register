@@ -2,6 +2,19 @@ import axios from 'axios'
 import React, { useState } from 'react'
 const Admission = ({id}) => {
   const [adm,setAdm]= useState('')
+  const [name,setName]= useState('')
+
+
+   useEffect(() => {
+   
+      axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
+               .then((res)=> {console.log(res.data);setName(res.data)})
+               .catch((err)=> console.log(err))
+   
+   
+   }, [id])
+
+
   const handleCreate = (params) => {
     axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/admissions/adm`,{adm:adm})
                   .then((res)=> alert(`${adm} admission is registered`))
@@ -22,7 +35,8 @@ const Admission = ({id}) => {
                  </div>
 
                  <div>
-                   <h5>Previous Admissions</h5> 
+                   <h5>Previous Admissions</h5>
+                   {name?.Admissions?.map((name, index)=>{return (<div  key={index}>{name.key}</div>)})} 
                  </div>
             </div>
     
