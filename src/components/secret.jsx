@@ -11,7 +11,7 @@ const Secret = ({id}) => {
    useEffect(() => {
    
       axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
-               .then((res)=> {alert(res.data);setName(res.data)})
+               .then((res)=> {alert(id);setName(res.data)})
                .catch((err)=> console.log(err))
    
    
