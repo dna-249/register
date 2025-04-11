@@ -31,13 +31,13 @@ const User = () => {
          .then((res)=>  setName(res.data))
          .catch((err)=> console.log(err))
   }, [id,isUpdate])
-
+   let edit = []
   const handleSelect = (object,key,index) => {
     setKey(key) 
     setIndex(index) 
     setObject(object)
      const edit = window.prompt("write something")
-    
+    edit.push(edit)
   }
 
 
