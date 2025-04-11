@@ -325,7 +325,7 @@ color: #fff;
 }
 .click1{
   background-color: rgb(133, 174, 133);
-  color: rgb(43, 61, 41);
+  color: rgb(10, 26, 8);
   border-radius: 5px;
   height: fit-content;
   width: 80px;
@@ -337,7 +337,7 @@ color: #fff;
   justify-self: flex-end;
 }
 
-.click2:hover{
+.click1:hover{
   background-color: rgb(17, 50, 13);
   border-radius: 5px;
   height: fit-content;
