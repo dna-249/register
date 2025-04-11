@@ -85,7 +85,7 @@ const handleResult = async(params) => {
  
    </div>
  
-    <button className='click2' onClick={()=>handleResult()}>Save</button>
+    <button className='click1' onClick={()=>handleResult()}>Save</button>
    
    <div className='user2 '>
     <div className='three'>
