@@ -1,11 +1,38 @@
-import { useState } from "react"
-import { FaPlus,FaTimes,FaCheck } from "react-icons/fa"
+import { useState, useEffect } from "react"
+import { FaUser,FaTimes,FaCheck,FaArrowCircleLeft } from "react-icons/fa"
+import {useParams,useNavigate} from "react-router-dom"
 
 
-const StudentAttendance =({datas})=>{
+const StudentAttendance =()=>{
+    const [name, setName]= useState()
 
+    const {id} = useParams()
+    const nav   = useNavigate()
+      
+      
+        useEffect(() => {
+          axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+               .then((res)=>  setName(res.data))
+               .catch((err)=> console.log(err))
+        }, [id,])
       
     return (<>
+ <div className='center'>
+ <div className='bgUser'> 
+     <h3>REGISTER</h3>
+     <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
+     <div ><FaUser className='img'/></div>
+     name: {name?.name}<br />
+     class: <br />
+     Term:
+     
+     
+     <div className='white'>
+     <h2>Student Attendance</h2>
+           
+      
+     
+
        <div>
         <div>
              <thead>
@@ -19,7 +46,7 @@ const StudentAttendance =({datas})=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {datas.attend.map((item,index)=>{return (
+                {name?.attend.map((item,index)=>{return (
                                             
                                             <tbody key={index} className='green'>
                                                 <tr>
@@ -38,6 +65,10 @@ const StudentAttendance =({datas})=>{
                 )}                 
         </div>
     </div>
+
+    </div>
+      </div>
+   </div>
   </>  )
 }
 export default StudentAttendance

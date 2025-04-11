@@ -39,8 +39,8 @@ useEffect(() => {
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
-  <div><Link to="/activity">Activity</Link></div>
-        <div><Link to="/register">Attendance</Link> </div>
+        <div><Link to="/activity">Activity</Link></div>
+        <div onClick={()=>nav(`/studentAttendance/${name_id}`)}>Attendance </div>
         <div><Link to='/profile' >profile</Link></div>
     </div>)}
  </div>
@@ -281,34 +281,6 @@ useEffect(() => {
 </div>
 </div>
   </>)
-
- else if(show === 1) return (
-  <>
-  <div className='center'>
- <div className='bgUser'> 
-     <h3>REGISTER</h3>
-     <div ><FaUser className='img'/></div>
-     name: {name?.name}<br />
-     class: <br />
-     Term:
-     
-     
-     <div className='white'>
-     <h2>Student Attendance</h2>
-           
-       <StudentAttendance datas ={name} />
-     </div>
-      </div>
-   </div></>
-)
- else if(show === 2) return(
-  <div>
-    <Activity names={name} />
-  </div>
-)
-
-
-
 }
 
 export default Student
