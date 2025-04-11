@@ -27,14 +27,14 @@ const Admission = ({id}) => {
             
             <div className='white'>
                  <h4>Admissions</h4>
-                 <div>
+                 <div className='white'>
                     <h5>Create Admission</h5>
                     <h3>New:{adm}</h3>
                     <input type="number" onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
-                    <button onClick={()=>handleCreate()}>Register</button>
+                    <button className='click1' onClick={()=>handleCreate()}>Register</button>
                  </div>
 
-                 <div>
+                 <div className='white'>
                    <h5>Previous Admissions</h5>
                    {name?.Admissions?.map((name, index)=>{return (<div  key={index}>{name.adm}</div>)})} 
                  </div>
