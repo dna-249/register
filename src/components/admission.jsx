@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 const Admission = ({id}) => {
   const [adm,setAdm]= useState('')
   const [name,setName]= useState([''])
+  const [auto,setAuto]= useState(false)
 
 
    useEffect(() => {
@@ -12,12 +13,12 @@ const Admission = ({id}) => {
                .catch((err)=> console.log(err))
    
    
-   }, [id])
+   }, [id, auto])
 
 
   const handleCreate = (params) => {
     axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/admissions/adm`,{adm:adm})
-                  .then((res)=> alert(`${adm} admission is registered`))
+                  .then((res)=>{alert(`${adm} admission no is created`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
   

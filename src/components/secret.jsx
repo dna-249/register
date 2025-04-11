@@ -6,6 +6,8 @@ const Secret = ({id}) => {
    const [adm,setAdm]= useState('')
    const [adm1,setAdm1]= useState('')
    const [name,setName]= useState('')
+   const [auto,setAuto]= useState(false)
+   
 
 
    useEffect(() => {
@@ -15,16 +17,16 @@ const Secret = ({id}) => {
                .catch((err)=> console.log(err))
    
    
-   }, [id])
+   }, [id,auto])
    const handleManagementKey = (params) => {
 
       axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/management/key`,{adm:adm})
-                    .then((res)=> alert(`${adm} secret_key is registered`))
+                    .then((res)=> {alert(`${adm} secret_key is created`);setAuto((prev)=>!prev)})
                     .catch((err)=> console.log(err))
        }
        const handleStaffKey = (params) => {
         axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/staff/key`,{adm:adm1})
-                      .then((res)=> alert(`${adm1} secret_key is registered`))
+                      .then((res)=> {alert(`${adm} secret_key is created`);setAuto((prev)=>!prev)})
                       .catch((err)=> console.log(err))
          }
   return (

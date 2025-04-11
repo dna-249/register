@@ -3,6 +3,7 @@ import React, { useState,useEffect } from 'react'
 const Classes = ({id}) => {
   const [adm,setAdm]= useState('')
   const [name,setName]= useState([''])
+  const [auto,setAuto]= useState(false)
 
 
  useEffect(() => {
@@ -12,14 +13,14 @@ const Classes = ({id}) => {
               .catch((err)=> console.log(err))
   
   
- }, [id])
+ }, [id, auto])
  
  
 
 
   const handleCreate = (params) => {
     axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/classes/key`,{adm:adm})
-                .then((res)=> alert(`${adm} class is assigned`))
+                .then((res)=> {alert(`${adm} class is assigned`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
   
