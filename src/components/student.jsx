@@ -32,10 +32,10 @@ useEffect(() => {
  <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
  <div  className='three2'>
 
-          <div onClick={()=>setShow(3)}>Activity</div>
-        <div onClick={()=>setShow(1)}>Attendance </div>
-        <div onClick={()=>setShow(2)}> Activity</div>
- </div >
+ <div><Link to="/activity">Activity</Link></div>
+        <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
+        <div><Link to='/profile' >profile</Link></div>
+     </div >
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
