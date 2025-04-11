@@ -72,11 +72,13 @@ const Update =()=>{
                         <th>Fri:</th>
                     </tr>
             </thead>
-                {name?.attend.map((item,index)=>{return (
+                {name?.attend.map((item,index)=>{const serial=()=>{ return index +1};
+                                                    const serials = serial();    
+                                                          return (
                                             
-                                            <tbody key={index = ()=>{return index + 1}} className='green1'>
+                                            <tbody key={index} className='green1'>
                                                 <tr>
-                                                    <th >{index}</th>
+                                                    <th >{serials}</th>
                                                     <th>{item.date}</th>
                                                     <th  onClick={()=>handleSelect(item._id,'mon',index)}>{item.mon === "1" && <div><FaCheck /></div> || item.mon === "0" && <div className='red'><FaTimes /></div>}</th>
                                                     <th  onClick={()=>handleSelect(item._id,'tue',index)}>{item.tue === "1" && <div><FaCheck /></div> || item.tue === "0" && <div className='red'><FaTimes /></div>}</th>
