@@ -31,7 +31,7 @@ const Admission = ({id}) => {
                     <h5>Create Admission</h5>
                     <h3>New:{adm}</h3>
                     <input type="number" onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
-                    <button className='click1' onClick={()=>handleCreate()}>Register</button>
+                    <button onClick={()=>handleCreate()}>Register</button>
                  </div>
                      <h5>Previous Admissions</h5>
                  <div className='white' >

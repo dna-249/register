@@ -36,7 +36,7 @@ const Secret = ({id}) => {
                      <div className='white'>
                         <h5>Management</h5>
                         <input type="text" onChange={(e)=>setAdm(e.target.value)} placeholder='secret key...'/>
-                        <button className='click1' onClick={()=>handleManagementKey()}>Register</button>
+                        <button onClick={()=>handleManagementKey()}>Register</button>
                       </div>
                       <div className='white'>
                         <h5>Previous Keys</h5>
@@ -50,7 +50,7 @@ const Secret = ({id}) => {
                      <div className='white'>
                         <h5>Staff</h5>
                         <input type="text" onChange={(e)=>setAdm1(e.target.value)} placeholder='secret key...'/>
-                        <button className='click1' onClick={()=>handleStaffKey()}>Register</button>
+                        <button onClick={()=>handleStaffKey()}>Register</button>
                        </div>
 
                        <div className='white'>

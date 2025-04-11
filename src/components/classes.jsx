@@ -28,8 +28,8 @@ const Classes = ({id}) => {
            
             
             <div >
-                 <h4 className='white'>Classes</h4>
-                 <div>
+                 <h4 >Classes</h4>
+                 <div className='white'>
                     <h5>Create Class</h5>
                 
                     <input type="text" onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
