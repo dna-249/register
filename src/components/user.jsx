@@ -31,19 +31,19 @@ const User = () => {
          .then((res)=>  setName(res.data))
          .catch((err)=> console.log(err))
   }, [id,isUpdate])
-   let edit = []
+   
   const handleSelect = (object,key,index) => {
     setKey(key) 
     setIndex(index) 
     setObject(object)
      const edit = window.prompt("write something")
-    edit.push(edit)
+    setValue(edit)
   }
 
 
 const handleResult = async(params) => {
    await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/${object}/${index}/${key}`,{
-              value:edit
+              value:value
              })
                        .then((res)=>{setIsUpdate(pre => !pre);setShow(true); console.log(res.data)})
                        .catch((err)=> console.log(err))
