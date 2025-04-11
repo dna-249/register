@@ -74,22 +74,22 @@ const Management = () => {
        {select =="1" &&
                <div className="white three4">
                     <div><h3>Management</h3>
-                          {names1?.map((name,index) => <div key={index}>
+                          {names1?.map((name,index) =>{return( <div key={index}>
                           <div onClick={()=>nav(`/management/${name._id}`)}> {name.name} </div>
-                          </div>)}
+                          </div>)})}
                       </div>
 
                       <div>
                       <h3> Staff  </h3>
-                          {names2?.map((name,index) => <div key={index}>
+                          {names2?.map((name,index) => {return( <div key={index}>
                           <div onClick={()=>nav(`/staff/${name._id}`)}> {name.name} </div>
-                          </div>)}
+                          </div>)})}
                       </div>
                       
                       <div><h3> Students</h3>
-                            {names3?.map((name,index) => <div key={index}>
+                            {names3?.map((name,index) =>{return( <div key={index}>
                             <div onClick={()=>nav(`/student/${name._id}`)}> {name.name} </div>
-                            </div>)}
+                            </div>)})}
                             
                        </div> 
                 </div>
