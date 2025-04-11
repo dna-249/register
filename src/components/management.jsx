@@ -12,9 +12,9 @@ import {useParams,useNavigate } from "react-router-dom"
 
 const Management = () => {
 
-  const [names1,setNames1] = useState([])
-  const [names2,setNames2] = useState([])
-  const [names3,setNames3] = useState([])
+  const [names1,setNames1] = useState()
+  const [names2,setNames2] = useState()
+  const [names3,setNames3] = useState()
   const [name,setName] = useState('')
   const [view,setView] = useState('')
   const [select,setSelect] = useState('1')
