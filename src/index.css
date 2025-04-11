@@ -123,9 +123,6 @@ body {
 }
 .icons{
   position: absolute;
- 
- 
-  
   padding: 10px;
   height: fit-content;
   right: 0px;
@@ -137,14 +134,12 @@ body {
   border:1px solid rgba(68, 68, 68, 0.343);
   border-radius: 5px;
   text-align: center;
-  }
-.icons a{
   font-size:x-small ;
   color: green;
   text-decoration: none;
   font-weight: bold;
+  }
 
-}
 .two2{
   display: grid;
   grid-template-columns: 2fr 10fr;
