@@ -27,16 +27,22 @@ const Classes = ({id}) => {
     
            
             
-            <div className='white'>
-                 <h4>Classes</h4>
+            <div >
+                 <h4 className='white'>Classes</h4>
                  <div>
-                    <h5>Assign Class</h5>
+                    <h5>Create Class</h5>
                 
                     <input type="text" onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
-                    <button onClick={()=>handleCreate()}>Assign</button>
+                    <button onClick={()=>handleCreate()}>Create</button>
                  </div>
 
                  <div>
+                    <h5>Assign Class to Staff</h5>
+
+                    <h5>Assign Class to Staff</h5>
+                 </div>
+
+                 <div className='white'>
                    <h5>Previous Classes</h5>
                    {name?.classes?.map((name,index)=>{return(
                     <div key={index}>{name.key}</div>
