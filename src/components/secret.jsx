@@ -29,7 +29,7 @@ const Secret = ({id}) => {
          }
   return (
     
-            <div className='white'>
+            <div>
                  <h4>Secret_Keys</h4>
 
                   <div className='two'>   
