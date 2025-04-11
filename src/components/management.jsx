@@ -24,7 +24,7 @@ const Management = () => {
 
   useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
+    axios.get(`https://register-api-cloud.vercel.app/management`)
               .then((res)=> {console.log(res.data);setNames1(res.data)})
               .catch((err)=> console.log(err))
 
