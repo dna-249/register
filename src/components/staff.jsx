@@ -52,7 +52,7 @@ const Staff = ({setBack}) => {
         <div>Subject:</div>
         
     </div>
-    <div>
+    <div className='white'>
          <h2> STUDENT LIST</h2>
          {names?.map((name,index) => <div key={index + next}>
          <div onClick={()=>nav(`/user/${name._id}`)}> {name.name} </div>

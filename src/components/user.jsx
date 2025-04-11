@@ -276,7 +276,7 @@ const handleResult = async(params) => {
         const data3 = Number(digit(name.test));
         const data4 = Number(digit(name.exam));
         const arr =[data1,data2,data3,data4]
-       const total = arr.reduce((sum,current)=>{return sum + current},0)
+        const total = arr.reduce((sum,current)=>{return sum + current},0)
 
        const percent = (total) =>{return (total/100)*100 +"%"}
        const percents = percent(total)

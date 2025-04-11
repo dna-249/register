@@ -208,6 +208,8 @@ body {
   border: 1px solid rgba(65, 64, 64, 0.189);
   border-radius: 10px;
   background-color: rgba(240, 245, 249, 0.92);
+  justify-content:baseline;
+
 }
 .profile{
   width: 320px;
@@ -263,6 +265,10 @@ th{
 }
 
 .white{
+  width:100%;
+  justify-content:baseline;
+  min-width: 320px;
+  max-width: 1000px;
   background-color: #fff;
   border-radius: 5px;
   padding: 5px;
@@ -340,14 +346,6 @@ color: #fff;
   text-decoration:none;
   color:white;
   font-size:larger;
-}
-.input{
-  background-color: transparent;
-  width:98px;
-  outline: none;
-  border: none;
-  text-align: center;
-
 }
 
 
