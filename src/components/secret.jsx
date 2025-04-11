@@ -32,13 +32,13 @@ const Secret = ({id}) => {
             <div className='white'>
                  <h4>Secret_Keys</h4>
 
-                  <div className='two'>   
+                  <div className='two white'>   
                      <div>
                         <h5>Management</h5>
                         <input type="text" onChange={(e)=>setAdm(e.target.value)} placeholder='secret key...'/>
                         <button className='click1' onClick={()=>handleManagementKey()}>Register</button>
                       </div>
-                      <div>
+                      <div className='white'>
                         <h5>Previous Keys</h5>
                          {name?.management?.map((name,index)=>{return (
                            <div key={index}>{name}</div>
@@ -46,14 +46,14 @@ const Secret = ({id}) => {
                       </div>
                 </div>
 
-               <div>
-                     <div>
+               <div className='white'>
+                     <div className='white'>
                         <h5>Staff</h5>
                         <input type="text" onChange={(e)=>setAdm1(e.target.value)} placeholder='secret key...'/>
                         <button className='click1' onClick={()=>handleStaffKey()}>Register</button>
                        </div>
 
-                       <div>
+                       <div className='white'>
                         <h5>Previous Keys</h5>
                          {name?.staff?.map((name,index)=>{return (
                            <div key={index}>{name}</div>
