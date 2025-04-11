@@ -36,7 +36,9 @@ const User = () => {
     setKey(key) 
     setIndex(index) 
     setObject(object)
+     const edit = window.prompt("write something")
     setShow(false)
+    alert(edit)
     
   }
 
