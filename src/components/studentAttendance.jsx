@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { FaUser,FaTimes,FaCheck,FaArrowCircleLeft } from "react-icons/fa"
 import {useParams,useNavigate} from "react-router-dom"
-
+import axios from "axios"
 
 const StudentAttendance =()=>{
     const [name, setName]= useState()
