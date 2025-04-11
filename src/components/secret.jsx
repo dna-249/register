@@ -40,7 +40,7 @@ const Secret = ({id}) => {
                       </div>
                       <div>
                         <h5>Previous Keys</h5>
-                         {name.management.map((name,index)=>{return (
+                         {name?.management.map((name,index)=>{return (
                            <div key={index}>{name}</div>
                          )})}
                       </div>
@@ -55,7 +55,7 @@ const Secret = ({id}) => {
 
                        <div>
                         <h5>Previous Keys</h5>
-                         {name.staff.map((name,index)=>{return (
+                         {name?.staff.map((name,index)=>{return (
                            <div key={index}>{name}</div>
                          )})}
                      </div>
