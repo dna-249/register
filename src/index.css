@@ -312,12 +312,25 @@ color: #fff;
 
 }
 .click2{
-  
-  background-color: rgb(212, 207, 207);
+  background-color: rgb(133, 174, 133);
+  color: rgb(43, 61, 41);
   border-radius: 5px;
   height: fit-content;
-  width: fit-content;
-  padding: 10px;
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  display: grid;
+  margin: 2px;
+  justify-self: flex-end;
+}
+
+.click2:hover{
+  background-color: rgb(17, 50, 13);
+  border-radius: 5px;
+  height: fit-content;
+  width: 80px;
+  padding: 5px;
+  color: #f5f5dc;
   text-align: center;
   display: grid;
   margin: 2px;
