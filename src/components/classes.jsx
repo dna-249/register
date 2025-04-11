@@ -39,7 +39,7 @@ const Classes = ({id}) => {
                  <div>
                    <h5>Previous Classes</h5>
                    {name?.classes?.map((name,index)=>{return(
-                    <div key={index}>{name}</div>
+                    <div key={index}>{name.key}</div>
                    )})} 
                  </div>
             </div>
