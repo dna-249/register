@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState,useEffect } from 'react'
 const Classes = ({id}) => {
   const [adm,setAdm]= useState('')
+  const [name,setName]= useState('')
 
 
  useEffect(() => {
