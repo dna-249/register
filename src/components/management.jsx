@@ -38,7 +38,7 @@ const Management = () => {
   
   
   
- }, [])
+ }, [id])
  
   return (
     <div className='center' >
