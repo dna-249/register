@@ -18,7 +18,7 @@ const Classes = ({id}) => {
 
 
   const handleCreate = (params) => {
-    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/classes/key`,{key:adm})
+    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/classes/key`,{adm:adm})
                 .then((res)=> alert(`${adm} class is assigned`))
                   .catch((err)=> console.log(err))
      }
