@@ -37,15 +37,13 @@ const User = () => {
     setIndex(index) 
     setObject(object)
      const edit = window.prompt("write something")
-    setShow(false)
-    alert(edit)
     
   }
 
 
 const handleResult = async(params) => {
    await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/${object}/${index}/${key}`,{
-              value:value
+              value:edit
              })
                        .then((res)=>{setIsUpdate(pre => !pre);setShow(true); console.log(res.data)})
                        .catch((err)=> console.log(err))
