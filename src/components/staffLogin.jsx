@@ -23,7 +23,7 @@ const StaffLogin = () => {
     
     await axios.post("https://register-api-cloud.vercel.app/staff/login",{
         name:users,
-      }).then(res => setToken(res.data)).catch(err => {alert(user + "" + "access denied");console.log(err)})
+      }).then(res => setToken(res.data)).catch(err => {if(typeof user !== "undefined"){alert(user + "" + "access denied")} else console.log(err)})
    
   }
   useEffect(() => {
