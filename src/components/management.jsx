@@ -12,9 +12,9 @@ import {useParams,useNavigate } from "react-router-dom"
 
 const Management = () => {
 
-  const [names1,setNames1] = useState()
-  const [names2,setNames2] = useState()
-  const [names3,setNames3] = useState()
+  const [names1,setNames1] = useState([''])
+  const [names2,setNames2] = useState([''])
+  const [names3,setNames3] = useState([''])
   const [name,setName] = useState('')
   const [view,setView] = useState('')
   const [select,setSelect] = useState('1')
@@ -73,8 +73,25 @@ const Management = () => {
 <div className="white three4">
        {select =="1" &&
                <div className="white three4">
-                        
-                       
+                    <div><h3>Management</h3>
+                          {names1?.map((name,index) => <div key={index}>
+                          <div onClick={()=>nav(`/management/${name._id}`)}> {name.name} </div>
+                          </div>)}
+                      </div>
+
+                      <div>
+                      <h3> Staff  </h3>
+                          {names2?.map((name,index) => <div key={index}>
+                          <div onClick={()=>nav(`/staff/${name._id}`)}> {name.name} </div>
+                          </div>)}
+                      </div>
+                      
+                      <div><h3> Students</h3>
+                            {names3?.map((name,index) => <div key={index}>
+                            <div onClick={()=>nav(`/student/${name._id}`)}> {name.name} </div>
+                            </div>)}
+                            
+                       </div> 
                 </div>
                 || select === "2" && <div><Admission id ={names1?._id}/></div>
                 || select === "3" && <div> <Secret id ={names1?._id} /></div>
