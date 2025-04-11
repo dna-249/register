@@ -23,10 +23,9 @@ const StudentLogin = () => {
   const handleLogin = async () => {
     await axios.post("https://register-api-cloud.vercel.app/student/login",{
         name:users,
-      }).then(res =>setToken(res.data)).catch(err => console.log(err))
-  }
-
-
+      }).then(res =>setToken(res.data)).catch(err => {if(typeof user !== "undefined"){alert(user + "" + "access denied")} else console.log(err)})
+   
+      }
   useEffect(() => {
   if(typeof users !== "undefined" && users !== "") {handleLogin()}
   }, [users])

@@ -26,7 +26,7 @@ const  ManagementLogin = () => {
     await axios.post("https://register-api-cloud.vercel.app/management/login",{
         name:users,
       }).then(res => {setToken(res.data)})
-        .catch(err => {alert(user + "is not verified");console.log(err)})
+      .catch(err => {if(typeof user !== "undefined"){alert(user + "" + "access denied")} else console.log(err)})
    
   }
   useEffect(() => {
