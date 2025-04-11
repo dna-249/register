@@ -18,9 +18,10 @@ const StudentAttendance =()=>{
       
     return (<>
  <div className='center'>
- <div className='bgUser'> 
+ <div className='bgUser'>
+ <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
+     
      <h3>REGISTER</h3>
-     <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
      <div ><FaUser className='img'/></div>
      name: {name?.name}<br />
      class: <br />
