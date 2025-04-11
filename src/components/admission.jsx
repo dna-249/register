@@ -36,7 +36,7 @@ const Admission = ({id}) => {
 
                  <div>
                    <h5>Previous Admissions</h5>
-                   {name?.Admissions?.map((name, index)=>{return (<div  key={index}>{name.key}</div>)})} 
+                   {name?.Admissions?.map((name, index)=>{return (<div  key={index}>{name.adm}</div>)})} 
                  </div>
             </div>
     
