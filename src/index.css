@@ -68,7 +68,7 @@ body {
 }
 .twoA{
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
   justify-content:baseline;
 }
 .three{

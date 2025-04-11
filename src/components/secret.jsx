@@ -41,7 +41,7 @@ const Secret = ({id}) => {
                       <div className='white'>
                         <h5>Previous Keys</h5>
                          {name?.management?.map((name,index)=>{return (
-                           <div key={index}>{name}</div>
+                           <div key={index}>{name.key}</div>
                          )})}
                       </div>
                 </div>
@@ -56,7 +56,7 @@ const Secret = ({id}) => {
                        <div className='white'>
                         <h5>Previous Keys</h5>
                          {name?.staff?.map((name,index)=>{return (
-                           <div key={index}>{name}</div>
+                           <div key={index}>{name.key}</div>
                          )})}
                      </div>
                </div>
