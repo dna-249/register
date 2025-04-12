@@ -18,7 +18,7 @@ const StudentSignup = ({setLogin}) => {
 
   const handleSignUp =()=>{
     axios.post("https://register-api2.vercel.app/student/admissions/adm",
-      { adm:adm,
+      { key:adm,
         name:name,
         user:user,
         password:password,
