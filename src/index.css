@@ -24,12 +24,12 @@ body {
  margin: auto;
  justify-items: center;
  align-items: center;
- text-align: center;
+ text-align:left;
  border: none;
  background-color: #ffffff;
  border-radius: 10px;
- color: #343333ad;
-
+ color: #000;;
+ font-size: smaller;
  
 }
 .signUp input{
@@ -39,7 +39,7 @@ body {
  background-color:beige;
  border-radius: 10px;
  text-align: center;
- font-size: smaller;
+ font-size: xx-small;
  outline-color: rgb(151, 245, 132);
  margin-bottom: 10px;
  
