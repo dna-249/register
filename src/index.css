@@ -27,7 +27,7 @@ body {
  text-align:left;
  border: none;
  background-color: #ffffff;
- border-radius: 10px;
+ border-radius: 5px;
  color: #000;;
  font-size: smaller;
  
@@ -37,7 +37,7 @@ body {
  height: 30px;
  border: none;
  background-color:beige;
- border-radius: 10px;
+ border-radius: 5px;
  text-align: center;
  font-size: xx-small;
  outline-color: rgb(151, 245, 132);
