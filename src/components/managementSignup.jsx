@@ -24,7 +24,7 @@ const ManagementSignup = ({setLogin}) => {
         phone:phone,
         email:email
       })
-      .then((res)=> console.log(res.data))
+      .then((res)=>alert("successfully"))
       .catch((err)=> console.log(err))
 
   }
