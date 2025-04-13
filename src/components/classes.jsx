@@ -39,15 +39,17 @@ const Classes = ({id}) => {
 
      const handleId = (name) => {
        setSelect(name)
+       setShow(false)
      }
 
      const handleId1 = (name) => {
       setSelect1(name)
+      setShow1(false)
     }
      
     const handleAssign = (name) => {
       axios.put(`https://register-api-cloud.vercel.app/staff/${select?._id}`,{class:name})
-                .then((res)=> {alert(`${select?.name}  is assigned class ${name}`);setAuto((prev)=>!prev);setShow(false)})
+                .then((res)=> {alert(`${select?.name}  is assigned class ${name}`);setAuto((prev)=>!prev);setShow(true)})
                   .catch((err)=> console.log(err))
     
     }
