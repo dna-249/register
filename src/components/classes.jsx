@@ -85,7 +85,7 @@ const Classes = ({id}) => {
                   ):(
                   <div className='white'>
                       <h5> Select Class</h5>
-                      {name?classes?.map((name,index)=>{return(
+                       {name?.classes?.map((name,index)=>{return(
                              <div onClick={()=>handleAssign(name.key)} key={index}>{name.key}</div>
                       )})} 
                 </div>
@@ -104,7 +104,7 @@ const Classes = ({id}) => {
                 ):(
                   <div className='white'>
                       <h5> Select Class</h5>
-                      {name?classes?.map((name,index)=>{return(
+                      {name?.classes?.map((name,index)=>{return(
                         <div onClick={()=>handleAssign1(name.key)} key={index}>{name.key}</div>
 
                       )})} 
@@ -114,7 +114,7 @@ const Classes = ({id}) => {
 
                  <div className='white'>
                    <h5>Previous Classes</h5>
-                   {name?classes?.map((name,index)=>{return(
+                   {name?.classes?.map((name,index)=>{return(
                     <div key={index}>{name.key}</div>
                    )})} 
                  </div>
