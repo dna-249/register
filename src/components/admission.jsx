@@ -17,7 +17,7 @@ const Admission = ({id}) => {
 
 
   const handleCreate = (params) => {
-    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/admissions/adm`,{adm:adm})
+    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/admissions/key`,{key:adm})
                   .then((res)=>{alert(`${adm} admission no is created`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
@@ -30,14 +30,14 @@ const Admission = ({id}) => {
                  <h4>Admissions</h4>
                  <div className='white'>
                     <h5>Create Admission</h5>
-                    <h3>New:{adm}</h3>
+                    <h4>New:{adm}</h4>
                     <input type="number" onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
                     <button onClick={()=>handleCreate()}>Register</button>
                  </div>
                      <h5>Previous Admissions</h5>
                  <div className='white' >
                   
-                   {name?.admissions?.map((name, index)=>{return (<div  key={index}>{name.adm}</div>)})} 
+                   {name?.admissions?.map((name, index)=>{return (<div  key={index}>{name.key}</div>)})} 
                  </div>
             </div>
     
