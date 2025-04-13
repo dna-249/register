@@ -17,8 +17,8 @@ const Admission = ({id}) => {
 
 
   const handleCreate = (params) => {
-    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/admissions/key`,{key:adm})
-                  .then((res)=>{alert(`${adm} admission no is created`);setAuto((prev)=>!prev)})
+    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/admissions/key`,{adm:adm})
+                  .then((res)=>{alert(`${adm} admission is created`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
   
