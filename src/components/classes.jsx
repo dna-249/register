@@ -3,7 +3,7 @@ import React, { useState,useEffect } from 'react'
 const Classes = ({id}) => {
   const [adm,setAdm]= useState('')
   const [select,setSelect]= useState('')
-  const [select1,setSelec1t]= useState('')
+  const [select1,setSelect1]= useState('')
   const [show,setShow]= useState(true)
   const [show1,setShow1]= useState(true)
   const [name,setName]= useState([''])
