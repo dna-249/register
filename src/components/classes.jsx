@@ -99,7 +99,7 @@ const Classes = ({id}) => {
                     <div className='white'>
                       <h5>Assign Class to Staff</h5>
                    {name2?.map((name,index)=>{return(
-                   <div onClick={()=>handleId1(name._id)} key={index}>{name.key}</div>
+                       <div onClick={()=>handleId1(name)} key={index}>{name.key}</div>
 
                    )})} 
                  </div>
