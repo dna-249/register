@@ -2,6 +2,10 @@ import axios from 'axios'
 import React, { useState,useEffect } from 'react'
 const Classes = ({id}) => {
   const [adm,setAdm]= useState('')
+  const [select,setSelect]= useState('')
+  const [select1,setSelec1t]= useState('')
+  const [show,setShow]= useState(true)
+  const [show1,setShow1]= useState(true)
   const [name,setName]= useState([''])
   const [name1,setName1]= useState([''])
   const [name2,setName2]= useState([''])
@@ -32,6 +36,29 @@ const Classes = ({id}) => {
                 .then((res)=> {alert(`${adm} class is assigned`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
+
+     const handleId = (name) => {
+       setSelect(name)
+     }
+
+     const handleId1 = (name) => {
+      setSelect1(name)
+    }
+     
+    const handleAssign = (name) => {
+      axios.put(`https://register-api-cloud.vercel.app/staff/${select?._id}`,{class:name})
+                .then((res)=> {alert(`${select?.name}  is assigned class ${name}`);setAuto((prev)=>!prev);setShow(false)})
+                  .catch((err)=> console.log(err))
+    
+    }
+
+    const handleAssign1 = (name) => {
+      axios.put(`https://register-api-cloud.vercel.app/student/${select1?._id}`,{class:name})
+      .then((res)=> {alert(`${select1?.name}  is assigned class ${name}`);setAuto((prev)=>!prev);setShow1(false)})
+        .catch((err)=> console.log(err))
+
+   }
+    
   
   return (
     
@@ -47,26 +74,47 @@ const Classes = ({id}) => {
                  </div>
 
                  <div>
-                    <h5>Assign Class to Staff</h5>
-                    <div className='white'>
+                   {show?(
+                    <div className='white'> 
+                      <h5>Assign Class to Staff</h5>
                    {name1?.map((name,index)=>{return(
-                    <div key={index}>{name.name}</div>
-                   )})} 
-                 </div>
-                 </div>
+                    <div onClick={()=>handleId(name)} key={index}>{name.key}</div>
 
-                 <div>
-                    <h5>Assign Class to Staff</h5>
+                   )})} 
+                  </div>
+                  ):(
+                  <div className='white'>
+                      <h5> Select Class</h5>
+                      {name?classes?.map((name,index)=>{return(
+                             <div onClick={()=>handleAssign(name.key)} key={index}>{name.key}</div>
+                      )})} 
+                </div>
+                )}
+              </div>
+
+              <div>
+                    {show1?(
                     <div className='white'>
+                      <h5>Assign Class to Staff</h5>
                    {name2?.map((name,index)=>{return(
-                    <div key={index}>{name.name}</div>
+                   <div onClick={()=>handleId1(name._id)} key={index}>{name.key}</div>
+
                    )})} 
                  </div>
-                 </div>
+                ):(
+                  <div className='white'>
+                      <h5> Select Class</h5>
+                      {name?classes?.map((name,index)=>{return(
+                        <div onClick={()=>handleAssign1(name.key)} key={index}>{name.key}</div>
+
+                      )})} 
+                </div>
+                )}
+             </div>
 
                  <div className='white'>
                    <h5>Previous Classes</h5>
-                   {name?.map((name,index)=>{return(
+                   {name?classes?.map((name,index)=>{return(
                     <div key={index}>{name.key}</div>
                    )})} 
                  </div>
