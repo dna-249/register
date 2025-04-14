@@ -70,6 +70,8 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   justify-content:baseline;
+  margin: 2px;
+  padding: 2px;
 }
 .three{
   width:100%;
@@ -273,6 +275,8 @@ th{
   border-radius: 5px;
   padding: 5px;
   border: 1px solid rgba(132, 131, 131, 0.316);
+  margin: 5px;
+ 
 }
 .red{
   color: red;
