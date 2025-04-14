@@ -68,7 +68,7 @@ const Classes = ({id}) => {
             
             <div >
                  <h4 >Classes</h4>
-                 <div className='white'>
+                 <div className='white2'>
                     <h5>Create Class</h5>
                 
                     <input type="text" onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
@@ -77,7 +77,7 @@ const Classes = ({id}) => {
 
                  <div>
                    {show?(
-                    <div className='white'> 
+                    <div className='white2'> 
                       <h5>Assign Class to Staff</h5>
                    {name1?.map((name,index)=>{return(
                     <div onClick={()=>handleId(name)} key={index}>{name.name}</div>
@@ -85,7 +85,7 @@ const Classes = ({id}) => {
                    )})} 
                   </div>
                   ):(
-                  <div className='white'>
+                  <div className='white2'>
                       <h5> Select Class</h5>
                        {name?.classes?.map((name,index)=>{return(
                              <div onClick={()=>handleAssign(name.key)} key={index}>{name.key}</div>
@@ -96,7 +96,7 @@ const Classes = ({id}) => {
 
               <div>
                     {show1?(
-                    <div className='white'>
+                    <div className='white2'>
                       <h5>Assign Class to Student</h5>
                    {name2?.map((name,index)=>{return(
                        <div onClick={()=>handleId1(name)} key={index}>{name.name}</div>
@@ -104,7 +104,7 @@ const Classes = ({id}) => {
                    )})} 
                  </div>
                 ):(
-                  <div className='white'>
+                  <div className='white2'>
                       <h5> Select Class</h5>
                       {name?.classes?.map((name,index)=>{return(
                         <div onClick={()=>handleAssign1(name.key)} key={index}>{name.key}</div>
@@ -114,7 +114,7 @@ const Classes = ({id}) => {
                 )}
              </div>
 
-                 <div className='white'>
+                 <div className='white2'>
                    <h5>Previous Classes</h5>
                    {name?.classes?.map((name,index)=>{return(
                     <div key={index}>{name.key}</div>

@@ -47,9 +47,13 @@ const Staff = ({setBack}) => {
          <div className='bars'><FaBars/></div>
          </div>
       <div>
-        <div>Name:{staff?.name}</div>
-        <div>Class:{staff?.class}</div>
-        <div>Role:</div>
+      <div>
+              <h4>
+                Key:{staff?.key} <br />
+                Name:{staff?.name} <br />
+                class:{staff?.class}
+              </h4>
+            </div>
         
     </div>
     <div className='white'>

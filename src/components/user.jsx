@@ -80,10 +80,12 @@ const handleResult = async(params) => {
  </div>
    <div className='two'>
    <div>
-   <div> <h4>{name?.key}</h4> </div> 
-   <div> <h4>{name?.name}</h4> </div> 
-   <div> <h4>{name?.class}</h4> </div> 
-   </div>
+              <h4>
+                Key:{name?.key} <br />
+                Name:{name?.name} <br />
+                class:{name?.class}
+              </h4>
+        </div>
    <div><span style={{color:"blue", textDecoration:"underline"}}></span></div>
  
    </div>

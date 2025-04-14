@@ -277,6 +277,14 @@ th{
   margin: 5px;
  
 }
+.white2{
+  width: 100%;
+  justify-content:baseline;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid rgba(132, 131, 131, 0.316);
+}
 .red{
   color: red;
 }

@@ -73,7 +73,7 @@ const Management = () => {
  </div>
 <div className="white three4">
        {select =="1" &&
-               <div className="white three4">
+               <div className="white2 three4">
                     <div><h3>Management</h3>
                           {names1?.map((name,index) => <div key={index}>
                           <div onClick={()=>nav(`/management/${name._id}`)}> {name.name} </div>
