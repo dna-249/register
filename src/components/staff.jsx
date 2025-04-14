@@ -17,11 +17,11 @@ const Staff = ({setBack}) => {
   const nav = useNavigate()
   useEffect(() => {
  
-    axios.get(`https://register-api2.vercel.app/staff/${id}`)
+    axios.get(`https://register-api-cloud.vercel.app/staff/${id}`)
               .then((res)=> {console.log(res.data);setStaff(res.data)})
               .catch((err)=> console.log(err))
   
-              axios.get(`https://register-api2.vercel.app/student`)
+              axios.get(`https://register-api-cloud.vercel.app/student`)
               .then((res)=> {console.log(res.data);setNames(res.data)})
               .catch((err)=> console.log(err))
   
@@ -48,13 +48,14 @@ const Staff = ({setBack}) => {
          </div>
       <div>
         <div>Name:{staff?.name}</div>
-        <div>Class:{staff?.name}</div>
+        <div>Class:{staff?.class}</div>
         <div>Subject:</div>
         
     </div>
     <div className='white'>
          <h2> STUDENT LIST</h2>
-         {names?.map((item,index) => <div key={index}>
+         {names?.filter((item) => {if(item?.class === staff?.class) return item.name})
+          .map((item,index) => <div key={index}>
          <div onClick={()=>nav(`/user/${item._id}`)}> {item.name} </div>
          </div>)}
 
