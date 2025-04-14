@@ -267,7 +267,6 @@ th{
 }
 
 .white{
-  width:100%;
   justify-content:baseline;
   min-width: 320px;
   max-width: 1000px;
