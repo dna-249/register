@@ -205,7 +205,7 @@ body {
   font-family:system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: green;
   display: grid;
-  margin: auto;
+  margin: 2px;
   padding: 10px;
   border: 1px solid rgba(65, 64, 64, 0.189);
   border-radius: 10px;
@@ -272,7 +272,7 @@ th{
   max-width: 1000px;
   background-color: #fff;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   border: 1px solid rgba(132, 131, 131, 0.316);
   margin: 5px;
  
@@ -284,6 +284,7 @@ th{
   border-radius: 5px;
   padding: 5px;
   border: 1px solid rgba(132, 131, 131, 0.316);
+  margin: 5px;
 }
 .red{
   color: red;

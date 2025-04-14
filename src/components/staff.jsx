@@ -53,7 +53,7 @@ const Staff = ({setBack}) => {
                 Name:{staff?.name} <br />
                 class:{staff?.class}
               </h4>
-            </div>
+        </div>
         
     </div>
     <div className='white'>
