@@ -37,8 +37,8 @@ const Secret = ({id}) => {
                   <div className='twoA'>   
                      <div className='white2'>
                         <h5>Management</h5>
-                        <input type="text" onChange={(e)=>setAdm(e.target.value)} placeholder='secret key...'/>
-                        <button onClick={()=>handleManagementKey()}>Register</button>
+                        <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='secret key...'/>
+                        <button className='click1' onClick={()=>handleManagementKey()}>Register</button>
                       </div>
                       <div className='white2'>
                         <h5>Previous Keys</h5>

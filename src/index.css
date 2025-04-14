@@ -44,6 +44,18 @@ body {
  margin-bottom: 10px;
  
 }
+
+.input{
+  width: 250px; 
+  height: 30px;
+  border: none;
+  background-color:beige;
+  border-radius: 5px;
+  text-align: center;
+  font-size: xx-small;
+  outline-color: rgb(151, 245, 132);
+  margin-bottom: 10px;}
+
 .signUp button{
   border-radius: 5px;
   background-color: rgba(47, 142, 47, 0.633);
@@ -282,6 +294,7 @@ th{
   justify-content:baseline;
   background-color: #fff;
   border-radius: 5px;
+  min-width: 250px;
   padding: 5px;
   border: 1px solid rgba(132, 131, 131, 0.316);
   margin: 5px;
