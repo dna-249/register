@@ -80,7 +80,7 @@ const Classes = ({id}) => {
                     <div className='white'> 
                       <h5>Assign Class to Staff</h5>
                    {name1?.map((name,index)=>{return(
-                    <div onClick={()=>handleId(name)} key={index}>{name.key}</div>
+                    <div onClick={()=>handleId(name)} key={index}>{name.name}</div>
 
                    )})} 
                   </div>
@@ -97,9 +97,9 @@ const Classes = ({id}) => {
               <div>
                     {show1?(
                     <div className='white'>
-                      <h5>Assign Class to Staff</h5>
+                      <h5>Assign Class to Student</h5>
                    {name2?.map((name,index)=>{return(
-                       <div onClick={()=>handleId1(name)} key={index}>{name.key}</div>
+                       <div onClick={()=>handleId1(name)} key={index}>{name.name}</div>
 
                    )})} 
                  </div>
