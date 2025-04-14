@@ -47,10 +47,11 @@ useEffect(() => {
  
  </div>
    <div className='two'>
-  
+   <div>
    <div> <h4>{name?.key}</h4> </div> 
    <div> <h4>{name?.name}</h4> </div> 
    <div> <h4>{name?.class}</h4> </div> 
+   </div>
    <div><span style={{color:"blue", textDecoration:"underline"}}></span></div>
  
    </div>

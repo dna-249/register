@@ -50,7 +50,7 @@ const Management = () => {
             <div className='bars'><FaBars/></div>
         
             <div>
-                <div>Name:{names1?.key}</div>
+                <div>Key:{names1?.key}</div>
                 <div>Name:{names1?.name}</div>
                 <div>Role:</div>
                 
