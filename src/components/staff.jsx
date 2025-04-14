@@ -48,7 +48,7 @@ const Staff = ({setBack}) => {
          </div>
       <div>
         <div>Name:{staff?.name}</div>
-        <div>Class:{staff?.class}</div>
+        <div>Class:</div>
         <div>Subject:</div>
         
     </div>
