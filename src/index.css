@@ -82,7 +82,8 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   margin: 2px;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 5px;
 }
 .three{
   width:100%;
@@ -362,7 +363,7 @@ color: #fff;
   padding: 5px;
   text-align: center;
   display: grid;
-  
+  height: 30px;
   border: none;
   
 }
