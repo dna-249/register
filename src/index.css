@@ -46,15 +46,15 @@ body {
 }
 
 .input{
-  width: 250px; 
+  width: 200px; 
   height: 30px;
   border: none;
   background-color:beige;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
   font-size: xx-small;
   outline-color: rgb(151, 245, 132);
-  margin-bottom: 10px;}
+  }
 
 .signUp button{
   border-radius: 5px;

@@ -34,7 +34,7 @@ const Secret = ({id}) => {
             <div >
                  <h4>Secret_Keys</h4>
 
-                  <div className='twoA'>   
+                  <div>   
                      <div className='white2'>
                         <h5>Management</h5>
                         <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='secret key...'/>
@@ -48,7 +48,7 @@ const Secret = ({id}) => {
                       </div>
                 </div>
 
-               <div className=' twoA'>
+               <div >
                      <div className='white2'>
                         <h5>Staff</h5>
                         <input type="text" onChange={(e)=>setAdm1(e.target.value)} placeholder='secret key...'/>
