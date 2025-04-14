@@ -54,7 +54,7 @@ const Staff = ({setBack}) => {
     </div>
     <div className='white'>
          <h2> STUDENT LIST</h2>
-         {names?.filter((item) => {return staff?.class.toLowerCase() === item.class? item:item.class.toLowerCase().includes(staff?.class)})
+         {names?.filter((item) => {return staff?.class.toLowerCase() === item.class.toLowerCase()})
           .map((item,index) => <div key={index}>
          <div onClick={()=>nav(`/user/${item._id}`)}> {item.name} </div>
          </div>)}
