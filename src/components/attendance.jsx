@@ -34,7 +34,7 @@ const Attendance =()=>{
     }
 
     const handleRegister = async(add)=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/push/${add}`,
+           await axios.put(`https://register-api-cloud.vercel.app/student/${add}`,
             {
             date:Date().slice(0,21),
             mon:'a',
