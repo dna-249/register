@@ -81,9 +81,8 @@ body {
 .twoA{
   display: grid;
   grid-template-columns: auto auto;
-  justify-content:baseline;
   margin: 2px;
-  padding: 2px;
+  justify-content: space-around;
 }
 .three{
   width:100%;
