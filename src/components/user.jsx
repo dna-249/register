@@ -90,7 +90,7 @@ const handleResult = async(params) => {
  
    </div>
  
-    <button className='click1' onClick={()=>handleResult()}>Save</button>
+    <button style={{justifySelf: "flex-end",margin:"2px"}} className='click1' onClick={()=>handleResult()}>Save</button>
    
    <div className='user2 '>
     <div className='three'>
