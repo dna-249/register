@@ -159,7 +159,7 @@ body {
   grid-template-columns: auto auto auto auto auto auto auto;
   justify-content:baseline;
   padding: 10px;
-  width: 600px;
+  width: 800px;
 }
 .scroll{
   min-width: 320px;
@@ -171,7 +171,7 @@ body {
   justify-content:baseline;
   height: 170px;
   padding: 10px;
-  width: 600px;
+  width: 800px;
 }
 .row2{
   display: grid;
@@ -206,7 +206,7 @@ body {
   color: green;
   display: grid;
   margin: auto;
-  padding: 2px;
+  padding: 10px;
   border: 1px solid rgba(65, 64, 64, 0.189);
   border-radius: 10px;
   background-color: rgba(240, 245, 249, 0.92);
@@ -274,7 +274,7 @@ th{
   border-radius: 5px;
   padding: 5px;
   border: 1px solid rgba(132, 131, 131, 0.316);
-
+  margin: 5px;
  
 }
 .red{
