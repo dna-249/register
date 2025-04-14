@@ -48,13 +48,13 @@ const Staff = ({setBack}) => {
          </div>
       <div>
         <div>Name:{staff?.name}</div>
-        <div>Class:</div>
+        <div>Class:{staff?.class}</div>
         <div>Subject:</div>
         
     </div>
     <div className='white'>
          <h2> STUDENT LIST</h2>
-         {names?.filter((item) => {return staff?.class?.toLowerCase() === item?.class?.toLowerCase()})
+         {names?.filter((item) => {return item?.class?.toLowerCase()=== staff?.class?.toLowerCase()})
           .map((item,index) => <div key={index}>
          <div onClick={()=>nav(`/user/${item._id}`)}> {item.name} </div>
          </div>)}
