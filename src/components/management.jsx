@@ -50,9 +50,10 @@ const Management = () => {
             <div className='bars'><FaBars/></div>
         
             <div>
+                <div>Name:{names1?.key}</div>
                 <div>Name:{names1?.name}</div>
-                <div>Class:</div>
-                <div>Subject:</div>
+                <div>Role:</div>
+                
                 
             </div>
     </div>

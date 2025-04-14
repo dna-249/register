@@ -49,7 +49,7 @@ const Staff = ({setBack}) => {
       <div>
         <div>Name:{staff?.name}</div>
         <div>Class:{staff?.class}</div>
-        <div>Subject:</div>
+        <div>Role:</div>
         
     </div>
     <div className='white'>
