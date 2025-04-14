@@ -17,11 +17,11 @@ const Staff = ({setBack}) => {
   const nav = useNavigate()
   useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/staff/${id}`)
+    axios.get(`https://register-api2.vercel.app/staff/${id}`)
               .then((res)=> {console.log(res.data);setStaff(res.data)})
               .catch((err)=> console.log(err))
   
-              axios.get(`https://register-api-cloud.vercel.app/student`)
+              axios.get(`https://register-api2.vercel.app/student`)
               .then((res)=> {console.log(res.data);setNames(res.data)})
               .catch((err)=> console.log(err))
   
@@ -48,7 +48,7 @@ const Staff = ({setBack}) => {
          </div>
       <div>
         <div>Name:{staff?.name}</div>
-        <div>Class:</div>
+        <div>Class:{staff?.name}</div>
         <div>Subject:</div>
         
     </div>
