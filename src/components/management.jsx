@@ -50,11 +50,11 @@ const Management = () => {
             <div className='bars'><FaBars/></div>
         
             <div>
-                <div>Key:{names1?.key}</div>
-                <div>Name:{names1?.name}</div>
-                <div>Role:</div>
-                
-                
+              <h4>
+                Key:{names1?.key} <br />
+                Name:{names1?.name} <br />
+                Role:
+              </h4>
             </div>
     </div>
 
