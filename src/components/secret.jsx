@@ -38,15 +38,18 @@ const Secret = ({id}) => {
                      <div className='white2'>
                         <h5>Management</h5>
                     <div className='twoA'>
+                      <h5>New key: {adm}</h5>
                         <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='secret key...'/>
                         <button className='click1' onClick={()=>handleManagementKey()}>Register</button>
                       </div>
                       </div>
                       <div className='white2'>
                         <h5>Previous Keys</h5>
+                        <div className="dropDown">
                          {name?.management?.map((item,index)=>{return (
                            <div key={index}>{item.key}</div>
                          )})}
+                      </div>
                       </div>
                 </div>
 
@@ -54,6 +57,7 @@ const Secret = ({id}) => {
                      <div className='white2'>
                         <h5>Staff</h5>
                     <div className='twoA'>
+                      <h5>New key: {adm1}</h5>
                         <input type="text" className='input' onChange={(e)=>setAdm1(e.target.value)} placeholder='secret key...'/>
                         <button className='click1' onClick={()=>handleStaffKey()}>Register</button>
                        </div>
@@ -61,9 +65,11 @@ const Secret = ({id}) => {
 
                        <div className='white2'>
                         <h5>Previous Keys</h5>
+                        <div className="dropDown">
                          {name?.staff?.map((item,index)=>{return (
                            <div key={index}>{item.key}</div>
                          )})}
+                     </div>
                      </div>
                </div>
 

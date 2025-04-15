@@ -71,6 +71,7 @@ const Classes = ({id}) => {
                  <div className='white2'>
                     <h5>Create Class</h5>
                     <div className='twoA'>
+                      <h5>New Class: {adm}</h5>
                     <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
                     <button className='click1' onClick={()=>handleCreate()}>Create</button>
                  </div>
@@ -80,17 +81,21 @@ const Classes = ({id}) => {
                    {show?(
                     <div className='white2'> 
                       <h5>Assign Class to Staff</h5>
+                      <div className="dropDown">
                    {name1?.map((name,index)=>{return(
                     <div onClick={()=>handleId(name)} key={index}>{name.name}</div>
 
                    )})} 
                   </div>
+                  </div>
                   ):(
                   <div className='white2'>
                       <h5> Select Class</h5>
+                      <div className="dropDown">
                        {name?.classes?.map((name,index)=>{return(
                              <div onClick={()=>handleAssign(name.key)} key={index}>{name.key}</div>
                       )})} 
+                </div>
                 </div>
                 )}
               </div>
@@ -99,27 +104,33 @@ const Classes = ({id}) => {
                     {show1?(
                     <div className='white2'>
                       <h5>Assign Class to Student</h5>
+                      <div className="dropDown">
                    {name2?.map((name,index)=>{return(
                        <div onClick={()=>handleId1(name)} key={index}>{name.name}</div>
 
                    )})} 
                  </div>
+                 </div>
                 ):(
                   <div className='white2'>
                       <h5> Select Class</h5>
+                      <div className="dropDown">
                       {name?.classes?.map((name,index)=>{return(
                         <div onClick={()=>handleAssign1(name.key)} key={index}>{name.key}</div>
 
                       )})} 
+                </div>
                 </div>
                 )}
              </div>
 
                  <div className='white2'>
                    <h5>Previous Classes</h5>
+                   <div className="dropDown">
                    {name?.classes?.map((name,index)=>{return(
                     <div key={index}>{name.key}</div>
                    )})} 
+                 </div>
                  </div>
             </div>
     

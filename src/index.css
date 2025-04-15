@@ -405,7 +405,9 @@ color: #fff;
   font-size: large;
   font-weight: bold;
   background-color:beige;
-  width: 100px;
+  width: 110px;
+  padding-left: 10px;
+  height: 300px;
 }
 
 
