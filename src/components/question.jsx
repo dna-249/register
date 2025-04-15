@@ -13,7 +13,7 @@ const Question = () => {
     const [name, setName]= useState([])
     const [select, setSelect]= useState(false)
     const [key, setKey]= useState() 
-    const [show, setShow]= useState(false)
+    const [show, setShow]= useState(true)
 
     const [index, setIndex]= useState()
     const [isNew, setIsNew]= useState(true)
@@ -34,7 +34,7 @@ const Question = () => {
     const handleSelect = (item,key,index) => {
         setKey(key) 
         setIndex(index) 
-        setShow(true)
+        setShow(false)
         setSelect2(item)
         
       }
@@ -61,7 +61,7 @@ const Question = () => {
                     await axios.put(`https://register-api-cloud.vercel.app/staff/set/${id}/${object}/${index}/${key}`,{
                      value:select3
                     })
-                              .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); setShow(false); console.log(res.data)})
+                              .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); setShow(true); console.log(res.data)})
                               .catch((err)=> console.log(err))
               }
     
