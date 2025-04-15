@@ -11,7 +11,9 @@ const Question = () => {
     const [term, setTerm]= useState("first")
     const [name, setName]= useState([])
     const [select, setSelect]= useState(false)
-    const [key, setKey]= useState()
+    const [key, setKey]= useState() 
+    const [show, setShow]= useState(false)
+
     const [index, setIndex]= useState()
     const [isNew, setIsNew]= useState(true)
     
@@ -31,7 +33,7 @@ const Question = () => {
     const handleSelect = (item,key,index) => {
         setKey(key) 
         setIndex(index) 
-        setIsNew(pre => !pre)
+        setShow(true)
         setSelect2(item)
         
       }
@@ -55,10 +57,10 @@ const Question = () => {
          }
 
          const handleSave = async()=>{
-                    await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/${object}/${index}/${key}`,{
+                    await axios.put(`https://register-api-cloud.vercel.app/staff/set/${id}/${object}/${index}/${key}`,{
                      value:select3
                     })
-                              .then((res)=>{setIsNew(pre => !pre); console.log(res.data)})
+                              .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); setShow(false); console.log(res.data)})
                               .catch((err)=> console.log(err))
               }
     
