@@ -403,7 +403,6 @@ color: #fff;
 }
 .dropDown{
   display: grid;
-  font-size: large;
   font-weight: bold;
   background-color:beige;
   width: 110px;
