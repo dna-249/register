@@ -40,7 +40,7 @@ const Question = () => {
       }
 
     const handleRegister = async(add)=>{
-               await axios.put(`https://register-api-cloud.vercel.app/staff/${add}`,
+               await axios.put(`https://register-api-cloud.vercel.app/staff/${add}/${object}`,
                 {
                 date:Date().slice(0,21),
                 session:session,
