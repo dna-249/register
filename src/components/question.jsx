@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import {useParams,useNavigate} from "react-router-dom"
 import axios from 'axios'
-
+import { FaPlus } from 'react-icons/fa'
 const Question = () => {
      
     const [select2,setSelect2]=useState()
