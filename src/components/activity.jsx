@@ -65,7 +65,7 @@ const test =[{questions :["what is you name?",
         <div  className="two">
         <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
       <div> Admission No: <br />
-       Name:{names.name} <br />
+       Name:{names?.name} <br />
        Class: <br />
        Subject: {select3} <br />
        Activity: {select} <br />
@@ -111,9 +111,10 @@ const test =[{questions :["what is you name?",
     <div><h3>Remaining: 45mins </h3></div>
     </div>
 
-    {test.map((item, index)=> {if(count !== 4)
-        return (
+    {test.map((item, index)=>
+        {if(count !== 4)return (
         <div  key={index} >{item.questions[count]}
+
             {item.options.map((item,index)=> { return(<div key={index}>
              <div>Select: {select}
              <select onChange={(e)=>setSelect(e.target.value)}>
@@ -123,10 +124,12 @@ const test =[{questions :["what is you name?",
               <option value="C">C</option>
               <option value="D">D</option>
             </select></div>
+
             {Object.values(item)[count]
             .map((item, index)=>{return (<div  key={index}>
                  {item}
             </div>)})}</div>)})}
+            
             <div  onClick={()=>name(item.answers[count])}> Next</div></div>)
     ;else return (<div> {count2}</div>)})}
    

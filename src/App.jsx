@@ -7,6 +7,7 @@ const Secret  = lazy(()=>import( './components/secret'))
 const SignUp =lazy(()=>import('./components/signup'))
 const Login =lazy(()=>import('./components/login'))
 const User =lazy(()=>import('./components/user'))
+const Question =lazy(()=>import('./components/question'))
 const ManagementSignup =lazy(()=>import('./components/managementSignup'))
 const ManagementLogin =lazy(()=>import('./components/managementLogin'))
 const Management =lazy(()=>import('./components/management'))
@@ -41,6 +42,7 @@ return (<div>
       <Route path='/student/:id' element={<Student />}/>
       <Route path='/studentAttendance/:id' element={<StudentAttendance />}/>
       <Route path='/secret' element={<Secret />}/>
+      <Route path='/question/:id' element={<Question />}/>
       <Route path='/admission' element={<Admission />}/>
       <Route path='/activity' element={<Activity />}/>
       <Route path='/register' element={<Register />}/>

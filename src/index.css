@@ -55,6 +55,10 @@ body {
   font-size: xx-small;
   outline-color: rgb(151, 245, 132);
   }
+  select{
+    width: 20px;
+    outline-color: yellowgreen;
+  }
 
 .signUp button{
   border-radius: 5px;
@@ -107,7 +111,8 @@ body {
   display: grid;
   grid-template-columns: auto auto auto auto;
   justify-content:baseline;
-  width: 420px;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .three3{
@@ -279,18 +284,18 @@ th{
 }
 
 .white{
+  width: 100%;
   justify-content:baseline;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 1000px;
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
   border: 1px solid rgba(132, 131, 131, 0.316);
-  margin: 5px;
+  
  
 }
 .white2{
-  width: 100%;
   justify-content:baseline;
   background-color: #fff;
   border-radius: 5px;
@@ -298,7 +303,7 @@ th{
   max-width: 100%;
   padding: 5px;
   border: 1px solid rgba(132, 131, 131, 0.316);
-  margin: 5px;
+ margin-top: 5px;
 }
 .red{
   color: red;

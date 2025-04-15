@@ -42,7 +42,7 @@ const Staff = ({setBack}) => {
         
                 <div><Link to="/staff">Results</Link></div>
                 <div><Link to="/register">Attendances</Link> </div>
-                <div><Link to="/activity">Activities</Link></div>
+                <div  onClick={()=>nav(`/question/${id}`)}>Questions</div>
          </div>
          <div className='bars'><FaBars/></div>
          </div>
