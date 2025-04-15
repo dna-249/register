@@ -61,13 +61,14 @@ const Management = () => {
 
     <div className="two"> 
             <div  className='three2'>
+                <div onClick={()=>setSelect('1')}> Index</div>
                 <div onClick={()=>setSelect('2')}> Admissions</div>
                 <div onClick={()=>setSelect('3')}>Secret_Keys </div>
-                <div onClick={()=>setSelect('4')}>Classes</div>
+              
          </div>
          <div  className='three2'>
+                <div onClick={()=>setSelect('4')}>Classes</div>
                 <div>Results</div>
-                <div>Reports </div>
                 <div>Notice</div>
          </div>
  </div>
@@ -75,23 +76,29 @@ const Management = () => {
        {select =="1" &&
                <div className="white2 three4">
                     <div><h3>Management</h3>
+                    <div className="dropDown">
                           {names1?.map((name,index) => <div key={index}>
                           <div onClick={()=>nav(`/management/${name._id}`)}> {name.name} </div>
                           </div>)}
                       </div>
+                      </div>
 
                       <div>
                       <h3> Staff  </h3>
+                      <div className="dropDown">
                           {names2?.map((name,index) => <div key={index}>
                           <div onClick={()=>nav(`/staff/${name._id}`)}> {name.name} </div>
                           </div>)}
                       </div>
+                      </div>
                       
                       <div><h3> Students</h3>
+                           <div className="dropDown">
                             {names3?.map((name,index) => <div key={index}>
                             <div onClick={()=>nav(`/student/${name._id}`)}> {name.name} </div>
                             </div>)}
                             
+                       </div> 
                        </div> 
                 </div>
                 || select === "2" && <div><Admission id ={id}/></div>
