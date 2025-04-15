@@ -75,6 +75,7 @@ const Management = () => {
 <div className="white three4">
        {select =="1" &&
                <div className="white2 three4">
+                <div className="scroll">
                     <div><h3>Management</h3>
                     <div className="dropDown">
                           {names1?.map((name,index) => <div key={index}>
@@ -100,6 +101,7 @@ const Management = () => {
                             
                        </div> 
                        </div> 
+                </div>
                 </div>
                 || select === "2" && <div><Admission id ={id}/></div>
                 || select === "3" && <div> <Secret id ={id} /></div>

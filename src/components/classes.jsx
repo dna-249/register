@@ -70,8 +70,9 @@ const Classes = ({id}) => {
                  <h4 >Classes</h4>
                  <div className='white2'>
                     <h5>Create Class</h5>
+                    <h5>New Class: {adm}</h5>
                     <div className='twoA'>
-                      <h5>New Class: {adm}</h5>
+                      
                       
                     <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
                     <button className='click1' onClick={()=>handleCreate()}>Create</button>
