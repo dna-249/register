@@ -22,7 +22,7 @@ const Question = () => {
   const [value6, setValue6]= useState() 
   const [type, setType]= useState() 
   const [show, setShow]= useState(true)
-  const [insert, setInsert]= useState(0)
+  const [insert, setInsert]= useState(1)
 
   const [index, setIndex]= useState()
   const [isNew, setIsNew]= useState(true)
