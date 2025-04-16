@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import {useParams,useNavigate} from "react-router-dom"
 import axios from 'axios'
-import { FaPlus,FaArrowCircleLeft } from 'react-icons/fa'
+import { FaPlus,FaArrowCircleLeft,FaDatabase } from 'react-icons/fa'
 const Question = () => {
      
   const [select2,setSelect2]=useState()
@@ -22,7 +22,7 @@ const Question = () => {
   const [value6, setValue6]= useState() 
   const [type, setType]= useState() 
   const [show, setShow]= useState(true)
-  const [insert, setInsert]= useState(false)
+  const [insert, setInsert]= useState(0)
 
   const [index, setIndex]= useState()
   const [isNew, setIsNew]= useState(true)
@@ -38,7 +38,12 @@ const Question = () => {
            .catch((err)=> console.log(err))
     }, [id, show,select])
   
-
+   const handleDelete = (params) => {
+    axios.put(`https://register-api-cloud.vercel.app/staff/${id}/${select2}/${object}`)
+    .then((res)=>  setName(res.data))
+    .catch((err)=> console.log(err))
+   }
+   
      
     const handleSelect = (item,key,index) => {
         setKey(key) 
@@ -62,7 +67,7 @@ const Question = () => {
                 c:value4,
                 d:value5,
                })
-                         .then((res)=> {setSelect(pre => !pre); setInsert(false);console.log(res.data)})
+                         .then((res)=> {setSelect(pre => !pre); setInsert(0);console.log(res.data)})
                          .catch((err)=> console.log(err))
                   
          }
@@ -75,7 +80,7 @@ const Question = () => {
                               .catch((err)=> console.log(err))
               }
     
- if(insert === false)return (
+ if(insert === 0)return (
   
   <div>{show?(
   <div className='center'>
@@ -114,7 +119,7 @@ const Question = () => {
       <option value="bio">Biology</option>
     </select></div>
     </div>
-    <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(true)}>Insert Questions</button></div>
+    <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(1)}>Insert Questions</button></div>
 
 
        <div className='white'>
@@ -255,7 +260,7 @@ const Question = () => {
   
    </div>
   )
-  else return(
+  if(insert === 1) return(
     <div className='center'>
   <div style={{margin:"auto",color:"green"}}>
        
@@ -306,6 +311,89 @@ const Question = () => {
   </div>
  
   )
-}
+  if(insert === 2) return(
+  <div>{show?(
+  <div className='center'>
+   <div className='bgUser'> 
+
+   
+       
+      
+   
+    >
+    <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(0)}>Back</button></div>
+
+
+       <div className='white'>
+         
+           <div >
+            <h3> Updating Questions</h3>
+             
+                </div>
+          <div className="scroll">
+               <thead className='seven' >
+                      <tr>
+                          <th>Date:</th>
+                          <th>session:</th>
+                          <th>term:</th>
+                          <th>type:</th>
+                          <th>question:</th>
+                          <th>ans:</th>
+                          <th>a:</th>
+                          <th>b:</th>
+                          <th>c:</th>
+                          <th>d:</th>
+                      </tr>
+              </thead>
+                   {name?.[`${object}`]?.map((item,index)=>
+                   { const serial=()=>{ return index +1};
+                                    const serials = serial();
+                                    return (
+                                              <tbody key={index} className='green seven'>
+                                                  <tr>
+                                                      <th>{item.date}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,'session',index)}>{item.session}</th>
+                                                     <th  onClick={()=>handleSelect(item._id,'term',index)}>{item.term}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,`${type}`,index)}>{item.type}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,'question',index)}>{item.question}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,'ans',index)}>{item.ans}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,'a',index)}>{item.a}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,'b',index)}>{item.b}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,'c',index)}>{item.c}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,'d',index)}>{item.d}</th>
+                                                        </tr>
+                                                  
+                                             </tbody>
+                                                      )}
+                          
+                              
+                              
+                  )}                 
+                                                                                     
+            
+          </div>
+            </div>
+   </div>
+   
+     </div>):(
+      div className='center'>
+      <div className='bgUser'> 
+      
+                <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
+          <div  className='click'  onClick={()=>setIsNew(true)}> BAck </div>
+          </div>
+                  <div className="center2" >
+                     <FaDatabase style={{width:"50px",height:"50px"}} className='img'/>
+                  <h3 className="red">Your are about to delete Row {index}<br/>
+                  Row Id:{select2}</h3>
+               
+                 <div className='two '>
+                      </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Delete</div>
+                      </div>
+                      </div>
+              
+  
+  
+)}</div>)}
 
 export default Question
