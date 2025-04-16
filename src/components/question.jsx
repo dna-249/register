@@ -62,7 +62,7 @@ const Question = () => {
 
          const handleSave = async()=>{
                     await axios.put(`https://register-api-cloud.vercel.app/staff/set/${id}/${object}/${index}/${key}`,{
-                     value:select3
+                     value:value
                     })
                               .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); setShow(true); console.log(res.data)})
                               .catch((err)=> console.log(err))
@@ -173,7 +173,7 @@ const Question = () => {
          <div className="white">
          <h3>Setting Questions</h3>
         <div className="white2">
-            <h5>Question</h5>
+          
             <h5>Question: {value}</h5>
             <h5>value: {value} </h5>
             <textarea style={{outlineColor:"yellowgreen"}} cols={39} rows={5} placeholder='type question....'  onChange={(e)=>setValue(e.target.value)}/>
@@ -185,7 +185,7 @@ const Question = () => {
         
        || key === "a"   && <div style={{margin:"auto",color:"green"}}>
        <div className="white">
-     <h5> Question Options</h5>
+    
       <div className="white2">
           <h5>Option value for {key}</h5>
           <h5>value: {value} </h5>
@@ -197,7 +197,7 @@ const Question = () => {
            
            || key === "b"  && <div style={{margin:"auto",color:"green"}}>
            <div className="white">
-         <h5> Question Options</h5>
+        
           <div className="white2">
               <h5>Option value for {key}</h5>
               <h5>value: {value} </h5>
@@ -209,7 +209,7 @@ const Question = () => {
            
            || key === "c"  && <div style={{margin:"auto",color:"green"}}>
            <div className="white">
-         <h5> Question Options</h5>
+         
           <div className="white2">
               <h5>Option value for {key}</h5>
               <h5>value: {value} </h5>
@@ -222,7 +222,7 @@ const Question = () => {
            || key === "d"
         && <div style={{margin:"auto",color:"green"}}>
          <div className="white">
-       <h5> Question Options</h5>
+      
         <div className="white2">
             <h5>Option value for {key}</h5>
             <h5>value: {value} </h5>
@@ -238,7 +238,7 @@ const Question = () => {
          <div className="white">
       
        <div className="white2">
-            <h5>Answer</h5>
+           
            
             <h5>Answer: {value} </h5>
             <div className="twoA">
