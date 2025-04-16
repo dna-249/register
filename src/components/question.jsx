@@ -56,7 +56,7 @@ const Question = () => {
                 term:term,
                 type:type,
                 question:value1,
-                ans:v,
+                ans:value6,
                 a:value2,
                 b:value3,
                 c:value4,
