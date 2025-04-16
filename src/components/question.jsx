@@ -173,26 +173,59 @@ const Question = () => {
          <h3>Setting Questions</h3>
         <div className="white2">
             <h5>Question</h5>
-            <textarea style={{outlineColor:"yellowgreen"}} cols={39} rows={5} placeholder='type question....' />
+            <h5>Question: {value}</h5>
+            <h5>value: {value} </h5>
+            <textarea style={{outlineColor:"yellowgreen"}} cols={39} rows={5} placeholder='type question....'  onChange={(e)=>setValue(e.target.value)}/>
             <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
 
              </div> 
              </div> 
         </div>
         
-       || key === "a" || key === "b" || key === "c" || key === "d" &&
- 
-      
-        <div style={{margin:"auto",color:"green"}}>
+       || key === "a"   && <div style={{margin:"auto",color:"green"}}>
+       <div className="white">
+     <h5> Question Options</h5>
+      <div className="white2">
+          <h5>Option value for {key}</h5>
+          <h5>value: {value} </h5>
+           <input type="text" onChange={(e)=>setValue(e.target.value)} placeholder="value...."/> 
+          <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+           </div>
+           </div>
+           </div>
+           
+           || key === "b"  && <div style={{margin:"auto",color:"green"}}>
+           <div className="white">
+         <h5> Question Options</h5>
+          <div className="white2">
+              <h5>Option value for {key}</h5>
+              <h5>value: {value} </h5>
+               <input type="text" onChange={(e)=>setValue(e.target.value)} placeholder="value...."/> 
+              <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+               </div>
+               </div>
+               </div>
+           
+           || key === "c"  && <div style={{margin:"auto",color:"green"}}>
+           <div className="white">
+         <h5> Question Options</h5>
+          <div className="white2">
+              <h5>Option value for {key}</h5>
+              <h5>value: {value} </h5>
+               <input type="text" onChange={(e)=>setValue(e.target.value)} placeholder="value...."/> 
+              <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+               </div>
+               </div>
+               </div>
+           
+           || key === "d"
+        && <div style={{margin:"auto",color:"green"}}>
          <div className="white">
        <h5> Question Options</h5>
         <div className="white2">
-            
-            <h5>Option Format</h5>
-             <h6> A B C D
-             <input type="radio"/> 
-              A B C D E
-             <input type="radio"  /></h6>
+            <h5>Option value for {key}</h5>
+            <h5>value: {value} </h5>
+             <input type="text" onChange={(e)=>setValue(e.target.value)} placeholder="value...."/> 
             <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
              </div>
              </div>
@@ -205,8 +238,10 @@ const Question = () => {
       
        <div className="white2">
             <h5>Answer</h5>
+           
+            <h5>Answer: {value} </h5>
             <div className="twoA">
-            <input type="text" className="input" />
+            <input type="text" className="input" placeholder="write ans..."  onChange={(e)=>setValue(e.target.value)}/>
             <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
         </div>
            </div>
