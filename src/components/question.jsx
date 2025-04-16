@@ -165,7 +165,7 @@ const Question = () => {
    </div>
      </div>):(
       <div className='center'>
-      {key === question && 
+      {key === "question" && 
         
         <div style={{margin:"auto",color:"green"}}>
          <div className="white">
@@ -179,7 +179,7 @@ const Question = () => {
              </div> 
         </div>
         
-       || key === a || key === b || key === c || key === d &&
+       || key === "a" || key === "b" || key === "c" || key === "d" &&
  
       
         <div style={{margin:"auto",color:"green"}}>
@@ -197,7 +197,7 @@ const Question = () => {
              </div>
              </div>
             
-    || key === Answer &&
+    || key === "Answer" &&
         
         <div style={{margin:"auto",color:"green"}}>
          <div className="white">
