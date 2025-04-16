@@ -13,6 +13,7 @@ const Question = () => {
     const [name, setName]= useState([])
     const [select, setSelect]= useState(false)
     const [key, setKey]= useState() 
+    const [type, setType]= useState() 
     const [show, setShow]= useState(true)
 
     const [index, setIndex]= useState()
@@ -45,6 +46,7 @@ const Question = () => {
                 date:Date().slice(0,21),
                 session:session,
                 term:term,
+                type:type,
                 question:'',
                 ans:'',
                 a:'',
@@ -73,7 +75,7 @@ const Question = () => {
 
    <h3>Select Option below:</h3>
     <div className='four'>
-    <div>Activity: <select onChange={(e)=>setSelect(e.target.value)}>
+    <div>Activity: <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="exam">Examination</option>
       <option value="test">Test</option>
@@ -136,9 +138,10 @@ const Question = () => {
                                     return (
                                               <tbody key={index} className='green'>
                                                   <tr>
-                                                      <th>{item.date}</th>
+                                                      <th>{item.data}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'session',index)}>{item.session}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'term',index)}>{item.term}</th>
+                                                      <th  onClick={()=>handleSelect(item._id,`${type}`,index)}>{item.type}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'question',index)}>{item.question}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'ans',index)}>{item.ans}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'a',index)}>{item.a}</th>
@@ -160,33 +163,54 @@ const Question = () => {
           </div>
           </div>
    </div>
-     </div>):(  <div className='center'>
+     </div>):(
+      {key === question && 
+        <div className='center'>
         <div style={{margin:"auto",color:"green"}}>
          <div className="white">
          <h3>Setting Questions</h3>
         <div className="white2">
             <h5>Question</h5>
             <textarea style={{outlineColor:"yellowgreen"}} cols={39} rows={5} placeholder='type question....' />
-          </div>  
+            <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+
+             </div> 
+             </div> 
+        </div>
+        
+       || key === a || key === b || key === c || key === d &&
+ 
+      
+        <div style={{margin:"auto",color:"green"}}>
+         <div className="white">
+       <h5> Question Options</h5>
         <div className="white2">
             
             <h5>Option Format</h5>
              <h6> A B C D
-             <input type="radio"/></h6>
-             <h6> A B C D E
+             <input type="radio"/> 
+              A B C D E
              <input type="radio"  /></h6>
+            <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
              </div>
-       <div className="white2">
+             </div>
+             </div>
+            
+    || key === Answer &&
         
+        <div style={{margin:"auto",color:"green"}}>
+         <div className="white">
+      
+       <div className="white2">
             <h5>Answer</h5>
             <div className="twoA">
             <input type="text" className="input" />
             <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
         </div>
-        </div>
            </div>
            </div>
         </div>
+        </div>}
         )}
   
    </div>
