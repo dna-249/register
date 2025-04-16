@@ -298,7 +298,7 @@ const Question = () => {
       <h5>Answer: {value6} </h5>
       <div className="twoA">
       <input type="text" className="input" placeholder="write ans..."  onChange={(e)=>setValue6(e.target.value)}/>
-      <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+      <button className="click1" onClick={()=>handleRegister(id)}>UPLOAD</button>
   </div>
      </div>
      </div>
