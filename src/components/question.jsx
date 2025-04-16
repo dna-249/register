@@ -36,8 +36,8 @@ const Question = () => {
     const handleSelect = (item,key,index) => {
         setKey(key) 
         setIndex(index) 
-        setShow(false)
         setSelect2(item)
+        setShow(false)
         
       }
 
@@ -175,7 +175,6 @@ const Question = () => {
         <div className="white2">
           
             <h5>Question: {value}</h5>
-            <h5>value: {value} </h5>
             <textarea style={{outlineColor:"yellowgreen"}} cols={39} rows={5} placeholder='type question....'  onChange={(e)=>setValue(e.target.value)}/>
             <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
 
