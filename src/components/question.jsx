@@ -119,11 +119,11 @@ const Question = () => {
 
        <div className='white scroll'>
          
-           <div className='seven'>
+           <div >
               <h2>Questions</h2>
                 </div>
           <div>
-               <thead>
+               <thead className='seven' >
                       <tr>
                           <th>Date:</th>
                           <th>session:</th>
