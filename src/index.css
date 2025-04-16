@@ -370,7 +370,7 @@ color: #fff;
   display: grid;
   height: 30px;
   border: none;
-  
+  justify-self: flex-end; 
 }
 
 .click1:hover{
