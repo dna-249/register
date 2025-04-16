@@ -140,7 +140,7 @@ const Question = () => {
                                     return (
                                               <tbody key={index} className='green'>
                                                   <tr>
-                                                      <th>{item.data}</th>
+                                                      <th>{item.date}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'session',index)}>{item.session}</th>
                                                      <th  onClick={()=>handleSelect(item._id,'term',index)}>{item.term}</th>
                                                       <th  onClick={()=>handleSelect(item._id,`${type}`,index)}>{item.type}</th>
