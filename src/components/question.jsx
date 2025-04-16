@@ -124,6 +124,7 @@ const Question = () => {
                           <th>Date:</th>
                           <th>session:</th>
                           <th>term:</th>
+                          <th>type:</th>
                           <th>question:</th>
                           <th>ans:</th>
                           <th>a:</th>
@@ -140,7 +141,7 @@ const Question = () => {
                                                   <tr>
                                                       <th>{item.data}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'session',index)}>{item.session}</th>
-                                                      <th  onClick={()=>handleSelect(item._id,'term',index)}>{item.term}</th>
+                                                     <th  onClick={()=>handleSelect(item._id,'term',index)}>{item.term}</th>
                                                       <th  onClick={()=>handleSelect(item._id,`${type}`,index)}>{item.type}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'question',index)}>{item.question}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'ans',index)}>{item.ans}</th>
@@ -197,7 +198,7 @@ const Question = () => {
              </div>
              </div>
             
-    || key === "Answer" &&
+    || key === "ans" &&
         
         <div style={{margin:"auto",color:"green"}}>
          <div className="white">
