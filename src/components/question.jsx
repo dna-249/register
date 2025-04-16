@@ -320,9 +320,7 @@ const Question = () => {
 
    
        
-      
-   
-    >
+    
     <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(0)}>Back</button></div>
 
 
