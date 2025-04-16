@@ -2,29 +2,36 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import {useParams,useNavigate} from "react-router-dom"
 import axios from 'axios'
-import { FaPlus } from 'react-icons/fa'
+import { FaPlus,FaArrowCircleLeft } from 'react-icons/fa'
 const Question = () => {
      
-    const [select2,setSelect2]=useState()
-    const [select3,setSelect3]=useState()
-    const [object, setObject]= useState("Eng")
-    const [session, setSession]= useState("2024/2025")
-    const [term, setTerm]= useState("first")
-    const [name, setName]= useState([])
-    const [select, setSelect]= useState(false)
-    const [key, setKey]= useState() 
-    const [value, setValue]= useState() 
-    const [type, setType]= useState() 
-    const [show, setShow]= useState(true)
+  const [select2,setSelect2]=useState()
+  const [select3,setSelect3]=useState()
+  const [object, setObject]= useState("Eng")
+  const [session, setSession]= useState("2024/2025")
+  const [term, setTerm]= useState("first")
+  const [name, setName]= useState([])
+  const [select, setSelect]= useState(false)
+  const [key, setKey]= useState() 
+  const [value, setValue]= useState() 
+  const [value1, setValue1]= useState() 
+  const [value2, setValue2]= useState() 
+  const [value3, setValue3]= useState() 
+  const [value4, setValue4]= useState() 
+  const [value5, setValue5]= useState() 
+  const [value6, setValue6]= useState() 
+  const [type, setType]= useState() 
+  const [show, setShow]= useState(true)
+  const [insert, setInsert]= useState(false)
 
-    const [index, setIndex]= useState()
-    const [isNew, setIsNew]= useState(true)
-    
-    
-    const {id} = useParams()
-    const nav   = useNavigate()
+  const [index, setIndex]= useState()
+  const [isNew, setIsNew]= useState(true)
   
   
+  const {id} = useParams()
+  const nav   = useNavigate()
+
+
     useEffect(() => {
       axios.get(`https://register-api-cloud.vercel.app/staff/${id}`)
            .then((res)=>  setName(res.data))
@@ -48,12 +55,12 @@ const Question = () => {
                 session:session,
                 term:term,
                 type:type,
-                question:'',
-                ans:'',
-                a:'',
-                b:'',
-                c:'',
-                d:'',
+                question:value1,
+                ans:v,
+                a:value2,
+                b:value3,
+                c:value4,
+                d:value5,
                })
                          .then((res)=> {setSelect(pre => !pre);console.log(res.data)})
                          .catch((err)=> console.log(err))
@@ -68,7 +75,7 @@ const Question = () => {
                               .catch((err)=> console.log(err))
               }
     
-  return (
+ if(insert === false)return (
   
   <div>{show?(
   <div className='center'>
@@ -107,17 +114,13 @@ const Question = () => {
       <option value="bio">Biology</option>
     </select></div>
     </div>
-<div className="three4">
-    <div><h3>Section A </h3></div>
-    <div><h3>Duration: 45mins </h3></div>
-    <div><h3>Remaining: 45mins </h3></div>
-    </div>
+    <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(true)}>Insert Questions</button></div>
 
 
        <div className='white'>
          
            <div>
-              <h2>Student Attendance</h2>
+              <h2>Questions</h2>
                 </div>
           <div>
                <thead>
@@ -251,6 +254,57 @@ const Question = () => {
         )}
   
    </div>
+  )
+  else return(
+    <div className='center'>
+  <div style={{margin:"auto",color:"green"}}>
+       
+   <div className="white">
+   <div className='click2' onClick={()=>setInsert(false)}><FaArrowCircleLeft /></div>
+  
+   <h3>Setting Questions</h3>
+  <div className="white2">
+      <h5>Question: {value1}</h5>
+        <textarea style={{outlineColor:"yellowgreen"}} cols={39} rows={5} placeholder='type question....'  onChange={(e)=>setValue1(e.target.value)}/> 
+       </div> 
+  
+<div className="white2">
+    <h5>Option value for A</h5>
+    <h5>value: {value2} </h5>
+     <input type="text" className="input" onChange={(e)=>setValue2(e.target.value)} placeholder="value...."/> 
+    </div>
+   
+    <div className="white2">
+        <h5>Option value for B</h5>
+        <h5>value: {value3} </h5>
+         <input type="text" className="input" onChange={(e)=>setValue3(e.target.value)} placeholder="value...."/> 
+       </div>
+        
+       <div className="white2">
+        <h5>Option value for C</h5>
+        <h5>value: {value4} </h5>
+         <input type="text" className="input" onChange={(e)=>setValue4(e.target.value)} placeholder="value...."/> 
+       </div>
+       
+  <div className="white2">
+      <h5>Option value for D</h5>
+      <h5>value: {value5} </h5>
+       <input type="text" className="input" onChange={(e)=>setValue5(e.target.value)} placeholder="value...."/> 
+       </div>
+        
+
+ <div className="white2">
+    
+      <h5>Answer: {value6} </h5>
+      <div className="twoA">
+      <input type="text" className="input" placeholder="write ans..."  onChange={(e)=>setValue6(e.target.value)}/>
+      <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+  </div>
+     </div>
+     </div>
+  </div>
+  </div>
+ 
   )
 }
 
