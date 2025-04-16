@@ -214,7 +214,7 @@ body {
 }
 .bgUser{
   
-  width: fit-content;
+  width:fit-content;
   height:fit-content;
   align-items: center;
   justify-content: center;
@@ -222,6 +222,7 @@ body {
   font-family:system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: green;
   display: grid;
+  margin: auto;
   padding: 10px;
   border: 1px solid rgba(65, 64, 64, 0.189);
   border-radius: 10px;
@@ -283,10 +284,9 @@ th{
 }
 
 .white{
-  width: 100%;
+  
   justify-content:baseline;
   min-width: 300px;
-  max-width: 1000px;
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
