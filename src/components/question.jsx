@@ -117,12 +117,12 @@ const Question = () => {
     <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(true)}>Insert Questions</button></div>
 
 
-       <div className='white scroll'>
+       <div className='white'>
          
            <div >
               <h2>Questions</h2>
                 </div>
-          <div>
+          <div className="scroll">
                <thead className='seven' >
                       <tr>
                           <th>Date:</th>
@@ -164,9 +164,10 @@ const Question = () => {
                                                                                      
             
           </div>
+          <div onClick={()=>handleRegister(id)}><FaPlus  className='click2'/></div>
           </div>
    </div>
-   <div onClick={()=>handleRegister(id)}><FaPlus  className='click2'/></div>                                     
+   
      </div>):(
       <div className='center'>
       {key === "question" && 
