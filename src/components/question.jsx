@@ -62,7 +62,7 @@ const Question = () => {
                 c:value4,
                 d:value5,
                })
-                         .then((res)=> {setSelect(pre => !pre);console.log(res.data)})
+                         .then((res)=> {setSelect(pre => !pre); setInsert(false);console.log(res.data)})
                          .catch((err)=> console.log(err))
                   
          }
