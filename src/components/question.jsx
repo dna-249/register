@@ -39,8 +39,8 @@ const Question = () => {
     }, [id, show,select])
   
    const handleDelete = (params) => {
-    axios.put(`https://register-api-cloud.vercel.app/staff/${id}/${select2}/${object}`)
-    .then((res)=>  setName(res.data))
+    axios.put(`https://register-api-cloud.vercel.app/staff/pull/${id}/${select2}/${object}`)
+    .then((res)=> { setName(res.data);setSelect(pre => !pre); setInsert(0); alert("Deleted successfully")})
     .catch((err)=> console.log(err))
    }
    
@@ -380,7 +380,7 @@ const Question = () => {
       <div className='bgUser'> 
       
                 <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
-          <div  className='click'  onClick={()=>setIsNew(true)}> BAck </div>
+          <div  className='click'  onClick={()=>setShow(true)}> BAck </div>
           </div>
                   <div className="center2" >
                      <FaDatabase style={{width:"50px",height:"50px"}} className='img'/>
@@ -388,7 +388,7 @@ const Question = () => {
                   Row Id:{select2}</h3>
                
                  <div className='two '>
-                      </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleSave()}>Delete</div>
+                      </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleDelete()}>Delete</div>
                       </div>
                       </div>
               
