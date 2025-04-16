@@ -22,7 +22,7 @@ const Question = () => {
   const [value6, setValue6]= useState() 
   const [type, setType]= useState() 
   const [show, setShow]= useState(true)
-  const [insert, setInsert]= useState(1)
+  const [insert, setInsert]= useState(0)
 
   const [index, setIndex]= useState()
   const [isNew, setIsNew]= useState(true)
@@ -376,7 +376,7 @@ const Question = () => {
    </div>
    
      </div>):(
-      div className='center'>
+      
       <div className='bgUser'> 
       
                 <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
