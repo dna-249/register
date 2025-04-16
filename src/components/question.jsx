@@ -141,7 +141,7 @@ const Question = () => {
                    { const serial=()=>{ return index +1};
                                     const serials = serial();
                                     return (
-                                              <tbody key={index} className='green'>
+                                              <tbody key={index} className='green seven'>
                                                   <tr>
                                                       <th>{item.date}</th>
                                                       <th  onClick={()=>handleSelect(item._id,'session',index)}>{item.session}</th>
