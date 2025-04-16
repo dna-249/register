@@ -40,7 +40,7 @@ const Question = () => {
   
    const handleDelete = (params) => {
     axios.put(`https://register-api-cloud.vercel.app/staff/pull/${id}/${select2}/${object}`)
-    .then((res)=> { setName(res.data);setSelect(pre => !pre); setInsert(2); alert("Deleted successfully")})
+    .then((res)=> { setName(res.data);setSelect(pre => !pre); setInsert(2);setShow(true); alert("Deleted successfully")})
     .catch((err)=> console.log(err))
    }
    
