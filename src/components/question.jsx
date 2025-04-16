@@ -409,7 +409,7 @@ const Question = () => {
    </div>
    
      </div>):(
-      
+       <div className="center">
       <div className='bgUser'> 
       
                 <div style={{width:"300px",justifyContent:"flex-end"}} className='three'>
@@ -422,6 +422,7 @@ const Question = () => {
                
                  <div className='two '>
                       </div> <div style={{width :"200px",justifySelf:"center" }} className='click2 save'  onClick={()=>handleDelete()}>Delete</div>
+                      </div>
                       </div>
                       </div>
               
