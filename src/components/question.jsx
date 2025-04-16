@@ -13,6 +13,7 @@ const Question = () => {
     const [name, setName]= useState([])
     const [select, setSelect]= useState(false)
     const [key, setKey]= useState() 
+    const [value, setValue]= useState() 
     const [type, setType]= useState() 
     const [show, setShow]= useState(true)
 
