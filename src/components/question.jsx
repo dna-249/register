@@ -117,9 +117,9 @@ const Question = () => {
     <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(true)}>Insert Questions</button></div>
 
 
-       <div className='white'>
+       <div className='white scroll'>
          
-           <div>
+           <div className='seven'>
               <h2>Questions</h2>
                 </div>
           <div>
