@@ -40,7 +40,7 @@ const Question = () => {
   
    const handleDelete = (params) => {
     axios.put(`https://register-api-cloud.vercel.app/staff/pull/${id}/${select2}/${object}`)
-    .then((res)=> { setName(res.data);setSelect(pre => !pre); setInsert(0); alert("Deleted successfully")})
+    .then((res)=> { setName(res.data);setSelect(pre => !pre); setInsert(2); alert("Deleted successfully")})
     .catch((err)=> console.log(err))
    }
    
@@ -318,9 +318,42 @@ const Question = () => {
   <div className='center'>
    <div className='bgUser'> 
 
-   
-       
+   <h3>Select Option below:</h3>
+    <div className='four'>
+    <div>Activity: <select onChange={(e)=>setType(e.target.value)}>
+      <option value="">select</option>
+      <option value="exam">Examination</option>
+      <option value="test">Test</option>
+      <option value="ca">C/A</option>
+      <option value="ass">Assignment</option>
+    </select></div>
+        
+        <div>Session: <select onChange={(e)=>setSession(e.target.value)}> 
+      <option value="">select</option>
+      <option value="2022/2023">2022/2023</option>
+      <option value="2023/2024">2023/2024</option>
+      <option value="2024/2025">2024/2025</option>
+      </select></div>
+
+       <div>Term: <select onChange={(e)=>setTerm(e.target.value)}> 
+      <option value="">select</option>
+      <option value="first">First Term</option>
+      <option value="second">Second Term</option>
+      <option value="third">Third Term</option>
+    </select></div>
+
+    <div>Subject: <select onChange={(e)=>setObject(e.target.value)}>
+      <option value="">select</option>
+      <option value="Eng">English</option>
+      <option value="math">Mathematics</option>
+      <option value="chem">Chemistry</option>
+      <option value="phy">Physics</option>
+      <option value="bio">Biology</option>
+    </select></div>
+    </div>
     
+
+
     <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(0)}>Back</button></div>
 
 
