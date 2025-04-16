@@ -119,7 +119,9 @@ const Question = () => {
       <option value="bio">Biology</option>
     </select></div>
     </div>
-    <div> <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(1)}>Insert Questions</button></div>
+    <div className='twoA'> <button style={{width:"150px",fontWeight:"bold",justifySelf:"flex-start"}} className='click1' onClick={()=>setInsert(2)}>Updating Questions</button>
+
+     <button style={{width:"150px",fontWeight:"bold",margin:"5px"}} className='click1' onClick={()=>setInsert(1)}>Insert Questions</button></div>
 
 
        <div className='white'>
