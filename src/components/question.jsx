@@ -162,12 +162,11 @@ const Question = () => {
                               
                   )}                 
                                                                                      
-               <div onClick={()=>handleRegister(id)}><FaPlus  className='click2'/></div>
-                                        
-  
+            
           </div>
           </div>
    </div>
+   <div onClick={()=>handleRegister(id)}><FaPlus  className='click2'/></div>                                     
      </div>):(
       <div className='center'>
       {key === "question" && 
