@@ -122,8 +122,9 @@ const test =[{questions :["what is you name?",
 <div className='white'>
     {staff?.[`${object}`].map((item, index)=>
         {if(count !== 4)return (
-        <div  key={index} > {item.questions}          
-        
+        <div  key={index} > 
+        <h1>{item.question}</h1>          
+        <h3>
               A - {item.a} <input checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/>
             
               B  - {item.b}<input checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/>
@@ -131,9 +132,9 @@ const test =[{questions :["what is you name?",
               C - {item.c} <input checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/>
             
               D - {item.d} <input checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/>
+              </h3>
             
-            
-            <div  onClick={()=>name(item.ans[count])}> Next</div></div>)
+            <div  onClick={()=>name(item.ans[count])}><h1>Next</h1></div></div>)
     ;else return (<div> {count2}</div>)})}
    
 </div>
