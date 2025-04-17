@@ -40,7 +40,7 @@ const Staff = ({setBack}) => {
          <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
          <div  className='three2'>
         
-                <div><Link to="/staff">Results</Link></div>
+                <div onClick={()=>nav(`/activity/${id}`)}> Activity</div>
                 <div><Link to="/register">Attendances</Link> </div>
                 <div  onClick={()=>nav(`/question/${id}`)}>Questions</div>
          </div>
