@@ -48,7 +48,7 @@ const test =[{questions :["what is you name?",
       if(select !== ''){  setCount((count)=>count + 1 )
         setSelect("");
       handleAnswer(answer);
-       setSelect("")}}
+       setSelect("")}
     }
 
     const name2 = (answer) => {
