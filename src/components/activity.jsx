@@ -120,9 +120,9 @@ const test =[{questions :["what is you name?",
 
 
 <div className='white'>
-    {staff?.[`${object}`].map((item, index)=>
+    {staff?.[`${object}`].filter((item,index) => { if( index === count)return item}).map((item, index)=>
         {if(count !== 4)return (
-        <div  key={0} > 
+        <div  key={index} > 
         <h1>{item.question}</h1>          
         <h3>
               A - {item.a} <input checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> <br />
