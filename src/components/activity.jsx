@@ -136,13 +136,13 @@ const test =[{questions :["what is you name?",
         <div  key={index} > 
         <h1>{item.question}</h1>          
         <h3>
-              A - {item.a} <input checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> A - {item.a}  <br />
+               <input checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> A - {item.a}  <br />
             
-              B  - {item.b}<input checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/> B  - {item.b}<br />
+              <input checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/> B  - {item.b}<br />
             
-              C - {item.c} <input checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/> C - {item.c}<br />
+               <input checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/> C - {item.c}<br />
             
-              D - {item.d} <input checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/>  D - {item.d}<br />
+              <input checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/>  D - {item.d}<br />
               </h3>
           <div className="twoA">  
             <button style={{justifySelf:"flex-start"}} className="click1" onClick={()=>name(item.ans[count])}>Next</button>
