@@ -122,16 +122,16 @@ const test =[{questions :["what is you name?",
 <div className='white'>
     {staff?.[`${object}`].map((item, index)=>
         {if(count !== 4)return (
-        <div  key={index} > 
-        <h1>{item.question[count]}</h1>          
+        <div  key={0} > 
+        <h1>{item.question}</h1>          
         <h3>
-              A - {item.a[count]} <input checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> <br />
+              A - {item.a} <input checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> <br />
             
-              B  - {item.b[count]}<input checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/><br />
+              B  - {item.b}<input checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/><br />
             
-              C - {item.c[count]} <input checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/><br />
+              C - {item.c} <input checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/><br />
             
-              D - {item.d[count]} <input checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/><br />
+              D - {item.d} <input checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/><br />
               </h3>
             
             <div  onClick={()=>name(item.ans[count])}><h1>Next</h1></div></div>)
