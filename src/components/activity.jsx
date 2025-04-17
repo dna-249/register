@@ -45,15 +45,15 @@ const test =[{questions :["what is you name?",
     
     
     const name = (answer) => {
-       setCount((count)=> count + 1)
+      if(select !== ''){ setCount((count)=> count + 1)
        handleAnswer(answer)
-       setSelect("")
+       setSelect("")}
     }
 
     const name2 = (answer) => {
-      setCount((count)=> count - 1)
+     if(select !== ''){ setCount((count)=> count - 1)
       handleAnswer2(answer)
-      setSelect("")
+      setSelect("")}
 
    }
       
