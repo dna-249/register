@@ -120,7 +120,8 @@ const test =[{questions :["what is you name?",
 
 
 <div className='white'>
-    {staff?.[`${object}`][count]?.map((item, index)=>
+    {staff?.[`${object}`].map((item, index)=>
+     {Object.values(item)[count].map((item,index) =>
         {if(count !== 4)return (
         <div  key={index} > 
         <h1>{item.question}</h1>          
@@ -135,7 +136,7 @@ const test =[{questions :["what is you name?",
               </h3>
             
             <div  onClick={()=>name(item.ans[count])}><h1>Next</h1></div></div>)
-    ;else return (<div> {count2}</div>)})}
+    ;else return (<div> {count2}</div>)})})}
    
 </div>
 </div>
