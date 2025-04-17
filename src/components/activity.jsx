@@ -10,7 +10,7 @@ const Activity = ({names,setBack}) => {
 
     const [count,setCount]=useState(0)
     const [count2,setCount2]=useState(5)
-    const [staff,setStaff]=useState([''])
+    const [staff,setStaff]=useState()
     const [select,setSelect]=useState()
     const [object, setObject]= useState("Eng")
     const [session, setSession]= useState("2024/2025")
