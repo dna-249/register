@@ -9,9 +9,9 @@ import axios from 'axios'
 const Activity = ({names,setBack}) => {
 
     const [count,setCount]=useState(0)
-    const [count2,setCount2]=useState(0)
+    const [count2,setCount2]=useState(5)
     const [staff,setStaff]=useState()
-    const [select,setSelect]=useState('')
+    const [select,setSelect]=useState()
     const [object, setObject]= useState("Eng")
     const [session, setSession]= useState("2024/2025")
     const [term, setTerm]= useState("first")
@@ -45,36 +45,19 @@ const test =[{questions :["what is you name?",
     
     
     const name = (answer) => {
+     
        setCount((count)=> count + 1)
-       setSelect("")
-
+       setSelect('')
        handleAnswer(answer)
        setSelect("")
     }
-
-    const name2 = (answer) => {
-     setCount((count)=> count - 1)
-       setSelect("")
-       handleAnswer2(answer)
-      setSelect("")
-
-   }
       
   
       
     const handleAnswer = (answer) => {
+
       if(answer === select){
         setCount2(count2 => count2 + 10)
-        alert(count2)
-      } else  {
-        setCount2(()=>count2)
-        alert(count2)
-      }
-    }
-
-    const handleAnswer2 = (answer) => {
-      if(answer === select){
-        setCount2(count2 => count2 - 10)
         alert(count2)
       } else  {
         setCount2(()=>count2)
@@ -142,19 +125,16 @@ const test =[{questions :["what is you name?",
         <div  key={index} > 
         <h1>{item.question}</h1>          
         <h3>
-               <input checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> A - {item.a}  <br />
+              A - {item.a} <input checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> A - {item.a}  <br />
             
-              <input checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/> B  - {item.b}<br />
+              B  - {item.b}<input checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/> B  - {item.b}<br />
             
-               <input checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/> C - {item.c}<br />
+              C - {item.c} <input checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/> C - {item.c}<br />
             
-              <input checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/>  D - {item.d}<br />
+              D - {item.d} <input checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/>  D - {item.d}<br />
               </h3>
-          <div className="twoA">  
-            <button style={{justifySelf:"flex-start"}} className="click1" onClick={()=>name(item.ans[count])}>Next</button>
-            <button style={{justifySelf:"flex-end"}} className="click1" onClick={()=>name2(item.ans[count])}>Previous</button>
-            </div>
-            </div>)
+            
+            <div  onClick={()=>name(item.ans[count])}><h1>Next</h1></div></div>)
     ;else return (<div> {count2}</div>)})}
    
 </div>
