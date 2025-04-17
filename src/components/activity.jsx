@@ -120,7 +120,7 @@ const test =[{questions :["what is you name?",
 
 
 <div className='white'>
-    {staff?.[`${object}`].map((item, index)=> Object.values(item)[count].map((item, index)=>
+    {staff?.[`${object}`].map((item, index)=> Object.keys(item)[count].map((item, index)=>
         {if(count !== 4)return (
         <div  key={index} > 
         <h1>{item.question}</h1>          
