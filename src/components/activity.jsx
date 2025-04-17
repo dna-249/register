@@ -132,7 +132,7 @@ const test =[{questions :["what is you name?",
 
 <div className='white'>
     {staff?.[`${object}`].filter((item,index) => { if( index === count) return item}).map((item, index)=>
-        {if(count <= item.length)return (
+        {if(count === item.length)return (
         <div  key={index} > 
         <h1>{item.question}</h1>          
         <h3>
