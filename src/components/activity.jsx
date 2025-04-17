@@ -9,7 +9,7 @@ import axios from 'axios'
 const Activity = ({names,setBack}) => {
 
     const [count,setCount]=useState(0)
-    const [count2,setCount2]=useState('')
+    const [count2,setCount2]=useState(0)
     const [staff,setStaff]=useState()
     const [select,setSelect]=useState('')
     const [object, setObject]= useState("Eng")
