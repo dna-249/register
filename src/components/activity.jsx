@@ -27,7 +27,7 @@ const Activity = ({names,setBack}) => {
       axios.get(`https://register-api-cloud.vercel.app/staff/${id}`)
                 .then((res)=> {console.log(res.data);setStaff(res.data)})
                 .catch((err)=> console.log(err))   
-   }, [id])
+   }, [id,session,term,term])
      
     
 const test =[{questions :["what is you name?",
