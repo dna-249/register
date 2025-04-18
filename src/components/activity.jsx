@@ -141,7 +141,7 @@ const test =[{questions :["what is you name?",
   
     {staff?.[`${object}`]
     .filter((item,index) =>{ 
-      return item.session === session && item.term === term && item.type === type
+      return item.session === session && item.term === term && item.type === type && index === count
       }).map((item, index)=>
         { const setting = ()=>{ return item.ans};
            const answer = setting();  
