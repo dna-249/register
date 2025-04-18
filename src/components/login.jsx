@@ -7,13 +7,13 @@ const Login = ({setLogin}) => {
     <div className='signUp'>
         
        
-    <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
+    <div  style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
     <div><FaUser className='img'/> <br /> <span style={{color:"green",fontWeight:"bolder"}}>LOGIN</span>  </div>
         
         <button ><Link to="/managementLogin">Management</Link></button>
         <button ><Link to="/staffLogin">Staff</Link></button>
         <button ><Link to="/studentLogin">Student</Link></button> <br/>
-        <div> <Link to="/activity">Activity </Link></div>
+        <div> <Link to="/activity/:id">Activity </Link></div>
     </div>
     
     
