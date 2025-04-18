@@ -45,26 +45,26 @@ const test =[{questions :["what is you name?",
   
     
     
-    const name = (answer) => {
+    const name = () => {
        setCount((count)=>count + 1 )
         setSelect("");
-        console.log(select2)
-      handleAnswer(answer);
+        console.log(answer)
+      handleAnswer();
        setSelect("")
     }
 
     const name2 = (answer) => {
      setCount((count)=> count - 1)
        setSelect("")
-       handleAnswer2(answer)
+       handleAnswer2()
       setSelect("")
 
    }
       
   
       
-    const handleAnswer = (answer) => {
-      if(select2 === select){
+    const handleAnswer = () => {
+      if(answer === select){
         setCount2(count2 => count2 + 10)
         alert(count2)
       } else  {
@@ -73,7 +73,7 @@ const test =[{questions :["what is you name?",
       }
     }
 
-    const handleAnswer2 = (answer) => {
+    const handleAnswer2 = () => {
       if(answer === select){
         setCount2(count2 => count2 - 10)
         alert(count2)
@@ -140,7 +140,9 @@ const test =[{questions :["what is you name?",
 <div className='white'>
   
     {staff?.[`${object}`].filter((item,index) => { if( index === count) return item}).map((item, index)=>
-        { const setting = ()=>{setSelect2(item.question)};setting();   if(count !== item.length)return (
+        { const setting = ()=>{ return item.question};
+           const answer = setting();  
+            if(count !== item.length)return (
         <div  key={index} > 
         <h1>{item.question}</h1>          
         <h3>
