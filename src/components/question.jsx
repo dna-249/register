@@ -179,6 +179,7 @@ const Question = () => {
       <div className='center'>
       {
         key === "type"   && 
+        <div className="white">
         <div className="white2">
               <div>Activity: <select onChange={(e)=>setValue(e.target.value)}>
                 <option value="">select</option>
@@ -190,11 +191,13 @@ const Question = () => {
                 <h5>value: {value} </h5>
               <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
            </div>
+           </div>
            
            
          
        
        || key === "session"   && 
+       <div className="white">
        <div className="white2">
         <div>Session: <select onChange={(e)=>setValue(e.target.value)}> 
       <option value="">select</option>
@@ -205,11 +208,13 @@ const Question = () => {
           <h5>value: {value} </h5>
              <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
            </div>
+           </div>
 
 
            
          
        || key === "term"   &&
+       <div className="white">
        <div className="white2">
         <div>Term: <select onChange={(e)=>setValue(e.target.value)}> 
         <option value="">select</option>
@@ -220,8 +225,10 @@ const Question = () => {
                   <h5>value: {value} </h5>
           <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
         </div>
+        </div>
         
         || key === "object"   &&
+        <div className="white">
         <div className="white2">
           <div>Subject: <select onChange={(e)=>setValue(e.target.value)}>
       <option value="">select</option>
@@ -233,6 +240,7 @@ const Question = () => {
     </select></div>
            <h5>value: {value} </h5>
            <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+         </div> 
          </div> 
       
       || key === "question" && 
