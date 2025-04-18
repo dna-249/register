@@ -140,10 +140,8 @@ const test =[{questions :["what is you name?",
 <div className='white'>
   
     {staff?.[`${object}`]
-    .filter((item,index) => {
-       if( index === count){ return item}
-      else if( session === item.session){ return item.session}
-      else if( term === item.term){ return item.term};
+    .filter((item,index) =>{ 
+      return item.session === session || item.term === term || index === count
       }).map((item, index)=>
         { const setting = ()=>{ return item.ans};
            const answer = setting();  
