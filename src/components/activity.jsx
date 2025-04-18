@@ -16,7 +16,7 @@ const Activity = ({names,setBack}) => {
     const [object, setObject]= useState("Eng")
     const [session, setSession]= useState("2024/2025")
     const [term, setTerm]= useState("first")
-    const [type, setType]= useState() 
+    const [type, setType]= useState("exam") 
      
       
 
