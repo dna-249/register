@@ -45,25 +45,25 @@ const test =[{questions :["what is you name?",
   
     
     
-    const name = () => {
+    const name = (answer) => {
        setCount((count)=>count + 1 )
         setSelect("");
         console.log(answer)
-      handleAnswer();
+      handleAnswer(answer);
        setSelect("")
     }
 
     const name2 = (answer) => {
      setCount((count)=> count - 1)
        setSelect("")
-       handleAnswer2()
+       handleAnswer2(answer)
       setSelect("")
 
    }
       
   
       
-    const handleAnswer = () => {
+    const handleAnswer = (answer) => {
       if(answer === select){
         setCount2(count2 => count2 + 10)
         alert(count2)
@@ -155,8 +155,8 @@ const test =[{questions :["what is you name?",
               <input    checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/>  D - {item.d}<br />
               </h3>
           <div className="twoA">  
-            <button style={{justifySelf:"flex-start"}} className="click1" onClick={()=>name(count)}>Next</button>
-            <button style={{justifySelf:"flex-end"}} className="click1" onClick={()=>name2(count)}>Previous</button>
+            <button style={{justifySelf:"flex-start"}} className="click1" onClick={()=>name(answer)}>Next</button>
+            <button style={{justifySelf:"flex-end"}} className="click1" onClick={()=>name2(answer)}>Previous</button>
             </div>
             </div>)
     ;else return (<div> {count2}</div>)})}
