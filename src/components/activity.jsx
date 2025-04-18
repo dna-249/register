@@ -27,7 +27,7 @@ const Activity = ({names,setBack}) => {
       axios.get(`https://register-api-cloud.vercel.app/staff/${id}`)
                 .then((res)=> {console.log(res.data);setStaff(res.data)})
                 .catch((err)=> console.log(err))   
-   }, [id,session,term,term])
+   }, [id])
      
     
 const test =[{questions :["what is you name?",
@@ -141,9 +141,9 @@ const test =[{questions :["what is you name?",
   
     {staff?.[`${object}`]
     .filter((item,index) => {
-       if( index === count){ return item};
-       if( session === item.session){ return item.session};
-       if( term === item.term){ return item.term};
+       if( index === count){ return item}
+      else if( session === item.session){ return item.session}
+      else if( term === item.term){ return item.term};
       }).map((item, index)=>
         { const setting = ()=>{ return item.ans};
            const answer = setting();  
