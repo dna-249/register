@@ -179,6 +179,7 @@ const Question = () => {
       <div className='center'>
       {
         key === "type"   && 
+        <div style={{margin:"auto",color:"green"}}>
         <div className="white">
         <div className="white2">
               <div>Activity: <select onChange={(e)=>setValue(e.target.value)}>
@@ -192,11 +193,13 @@ const Question = () => {
               <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
            </div>
            </div>
+           </div>
            
            
          
        
        || key === "session"   && 
+       <div style={{margin:"auto",color:"green"}}>
        <div className="white">
        <div className="white2">
         <div>Session: <select onChange={(e)=>setValue(e.target.value)}> 
@@ -209,11 +212,13 @@ const Question = () => {
              <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
            </div>
            </div>
+           </div>
 
 
            
          
        || key === "term"   &&
+       <div style={{margin:"auto",color:"green"}}>
        <div className="white">
        <div className="white2">
         <div>Term: <select onChange={(e)=>setValue(e.target.value)}> 
@@ -226,8 +231,10 @@ const Question = () => {
           <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
         </div>
         </div>
+        </div>
         
         || key === "object"   &&
+        <div style={{margin:"auto",color:"green"}}>
         <div className="white">
         <div className="white2">
           <div>Subject: <select onChange={(e)=>setValue(e.target.value)}>
@@ -240,6 +247,7 @@ const Question = () => {
     </select></div>
            <h5>value: {value} </h5>
            <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+         </div> 
          </div> 
          </div> 
       
@@ -282,7 +290,8 @@ const Question = () => {
                </div>
                </div>
            
-           || key === "c"  && <div style={{margin:"auto",color:"green"}}>
+           || key === "c"  && 
+           <div style={{margin:"auto",color:"green"}}>
            <div className="white">
          
           <div className="white2">
