@@ -73,7 +73,7 @@ const test =[{questions :["what is you name?",
       }
     }
 
-    const handleAnswer2 = () => {
+    const handleAnswer2 = (answer) => {
       if(answer === select){
         setCount2(count2 => count2 - 10)
         alert(count2)
