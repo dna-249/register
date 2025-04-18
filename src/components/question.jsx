@@ -177,7 +177,65 @@ const Question = () => {
    
      </div>):(
       <div className='center'>
-      {key === "question" && 
+      {
+        key === "type"   && 
+        <div className="white2">
+              <div>Activity: <select onChange={(e)=>setValue(e.target.value)}>
+                <option value="">select</option>
+                <option value="exam">Examination</option>
+                <option value="test">Test</option>
+                <option value="ca">C/A</option>
+                <option value="ass">Assignment</option>
+              </select></div>
+                <h5>value: {value} </h5>
+              <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+           </div>
+           
+           
+         
+       
+       || key === "session"   && 
+       <div className="white2">
+        <div>Session: <select onChange={(e)=>setValue(e.target.value)}> 
+      <option value="">select</option>
+      <option value="2022/2023">2022/2023</option>
+      <option value="2023/2024">2023/2024</option>
+      <option value="2024/2025">2024/2025</option>
+      </select></div>
+          <h5>value: {value} </h5>
+             <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+           </div>
+
+
+           
+         
+       || key === "term"   &&
+       <div className="white2">
+        <div>Term: <select onChange={(e)=>setValue(e.target.value)}> 
+        <option value="">select</option>
+        <option value="first">First Term</option>
+        <option value="second">Second Term</option>
+        <option value="third">Third Term</option>
+        </select></div>
+                  <h5>value: {value} </h5>
+          <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+        </div>
+        
+        || key === "object"   &&
+        <div className="white2">
+          <div>Subject: <select onChange={(e)=>setValue(e.target.value)}>
+      <option value="">select</option>
+      <option value="Eng">English</option>
+      <option value="math">Mathematics</option>
+      <option value="chem">Chemistry</option>
+      <option value="phy">Physics</option>
+      <option value="bio">Biology</option>
+    </select></div>
+           <h5>value: {value} </h5>
+           <button className="click1" onClick={()=>handleSave()}>UPLOAD</button>
+         </div> 
+      
+      || key === "question" && 
         
         <div style={{margin:"auto",color:"green"}}>
          <div className="white">
