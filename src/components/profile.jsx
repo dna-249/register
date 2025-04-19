@@ -24,7 +24,7 @@ const Profile = () => {
     console.log(image)
   }
   const uploadImage =()=>{
-    axios.post(`https://https://uploadapi-production.up.railway.app//post`,{form})
+    axios.post(`https://https://uploadapi-production.up.railway.app/post`,{form})
                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 01")})
                     .catch((err)=> console.log(err))
                     
