@@ -16,7 +16,7 @@ const Profile = () => {
 
 
     const form = new FormData()
-    form.append("file",image1)
+    form.append("cloud",image1)
   const handleImage = (e) => {
     setImage1(e.target.files[0])
     
@@ -24,12 +24,12 @@ const Profile = () => {
     console.log(image)
   }
   const uploadImage =()=>{
-    axios.post(`https://uploadapi-production.up.railway.app/post`,{form})
+    axios.post(`https://uploadapi-production.up.railway.app/image`,{form})
                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 01")})
                     .catch((err)=> console.log(err))
                     
    axios.put(`https://register-api-cloud.vercel.app/student/${id}`,
-    {image:`https://uploadapi-production.up.railway.app//file/${image1?.name}`})
+    {image:`https://uploadapi-production.up.railway.app/cloud/${image1?.name}`})
                                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 02")})
                                     .catch((err)=> console.log(err))   
   }
