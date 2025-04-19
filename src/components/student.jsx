@@ -16,7 +16,7 @@ const Student = () => {
 
 useEffect(() => {
   axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
-       .then((res)=> setName(res.data))
+       .then((res)=> {setName(res.data);console.log(res.data)})
        .catch((err)=> console.log(err))
 }, [id])
 
