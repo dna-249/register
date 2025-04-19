@@ -24,12 +24,12 @@ const Profile = () => {
     console.log(image)
   }
   const uploadImage =()=>{
-    axios.post(`https://https://uploadapi-production.up.railway.app/post`,{form})
+    axios.post(`https://uploadapi-production.up.railway.app/post`,{form})
                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 01")})
                     .catch((err)=> console.log(err))
                     
    axios.put(`https://register-api-cloud.vercel.app/student/${id}`,
-    {image:`https://https://uploadapi-production.up.railway.app//file/${image1?.name}`})
+    {image:`https://uploadapi-production.up.railway.app//file/${image1?.name}`})
                                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 02")})
                                     .catch((err)=> console.log(err))   
   }
