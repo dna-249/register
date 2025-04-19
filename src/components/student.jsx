@@ -34,16 +34,16 @@ useEffect(() => {
                 <FaUser className='img'/>}</div>
  <div  className='three2 icons'>
 
-        <div><Link to="/activity">Activity</Link></div>
+        <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
-        <div><Link to='/profile' >profile</Link></div>
+        <div onClick={()=>nav(`/profile/${name._id}`)}>profile</div>
      </div >
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
-        <div><Link to="/activity">Activity</Link></div>
+        <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
-        <div><Link to='/profile' >profile</Link></div>
+        <div onClick={()=>nav(`/profile/${name._id}`)}>profile</div>
     </div>)}
  </div>
  
