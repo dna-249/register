@@ -44,6 +44,10 @@ body {
  margin-bottom: 10px;
  
 }
+input[type="file"]{
+  background-color: green;
+  display: none;
+}
 
 .input{
   width: 170px; 
@@ -370,6 +374,13 @@ color: #fff;
   height: 30px;
   border: none;
   justify-self: flex-end; 
+}
+.image:hover{
+  background-color: rgb(209, 204, 204);
+  color: #fff;
+}
+image:active{
+  height: 100px;
 }
 
 .click1:hover{

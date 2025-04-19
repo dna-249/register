@@ -1,16 +1,65 @@
 import React, { useState } from 'react'
 import { FaUser } from 'react-icons/fa'
+import axios from 'axios'
 const Profile = () => {
     const [values,setValues]= useState('nura')
     const [value,setValue]= useState('')
     const [edit,setEdit]= useState(false)
+    const [image,setImage]=useState('')
+    const [image1,setImage1]=useState('')
+    const [name,setName]=useState('')
+       
+
+
+
+    const form = new FormData()
+    form.append("file",image1)
+  const handleImage = (e) => {
+    setImage1(e.target.files[0])
     
+    setImage(URL.createObjectURL(e.target.files[0]))
+    console.log(image)
+  }
+  const uploadImage =()=>{
+    axios.post(`https://myshop-image-api.up.railway.app/image`,{form})
+                    .then((res)=> {console.log(res.data);alert("image uploaded successfully")})
+                    .catch((err)=> console.log(err))
+                    
+   axios.put(`https://register-api-cloud.vercel.app/student/${id}`)
+                                    .then((res)=> {console.log(res.data);setStaff(res.data)})
+                                    .catch((err)=> console.log(err))   
+  }
+
+  useEffect(() => {
+   
+    axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+              .then((res)=> {console.log(res.data);setName(res.data)})
+              .catch((err)=> console.log(err))   
+ }, [id])
   return (
     <>
     <div className='profile'>
       <div>
         <div>
-            <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
+            {edit? <div>
+              {image? <img src={name?.image} width={100} height={100}/>
+               :
+               <label for="file"><FaUser className='img'/> 
+               <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>}
+
+                <div className='white2 bgUser'> 
+                <label for="file" className='white2 image'>Select Photo .... 
+                <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>
+                 <div style={{height:"20px", margin:"2px"}} className='click1'  onClick={()=>handleImage()}>UploadImage</div>
+                </div>
+              </div>
+               :
+               <div style={{marginTop:"20px"}}>{image? <img src={image} width={100} height={100}/> 
+               : 
+               <label for="file"><FaUser className='img'/> <input type='file' id='file' onChange={(e)=>handleImage(e)}/>
+               </label>}
+            </div>}
+
          </div>
          <div className='two'> 
           <div><h3>Student Personal Info</h3></div>
@@ -23,7 +72,7 @@ const Profile = () => {
              <div>Gender:<input onChange={(e)=>setValue(e.target.value)} value={edit? value:values} readOnly={edit? false:true} type="text"  /></div>
              <div>Age:<input onChange={(e)=>setValue(e.target.value)} value={edit? value:values} readOnly={edit? false:true} type="text"  /></div>
              <div>Email:<input onChange={(e)=>setValue(e.target.value)} value={edit? value:values} readOnly={edit? false:true} type="text"  /></div>
-             <div>Address:<input onChange={(e)=>setValue(e.target.value)} value={edit? value:values} readOnly={edit? false:true} type="text"  /></div>
+             <div>Address:<br/><textarea cols={40} rows={5} onChange={(e)=>setValue(e.target.value)} value={edit? value:values} readOnly={edit? false:true} type="text"  /></div>
              <div>phone:<input onChange={(e)=>setValue(e.target.value)} value={edit? value:values} readOnly={edit? false:true} type="text"  /></div>
              <div>
               <h3>Account Info</h3>

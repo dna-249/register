@@ -12,7 +12,8 @@ const Activity = ({names,setBack}) => {
     const [count2,setCount2]=useState(0)
     const [staff,setStaff]=useState()
     const [select,setSelect]=useState('')
-    const [select2,setSelect2]=useState('')
+    const [image,setImage]=useState('')
+    const [image1,setImage1]=useState('')
     const [object, setObject]= useState("Eng")
     const [session, setSession]= useState("2024/2025")
     const [term, setTerm]= useState("first")
@@ -30,19 +31,14 @@ const Activity = ({names,setBack}) => {
    }, [id])
      
     
-const test =[{questions :["what is you name?",
-                        "which class are you?",
-                        "how old are you?",
-                        "what is your hobby?"],
-
-            options:[{ one:["A.nura ","B.mary","C.muda ","D.myHauwa "],
-                       two:["A. class 1 ","B. class 2","C.class 3 ","D. all classes "],
-                     three:["A. 20yrs ","B. 25yrs","C.30yrs ","D. 35yrs"],
-                      four:["A. reading","B.recitation","C.programming ","D.designing "]}],
-
-            answers:["D","C","B","A"]
-            }]
-  
+   const form = new FormData()
+   form.append("file",image1)
+ const handleImage = (e) => {
+   setImage1(e.target.files[0])
+   
+   setImage(URL.createObjectURL(e.target.files[0]))
+   console.log(image)
+ }
     
     
     const name = (answer) => {
@@ -95,7 +91,7 @@ const test =[{questions :["what is you name?",
           </div>     
          
         <div  className="two">
-        <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
+        <div style={{marginTop:"20px"}}>{image? <img src={image} width={100} height={100}/> : <label for="file"><FaUser className='img'/> <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>}</div>
       <div> Admission No: <br />
        Name:{names?.name} <br />
        Class: <br />
