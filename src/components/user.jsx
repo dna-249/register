@@ -64,7 +64,7 @@ const handleResult = async(params) => {
  <div style={{marginTop:"20px"}}> <FaUser className='img'/></div>
  <div  className='three2'>
 
-          <div onClick={()=>setShow(3)}>Activity</div>
+          <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
           <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/update/${name._id}`)}> Update</div>
     </div >

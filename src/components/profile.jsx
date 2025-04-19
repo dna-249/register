@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaUser } from 'react-icons/fa'
 import axios from 'axios'
+import { useParams,useNavigate } from 'react-router-dom'
 const Profile = () => {
     const [values,setValues]= useState('nura')
     const [value,setValue]= useState('')
@@ -9,7 +10,9 @@ const Profile = () => {
     const [image1,setImage1]=useState('')
     const [name,setName]=useState('')
        
-
+     const {id} = useParams()
+      const nav  = useNavigate()
+    
 
 
     const form = new FormData()
@@ -50,7 +53,7 @@ const Profile = () => {
                 <div className='white2 bgUser'> 
                 <label for="file" className='white2 image'>Select Photo .... 
                 <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>
-                 <div style={{height:"20px", margin:"2px"}} className='click1'  onClick={()=>handleImage()}>UploadImage</div>
+                 <div style={{height:"20px", margin:"2px"}} className='click1'  onClick={()=>uploadImage()}>UploadImage</div>
                 </div>
               </div>
                :
