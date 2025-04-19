@@ -45,7 +45,7 @@ const Profile = () => {
       <div>
         <div>
             {edit? <div>
-              {image? <img src={name?.image} width={100} height={100}/>
+              {name? <img src={name?.image} width={100} height={100}/>
                :
                <label for="file"><FaUser className='img'/> 
                <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>}

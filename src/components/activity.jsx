@@ -91,12 +91,12 @@ const Activity = ({names,setBack}) => {
           </div>     
          
         <div  className="two">
-        <div style={{marginTop:"20px"}}>{image? <img src={image} width={100} height={100}/> : <label for="file"><FaUser className='img'/> <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>}</div>
+        <div style={{marginTop:"20px"}}>{image? <img src={image?.image} width={100} height={100}/> : <label for="file"><FaUser className='img'/> <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>}</div>
       <div> Admission No: <br />
        Name:{names?.name} <br />
        Class: <br />
       </div></div>
- <div style={{marginBottom:"10px"}}><Link to="/profile">User Profile</Link></div>
+ <div style={{marginBottom:"10px"}}  onClick={()=>nav(`/profile/${id}`)}>User Profile</div>
  <h3>Select Option below:</h3>
     <div className='four'>
     <div>Activity: <select onChange={(e)=>setType(e.target.value)}>
