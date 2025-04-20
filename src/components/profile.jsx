@@ -16,7 +16,7 @@ const Profile = () => {
 
 
     const form = new FormData()
-    form.append("cloud",image1)
+    form.append("file",image1)
   const handleImage = (e) => {
     setImage1(e.target.files[0])
     
@@ -29,7 +29,7 @@ const Profile = () => {
                     .catch((err)=> console.log(err))
                     
    axios.put(`https://register-api-cloud.vercel.app/student/${id}`,
-    {image:`https://imageapi-production-c98c.up.railway.app/cloud/${image1?.name}`})
+    {image:`https://imageapi-production-c98c.up.railway.app/file/${image1?.name}`})
                                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 02")})
                                     .catch((err)=> console.log(err))   
   }
