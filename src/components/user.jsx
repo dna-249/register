@@ -27,7 +27,7 @@ const User = () => {
 
 
   useEffect(() => {
-    axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+    axios.get(`https://database-api-eight.vercel.app/student/${id}`)
          .then((res)=>  setName(res.data))
          .catch((err)=> console.log(err))
   }, [id,isUpdate])
@@ -42,7 +42,7 @@ const User = () => {
 
 
 const handleResult = async(params) => {
-   await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/${object}/${index}/${key}`,{
+   await axios.put(`https://database-api-eight.vercel.app/student/set/${id}/${object}/${index}/${key}`,{
               value:value
              })
                        .then((res)=>{setIsUpdate(pre => !pre);setShow(true); console.log(res.data)})

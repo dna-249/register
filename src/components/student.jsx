@@ -15,7 +15,7 @@ const Student = () => {
   const nav = useNavigate()
 
 useEffect(() => {
-  axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+  axios.get(`https://database-api-eight.vercel.app/student/${id}`)
        .then((res)=> {setName(res.data);console.log(res.data)})
        .catch((err)=> console.log(err))
 }, [id])

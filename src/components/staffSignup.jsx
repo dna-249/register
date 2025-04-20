@@ -15,7 +15,7 @@ const StaffSignup = ({setLogin}) => {
   const [email,setEmail]= useState("")
   
   const handleSignUp =()=>{
-    axios.post("https://register-api2.vercel.app/staff",
+    axios.post("https://database-api-eight.vercel.app/staff",
       { key:key,
         name:name,
         name:user,

@@ -19,7 +19,7 @@ const Attendance =()=>{
     
     
       useEffect(() => {
-        axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+        axios.get(`https://database-api-eight.vercel.app/student/${id}`)
              .then((res)=>  setName(res.data))
              .catch((err)=> console.log(err))
       }, [id, isNew,select])
@@ -34,7 +34,7 @@ const Attendance =()=>{
     }
 
     const handleRegister = async(add)=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/${add}`,
+           await axios.put(`https://database-api-eight.vercel.app/student/${add}`,
             {
             date:Date().slice(0,21),
             mon:'a',
@@ -52,7 +52,7 @@ const Attendance =()=>{
     
     
     const handleSave = async()=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/set/${id}/attend/${index}/${key}`,{
+           await axios.put(`https://database-api-eight.vercel.app/student/set/${id}/attend/${index}/${key}`,{
             value:select3
            })
                      .then((res)=>{setIsNew(pre => !pre); console.log(res.data)})

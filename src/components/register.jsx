@@ -17,7 +17,7 @@ const Register = () => {
   
 useEffect(() => {
  
-   axios.get(`https://register-api-cloud.vercel.app/student`)
+   axios.get(`https://database-api-eight.vercel.app/student`)
              .then((res)=> {console.log(res.data);setItems(res.data)})
              .catch((err)=> console.log(err))
  

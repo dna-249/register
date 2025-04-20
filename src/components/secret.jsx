@@ -12,7 +12,7 @@ const Secret = ({id}) => {
 
    useEffect(() => {
    
-      axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
+      axios.get(`https://database-api-eight.vercel.app/management/${id}`)
                .then((res)=> {console.log(res.data);setName(res.data)})
                .catch((err)=> console.log(err))
    
@@ -20,12 +20,12 @@ const Secret = ({id}) => {
    }, [id,auto])
    const handleManagementKey = (params) => {
 
-      axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/management/key`,{adm:adm})
+      axios.put(`https://database-api-eight.vercel.app/management/push/${id}/management/key`,{adm:adm})
                     .then((res)=> {alert(`${adm} secret_key is created`);setAuto((prev)=>!prev)})
                     .catch((err)=> console.log(err))
        }
        const handleStaffKey = (params) => {
-        axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/staff/key`,{adm:adm1})
+        axios.put(`https://database-api-eight.vercel.app/management/push/${id}/staff/key`,{adm:adm1})
                       .then((res)=> {alert(`${adm} secret_key is created`);setAuto((prev)=>!prev)})
                       .catch((err)=> console.log(err))
          }

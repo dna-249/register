@@ -33,13 +33,13 @@ const Question = () => {
 
 
     useEffect(() => {
-      axios.get(`https://register-api-cloud.vercel.app/staff/${id}`)
+      axios.get(`https://database-api-eight.vercel.app/staff/${id}`)
            .then((res)=>  setName(res.data))
            .catch((err)=> console.log(err))
     }, [id, show,select])
   
    const handleDelete = (params) => {
-    axios.put(`https://register-api-cloud.vercel.app/staff/pull/${id}/${select2}/${object}`)
+    axios.put(`https://database-api-eight.vercel.app/staff/pull/${id}/${select2}/${object}`)
     .then((res)=> { setName(res.data);setSelect(pre => !pre); setInsert(2);setShow(true); alert("Deleted successfully")})
     .catch((err)=> console.log(err))
    }
@@ -54,7 +54,7 @@ const Question = () => {
       }
 
     const handleRegister = async(add)=>{
-               await axios.put(`https://register-api-cloud.vercel.app/staff/${add}/${object}`,
+               await axios.put(`https://database-api-eight.vercel.app/staff/${add}/${object}`,
                 {
                 date:Date().slice(0,21),
                 session:session,
@@ -73,7 +73,7 @@ const Question = () => {
          }
 
          const handleSave = async()=>{
-                    await axios.put(`https://register-api-cloud.vercel.app/staff/set/${id}/${object}/${index}/${key}`,{
+                    await axios.put(`https://database-api-eight.vercel.app/staff/set/${id}/${object}/${index}/${key}`,{
                      value:value
                     })
                               .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); setShow(true); console.log(res.data)})

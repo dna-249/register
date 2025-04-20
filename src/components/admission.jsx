@@ -8,7 +8,7 @@ const Admission = ({id}) => {
 
    useEffect(() => {
    
-      axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
+      axios.get(`https://database-api-eight.vercel.app/management/${id}`)
                .then((res)=> {console.log(res.data);setName(res.data)})
                .catch((err)=> console.log(err))
    
@@ -17,7 +17,7 @@ const Admission = ({id}) => {
 
 
   const handleCreate = (params) => {
-    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/admissions/key`,{adm:adm})
+    axios.put(`https://database-api-eight.vercel.app/management/push/${id}/admissions/key`,{adm:adm})
                   .then((res)=>{alert(`${adm} admission is created`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }

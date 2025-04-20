@@ -14,15 +14,15 @@ const Classes = ({id}) => {
 
  useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/management/${id}`)
+    axios.get(`https://database-api-eight.vercel.app/management/${id}`)
               .then((res)=> {console.log(res.data);setName(res.data)})
               .catch((err)=> console.log(err))
   
-    axios.get(`https://register-api-cloud.vercel.app/staff`)
+    axios.get(`https://database-api-eight.vercel.app/staff`)
               .then((res)=> {console.log(res.data);setName1(res.data)})
               .catch((err)=> console.log(err))
 
-    axios.get(`https://register-api-cloud.vercel.app/student`)
+    axios.get(`https://database-api-eight.vercel.app/student`)
               .then((res)=> {console.log(res.data);setName2(res.data)})
               .catch((err)=> console.log(err))
   
@@ -32,7 +32,7 @@ const Classes = ({id}) => {
 
 
   const handleCreate = (params) => {
-    axios.put(`https://register-api-cloud.vercel.app/management/push/${id}/classes/key`,{adm:adm})
+    axios.put(`https://database-api-eight.vercel.app/management/push/${id}/classes/key`,{adm:adm})
                 .then((res)=> {alert(`${adm} class is assigned`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
@@ -48,14 +48,14 @@ const Classes = ({id}) => {
     }
      
     const handleAssign = (name) => {
-      axios.put(`https://register-api-cloud.vercel.app/staff/${select?._id}`,{class:name})
+      axios.put(`https://database-api-eight.vercel.app/staff/${select?._id}`,{class:name})
                 .then((res)=> {alert(`${select?.name}  is assigned class ${name}`);setAuto((prev)=>!prev);setShow(true)})
                   .catch((err)=> console.log(err))
     
     }
 
     const handleAssign1 = (name) => {
-      axios.put(`https://register-api-cloud.vercel.app/student/${select1?._id}`,{class:name})
+      axios.put(`https://database-api-eight.vercel.app/student/${select1?._id}`,{class:name})
       .then((res)=> {alert(`${select1?.name}  is assigned class ${name}`);setAuto((prev)=>!prev);setShow1(false)})
         .catch((err)=> console.log(err))
 

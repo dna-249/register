@@ -24,15 +24,15 @@ const Management = () => {
 
   useEffect(() => {
  
-    axios.get(`https://register-api-cloud.vercel.app/management`)
+    axios.get(`https://database-api-eight.vercel.app/management`)
               .then((res)=> {console.log(res.data);setNames1(res.data)})
               .catch((err)=> console.log(err))
 
-    axios.get(`https://register-api-cloud.vercel.app/staff`)
+    axios.get(`https://database-api-eight.vercel.app/staff`)
               .then((res)=> {console.log(res.data);setNames2(res.data)})
               .catch((err)=> console.log(err))
 
-    axios.get(`https://register-api-cloud.vercel.app/student`)
+    axios.get(`https://database-api-eight.vercel.app/student`)
               .then((res)=> {console.log(res.data);setNames3(res.data)})
               .catch((err)=> console.log(err))
   

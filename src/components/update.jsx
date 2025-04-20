@@ -19,7 +19,7 @@ const Update =()=>{
     
     
       useEffect(() => {
-        axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+        axios.get(`https://database-api-eight.vercel.app/student/${id}`)
              .then((res)=>  setName(res.data))
              .catch((err)=> console.log(err))
       }, [id, isNew])
@@ -36,7 +36,7 @@ const Update =()=>{
     
     
     const handleSave = async()=>{
-           await axios.put(`https://register-api-cloud.vercel.app/student/pull/${id}/${select2}`)
+           await axios.put(`https://database-api-eight.vercel.app/student/pull/${id}/${select2}`)
                      .then((res)=> {setIsNew(pre => !pre);console.log(res.data)})
                      .catch((err)=> console.log(err))
                       }

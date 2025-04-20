@@ -28,7 +28,7 @@ const Profile = () => {
                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 01")})
                     .catch((err)=> console.log(err))
                     
-   axios.put(`https://register-api-cloud.vercel.app/student/${id}`,
+   axios.put(`https://database-api-eight.vercel.app/student/${id}`,
     {image:`https://imageapi-production-c98c.up.railway.app/file/${image1?.name}`})
                                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 02")})
                                     .catch((err)=> console.log(err))   
@@ -36,7 +36,7 @@ const Profile = () => {
 
   useEffect(() => {
    
-    axios.get(`https://register-api-cloud.vercel.app/student/${id}`)
+    axios.get(`https://database-api-eight.vercel.app/student/${id}`)
               .then((res)=> {console.log(res.data);setName(res.data)})
               .catch((err)=> console.log(err))   
  }, [id])
