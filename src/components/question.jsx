@@ -125,7 +125,7 @@ const Question = () => {
       <option value="phy">Physics</option>
       <option value="bio">Biology</option>
     </select></div>
-    <div className='white2'> Time in sec:{time} 
+    <div > Time in sec:{time} 
       <input type='number ' onChange={(e)=>setTime(e.target.value)}/>
       <button className='click1' onClick={()=>handleSetting()}>Save</button></div>
     </div>
