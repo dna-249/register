@@ -82,7 +82,7 @@ const Question = () => {
               }
     
               const handleSetting = async()=>{
-                await axios.put(`https://database-api-eight.vercel.app/staff/${id}`,{
+                await axios.put(`https://database-api-eight.vercel.app/staff/${name?._id}`,{
                   session:session,
                   term:term,
                   type:type,
