@@ -10,6 +10,7 @@ const Question = () => {
   const [object, setObject]= useState("Eng")
   const [session, setSession]= useState("2024/2025")
   const [term, setTerm]= useState("first")
+  const [time, setTime]= useState()
   const [name, setName]= useState([])
   const [select, setSelect]= useState(false)
   const [key, setKey]= useState() 
@@ -80,11 +81,61 @@ const Question = () => {
                               .catch((err)=> console.log(err))
               }
     
+              const handleSetting = async()=>{
+                await axios.put(`https://database-api-eight.vercel.app/staff/${id}`,{
+                  session:session,
+                  term:term,
+                  type:type,
+                  time:time
+                })
+                          .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); console.log(res.data)})
+                          .catch((err)=> console.log(err))
+          }
+
+
  if(insert === 0)return (
   
   <div>{show?(
   <div className='center'>
    <div className='bgUser'> 
+    <div className='white'>
+      <h3> Set the Activity Questions for student to attempt:</h3>
+      <div className='four'>
+    
+        
+        <div>Session: <select onChange={(e)=>setSession(e.target.value)}> 
+      <option value="">select</option>
+      <option value="2022/2023">2022/2023</option>
+      <option value="2023/2024">2023/2024</option>
+      <option value="2024/2025">2024/2025</option>
+      </select></div>
+
+       <div>Term: <select onChange={(e)=>setTerm(e.target.value)}> 
+      <option value="">select</option>
+      <option value="first">First Term</option>
+      <option value="second">Second Term</option>
+      <option value="third">Third Term</option>
+    </select></div>
+
+    <div>Subject: <select onChange={(e)=>setType(e.target.value)}>
+      <option value="">select</option>
+      <option value="Eng">English</option>
+      <option value="math">Mathematics</option>
+      <option value="chem">Chemistry</option>
+      <option value="phy">Physics</option>
+      <option value="bio">Biology</option>
+    </select></div>
+    <div className='white2'> Time in sec:{time} 
+      <input type='number ' onChange={(e)=>setTime(e.target.value)}/>
+      <button className='click1' onClick={()=>handleSetting()}>Save</button></div>
+    </div>
+    <h4>
+      Session:{name?.session} <br />
+      Term:{name?.term} <br />
+      Session:{name?.type} <br />
+      Time in sec:{name?.time}
+    </h4>
+    </div>
 
    <h3>Select Option below:</h3>
     <div className='four'>
