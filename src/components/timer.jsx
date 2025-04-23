@@ -1,21 +1,19 @@
 import React, { useState,useEffect,useRef } from 'react'
 
-const Timer = () => {
-  const [timer,setTimer] = useState()
-
+const Timer = ({time}) => {
   const getTime = (params) => {
     const remain = JSON.parse(localStorage.getItem("time"))
     if(remain === "undefined") {return null} else {return remain}
   }
   
-    const [duration,setDuration]=useState(!timer?getTime():timer)
+    const [duration,setDuration]=useState(!time?getTime():time)
     
   
     const set = (params) => {
       localStorage.removeItem("time")
       console.log(duration)
       setDuration("")
-      setDuration(()=>timer*1000)
+      setDuration(()=>time*1000)
       setTimer('')
     }
     
@@ -45,19 +43,13 @@ const Timer = () => {
      setDuration(()=>duration - 1000)
      localStorage.setItem("time", JSON.stringify(duration))
     }, 1000);}
-  },[duration,timer])
+  },[duration])
   return (
     
        
-          <div className="white">
-            <div className="twoA">
-                <div > <h2>Examination Hall <input type='number'value={timer} onChange={(e)=>setTimer(e.target.value)}/> <button onClick={()=>set()}>set Time</button> </h2></div>
-                <div>
-                    <div> <h2>Duration:{duration !== -1000? timerFormat(duration):'0:0:0'}</h2></div>
-                    <div></div>
-                </div>
-            </div>
-          </div>
+          <div >
+               <h2>Duration:{duration !== -1000? timerFormat(duration):'0:0:0'}</h2>
+           </div>
        
   )
 }
