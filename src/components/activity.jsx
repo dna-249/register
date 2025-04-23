@@ -108,9 +108,7 @@ const Activity = ({names,setBack}) => {
 
 <div className='white'>
   
-    {staff?.[`${staff?.type}`].filter((item,index) =>{ 
-      return item.session === staff?.session && item.term === staff?.term && item.type === staff?.type && index === count
-      }).map((item, index)=>
+    {staff?.Eng.map((item, index)=>
         { const setting = ()=>{ return item.ans};
            const answer = setting();  
             if(count !== item.length)return (
