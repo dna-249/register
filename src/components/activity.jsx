@@ -27,7 +27,7 @@ const Activity = ({names,setBack}) => {
     useEffect(() => {
    
       axios.get(`https://database-api-eight.vercel.app/staff/${id}`)
-                .then((res)=> {console.log(res.data);setStaff(res.data)})
+                .then((res)=> {console.log(res.data);setObject(res.data.type);setStaff(res.data)})
                 .catch((err)=> console.log(err))   
    }, [id])
      
@@ -108,8 +108,8 @@ const Activity = ({names,setBack}) => {
 
 <div className='white'>
   
-    {staff?.[`${staff?.type}`].filter((item,index) =>{ 
-      return item.session === staff?.session && item.term === staff?.term 
+    {staff?.[`${object}`].filter((item,index) =>{ 
+      return item.session === staff?.session && item.term === staff?.term  && item.type === staff?.type && index === count 
       }).map((item, index)=>
         { const setting = ()=>{ return item.ans};
            const answer = setting();  
