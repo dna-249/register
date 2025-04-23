@@ -6,14 +6,14 @@ const Timer = ({time}) => {
     if(remain === "undefined") {return null} else {return remain}
   }
   
-    const [duration,setDuration]=useState(!time?getTime():time)
+    const [duration,setDuration]=useState(!time?getTime():60)
     
   
     const set = (params) => {
       localStorage.removeItem("time")
       console.log(duration)
       setDuration("")
-      setDuration(()=>time*1000)
+      setDuration(()=>60*1000)
       setTimer('')
     }
     
@@ -48,7 +48,7 @@ const Timer = ({time}) => {
     
        
           <div >
-               <h2>Duration:{duration !== -1000? timerFormat(duration):'0:0:0'}</h2>
+               <h2 onClick={()=>set()}>Duration:{duration !== -1000? timerFormat(duration):'0:0:0'}</h2>
            </div>
        
   )
