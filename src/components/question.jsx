@@ -83,10 +83,10 @@ const Question = () => {
     
               const handleSetting = async()=>{
                 await axios.put(`https://database-api-eight.vercel.app/staff/${name?._id}`,{
-                  session2:session,
-                  term2:term,
-                  type2:type,
-                  time2:time
+                  session:session,
+                  term:term,
+                  type:type,
+                  time:time
                 })
                           .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); console.log(res.data)})
                           .catch((err)=> console.log(err))
