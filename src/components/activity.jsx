@@ -109,7 +109,7 @@ const Activity = ({names,setBack}) => {
 <div className='white'>
   
     {staff?.[`${object}`].filter((item,index) =>{ 
-      return item.session === staff?.session && item.term === staff?.term  && item.type === staff?.type && index === count 
+      return item.session === staff?.session && item.term === staff?.term  && item.type === staff?.type
       }).map((item, index)=>
         { const setting = ()=>{ return item.ans};
            const answer = setting();  
