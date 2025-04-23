@@ -108,7 +108,7 @@ const Activity = ({names,setBack}) => {
 
 <div className='white'>
   
-    {staff?.Eng.map((item, index)=>
+    {staff?.[`${staff?.type}`].map((item, index)=>
         { const setting = ()=>{ return item.ans};
            const answer = setting();  
             if(count !== item.length)return (
