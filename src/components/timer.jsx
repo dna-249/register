@@ -43,7 +43,7 @@ const Timer = ({time}) => {
      setDuration(()=>duration - 1000)
      localStorage.setItem("time", JSON.stringify(duration))
     }, 1000);}
-  },[duration])
+  },[duration,time])
   return (
     
        
