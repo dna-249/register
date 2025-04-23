@@ -27,7 +27,7 @@ const Activity = ({names,setBack}) => {
     useEffect(() => {
    
       axios.get(`https://database-api-eight.vercel.app/staff/${id}`)
-                .then((res)=> {console.log(res.data);setObject(res.data.type);setStaff(res.data)})
+                .then((res)=> {console.log(res.data);setObject(()=>res.data.type);setStaff(res.data)})
                 .catch((err)=> console.log(err))   
    }, [id])
      
