@@ -81,7 +81,7 @@ const Activity = ({names,setBack}) => {
     }
     
 
-
+    const strTime = ()=> {return parseInt(staff?.time)}
 
      return (
       <div className='center'>
@@ -100,7 +100,7 @@ const Activity = ({names,setBack}) => {
  <div style={{marginBottom:"10px"}}  onClick={()=>nav(`/profile/${id}`)}>User Profile</div>
  <div>
   <div></div>
-  <div><Timer time ={staff?.time}/></div>
+  <div><Timer time ={strTime()}/></div>
  </div>
     
     
