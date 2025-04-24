@@ -109,30 +109,28 @@ const Activity = ({names,setBack}) => {
 <div className='white'>
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
-      return item.session === staff?.session && item.term === staff?.term && index === count 
+      return item.session === staff?.session && item.term === staff?.term  
       }).map((item, index)=>
-        { const setting = ()=>{ return item.ans};
-           const answer = setting(); 
+        
            
            
-            if(count !== item.length)return (
         <div  key={index} > 
-        <h1>{item.question}</h1>          
+        <h1>{item.question[0]}</h1>          
         <h3>
                <input    checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> A - {item.a}  <br />
             
-              <input    checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/> B  - {item.b}<br />
+              <input    checked={select === 'B'} value='B' type='radio' onChange={(e)=>setSelect(e.target.value)}/> B  - {item.b[0]}<br />
             
-               <input    checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/> C - {item.c}<br />
+               <input    checked={select === 'C'} value='C' type='radio' onChange={(e)=>setSelect(e.target.value)}/> C - {item.c[0]}<br />
             
-              <input    checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/>  D - {item.d}<br />
+              <input    checked={select === 'D'} value='D' type='radio' onChange={(e)=>setSelect(e.target.value)}/>  D - {item.d[0]}<br />
               </h3>
           <div className="twoA">  
-            <button style={{justifySelf:"flex-start"}} className="click1" onClick={()=>name(answer)}>Next</button>
-            <button style={{justifySelf:"flex-end"}} className="click1" onClick={()=>name2(answer)}>Previous</button>
+            <button style={{justifySelf:"flex-start"}} className="click1" onClick={()=>name(item.ans[0])}>Next</button>
+            <button style={{justifySelf:"flex-end"}} className="click1" onClick={()=>name2(item.ans[0])}>Previous</button>
             </div>
             </div>)
-    ;else return (<div> {count2}</div>)})}
+    }
    
 </div>
 </div>
