@@ -114,8 +114,8 @@ const Activity = ({names,setBack}) => {
         { const setting = ()=>{ return item.ans};
            const answer = setting(); 
            
-           const index2 =()=> {return count}
-           
+           const index2 =(index)=> {return count}
+
             if(count !== item.length)return (
         <div  key={index2()} > 
         <h1>{item.question}</h1>          
