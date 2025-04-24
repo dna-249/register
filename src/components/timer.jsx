@@ -14,7 +14,7 @@ const Timer = ({time}) => {
       console.log(duration)
       setDuration("")
       setDuration(()=>time*1000)
-      setTimer('')
+    
     }
     
 
