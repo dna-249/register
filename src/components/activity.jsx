@@ -109,15 +109,14 @@ const Activity = ({names,setBack}) => {
 <div className='white'>
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
-      return item.session === staff?.session && item.term === staff?.term
+      return item.session === staff?.session && item.term === staff?.term  && count === index 
       }).map((item, index)=>
         { const setting = ()=>{ return item.ans};
            const answer = setting(); 
            
-           const index2 =(index)=> {return count}
-
+           
             if(count !== item.length)return (
-        <div  key={index2()} > 
+        <div  key={index} > 
         <h1>{item.question}</h1>          
         <h3>
                <input    checked={select === 'A'} value='A'  type='radio' onChange={(e)=>setSelect(e.target.value)}/> A - {item.a}  <br />
