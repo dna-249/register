@@ -17,7 +17,7 @@ const Profile = () => {
 
     const form = new FormData()
     form.append("file",image1)
-    form.append("upload_preset","user_image")
+    form.append("upload_preset","user_images")
     form.append("cloud_name","dukgqyyek")
 
   const handleImage = (e) => {
