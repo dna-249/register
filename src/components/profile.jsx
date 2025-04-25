@@ -46,7 +46,7 @@ const Profile = () => {
 
   useEffect(() => {
    
-    axios.get(`https://database-api-eight.vercel.app/student/${id}`)
+    axios.get(`https://database-api-eight.vercel.app/${id}/${id2}`)
               .then((res)=> {console.log(res.data);setName(res.data)})
               .catch((err)=> console.log(err))   
  }, [id])
