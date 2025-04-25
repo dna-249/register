@@ -55,8 +55,9 @@ const Profile = () => {
     <div className='profile'>
       <div>
         <div>
-            {edit? <div>
-              {name? <img src={name?.image} width={100} height={100}/>
+            {edit? 
+            <div>
+              {!name? <img src={name?.image} width={100} height={100}/>
                :
                <label for="file"><FaUser className='img'/> 
                <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>}
@@ -68,7 +69,7 @@ const Profile = () => {
                 </div>
               </div>
                :
-               <div style={{marginTop:"20px"}}>{image? <img src={image} width={100} height={100}/> 
+               <div style={{marginTop:"20px"}}>{!image? <img src={image} width={100} height={100}/> 
                : 
                <label for="file"><FaUser className='img'/> <input type='file' id='file' onChange={(e)=>handleImage(e)}/>
                </label>}
