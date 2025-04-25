@@ -11,7 +11,7 @@ const Profile = () => {
     const [image1,setImage1]=useState('')
     const [name,setName]=useState('')
        
-     const {id} = useParams()
+     const {id,id2} = useParams()
       const nav  = useNavigate()
     
 
@@ -38,7 +38,7 @@ const Profile = () => {
     const url = await res.json()
     console.log(url.secure_url)
                     
-  await axios.put(`https://database-api-eight.vercel.app/student/${id}`,
+  await axios.put(`https://database-api-eight.vercel.app/${id}/${id2}`,
     {image:url.secure_url})
                                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 02")})
                                     .catch((err)=> console.log(err))   
@@ -59,7 +59,8 @@ const Profile = () => {
               {name? <img src={name?.image} width={100} height={100}/>
                :
                <label for="file"><FaUser className='img'/> 
-               <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>}
+               <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>
+               }
 
                 <div className='white2 bgUser'> 
                 <label for="file" className='white2 image'>Select Photo .... 
@@ -68,13 +69,14 @@ const Profile = () => {
                 </div>
               </div>
                :
-               <div style={{marginTop:"20px"}}>{image? <img src={image} width={100} height={100}/> 
+              <div style={{marginTop:"20px"}}>
+                {image? <img src={image} width={100} height={100}/> 
                : 
                <label for="file"><FaUser className='img'/> <input type='file' id='file' onChange={(e)=>handleImage(e)}/>
                </label>}
             </div>}
-
          </div>
+
          <div className='two'> 
           <div><h3>Student Personal Info</h3></div>
           <div onClick={()=>setEdit((pre)=>!pre)}> <h3 style={{color:"blue", textDecoration:"underline"}}>edit</h3></div>

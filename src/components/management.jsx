@@ -48,6 +48,8 @@ const Management = () => {
             <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
             
             <div className='bars'><FaBars/></div>
+            <div  onClick={()=>nav(`/profile/management/${id}`)}>Profile</div>
+
         
             <div>
               <h4>

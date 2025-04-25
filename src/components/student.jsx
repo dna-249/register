@@ -36,7 +36,7 @@ useEffect(() => {
 
         <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
-        <div onClick={()=>nav(`/profile/${name._id}`)}>profile</div>
+        <div onClick={()=>nav(`/profile/student/${name._id}`)}>profile</div>
      </div >
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(

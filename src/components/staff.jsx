@@ -41,8 +41,8 @@ const Staff = ({setBack}) => {
          <div  className='three2'>
         
                 <div onClick={()=>nav(`/activity/${id}`)}> Activity</div>
-                <div><Link to="/register">Attendances</Link> </div>
                 <div  onClick={()=>nav(`/question/${id}`)}>Questions</div>
+                <div  onClick={()=>nav(`/profile/staff/${id}`)}>Profile</div>
          </div>
          <div className='bars'><FaBars/></div>
          </div>
