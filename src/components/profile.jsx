@@ -17,6 +17,9 @@ const Profile = () => {
 
     const form = new FormData()
     form.append("file",image1)
+    form.append("upload_preset","user_image")
+    form.append("cloud_name","dukgqyyek")
+
   const handleImage = (e) => {
     setImage1(e.target.files[0])
     
@@ -24,7 +27,7 @@ const Profile = () => {
     console.log(image)
   }
   const uploadImage =()=>{
-    axios.post(`https://imageapi-production-c98c.up.railway.app/image`,{form})
+    axios.post(`https://api.cloudinary.com/v1_1/dukgqyyek/image/upload`,{form})
                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 01")})
                     .catch((err)=> console.log(err))
                     
