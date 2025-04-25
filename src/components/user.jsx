@@ -61,7 +61,9 @@ const handleResult = async(params) => {
           <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
     </div>     
   <div className='two'>
- <div style={{marginTop:"20px"}}> <FaUser className='img'/></div>
+  <div style={{marginTop:"20px"}}> {name? <img src={name?.image} width={100} height={100}/>
+                 :
+                 <FaUser className='img'/>}</div>
  <div  className='three2'>
 
           <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
