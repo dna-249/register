@@ -31,10 +31,12 @@ const Profile = () => {
     form.append("upload_preset","user_images")
     form.append("cloud_name","dukgqyyek")
 
-   await fetch(`https://api.cloudinary.com/v1_1/dukgqyyek/image/upload`,{
+  const res = await fetch(`https://api.cloudinary.com/v1_1/dukgqyyek/image/upload`,{
     method:"POST",
-    body:form}).then((res)=> {console.log(res);setImages(res); alert("image uploaded successfully 01")})
-                    .catch((err)=> console.log(err))
+    body:form})
+
+    const url = await res.json()
+    console.log(url)
                     
   await axios.put(`https://database-api-eight.vercel.app/student/${id}`,
     {image:images})
