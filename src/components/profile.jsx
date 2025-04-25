@@ -39,7 +39,7 @@ const Profile = () => {
     console.log(url)
                     
   await axios.put(`https://database-api-eight.vercel.app/student/${id}`,
-    {image:images})
+    {image:url})
                                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 02")})
                                     .catch((err)=> console.log(err))   
   }
