@@ -24,9 +24,14 @@ const Management = () => {
 
   useEffect(() => {
  
+    axios.get(`https://database-api-eight.vercel.app/management/${id}`)
+              .then((res)=> {console.log(res.data);setName(res.data)})
+              .catch((err)=> console.log(err))
+
     axios.get(`https://database-api-eight.vercel.app/management`)
               .then((res)=> {console.log(res.data);setNames1(res.data)})
               .catch((err)=> console.log(err))
+
 
     axios.get(`https://database-api-eight.vercel.app/staff`)
               .then((res)=> {console.log(res.data);setNames2(res.data)})
@@ -45,7 +50,7 @@ const Management = () => {
       <div className="bgUser">
         <h3> MANAGEMENT DASHBOARD</h3>
          <div className='two'>
-             <div style={{marginTop:"20px"}}> {name?<div> <img src={names1?.image} width={100} height={100}/>
+             <div style={{marginTop:"20px"}}> {name?<div> <img src={name?.image} width={100} height={100}/>
              <div  onClick={()=>nav(`/profile/management/${id}`)}>Profile</div></div>
                             :
                            <div> <FaUser className='img'/>
@@ -58,8 +63,8 @@ const Management = () => {
         
             <div>
               <h4>
-                Key:{names1?.key} <br />
-                Name:{names1?.name} <br />
+                Key:{name?.key} <br />
+                Name:{name?.name} <br />
                 Role:
               </h4>
             </div>
