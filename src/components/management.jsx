@@ -46,10 +46,10 @@ const Management = () => {
         <h3> MANAGEMENT DASHBOARD</h3>
          <div className='two'>
              <div style={{marginTop:"20px"}}> {name?<div> <img src={names1?.image} width={100} height={100}/>
-             <div  onClick={()=>nav(`/profile/management/${names1._id}`)}>Profile</div></div>
+             <div  onClick={()=>nav(`/profile/management/${id}`)}>Profile</div></div>
                             :
                            <div> <FaUser className='img'/>
-             <div  onClick={()=>nav(`/profile/management/${names1._id}`)}>Profile</div></div>
+             <div  onClick={()=>nav(`/profile/management/${id}`)}>Profile</div></div>
             }</div>
                               
             <div className='bars'><FaBars/></div>
