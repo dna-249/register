@@ -7,6 +7,7 @@ const Profile = () => {
     const [value,setValue]= useState('')
     const [edit,setEdit]= useState(false)
     const [image,setImage]=useState('')
+    const [images,setImages]=useState('')
     const [image1,setImage1]=useState('')
     const [name,setName]=useState('')
        
@@ -15,10 +16,7 @@ const Profile = () => {
     
 
 
-    const form = new FormData()
-    form.append("file",image1)
-    form.append("upload_preset","user_images")
-    form.append("cloud_name","dukgqyyek")
+    
 
   const handleImage = (e) => {
     setImage1(e.target.files[0])
@@ -26,13 +24,19 @@ const Profile = () => {
     setImage(URL.createObjectURL(e.target.files[0]))
     console.log(image)
   }
-  const uploadImage =()=>{
-    axios.post(`https://api.cloudinary.com/v1_1/dukgqyyek/image/upload`,{form})
-                    .then((res)=> {console.log(res.data);alert("image uploaded successfully 01")})
+  const uploadImage = async()=>{
+
+    const form = new FormData()
+    form.append("file",image1)
+    form.append("upload_preset","user_images")
+    form.append("cloud_name","dukgqyyek")
+
+   await axios.post(`https://api.cloudinary.com/v1_1/dukgqyyek/image/upload`,{form})
+                    .then((res)=> {console.log(res.data);setImages(res.data.url); alert("image uploaded successfully 01")})
                     .catch((err)=> console.log(err))
                     
-   axios.put(`https://database-api-eight.vercel.app/student/${id}`,
-    {image:`https://imageapi-production-c98c.up.railway.app/file/${image1?.name}`})
+  await axios.put(`https://database-api-eight.vercel.app/student/${id}`,
+    {image:images})
                                     .then((res)=> {console.log(res.data);alert("image uploaded successfully 02")})
                                     .catch((err)=> console.log(err))   
   }
