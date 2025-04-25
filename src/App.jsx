@@ -50,7 +50,7 @@ return (<div>
       <Route path='/admission' element={<Admission />}/>
       <Route path='/activity/:id' element={<Activity />}/>
       <Route path='/register' element={<Register />}/>
-      <Route path='/profile/:id/:id' element={<Profile/>}/>
+      <Route path='/profile/:id/:id2' element={<Profile/>}/>
       <Route path='/attendance/:id' element={<Attendance />}/>
       <Route path='/update/:id' element={<Update />}/>
     </Routes>
