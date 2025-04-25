@@ -33,7 +33,7 @@ const Profile = () => {
 
    await fetch(`https://api.cloudinary.com/v1_1/dukgqyyek/image/upload`,{
     method:"POST",
-    body:form}).then((res)=> {console.log(res.data);setImages(res.data.url); alert("image uploaded successfully 01")})
+    body:form}).then((res)=> {console.log(res.data);setImages(res.data); alert("image uploaded successfully 01")})
                     .catch((err)=> console.log(err))
                     
   await axios.put(`https://database-api-eight.vercel.app/student/${id}`,
