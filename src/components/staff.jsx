@@ -37,7 +37,9 @@ const Staff = ({setBack}) => {
         <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
         </div>
          <div className='two'>
-         <div style={{marginTop:"20px"}}><FaUser className='img'/></div>
+         <div style={{marginTop:"20px"}}> {staff? <img className='img' src={staff?.image} />
+                         :
+                         <FaUser className='img'/>}</div>
          <div  className='three2'>
         
                 <div onClick={()=>nav(`/activity/${id}`)}> Activity</div>

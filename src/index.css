@@ -80,6 +80,7 @@ input[type="file"]{
   border-radius: 50%;
   background-color: #fff;
   color: grey;
+  padding: 5px;
 }
 .two{
   display: grid;

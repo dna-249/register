@@ -92,7 +92,9 @@ const Activity = ({names,setBack}) => {
           </div>     
          
         <div  className="two">
-        <div style={{marginTop:"20px"}}>{image? <img src={image?.image} width={100} height={100}/> : <label for="file"><FaUser className='img'/> <input type='file' id='file' onChange={(e)=>handleImage(e)}/></label>}</div>
+        <div style={{marginTop:"20px"}}> {names? <img className='img' src={names?.image} />
+                        :
+                        <FaUser className='img'/>}</div>
       <div> Admission No: <br />
        Name:{names?.name} <br />
        Class: <br />

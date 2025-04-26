@@ -51,7 +51,9 @@ const Update =()=>{
           <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
     </div>     
   
-     <div ><FaUser className='img'/></div>
+     <div > {name? <img className='img' src={name?.image} />
+                     :
+                     <FaUser className='img'/>}</div>
      name: {name?.name}<br />
      class: <br />
      Term:

@@ -61,7 +61,7 @@ const handleResult = async(params) => {
           <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
     </div>     
   <div className='two'>
-  <div style={{marginTop:"20px"}}> {name? <img src={name?.image} width={100} height={100}/>
+  <div style={{marginTop:"20px"}}> {name? <img className='img' src={name?.image} />
                  :
                  <FaUser className='img'/>}</div>
  <div  className='three2'>

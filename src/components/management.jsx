@@ -50,7 +50,7 @@ const Management = () => {
       <div className="bgUser">
         <h3> MANAGEMENT DASHBOARD</h3>
          <div className='two'>
-             <div style={{marginTop:"20px"}}> {name?<div> <img src={name?.image} width={100} height={100}/>
+             <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
              <div  onClick={()=>nav(`/profile/management/${id}`)}>Profile</div></div>
                             :
                            <div> <FaUser className='img'/>

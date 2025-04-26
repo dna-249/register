@@ -22,7 +22,9 @@ const StudentAttendance =()=>{
  <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
      
      <h3>REGISTER</h3>
-     <div ><FaUser className='img'/></div>
+     <div > {name? <img className='img' src={name?.image} />
+                     :
+                     <FaUser className='img'/>}</div>
      name: {name?.name}<br />
      class: <br />
      Term:
