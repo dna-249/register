@@ -50,12 +50,14 @@ body {
   grid-template-rows: auto auto auto auto auto auto auto auto;
   background:aliceblue;
   border-radius:10px;
+  width:fit-content;
   color:green;
   font-weight:bold;
+  z-index:10;
 }
 .side div{
   margin:2px;
-  width:100px;
+  width:150px;
   height:fit-content;
   padding:10px;
   border:1px solid greenyellow;
