@@ -47,7 +47,7 @@ body {
 .side{
   justify-self:flex-end;
   display:grid;
-  padding:10px;
+  padding:5px;
   grid-template-rows: auto auto auto auto auto auto auto auto;
   background:aliceblue;
   border-radius:10px;
@@ -57,10 +57,10 @@ body {
   z-index:10;
 }
 .side div{
-  margin:2px;
+  margin:1px;
   width:100px;
   height:fit-content;
-  padding:10px;
+  padding:5px;
   border:1px solid greenyellow;
   border-radius:5px;
 }
