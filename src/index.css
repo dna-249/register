@@ -48,15 +48,22 @@ body {
   display:grid;
   padding:10px;
   grid-template-rows: auto auto auto auto auto auto auto auto;
-  background:green;
+  background:aliceblue;
   border-radius:10px;
-  color:white;
+  color:green;
   font-weight:bold;
 }
 .side div{
   margin:2px;
   width:100px;
   height:fit-content;
+  padding:10px;
+  border:1px solid greenyellow;
+}
+
+.side div{
+background:green;
+color:white;
 }
 input[type="file"]{
   background-color: green;
