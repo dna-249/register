@@ -61,9 +61,10 @@ body {
   height:fit-content;
   padding:10px;
   border:1px solid greenyellow;
+  border-radius:5px;
 }
 
-.side div{
+.side div:hover{
 background:green;
 color:white;
 }

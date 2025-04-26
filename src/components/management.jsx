@@ -74,8 +74,7 @@ const Management = () => {
              <div>Classes</div>
              <div>Report</div>
              <div>Notice</div>
-             <div></div>
-             <div></div>
+             
             </div>
     </div>
 
