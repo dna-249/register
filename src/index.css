@@ -45,6 +45,7 @@ body {
  
 }
 .side{
+  justify-self:flex-end;
   display:grid;
   padding:10px;
   grid-template-rows: auto auto auto auto auto auto auto auto;

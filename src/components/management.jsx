@@ -63,7 +63,7 @@ const Management = () => {
               </h4>
             </div>
                               
-            <div className='bars'><FaBars/></div>
+            <div className='bars'>
             
 
         
@@ -75,6 +75,7 @@ const Management = () => {
              <div>Report</div>
              <div>Notice</div>
              
+            </div>
             </div>
     </div>
 
