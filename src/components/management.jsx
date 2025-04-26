@@ -68,13 +68,13 @@ const Management = () => {
 
         
             <div className="side">
-             <div>Index</div>
-             <div>Admission</div>
-             <div>Secret_Keys</div>
-             <div>Classes</div>
-             <div>Report</div>
-             <div>Notice</div>
-             
+            <div onClick={()=>setSelect('1')}> Index</div>
+                <div onClick={()=>setSelect('2')}> Admissions</div>
+                <div onClick={()=>setSelect('3')}>Secret_Keys </div>
+                <div onClick={()=>setSelect('4')}>Classes</div>
+                <div>Results</div>
+                <div>Notice</div>
+              
             </div>
             </div>
     </div>
