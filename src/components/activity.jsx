@@ -7,7 +7,7 @@ import axios from 'axios'
 import Timer from './timer'
 
 
-const Activity = ({names,setBack}) => {
+const Activity = ({setBack}) => {
 
     const [count,setCount]=useState(0)
     const [count2,setCount2]=useState(0)
@@ -15,6 +15,7 @@ const Activity = ({names,setBack}) => {
     const [select,setSelect]=useState('')
     const [image,setImage]=useState('')
     const [image1,setImage1]=useState('')
+    const [names,setNames]=useState('')
     const [object, setObject]= useState("Eng")
     const [session, setSession]= useState("2024/2025")
     const [term, setTerm]= useState("first")
@@ -28,7 +29,11 @@ const Activity = ({names,setBack}) => {
    
       axios.get(`https://database-api-eight.vercel.app/staff/${id}`)
                 .then((res)=> {console.log(res.data);setStaff(res.data)})
+                .catch((err)=> console.log(err))
+     axios.get(`https://database-api-eight.vercel.app/student/${id}`)
+                .then((res)=> {console.log(res.data);setNames(res.data)})
                 .catch((err)=> console.log(err))   
+     
    }, [id])
      
     
@@ -92,12 +97,14 @@ const Activity = ({names,setBack}) => {
           </div>     
          
         <div  className="two">
-        <div style={{marginTop:"20px"}}> {staff? <img className='img' src={staff?.image} />
+        <div style={{marginTop:"20px"}}> {names? <img className='img' src={names?.image} />
                         :
                         <FaUser className='img'/>}</div>
-      <div> <h4> Admission: {staff?.key} <br />  
-        Name: {staff?.name} <br />
-        Class :{staff?.class}</h4>
+      <div>
+        <h4> Admission: {names?.key} <br />  
+        Name: {names?.name} <br />
+        Class :{names?.class}
+        </h4>
       </div></div>
  <div style={{marginBottom:"10px"}}  onClick={()=>nav(`/profile/student/${id}`)}>User Profile</div>
  <div>

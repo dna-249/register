@@ -55,18 +55,27 @@ const Management = () => {
                             :
                            <div> <FaUser className='img'/>
              <div  onClick={()=>nav(`/profile/management/${id}`)}>Profile</div></div>
-            }</div>
+            }
+             <h4>
+                Key:{name?.key} <br />
+                Name:{name?.name} <br />
+                Role:
+              </h4>
+            </div>
                               
             <div className='bars'><FaBars/></div>
             
 
         
-            <div>
-              <h4>
-                Key:{name?.key} <br />
-                Name:{name?.name} <br />
-                Role:
-              </h4>
+            <div className="side">
+             <div>Index</div>
+             <div>Admission</div>
+             <div>Secret_Keys</div>
+             <div>Classes</div>
+             <div>Report</div>
+             <div>Notice</div>
+             <div></div>
+             <div></div>
             </div>
     </div>
 

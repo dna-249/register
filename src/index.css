@@ -44,6 +44,17 @@ body {
  margin-bottom: 10px;
  
 }
+.side{
+  display:grid;
+  padding:10px;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  background:green;
+}
+.side div{
+  margin:2px;
+  width:100px;
+  height:fit-content;
+}
 input[type="file"]{
   background-color: green;
   display: none;
