@@ -82,11 +82,9 @@ const handleResult = async(params) => {
  </div>
    <div className='two'>
    <div>
-              <h4>
-                Key:{name?.key} <br />
-                Name:{name?.name} <br />
-                class:{name?.class}
-              </h4>
+   <h4> Admission: {name?.key} <br />  
+        Name: {name?.name} <br />
+        Class :{name?.class}</h4>  
         </div>
    <div><span style={{color:"blue", textDecoration:"underline"}}></span></div>
  

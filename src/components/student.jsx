@@ -51,9 +51,9 @@ useEffect(() => {
    <div className='two'>
    <div>
    <div>
-    <h4>{name?.key} <br />  
-        {name?.name} <br />
-        {name?.class}</h4> </div> 
+    <h4> Admission: {name?.key} <br />  
+        Name: {name?.name} <br />
+        Class :{name?.class}</h4> </div> 
    </div>
    <div><span style={{color:"blue", textDecoration:"underline"}}></span></div>
  

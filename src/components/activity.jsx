@@ -92,14 +92,14 @@ const Activity = ({names,setBack}) => {
           </div>     
          
         <div  className="two">
-        <div style={{marginTop:"20px"}}> {names? <img className='img' src={names?.image} />
+        <div style={{marginTop:"20px"}}> {staff? <img className='img' src={staff?.image} />
                         :
                         <FaUser className='img'/>}</div>
-      <div> Admission No: <br />
-       Name:{names?.name} <br />
-       Class: <br />
+      <div> <h4> Admission: {staff?.key} <br />  
+        Name: {staff?.name} <br />
+        Class :{staff?.class}</h4>
       </div></div>
- <div style={{marginBottom:"10px"}}  onClick={()=>nav(`/profile/${id}`)}>User Profile</div>
+ <div style={{marginBottom:"10px"}}  onClick={()=>nav(`/profile/student/${id}`)}>User Profile</div>
  <div>
   <div></div>
   <div><Timer time ={strTime()}/></div>
