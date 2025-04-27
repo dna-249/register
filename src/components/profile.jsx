@@ -112,7 +112,7 @@ const Profile = () => {
           <div onClick={()=>setEdit((pre)=>!pre)}> <h3 style={{color:"blue", textDecoration:"underline"}}>edit</h3></div>
           </div> 
        <div> 
-         {name?.map((name,index)=> 
+         {name?.map((name,index)=>{return( 
            <div key={index}>
             <div>Admission No:<input onChange={(e)=>setValue1(e.target.value)} value={edit? value1:name.key} readOnly={edit? false:true} type="text"  /></div>
              <div> Name:<input onChange={(e)=>setValue2(e.target.value)} value={edit? value2:name.name} readOnly={edit? false:true} type="text"  /></div>
@@ -128,7 +128,7 @@ const Profile = () => {
              <div>Password:<input onChange={(e)=>setValue9(e.target.value)} value={edit? value9:name.password} readOnly={edit? false:true} type="text"  /></div>
              <div><button onClick={()=>handleChange()}>Save Changes </button></div>
             </div>
-         )}
+          )})}
           </div>
               </div>
     </div>
