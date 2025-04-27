@@ -49,12 +49,12 @@ body {
   display:grid;
   padding:5px;
   grid-template-rows: auto auto auto auto auto auto auto auto;
-  background: rgba(129, 132, 128, 0.67);
+  background: white;
   border-radius:10px;
   width:fit-content;
   color:green;
   font-weight:bold;
-  z-index:10;
+  
 }
 .side div{
   margin:1px;
@@ -65,6 +65,39 @@ body {
 }
 
 .side div:hover{
+background:green;
+color:white;
+}
+.sideA{
+  justify-self:flex-end;
+  display:grid;
+  padding:5px;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  background: white;
+  border-radius:10px;
+  width:fit-content;
+  color:green;
+  font-weight:bold;
+  
+}
+.sideA div{
+  margin:1px;
+  width:100px;
+  height:fit-content;
+  padding:5px;
+  border-radius:5px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+}
+.sideA span{
+
+display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.sideA div:hover{
 background:green;
 color:white;
 }
@@ -173,6 +206,13 @@ input[type="file"]{
 }
 .bars{
   display: none;
+}
+.bar{
+  display: grid;
+  padding: 10px;
+  background-color: white;
+  justify-self:right;
+  margin-bottom: 20px;
 }
 .icons{
   position: absolute;
@@ -472,6 +512,9 @@ image:active{
     display: grid;
     grid-template-rows: auto auto;
     justify-content:baseline;
+  }
+  .sideA{
+    display: none;
   }
   
 }

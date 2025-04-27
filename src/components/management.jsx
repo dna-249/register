@@ -16,7 +16,8 @@ const Management = () => {
   const [names2,setNames2] = useState([''])
   const [names3,setNames3] = useState([''])
   const [name,setName] = useState('')
-  const [view,setView] = useState('')
+  const [color,setColor] = useState('')
+  const [toggle,setToggle] = useState(true)
   const [select,setSelect] = useState('1')
   const [show,setShow] = useState(true)
   const nav = useNavigate()
@@ -44,30 +45,57 @@ const Management = () => {
   
   
  }, [id])
+ const colorPerSec = (params) => {
+   const color = Math.floor(Math.random() * 1001010)
+  setColor(()=>color)
+ }
+
+ setTimeout(()=>{
+ colorPerSec()
+ },5000)
  
   return (
     <div className='center' >
       <div className="bgUser">
-        <h3> MANAGEMENT DASHBOARD</h3>
-         <div className='two'>
+        <h3 onClick={()=>colorPerSec()}> MANAGEMENT DASHBOARD</h3>
+         <div className='two' >
              <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
-             <div  onClick={()=>nav(`/profile/management/${id}`)}>Profile</div></div>
+             </div>
                             :
                            <div> <FaUser className='img'/>
-             <div  onClick={()=>nav(`/profile/management/${id}`)}>Profile</div></div>
+             </div>
             }
+            <div  onClick={()=>nav(`/profile/management/${id}`)}><h4></h4>Profile</div>
              <h4>
                 Key:{name?.key} <br />
                 Name:{name?.name} <br />
                 Role:
               </h4>
             </div>
-                              
+             <div> 
+             <div style={{boxShadow:`2px 0px 10px 2px #${color}`}} className='sideA'>
+                 
+                  <div> {names1.length}</div><span>Managements</span> 
+                  <div>  {names2.length} </div><span>Staff</span>
+                   <div>  {names3.length}</div><span>Students</span>
+                  
+                </div>               
             <div className='bars'>
+              
+              {toggle? <div> 
+                <FaBars className='bar' onClick={()=>setToggle(false)}/>
+                <div  style={{boxShadow:`2px 0px 10px 2px #${color}`}} className='side'>
+                  <div>
+                   {names1.length} Management<br/>
+                    {names2.length} Staffs<br/>
+                    {names3.length}Students<br/>
+                  </div>
+                </div>
+            </div> :
             
 
         
-            <div className="side">
+            <div  style={{boxShadow:`2px 0px 10px 2px #${color}`}} className="side"  onClick={()=>setToggle(true)}>
             <div onClick={()=>setSelect('1')}> Index</div>
                 <div onClick={()=>setSelect('2')}> Admissions</div>
                 <div onClick={()=>setSelect('3')}>Secret_Keys </div>
@@ -75,13 +103,14 @@ const Management = () => {
                 <div>Results</div>
                 <div>Notice</div>
               
+            </div>}
             </div>
-            </div>
+            </div> 
     </div>
 
 
     <div className="two"> 
-            <div  className='three2'>
+            <div  className='three2' >
                 <div onClick={()=>setSelect('1')}> Index</div>
                 <div onClick={()=>setSelect('2')}> Admissions</div>
                 <div onClick={()=>setSelect('3')}>Secret_Keys </div>
