@@ -20,7 +20,7 @@ const Timer = ({time,setTimeOut,timeOut}) => {
 
 
      const name = (params) => {
-       if(duration === 0){setTimeOut(()=> "done");alert("save successfully");localStorage.removeItem("time")}
+       if(duration === 0){setTimeOut((prev)=> !prev);alert("save successfully");localStorage.removeItem("time")}
      }
 
      const timerFormat = (milliseconds) => {
