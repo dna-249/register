@@ -86,7 +86,6 @@ const Activity = ({setBack}) => {
        
        useEffect(()=>{
          handle()
-         set2()
          if(duration >= 0){
        setTimeout(() => {
         setDuration(()=>duration - 1000)
@@ -113,6 +112,7 @@ const Activity = ({setBack}) => {
         console.log(answer)
       handleAnswer(answer);
        setSelect("")
+       set2()
     }
 
     const name2 = (answer) => {
