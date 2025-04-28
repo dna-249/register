@@ -60,7 +60,7 @@ const Activity = ({setBack}) => {
    
    
   const handle = (params) => {
-          if(duration === 0  || count > staff?.[`${staff?.type}`].length){alert("save successfully");localStorage.removeItem("time")}
+          if(duration === 0  || count > staff?.[`${staff?.type}`].length){alert("save successfully");setDuration("");localStorage.removeItem("time")}
         }
    
   const timerFormat = (milliseconds) => {
