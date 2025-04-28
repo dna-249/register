@@ -116,6 +116,7 @@ const Activity = ({setBack}) => {
 
 
 <div className='white'>
+  {count > staff?.[`${staff?.type}`].length ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
@@ -124,7 +125,7 @@ const Activity = ({setBack}) => {
            const answer = setting(); 
            
            
-            if(count !== item.length)return (
+           return (
         <div  key={index} > 
         <h1>{item.question}</h1>          
         <h3>
@@ -141,9 +142,9 @@ const Activity = ({setBack}) => {
             <button style={{justifySelf:"flex-end"}} className="click1" onClick={()=>name2(answer)}>Previous</button>
             </div>
             </div>)
-    ;else return (<div> {count2}</div>)})}
+})}
    
-</div>
+   </div>:<div> {count2}</div> }</div>
 </div>
 </div>
   )
