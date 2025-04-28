@@ -58,11 +58,11 @@ const Activity = ({setBack}) => {
        }
 
        const set2 = (params) => {
-        if(count === staff?.[`${staff?.type}`].length -1){
+       
         localStorage.removeItem("time")
         setDuration(0)
         setDuration("")
-        }
+        
       }
        
    
@@ -112,7 +112,7 @@ const Activity = ({setBack}) => {
         console.log(answer)
       handleAnswer(answer);
        setSelect("")
-       set2()
+       
     }
 
     const name2 = (answer) => {
@@ -200,7 +200,7 @@ const Activity = ({setBack}) => {
               </h3>
           <div className="twoA">  
             <button style={{justifySelf:"flex-start"}} className="click1" onClick={()=>name(answer)}>Next</button>
-            <button style={{justifySelf:"flex-end"}} className="click1" onClick={()=>name2(answer)}>Previous</button>
+            <button style={{justifySelf:"flex-end"}} className="click1" onClick={()=>set2()}>Previous</button>
             </div>
             </div>)
 })}
