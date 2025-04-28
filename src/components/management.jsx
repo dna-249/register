@@ -76,14 +76,14 @@ const Management = () => {
              <div style={{boxShadow:`2px 0px 10px 2px #${color}`}} className='sideA'>
                  
              <div>
-                    {select === "1" && <div>
-                   {names1?.length} Management<br/>
-                    {names2?.length} Staffs<br/>
-                    {names3?.length}Students<br/>
+             {select === "1" && <div>
+                   {names1.length} Management<br/>
+                    {names2.length} Staffs<br/>
+                    {names3.length} Students<br/>
                     </div>
-                     || select === "2" && <div>{name?.admissions?.length} <br />Admissions</div>
-                     || select === "3" && <div> {name?.management?.length} <br />Management Keys
-                                               {name?.staff?.length} <br />Staff Keys
+                     || select === "2" && <div>{name?.admissions?.length} Admissions</div>
+                     || select === "3" && <div> {name?.management?.length} Management Keys <br />
+                                               {name?.staff?.length} Staff Keys 
                                               </div>
                      || select === "4" && <div> {name?.classes?.length} Classes</div>
      
@@ -99,11 +99,11 @@ const Management = () => {
                     {select === "1" && <div>
                    {names1.length} Management<br/>
                     {names2.length} Staffs<br/>
-                    {names3.length}Students<br/>
+                    {names3.length} Students<br/>
                     </div>
-                     || select === "2" && <div>{name?.admissions?.length} <br />Admissions</div>
-                     || select === "3" && <div> {name?.management?.length} <br />Management Keys <br />
-                                               {name?.staff?.length} <br />Staff Keys 
+                     || select === "2" && <div>{name?.admissions?.length} Admissions</div>
+                     || select === "3" && <div> {name?.management?.length} Management Keys <br />
+                                               {name?.staff?.length} Staff Keys 
                                               </div>
                      || select === "4" && <div> {name?.classes?.length} Classes</div>
      
