@@ -20,7 +20,7 @@ const Timer = ({time,setTimeOut,timeOut}) => {
 
 
      const name = (params) => {
-       if(duration === 0){alert("save successfully");localStorage.removeItem("time")}
+       if(duration === 0){alert("save successfully");setTimeOut(()=> "done");localStorage.removeItem("time")}
      }
 
      const timerFormat = (milliseconds) => {
@@ -42,8 +42,8 @@ const Timer = ({time,setTimeOut,timeOut}) => {
     setTimeout(() => {
      setDuration(()=>duration - 1000)
      localStorage.setItem("time", JSON.stringify(duration))
-    }, 1000)}else{setTimeOut(()=> "done")}
-  },[duration,time,timeOut])
+    }, 1000)}
+  },[duration,time])
 
   const data =[{a:["a","aa"],b:["b","bb"],c:["c","cc"]}]
   return (
