@@ -145,7 +145,7 @@ const Activity = ({setBack}) => {
 })}
    
    </div>:<div> {count2}</div> }</div>
-   <div> Question {count} of {count < staff?.[`${staff?.type}`].length} </div>
+   <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
 </div>
 </div>
   )
