@@ -1,6 +1,6 @@
 import React, { useState,useEffect,useRef } from 'react'
 
-const Timer = ({time= 60}) => {
+const Timer = ({time,setTimeOut}) => {
   const getTime = (params) => {
     const remain = JSON.parse(localStorage.getItem("time"))
     if(remain === "undefined") {return null} else {return remain}
@@ -42,7 +42,7 @@ const Timer = ({time= 60}) => {
     setTimeout(() => {
      setDuration(()=>duration - 1000)
      localStorage.setItem("time", JSON.stringify(duration))
-    }, 1000);}
+    }, 1000);}else{setTimeOut(0)}
   },[duration,time])
 
   const data =[{a:["a","aa"],b:["b","bb"],c:["c","cc"]}]
