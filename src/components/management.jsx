@@ -77,15 +77,15 @@ const Management = () => {
                  
              <div>
                     {select === "1" && <div>
-                   {names1.length} Management<br/>
-                    {names2.length} Staffs<br/>
-                    {names3.length}Students<br/>
+                   {names1?.length} Management<br/>
+                    {names2?.length} Staffs<br/>
+                    {names3?.length}Students<br/>
                     </div>
-                     || select === "2" && <div>{names1.admissions.length} <br />Admissions</div>
-                     || select === "3" && <div> {names1.management.length} <br />Management Keys
-                                               {names1.staff.length} <br />Staff Keys
+                     || select === "2" && <div>{names1?.admissions?.length} <br />Admissions</div>
+                     || select === "3" && <div> {names1?.management?.length} <br />Management Keys
+                                               {names1?.staff?.length} <br />Staff Keys
                                               </div>
-                     || select === "4" && <div> {names1.classes.length} Classes</div>
+                     || select === "4" && <div> {names1?.classes?.length} Classes</div>
      
                     }
                   </div>
