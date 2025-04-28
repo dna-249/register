@@ -128,26 +128,27 @@ const Management = () => {
                 <div className="scroll">
                     <div><h3>Management</h3>
                     <div className="dropDown">
-                          {names1?.map((name,index) => <div key={index}>
-                          <div onClick={()=>nav(`/management/${name._id}`)}> {name.name} </div>
-                          </div>)}
+                          {names1?.map((name,index) => 
+                          <div key={index} onClick={()=>nav(`/management/${name._id}`)}> {name.name} </div>
+                          )}
                       </div>
                       </div>
 
                       <div>
                       <h3> Staff  </h3>
                       <div className="dropDown">
-                          {names2?.map((name,index) => <div key={index}>
-                          <div onClick={()=>nav(`/staff/${name._id}`)}> {name.name} </div>
-                          </div>)}
+                          {names2?.map((name,index) => 
+                          <div key={index} onClick={()=>nav(`/staff/${name._id}`)}> {name.name} </div>
+                          )}
                       </div>
                       </div>
                       
                       <div><h3> Students</h3>
                            <div className="dropDown">
-                            {names3?.map((name,index) => <div key={index}>
-                            <div onClick={()=>nav(`/student/${name._id}`)}> {name.name} </div>
-                            </div>)}
+                            {names3?.map((name,index) =>
+                               <div onClick={()=>nav(`/student/${name._id}`)} key={index}>
+                                        {name.name} 
+                                           </div>)}
                             
                        </div> 
                        </div> 
