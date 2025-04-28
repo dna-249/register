@@ -102,8 +102,8 @@ const Management = () => {
                     {names3.length}Students<br/>
                     </div>
                      || select === "2" && <div>{name?.admissions?.length} <br />Admissions</div>
-                     || select === "3" && <div> {name?.management?.length} <br />Management Keys
-                                               {name?.staff?.length} <br />Staff Keys
+                     || select === "3" && <div> {name?.management?.length} <br />Management Keys <br />
+                                               {name?.staff?.length} <br />Staff Keys 
                                               </div>
                      || select === "4" && <div> {name?.classes?.length} Classes</div>
      
