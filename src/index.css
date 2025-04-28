@@ -47,7 +47,7 @@ body {
 .side{
   justify-self:flex-end;
   display:grid;
-  padding:5px;
+  padding:10px;
   grid-template-rows: auto auto auto auto auto auto auto auto;
   background: white;
   border-radius:10px;
@@ -71,7 +71,7 @@ color:white;
 .sideA{
   justify-self:flex-end;
   display:grid;
-  padding:5px;
+  padding:10px;
   grid-template-rows: auto auto auto auto auto auto auto auto;
   background: white;
   border-radius:10px;
@@ -89,7 +89,7 @@ color:white;
   display: grid;
   align-items: center;
   justify-content: center;
-  font-size: large;
+ 
 }
 .sideA span{
 
