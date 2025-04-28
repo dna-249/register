@@ -58,7 +58,7 @@ const Activity = ({setBack}) => {
        }
 
        const set2 = (params) => {
-        if(count > staff?.[`${staff?.type}`].length){
+        if(count === staff?.[`${staff?.type}`].length -1){
         localStorage.removeItem("time")
         setDuration(0)
         setDuration("")
