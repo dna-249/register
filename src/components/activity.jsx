@@ -17,10 +17,7 @@ const Activity = ({setBack}) => {
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
     const [timeOut,setTimeOut]= useState('')
-    const [object, setObject]= useState("Eng")
-    const [session, setSession]= useState("2024/2025")
-    const [term, setTerm]= useState("first")
-    const [type, setType]= useState("exam") 
+    
      
       
 
@@ -110,14 +107,14 @@ const Activity = ({setBack}) => {
  <div style={{marginBottom:"10px"}}  onClick={()=>nav(`/profile/student/${id}`)}>User Profile</div>
  <div>
   <div></div>
-  <div><Timer timeOut={timeOut} setTimeOut={setTimeOut} time ={strTime()}/></div>
+  <div><Timer setTimeOut={setTimeOut} time ={strTime()}/></div>
  </div>
     
     
 
 
 <div className='white'>
-  {timeOut === 'done' ?  <div> 
+  {timeOut ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
