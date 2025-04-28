@@ -494,7 +494,16 @@ image:active{
   border-radius: 5px;
 
 }
+.dropDown div{
+  border: 1px solid rgba(172, 255, 47, 0.382);
+  padding: 2px;
+  margin: 1px;
+}
 
+.dropDown div:hover{
+  background-color: rgb(40, 65, 40);
+  color: white;
+}
 
 
 
