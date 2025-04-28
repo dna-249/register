@@ -110,7 +110,7 @@ const Activity = ({setBack}) => {
  <div style={{marginBottom:"10px"}}  onClick={()=>nav(`/profile/student/${id}`)}>User Profile</div>
  <div>
   <div></div>
-  <div><Timer setTimeOut={setTimeOut} time ={strTime()}/></div>
+  <div><Timer timeOut={timeOut} setTimeOut={setTimeOut} time ={strTime()}/></div>
  </div>
     
     
