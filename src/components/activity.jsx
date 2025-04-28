@@ -46,10 +46,10 @@ const Activity = ({setBack}) => {
        if(remain === "undefined") {return null} else {return remain}
      }
      
-       const [duration,setDuration]=useState(!time?getTime():time)
+  const [duration,setDuration]=useState(!time?getTime():time)
        
      
-       const set = (params) => {
+  const set = (params) => {
          localStorage.removeItem("time")
          console.log(duration)
          setDuration("")
@@ -59,11 +59,11 @@ const Activity = ({setBack}) => {
        
    
    
-        const handle = (params) => {
+  const handle = (params) => {
           if(duration === 0){setTimeOut(false);alert("save successfully");localStorage.removeItem("time")}
         }
    
-        const timerFormat = (milliseconds) => {
+  const timerFormat = (milliseconds) => {
           let secs =parseInt(Math.floor(milliseconds /1000))
           let mins =parseInt(Math.floor(secs /60))
           let hours =parseInt( Math.floor(mins /60))
@@ -168,7 +168,7 @@ const Activity = ({setBack}) => {
 
 
 <div className='white'>
-  {timeOut === false  ?  <div> 
+  {!timeOut === false  ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
