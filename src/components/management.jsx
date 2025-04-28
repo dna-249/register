@@ -78,8 +78,8 @@ const Management = () => {
              <div>
              {select === "1" && <div>
                    {names1.length} Management<br/>
-                    {names2.length} Staffs<br/>*
-                    /{names3.length} Students<br/>
+                    {names2.length} Staffs<br/>
+                    {names3.length} Students<br/>
                     </div>
                      || select === "2" && <div>{name?.admissions?.length} Admissions</div>
                      || select === "3" && <div> {name?.management?.length} Management Keys <br />
@@ -102,7 +102,7 @@ const Management = () => {
                     {names3.length} Students<br/>
                     </div>
                      || select === "2" && <div>{name?.admissions?.length} Admissions</div>
-                     || select === "3" && <div> {name?.management?.length} Management Keys <br /><br />,
+                     || select === "3" && <div> {name?.management?.length} Management Keys <br /><br />
                                                {name?.staff?.length} Staff Keys 
                                               </div>
                      || select === "4" && <div> {name?.classes?.length} Classes</div>
