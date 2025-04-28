@@ -17,7 +17,10 @@ const Activity = ({setBack}) => {
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
     const [timeOut,setTimeOut]= useState('')
-    
+    const [object, setObject]= useState("Eng")
+    const [session, setSession]= useState("2024/2025")
+    const [term, setTerm]= useState("first")
+    const [type, setType]= useState("exam") 
      
       
 
@@ -33,6 +36,14 @@ const Activity = ({setBack}) => {
                 .catch((err)=> console.log(err))   
      
    }, [id])
+   const handleTimeOUt =()=>{
+    if(timeOut){
+      alert('timeOut')
+    }
+   }
+   useEffect(()=>{
+   handleTimeOUt()
+   },[timeOut])
      
     
    const form = new FormData()
@@ -114,7 +125,7 @@ const Activity = ({setBack}) => {
 
 
 <div className='white'>
-  {timeOut === 'done' ?  <div> 
+  {count < staff?.[`${staff?.type}`].length ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
