@@ -56,11 +56,19 @@ const Activity = ({setBack}) => {
          setDuration(()=>time*1000)
        
        }
+
+       const set2 = (params) => {
+        if(count > staff?.[`${staff?.type}`].length){
+        localStorage.removeItem("time")
+        setDuration(0)
+        setDuration("")
+        }
+      }
        
    
    
   const handle = (params) => {
-          if(duration === 0  || count > staff?.[`${staff?.type}`].length){alert("save successfully");setDuration("");localStorage.removeItem("time")}
+          if(duration === 0){alert("save successfully");localStorage.removeItem("time")}
         }
    
   const timerFormat = (milliseconds) => {
@@ -78,6 +86,7 @@ const Activity = ({setBack}) => {
        
        useEffect(()=>{
          handle()
+         set2()
          if(duration >= 0){
        setTimeout(() => {
         setDuration(()=>duration - 1000)
