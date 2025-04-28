@@ -42,7 +42,7 @@ const Timer = ({time,setTimeOut}) => {
     setTimeout(() => {
      setDuration(()=>duration - 1000)
      localStorage.setItem("time", JSON.stringify(duration))
-    }, 1000);}else{setTimeOut(0)}
+    }, 1000)}else{setTimeOut(()=> "done")}
   },[duration,time])
 
   const data =[{a:["a","aa"],b:["b","bb"],c:["c","cc"]}]
