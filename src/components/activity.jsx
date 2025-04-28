@@ -16,7 +16,7 @@ const Activity = ({setBack}) => {
     const [image,setImage]=useState('')
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
-    const [timeOut,setTimeOut]= useState('')
+    const [timeOut,setTimeOut]= useState(true)
     const [object, setObject]= useState("Eng")
     const [session, setSession]= useState("2024/2025")
     const [term, setTerm]= useState("first")
@@ -168,7 +168,7 @@ const Activity = ({setBack}) => {
 
 
 <div className='white'>
-  {!timeOut === false  ?  <div> 
+  {timeOut === false  ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
