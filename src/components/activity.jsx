@@ -36,13 +36,9 @@ const Activity = ({setBack}) => {
                 .catch((err)=> console.log(err))   
      
    }, [id])
-   const handleTimeOUt =()=>{
-    if(timeOut){
-      alert('timeOut')
-    }
-   }
+  
    useEffect(()=>{
-   handleTimeOUt()
+   alert('timeOut')
    },[timeOut])
      
     
