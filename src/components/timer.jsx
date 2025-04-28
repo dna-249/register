@@ -45,18 +45,12 @@ const Timer = ({time,setTimeOut,timeOut}) => {
     }, 1000)}
   },[duration,time])
 
-  const data =[{a:["a","aa"],b:["b","bb"],c:["c","cc"]}]
+  
   return (
     
        
           <div className="white" >
-               <h2 onClick={()=>set()}>Duration:{duration !== -1000? timerFormat(duration):'0:0:0'}</h2>
-      
-          <div>
-            {data.map((item, index)=>
-               <div key={index}>{item.a[1]}{item.b[1]}{item.c[1]}</div>
-               )}
-            </div>     
+               <h2 onClick={()=>set()}>Duration:{duration !== -1000? timerFormat(duration):'0:0:0'}</h2>   
            </div>
        
   )
