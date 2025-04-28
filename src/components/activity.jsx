@@ -168,7 +168,7 @@ const Activity = ({setBack}) => {
 
 
 <div className='white'>
-  {duration === 0  ?  <div> 
+  {duration =< 0  ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
