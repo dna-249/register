@@ -23,6 +23,7 @@ const Student =lazy(()=>import('./components/student'))
 const Profile =lazy(()=>import('./components/profile'))
 const Register =lazy(()=>import('./components/register'))
 const Activity =lazy(()=>import('./components/activity'))
+const StudentActivity =lazy(()=>import('./components/studentActivity'))
 const Attendance =lazy(()=>import('./components/attendance'))
 
 const App = () => {
@@ -49,6 +50,7 @@ return (<div>
       <Route path='/question/:id' element={<Question />}/>
       <Route path='/admission' element={<Admission />}/>
       <Route path='/activity/:id' element={<Activity />}/>
+      <Route path='/studentActivity/:id' element={<StudentActivity />}/>
       <Route path='/register' element={<Register />}/>
       <Route path='/profile/:id/:id2' element={<Profile/>}/>
       <Route path='/attendance/:id' element={<Attendance />}/>

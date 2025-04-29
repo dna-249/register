@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
-const Activity = ({setBack}) => {
+const StudentActivity = ({setBack}) => {
   const unSet = (params) => {
     const remain = JSON.parse(localStorage.getItem("unset"))
     if(!remain) {return false} else {return remain}
@@ -206,4 +206,4 @@ const Activity = ({setBack}) => {
   )
 }
 
-export default Activity
+export default StudentActivity
