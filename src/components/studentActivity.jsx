@@ -170,10 +170,11 @@ const StudentActivity = ({setBack}) => {
 <div className='white'>
 <h4>
       
-      Session:{staff?.session} <br />
-      Term:{staff?.term} <br />
-      Session:{staff?.type} <br />
-      Time in sec:{staff?.time}
+      Session:  {staff?.session} <br />
+      Term:  {staff?.term} <br />
+      Activity:  {staff?.activity} <br />
+      Type:  {staff?.type} <br />
+      Time in sec:  {staff?.time}
     </h4>
    <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
 

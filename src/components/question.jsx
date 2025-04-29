@@ -135,15 +135,15 @@ const Question = () => {
       <option value="bio">Biology</option>
     </select></div>
     <div > Time in sec:{time} 
-      <input type='number ' onChange={(e)=>setTime(e.target.value)}/>
+      <input type='number ' onChange={(e)=>setTime(e.target.value)}/> <br />
       <button className='click1' onClick={()=>handleSetting()}>Save</button></div>
     </div>
     <h4>
-      Session:{name?.session} <br />
-      Term:{name?.term} <br />
-      Activity:{name?.activity}
-      Type:{name?.type} <br />
-      Time in sec:{name?.time}
+      Session:  {name?.session} <br />
+      Term:  {name?.term} <br />
+      Activity:  {name?.activity}
+      Type:  {name?.type} <br />
+      Time in sec:  {name?.time}
     </h4>
     </div>
 
