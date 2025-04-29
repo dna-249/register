@@ -10,7 +10,7 @@ import Timer from './timer'
 const Activity = ({setBack}) => {
   const unSet = (params) => {
     const remain = JSON.parse(localStorage.getItem("unset"))
-    if(remain === "undefined") {return false} else {return remain}
+    if(!remain) {return false} else {return remain}
   }
 
     const [count,setCount]=useState(0)
@@ -52,8 +52,10 @@ const Activity = ({setBack}) => {
      
   const set = (params) => {
          localStorage.removeItem("time")
+         localStorage.removeItem("unset")
          console.log(duration)
          setDuration("")
+         setScore(false)
          setDuration(()=>time*1000)
        
        }
