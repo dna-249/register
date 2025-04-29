@@ -54,7 +54,7 @@ const Activity = ({setBack}) => {
        }
 
  const set2 = (params) => {
-  if(count > staff?.[`${staff?.type}`].length ){ setTimeOut(false)
+  if(count === staff?.[`${staff?.type}`].length ){ setTimeOut(false)
   localStorage.removeItem("time")
   }
         
@@ -172,7 +172,7 @@ const Activity = ({setBack}) => {
 
 
 <div className='white'>
-  {count > staff?.[`${staff?.type}`].length || duration >= 0    ?  <div> 
+  {count === staff?.[`${staff?.type}`].length || duration >= 0    ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
