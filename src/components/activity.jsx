@@ -16,12 +16,8 @@ const Activity = ({setBack}) => {
     const [image,setImage]=useState('')
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
-    const [timeOut,setTimeOut]= useState('')
-    const [object, setObject]= useState("Eng")
-    const [session, setSession]= useState("2024/2025")
-    const [term, setTerm]= useState("first")
-    const [type, setType]= useState("exam") 
-     
+    const [timeOut,setTimeOut]= useState(false)
+    
       
 
   const {id} = useParams()
@@ -57,11 +53,8 @@ const Activity = ({setBack}) => {
        
        }
 
-       const set2 = (params) => {
-       
-        localStorage.removeItem("time")
-        setDuration(0)
-        setDuration("")
+ const set2 = (params) => {
+  setTimeOut(true)
         
       }
        
@@ -88,7 +81,7 @@ const Activity = ({setBack}) => {
          handle()
          if(duration >= 0){
        setTimeout(() => {
-        setDuration(()=>duration - 1000)
+        setDuration(()=>{if(timeOut === true)return duration - 1000;else return 0 })
         localStorage.setItem("time", JSON.stringify(duration))
        }, 1000)}
      },[duration,time])
