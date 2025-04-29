@@ -134,14 +134,14 @@ const Question = () => {
       <option value="phy">Physics</option>
       <option value="bio">Biology</option>
     </select></div>
-    <div > Time in sec:{time} 
-      <input type='number ' onChange={(e)=>setTime(e.target.value)}/> <br />
+    <div > Time in sec:{time} <br /> 
+      <input type='number ' onChange={(e)=>setTime(e.target.value)}/> 
       <button className='click1' onClick={()=>handleSetting()}>Save</button></div>
     </div>
     <h4>
       Session:  {name?.session} <br />
       Term:  {name?.term} <br />
-      Activity:  {name?.activity}
+      Activity:  {name?.activity} <br />
       Type:  {name?.type} <br />
       Time in sec:  {name?.time}
     </h4>
