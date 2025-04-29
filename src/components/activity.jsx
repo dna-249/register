@@ -8,6 +8,10 @@ import Timer from './timer'
 
 
 const Activity = ({setBack}) => {
+  const unSet = (params) => {
+    const remain = JSON.parse(localStorage.getItem("unset"))
+    if(remain === "undefined") {return null} else {return remain}
+  }
 
     const [count,setCount]=useState(0)
     const [count2,setCount2]=useState(0)
@@ -17,7 +21,7 @@ const Activity = ({setBack}) => {
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
     const [timeOut,setTimeOut]= useState(true)
-    const [score,setScore]= useState(false)
+    const [score,setScore]= useState(unSet() === null? unSet():false)
     
       
 
@@ -109,6 +113,7 @@ const Activity = ({setBack}) => {
     const set2 = (params) => {
   if(count === staff?.[`${staff?.type}`].length -1 ){
      setScore(true)
+     localStorage.setItem("unset",JSON.stringify(score))
      setTimeOut(false)
    localStorage.removeItem("time")
         } 
