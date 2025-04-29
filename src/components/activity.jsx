@@ -17,6 +17,7 @@ const Activity = ({setBack}) => {
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
     const [timeOut,setTimeOut]= useState(true)
+    const [score,setScore]= useState(true)
     
       
 
@@ -106,8 +107,10 @@ const Activity = ({setBack}) => {
     }
 
     const set2 = (params) => {
-  if(count === staff?.[`${staff?.type}`].length -1 ){ setTimeOut(false)
-  localStorage.removeItem("time")
+  if(count === staff?.[`${staff?.type}`].length -1 ){
+     setScore(false)
+     setTimeOut(false)
+   localStorage.removeItem("time")
         } 
    }
 
@@ -176,7 +179,7 @@ const Activity = ({setBack}) => {
    <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
 
 
-  {count === staff?.[`${staff?.type}`].length || duration >= 0    ?  <div> 
+  {score === false ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
