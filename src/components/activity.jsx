@@ -16,7 +16,7 @@ const Activity = ({setBack}) => {
     const [image,setImage]=useState('')
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
-    const [timeOut,setTimeOut]= useState(false)
+    const [timeOut,setTimeOut]= useState(true)
     
       
 
@@ -54,7 +54,9 @@ const Activity = ({setBack}) => {
        }
 
  const set2 = (params) => {
-  setTimeOut(true)
+  setTimeOut(false)
+  localStorage.removeItem("time")
+
         
       }
        
