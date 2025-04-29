@@ -135,10 +135,10 @@ const Question = () => {
       <option value="bio">Biology</option>
     </select></div>
     <div > Time in sec:{time}</div>
-    <div> 
+    </div>
+    <div className='twoA'> 
       <input type='number ' onChange={(e)=>setTime(e.target.value)}  placeholder='time in sec ...'/> 
       <button className='click1' onClick={()=>handleSetting()}>Save</button></div>
-    </div>
     <h4>
       Session:  {name?.session} <br />
       Term:  {name?.term} <br />
