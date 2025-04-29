@@ -22,6 +22,7 @@ const Question = () => {
   const [value5, setValue5]= useState() 
   const [value6, setValue6]= useState() 
   const [type, setType]= useState() 
+  const [activity, setActivity]= useState() 
   const [show, setShow]= useState(true)
   const [insert, setInsert]= useState(0)
 
@@ -85,6 +86,7 @@ const Question = () => {
                 await axios.put(`https://database-api-eight.vercel.app/staff/${name?._id}`,{
                   session:session,
                   term:term,
+                  activity:activity,
                   type:type,
                   time:time
                 })
@@ -101,7 +103,14 @@ const Question = () => {
     <div className='white'>
       <h3> Set the Activity Questions for student to attempt:</h3>
       <div className='four'>
-    
+
+      <div>Activity: <select onChange={(e)=>setActivity(e.target.value)}>
+      <option value="">select</option>
+      <option value="exam">Examination</option>
+      <option value="test">Test</option>
+      <option value="ca">C/A</option>
+      <option value="ass">Assignment</option>
+    </select></div>
         
         <div>Session: <select onChange={(e)=>setSession(e.target.value)}> 
       <option value="">select</option>
@@ -132,7 +141,8 @@ const Question = () => {
     <h4>
       Session:{name?.session} <br />
       Term:{name?.term} <br />
-      Session:{name?.type} <br />
+      Activity:{name?.activity}
+      Type:{name?.type} <br />
       Time in sec:{name?.time}
     </h4>
     </div>
