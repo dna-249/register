@@ -1,8 +1,5 @@
 import React, { useState,useEffect } from 'react'
 import { FaBars, FaUser} from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import Activity from './activity'
-import StudentAttendance from './studentAttendance'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from "axios"
 
