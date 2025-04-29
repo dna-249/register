@@ -9,7 +9,7 @@ import Timer from './timer'
 
 const Activity = ({setBack}) => {
 
-    const [count,setCount]=useState(0)
+    const [count,setCount]=useState(1)
     const [count2,setCount2]=useState(0)
     const [staff,setStaff]=useState()
     const [select,setSelect]=useState('')
@@ -106,7 +106,7 @@ const Activity = ({setBack}) => {
     }
 
     const set2 = (params) => {
-  if(count === 1){ setTimeOut(false)
+  if(count === staff?.[`${staff?.type}`].length  ){ setTimeOut(false)
   localStorage.removeItem("time")
   }
         
