@@ -65,7 +65,10 @@ const Activity = ({setBack}) => {
    
    
   const handle = (params) => {
-          if(duration === 0){alert("save successfully"); setScore(true);localStorage.removeItem("time")}
+          if(duration === 0){alert("save successfully");
+             setScore(true);localStorage.removeItem("time")
+           localStorage.setItem("unset",JSON.stringify(score))
+    }
         }
    
   const timerFormat = (milliseconds) => {
