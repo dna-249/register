@@ -61,10 +61,10 @@ const StudentActivity = ({setBack}) => {
    
    
   const handle = (params) => {
-          if(duration === 0){alert("save successfully");
+          if(duration === 0){
              setScore(true);localStorage.removeItem("time")
            localStorage.setItem("unset",JSON.stringify(score))
-          handleResult()
+    handleResult()
 
     }
         }
@@ -143,7 +143,7 @@ const handleResult = async(params) => {
    await axios.put(`https://database-api-eight.vercel.app/student/set/${id}/${staff?.type}/0/${staff?.activity}`,{
               value:count2
              })
-                       .then((res)=>{setIsUpdate(pre => !pre);setShow(true); console.log(res.data)})
+                       .then((res)=>{alert("uploaded successfully"); console.log(res.data)})
                        .catch((err)=> console.log(err))
 }
     
