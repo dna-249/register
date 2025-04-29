@@ -104,7 +104,7 @@ const StudentActivity = ({setBack}) => {
     }
 
     const set2 = (params) => {
-  if(count === staff?.[`${staff?.type}`].length -1 ){
+  if(count === staff?.[`${staff?.type}`]?.length -1 ){
      setScore(true)
      localStorage.setItem("unset",JSON.stringify(score))
      setTimeOut(false)
@@ -185,7 +185,7 @@ const handleResult = async(params) => {
       Type:  {staff?.type} <br />
       Time in sec:  {staff?.time}
     </h4>
-   <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
+   <div> Question {count} of {staff?.[`${staff?.type}`]?.length} </div>
    {staff?.filter((item)=> {return item.class === names?.class})
    .map((item,index)=>{const unique =()=> setTime(()=>item.time)
                const times = unique()
