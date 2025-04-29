@@ -193,7 +193,7 @@ input[type="file"]{
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content:flex-end;
-  
+  width: 100%;
 }
 .three2 div{
   padding: 10px;
@@ -215,7 +215,7 @@ input[type="file"]{
   margin-bottom: 20px;
 }
 .icons{
-  position: absolute;
+ 
   padding: 10px;
   height: fit-content;
   right: 0px;
