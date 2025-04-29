@@ -64,6 +64,8 @@ const StudentActivity = ({setBack}) => {
           if(duration === 0){alert("save successfully");
              setScore(true);localStorage.removeItem("time")
            localStorage.setItem("unset",JSON.stringify(score))
+          handleResult()
+
     }
         }
    
@@ -107,6 +109,7 @@ const StudentActivity = ({setBack}) => {
      localStorage.setItem("unset",JSON.stringify(score))
      setTimeOut(false)
    localStorage.removeItem("time")
+   handleResult()
         } 
    }
 
@@ -136,7 +139,13 @@ const StudentActivity = ({setBack}) => {
       }
     }
     
-
+const handleResult = async(params) => {
+   await axios.put(`https://database-api-eight.vercel.app/student/set/${id}/${staff?.type}/0/${staff?.activity}`,{
+              value:count2
+             })
+                       .then((res)=>{setIsUpdate(pre => !pre);setShow(true); console.log(res.data)})
+                       .catch((err)=> console.log(err))
+}
     
 
      return (
