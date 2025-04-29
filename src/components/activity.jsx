@@ -21,7 +21,7 @@ const Activity = ({setBack}) => {
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
     const [timeOut,setTimeOut]= useState(true)
-    const [score,setScore]= useState(unSet() === null? unSet():false)
+    const [score,setScore]= useState(unSet() === true? unSet():false)
     
       
 
