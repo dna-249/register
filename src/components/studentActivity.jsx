@@ -64,7 +64,8 @@ const StudentActivity = ({setBack}) => {
           if(duration === 0){
              setScore(true);localStorage.removeItem("time")
            localStorage.setItem("unset",JSON.stringify(score))
-    handleResult()
+           
+           handleResult()
 
     }
         }
