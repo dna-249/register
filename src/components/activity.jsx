@@ -106,11 +106,10 @@ const Activity = ({setBack}) => {
     }
 
     const set2 = (params) => {
-  if(count === staff?.[`${staff?.type}`].length  ){ setTimeOut(false)
+  if(count === staff?.[`${staff?.type}`].length -1 ){ setTimeOut(false)
   localStorage.removeItem("time")
-  }
-        
-      }
+        } 
+   }
 
     const name2 = (answer) => {
      setCount((count)=> count - 1)
