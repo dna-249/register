@@ -17,7 +17,7 @@ const Activity = ({setBack}) => {
     const [image1,setImage1]=useState('')
     const [names,setNames]=useState('')
     const [timeOut,setTimeOut]= useState(true)
-    const [score,setScore]= useState(true)
+    const [score,setScore]= useState(false)
     
       
 
@@ -108,7 +108,7 @@ const Activity = ({setBack}) => {
 
     const set2 = (params) => {
   if(count === staff?.[`${staff?.type}`].length -1 ){
-     setScore(false)
+     setScore(true)
      setTimeOut(false)
    localStorage.removeItem("time")
         } 
