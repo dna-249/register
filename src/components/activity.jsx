@@ -54,9 +54,9 @@ const Activity = ({setBack}) => {
        }
 
  const set2 = (params) => {
-  setTimeOut(false)
+  if(count > staff?.[`${staff?.type}`].length ){ setTimeOut(false)
   localStorage.removeItem("time")
-
+  }
         
       }
        
@@ -80,6 +80,7 @@ const Activity = ({setBack}) => {
         
        
        useEffect(()=>{
+        set2()
          handle()
          if(duration >= 0){
        setTimeout(() => {
