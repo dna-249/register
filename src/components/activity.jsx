@@ -53,12 +53,7 @@ const Activity = ({setBack}) => {
        
        }
 
- const set2 = (params) => {
-  if(count === staff?.[`${staff?.type}`].length ){ setTimeOut(false)
-  localStorage.removeItem("time")
-  }
-        
-      }
+ 
        
    
    
@@ -109,6 +104,13 @@ const Activity = ({setBack}) => {
        setSelect("")
        set2()
     }
+
+    const set2 = (params) => {
+      if(count === staff?.[`${staff?.type}`].length ){ setTimeOut(false)
+      localStorage.removeItem("time")
+      }
+            
+          }
 
     const name2 = (answer) => {
      setCount((count)=> count - 1)
@@ -172,6 +174,9 @@ const Activity = ({setBack}) => {
 
 
 <div className='white'>
+   <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
+
+
   {count === staff?.[`${staff?.type}`].length || duration >= 0    ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
@@ -201,7 +206,7 @@ const Activity = ({setBack}) => {
 })}
    
    </div>:<div> {count2}</div> }</div>
-   <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
+   
 </div>
 </div>
   )
