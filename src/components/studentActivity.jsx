@@ -17,6 +17,7 @@ const StudentActivity = ({setBack}) => {
     const [select,setSelect]=useState('')
     const [names,setNames]=useState('')
     const [timeOut,setTimeOut]= useState(true)
+    const [time,setTime]= useState()
     const [score,setScore]= useState(unSet())
     
       
@@ -25,7 +26,7 @@ const StudentActivity = ({setBack}) => {
     const nav = useNavigate()
     useEffect(() => {
    
-      axios.get(`https://database-api-eight.vercel.app/staff/${id}`)
+      axios.get(`https://database-api-eight.vercel.app/staff`)
                 .then((res)=> {console.log(res.data);setStaff(res.data)})
                 .catch((err)=> console.log(err))
      axios.get(`https://database-api-eight.vercel.app/student/${id}`)
@@ -34,8 +35,6 @@ const StudentActivity = ({setBack}) => {
      
    }, [id])
 
-   const strTime = ()=> {return parseInt(staff?.time)}
-   const time = strTime()
 
 
    const getTime = (params) => {
@@ -64,7 +63,7 @@ const StudentActivity = ({setBack}) => {
           if(duration === 0){
              setScore(true);localStorage.removeItem("time")
            localStorage.setItem("unset",JSON.stringify(score))
-           
+
            handleResult()
 
     }
@@ -187,7 +186,11 @@ const handleResult = async(params) => {
       Time in sec:  {staff?.time}
     </h4>
    <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
-
+   {staff?.filter((item)=> {return item.class === names?.class})
+   .map((item,index)=>{const unique =()=> setTime(()=>item.time)
+               const times = unique()
+               return <div key={index}>{times}</div>
+   })}
 
   {score === false ?  <div> 
   
