@@ -23,17 +23,20 @@ const StudentActivity = ({setBack}) => {
 
   const {id,id2} = useParams()
     const nav = useNavigate()
+
+    const handleStudent = async ()=>{
+      await axios.get(`https://database-api-eight.vercel.app/student/${id}`)
+      .then((res)=> {console.log(res.data);setNames(res.data)})
+      .catch((err)=> console.log(err)) 
+
+     await axios.get(`https://database-api-eight.vercel.app/staff/class/${names?.class}`)
+      .then((res)=> {console.log(res.data);setStaff(res.data)})
+      .catch((err)=> console.log(err))
+
+    }
     useEffect(() => {
    
-        axios.get(`https://database-api-eight.vercel.app/student/${id}`)
-                .then((res)=> {console.log(res.data);setNames(res.data)})
-                .catch((err)=> console.log(err)) 
-
-        axios.get(`https://database-api-eight.vercel.app/staff/class/${names?.class}`)
-                .then((res)=> {console.log(res.data);setStaff(res.data)})
-                .catch((err)=> console.log(err))
-     
-     
+       handleStudent()
    }, [id])
 
    const strTime = ()=> {return parseInt(staff?.time)}
