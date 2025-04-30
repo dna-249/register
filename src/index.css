@@ -313,12 +313,12 @@ input[type="file"]{
 .profile input{
   margin: auto;
  height: 30px;
- min-width: 300px;
+ min-width: 250px;
  border: none;
- background-color: red;
+ background-color: beige;
  text-align: center;
  outline-color: greenyellow;
- margin-bottom: 20px;
+ margin-top: 20px;
  
 
 }
