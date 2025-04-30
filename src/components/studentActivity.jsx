@@ -67,7 +67,7 @@ const StudentActivity = ({setBack}) => {
          setDuration("")
          setScore(false)
          setDuration(()=>time*1000)
-         handle()
+        
        
        }
 
@@ -98,6 +98,7 @@ const StudentActivity = ({setBack}) => {
         
        
        useEffect(()=>{
+            handle()
          if(duration >= 0){
        setTimeout(() => {
         setDuration(()=>{if(timeOut === true)return duration - 1000;else return 0 })
@@ -118,7 +119,7 @@ const StudentActivity = ({setBack}) => {
     }
 
     const set2 = (params) => {
-  if(count === staff?.[`${staff?.type}`].length -1 ){
+  if(count === staff?.[`${staff?.type}`].length){
      setScore(true)
      localStorage.setItem("unset",JSON.stringify(score))
      setTimeOut(false)
