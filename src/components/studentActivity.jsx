@@ -118,7 +118,7 @@ const StudentActivity = ({setBack}) => {
     }
 
     const set2 = (params) => {
-  if(count === staff?.[`${staff?.type}`].length ){
+  if(count === staff?.[`${staff?.type}`].length -1 ){
      setScore(true)
      localStorage.setItem("unset",JSON.stringify(score))
      setTimeOut(false)
