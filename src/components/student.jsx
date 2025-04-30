@@ -41,14 +41,14 @@ const handleId = (id) => {
                 <FaUser className='img'/>}</div>
  <div  className='three2 icons'>
 
-        <div onClick={()=>nav(`/studentActivity/${name._id}/${time}`)}>Activity</div>
+        <div onClick={()=>nav(`/studentActivity/${name._id}`)}>Activity</div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/profile/student/${name._id}`)}>profile</div>
      </div >
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
-        <div onClick={()=>nav(`/studentActivity/${name._id}/${time}`)}>Activity</div>
+        <div onClick={()=>nav(`/studentActivity/${name._id}`)}>Activity</div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/profile/${name._id}`)}>profile</div>
     </div>)}
@@ -96,10 +96,6 @@ const handleId = (id) => {
     </tr>
     </thead>
      </div>
-     {staff?.filter((item)=> {return item.class === name?.class})
-   .map((item,index)=>{
-               return (<div key={index}>{handleId(item.name)}</div>)
-   })}
      <div className='row5 green'>
     {name?.Eng.map((name,index)=> { 
                   

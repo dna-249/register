@@ -25,12 +25,14 @@ const StudentActivity = ({setBack}) => {
     const nav = useNavigate()
     useEffect(() => {
    
-      axios.get(`https://database-api-eight.vercel.app/staff/${id2}`)
+        axios.get(`https://database-api-eight.vercel.app/student/${id}`)
+                .then((res)=> {console.log(res.data);setNames(res.data)})
+                .catch((err)=> console.log(err)) 
+
+        axios.get(`https://database-api-eight.vercel.app/staff/class/${names.class}`)
                 .then((res)=> {console.log(res.data);setStaff(res.data)})
                 .catch((err)=> console.log(err))
-     axios.get(`https://database-api-eight.vercel.app/student/${id}`)
-                .then((res)=> {console.log(res.data);setNames(res.data)})
-                .catch((err)=> console.log(err))   
+     
      
    }, [id])
 
