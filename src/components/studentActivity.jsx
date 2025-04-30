@@ -29,12 +29,12 @@ const StudentActivity = ({setBack}) => {
                 .then((res)=> {console.log(res.data);setNames(res.data)})
                 .catch((err)=> console.log(err)) 
 
-        axios.get(`https://database-api-eight.vercel.app/staff/class/${names.class}`)
+        axios.get(`https://database-api-eight.vercel.app/staff/class/${names?.class}`)
                 .then((res)=> {console.log(res.data);setStaff(res.data)})
                 .catch((err)=> console.log(err))
      
      
-   }, [id])
+   }, [id,names])
 
    const strTime = ()=> {return parseInt(staff?.time)}
    const time = strTime()
