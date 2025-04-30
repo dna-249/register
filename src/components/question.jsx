@@ -208,7 +208,7 @@ const Question = () => {
                       </tr>
               </thead>
                    {name?.[`${object}`]?.filter((item,index) =>{ 
-      return item.session === name?.session && item.term === name?.term && item.type === name?.type 
+      return item.session === session && item.term === term && item.type === type 
       }).map((item,index)=>
                    { const serial=()=>{ return index +1};
                                     const serials = serial();
