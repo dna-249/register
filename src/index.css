@@ -318,10 +318,9 @@ input[type="file"]{
  background-color: beige;
  text-align: center;
  outline-color: greenyellow;
-  margin-top: 20px;
- 
-
+ margin-top: 20px;
 }
+
 .profile button{
   height: 30px;
   width: 200px;
