@@ -7,6 +7,7 @@ import User from "./user"
 import {useParams,useNavigate } from "react-router-dom"
 const Staff = ({setBack}) => {
   const [names,setNames] = useState([])
+  const [toggle, setToggle]=useState()
   const [name,setName] = useState('')
   const [staff,setStaff] = useState('')
   const [next,setNext] = useState(0)
@@ -40,13 +41,21 @@ const Staff = ({setBack}) => {
          <div style={{marginTop:"20px"}}> {staff? <img className='img' src={staff?.image} />
                          :
                          <FaUser className='img'/>}</div>
-         <div  className='three2'>
-        
-                <div onClick={()=>nav(`/activity/${id}`)}> Activity</div>
-                <div  onClick={()=>nav(`/question/${id}`)}>Questions</div>
-                <div  onClick={()=>nav(`/profile/staff/${id}`)}>Profile</div>
-         </div>
-         <div className='bars'><FaBars/></div>
+         <div  className='three2 icons'>
+
+                <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
+                <div onClick={()=>nav(`/question/${name._id}`)}>Attendance </div>
+                <div onClick={()=>nav(`/profile/staff/${name._id}`)}>profile</div>
+                </div >
+
+                <div>{toggle?(
+  <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
+    <div className="icons bars">
+        <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
+                <div onClick={()=>nav(`/question/${name._id}`)}>Attendance </div>
+                <div onClick={()=>nav(`/profile/staff/${name._id}`)}>profile</div>
+               </div>)}
+ </div>
          </div>
       <div>
       <div>
