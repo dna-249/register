@@ -38,7 +38,7 @@ const StudentActivity = ({setBack}) => {
     useEffect(() => {
    
        handleStudent()
-   }, [id,names])
+   }, [id])
 
    const strTime = ()=> {return parseInt(staff?.time)}
    const time = strTime()
