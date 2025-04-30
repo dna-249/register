@@ -6,6 +6,7 @@ import axios from "axios"
 const Student = () => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
+  const [time,setTime]=useState()
   const [name,setName]=useState()
   const [show,setShow] = useState(0)
   const {id} = useParams()
@@ -15,6 +16,11 @@ useEffect(() => {
   axios.get(`https://database-api-eight.vercel.app/student/${id}`)
        .then((res)=> {setName(res.data);console.log(res.data)})
        .catch((err)=> console.log(err))
+
+  axios.get(`https://database-api-eight.vercel.app/staff`)
+                       .then((res)=> {console.log(res.data);setStaff(res.data)})
+                       .catch((err)=> console.log(err))
+          
 }, [id])
 
 
@@ -31,14 +37,14 @@ useEffect(() => {
                 <FaUser className='img'/>}</div>
  <div  className='three2 icons'>
 
-        <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
+        <div onClick={()=>nav(`/studentActivity/${name._id}/${time}`)}>Activity</div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/profile/student/${name._id}`)}>profile</div>
      </div >
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
-        <div onClick={()=>nav(`/studentActivity/${name._id}`)}>Activity</div>
+        <div onClick={()=>nav(`/studentActivity/${name._id}/${time}`)}>Activity</div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/profile/${name._id}`)}>profile</div>
     </div>)}
@@ -86,6 +92,11 @@ useEffect(() => {
     </tr>
     </thead>
      </div>
+     {staff?.filter((item)=> {return item.class === name?.class})
+   .map((item,index)=>{const unique =()=> setTime(()=>item._id)
+               const times = unique()
+               return <div key={index}>{times}</div>
+   })}
      <div className='row5 green'>
     {name?.Eng.map((name,index)=> { 
                   
