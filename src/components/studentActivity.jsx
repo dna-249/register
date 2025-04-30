@@ -34,7 +34,7 @@ const StudentActivity = ({setBack}) => {
                 .catch((err)=> console.log(err))
      
      
-   }, [id,names])
+   }, [id])
 
    const strTime = ()=> {return parseInt(staff?.time)}
    const time = strTime()
