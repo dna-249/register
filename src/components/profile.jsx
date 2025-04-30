@@ -14,6 +14,15 @@ const Profile = () => {
     const [value8,setValue8]= useState('')
     const [value9,setValue9]= useState('')
     const [edit,setEdit]= useState(false)
+    const [edit1,setEdit1]= useState(false)
+    const [edit2,setEdit2]= useState(false)
+    const [edit3,setEdit3]= useState(false)
+    const [edit4,setEdit4]= useState(false)
+    const [edit5,setEdit5]= useState(false)
+    const [edit6,setEdit6]= useState(false)
+    const [edit7,setEdit7]= useState(false)
+    const [edit8,setEdit8]= useState(false)
+    const [edit9,setEdit9]= useState(false)
     const [image,setImage]=useState('')
     const [images,setImages]=useState('')
     const [image1,setImage1]=useState('')
@@ -56,15 +65,15 @@ const Profile = () => {
   const handleChange = async(params) => {
 
     await axios.put(`https://database-api-eight.vercel.app/${id}/${id2}`,
-      { key:{value1 === " " ? name.key : value1 },
-        name:{value2 === " " ? name.name : value2 },
-        age:{value3 === " " ? name.age : value3 },
-        gender:{value4 === " " ? name.gender : value4 },
-        email:{value5 === " " ? name.email : value5 },
-        address:{value6 === " " ? name.address : value6 },
-        phone:{value7 === " " ? name.phone : value7 },
-        user:{value8 === " " ? name.user : value8 },
-        password:{value9 === " " ? name.password : value9 }
+      { key:value1,
+        name:value2,
+        age:value3,
+        gender:value4,
+        email:value5,
+        address:value6,
+        phone:value7,
+        user:value8,
+        password:value9 
         
         })
                                       .then((res)=> {console.log(res.data);alert("Save successfully")})
@@ -110,23 +119,51 @@ const Profile = () => {
 
          <div className='two'> 
           <div><h3>Student Personal Info</h3></div>
-          <div onClick={()=>setEdit((pre)=>!pre)}> <h3 style={{color:"blue", textDecoration:"underline"}}>edit</h3></div>
-          </div> 
+          <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit((pre)=>!pre)}>edit</div>
+          </div>  
        <div> 
           
            <div>
-            <div>Admission No:<input onChange={(e)=>setValue1(e.target.value)} value={edit? value1:name.key} readOnly={edit? false:true} type="text"  /></div>
-             <div> Name:<input onChange={(e)=>setValue2(e.target.value)} value={edit? value2:name.name} readOnly={edit? false:true} type="text"  /></div>
-             <div>Gender:<input onChange={(e)=>setValue3(e.target.value)} value={edit? value3:name.gender} readOnly={edit? false:true} type="text"  /></div>
-             <div>Age:<input onChange={(e)=>setValue4(e.target.value)} value={edit? value4:name.age} readOnly={edit? false:true} type="text"  /></div>
-             <div>Email:<input onChange={(e)=>setValue5(e.target.value)} value={edit? value5:name.email} readOnly={edit? false:true} type="text"  /></div>
-             <div>Address:<br/><textarea cols={40} rows={5} onChange={(e)=>setValue6(e.target.value)} value={edit? value6:name.address} readOnly={edit? false:true} type="text"  /></div>
-             <div>phone:<input onChange={(e)=>setValue7(e.target.value)} value={edit? value7:name.phone} readOnly={edit? false:true} type="text"  /></div>
+            <div className='two'>Admission No:<input onChange={(e)=>setValue1(e.target.value)} value={edit1? value1:name.key} readOnly={edit1? false:true} type="text"  />
+            <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit1((pre)=>!pre)}>edit</div>
+         </div>
+             
+             <div className='two'> Name:<input onChange={(e)=>setValue2(e.target.value)} value={edit2? value2:name.name} readOnly={edit2? false:true} type="text"  />
+             <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit2((pre)=>!pre)}>edit</div>
+             </div>
+             
+             <div className='two'>Gender:<input onChange={(e)=>setValue3(e.target.value)} value={edit3? value3:name.gender} readOnly={edit3? false:true} type="text"  />
+             <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit3((pre)=>!pre)}>edit</div>
+             </div>
+             
+             <div className='two'>Age:<input onChange={(e)=>setValue4(e.target.value)} value={edit4? value4:name.age} readOnly={edit4? false:true} type="text"  />
+             <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit4((pre)=>!pre)}>edit</div>
+             </div>
+             
+             <div className='two'>Email:<input onChange={(e)=>setValue5(e.target.value)} value={edit5? value5:name.email} readOnly={edit5? false:true} type="text"  />
+             <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit5((pre)=>!pre)}>edit</div>
+             </div>
+             
+             <div className='two'>Address:<br/><textarea cols={40} rows={5} onChange={(e)=>setValue6(e.target.value)} value={edit6? value6:name.address} readOnly={edit6? false:true} type="text"  />
+              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit6((pre)=>!pre)}>edit</div>
+             </div>
+             
+             <div className='two'>phone:<input onChange={(e)=>setValue7(e.target.value)} value={edit7? value7:name.phone} readOnly={edit7? false:true} type="text"  />
+             <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit7((pre)=>!pre)}>edit</div>
+             </div>
+             
              <div>
               <h3>Account Info</h3>
              </div>
-             <div>Username:<input onChange={(e)=>setValue8(e.target.value)} value={edit? value8:name.user} readOnly={edit? false:true} type="text"  /></div>
-             <div>Password:<input onChange={(e)=>setValue9(e.target.value)} value={edit? value9:name.password} readOnly={edit? false:true} type="text"  /></div>
+             
+             <div className='two'>Username:<input onChange={(e)=>setValue8(e.target.value)} value={edit8? value8:name.user} readOnly={edit8? false:true} type="text"  />
+             <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit8((pre)=>!pre)}>edit</div>
+             </div>
+             
+             <div className='two'>Password:<input onChange={(e)=>setValue9(e.target.value)} value={edit9? value9:name.password} readOnly={edit9? false:true} type="text"  />
+             <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit9((pre)=>!pre)}>edit</div>
+             </div>
+            
              <div><button onClick={()=>handleChange()}>Save Changes </button></div>
             </div>
         
