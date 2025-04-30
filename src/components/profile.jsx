@@ -119,7 +119,7 @@ const Profile = () => {
 
          <div className='two'> 
           <div><h3>Student Personal Info</h3></div>
-          <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit((pre)=>!pre)}>edit</div>
+          <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit((pre)=>!pre)}>edit pic</div>
           </div>  
        <div> 
           
@@ -144,7 +144,7 @@ const Profile = () => {
              <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit5((pre)=>!pre)}>edit</span>
              </div>
              
-             <div >  Address:<br/><textarea cols={40} rows={5} onChange={(e)=>setValue6(e.target.value)} value={edit6? value6:name.address} readOnly={edit6? false:true} type="text"  />
+             <div >Address:<br/><textarea cols={40} rows={5} onChange={(e)=>setValue6(e.target.value)} value={edit6? value6:name.address} readOnly={edit6? false:true} type="text"  />
               <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit6((pre)=>!pre)}>edit</span>
              </div>
              
