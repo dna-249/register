@@ -87,7 +87,7 @@ const Activity = ({setBack}) => {
         setDuration(()=>{if(timeOut === true)return duration - 1000;else return 0 })
         localStorage.setItem("time", JSON.stringify(duration))
        }, 1000)}
-     },[duration,time])
+     },[duration])
    
      
      
