@@ -23,6 +23,9 @@ useEffect(() => {
                        .catch((err)=> console.log(err))
           
 }, [id])
+const handleId = (id) => {
+  setTime(id)
+}
 
 
  if(show === 0) return (
@@ -95,7 +98,7 @@ useEffect(() => {
      </div>
      {staff?.filter((item)=> {return item.class === name?.class})
    .map((item,index)=>{
-               return (<div key={index}>{item.name}</div>)
+               return (<div key={index}>{handleId(item.name)}</div>)
    })}
      <div className='row5 green'>
     {name?.Eng.map((name,index)=> { 
