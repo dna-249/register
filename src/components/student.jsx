@@ -8,6 +8,7 @@ const Student = () => {
   const [toggle, setToggle]=useState()
   const [time,setTime]=useState()
   const [name,setName]=useState()
+  const [staff,setStaff]=useState()
   const [show,setShow] = useState(0)
   const {id} = useParams()
   const nav = useNavigate()
