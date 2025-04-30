@@ -103,7 +103,7 @@ const StudentActivity = ({setBack}) => {
         setDuration(()=>{if(timeOut === true)return duration - 1000;else return 0 })
         localStorage.setItem("time", JSON.stringify(duration))
        }, 1000)}
-     },[duration,time])
+     },[duration])
    
      
      
@@ -230,7 +230,7 @@ const handleResult = async(params) => {
             </div>)
 })}
    
-   </div>:<div > <div className="twoA"><h3> Score:{count2}</h3> <button className="click1" onClick={()=>handleResult()}>Summit Result</button></div>
+   </div>:<div > <div className="twoA"><h3> Score:{count2}</h3> <button className="click1" onClick={()=>handleResult()}>Summit</button></div>
           </div> }</div>
    
 </div>
