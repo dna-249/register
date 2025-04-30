@@ -167,8 +167,8 @@ const handleResult = async(params) => {
     <div className='bgUser'>
       <div className='two'>
                 <h3> STUDENT HALL</h3>
-                <div className='click2' onClick={()=>setBack(0)}><FaArrowCircleLeft /></div>
-          </div>     
+                <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
+                </div>     
          
         <div  className="two">
         <div style={{marginTop:"20px"}}> {names? <img className='img' src={names?.image} />

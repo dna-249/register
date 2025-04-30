@@ -99,7 +99,8 @@ const Question = () => {
   
   <div>{show?(
   <div className='center'>
-   <div className='bgUser'> 
+   <div className='bgUser'>
+   <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div> 
     <div className='white'>
       <h3> Set the Activity Questions for student to attempt:</h3>
       <div className='four'>

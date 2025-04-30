@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { FaUser } from 'react-icons/fa'
+import { FaUser,FaArrowCircleLeft } from 'react-icons/fa'
 import axios from 'axios'
 import { useParams,useNavigate } from 'react-router-dom'
 const Profile = () => {
@@ -83,6 +83,7 @@ const Profile = () => {
   return (
     <>
     <div className='profile'>
+    <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
       <div>
         <div>
             {edit? <div>
