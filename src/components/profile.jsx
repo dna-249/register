@@ -157,11 +157,11 @@ const Profile = () => {
              </div>
              
              <div >Username:<input onChange={(e)=>setValue8(e.target.value)} value={edit8? value8:name.user} readOnly={edit8? false:true} type="text"  />
-             <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit8((pre)=>!pre)}>edit</div>
+             <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit8((pre)=>!pre)}>edit</span>
              </div>
              
              <div >Password:<input onChange={(e)=>setValue9(e.target.value)} value={edit9? value9:name.password} readOnly={edit9? false:true} type="text"  />
-             <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit9((pre)=>!pre)}>edit</div>
+             <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit9((pre)=>!pre)}>edit</span>
              </div>
             
              <div><button onClick={()=>handleChange()}>Save Changes </button></div>
