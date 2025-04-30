@@ -124,31 +124,31 @@ const Profile = () => {
        <div> 
           
            <div>
-            <div className='two'>Admission No:<input onChange={(e)=>setValue1(e.target.value)} value={edit1? value1:name.key} readOnly={edit1? false:true} type="text"  />
+            <div >Admission No:<input onChange={(e)=>setValue1(e.target.value)} value={edit1? value1:name.key} readOnly={edit1? false:true} type="text"  />
             <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit1((pre)=>!pre)}>edit</span>
          </div>
              
-             <div className='two'> Name:<input onChange={(e)=>setValue2(e.target.value)} value={edit2? value2:name.name} readOnly={edit2? false:true} type="text"  />
+             <div > Name:<input onChange={(e)=>setValue2(e.target.value)} value={edit2? value2:name.name} readOnly={edit2? false:true} type="text"  />
              <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit2((pre)=>!pre)}>edit</span>
              </div>
              
-             <div className='two'>Gender:<input onChange={(e)=>setValue3(e.target.value)} value={edit3? value3:name.gender} readOnly={edit3? false:true} type="text"  />
+             <div >Gender:<input onChange={(e)=>setValue3(e.target.value)} value={edit3? value3:name.gender} readOnly={edit3? false:true} type="text"  />
              <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit3((pre)=>!pre)}>edit</span>
              </div>
              
-             <div className='two'>Age:<input onChange={(e)=>setValue4(e.target.value)} value={edit4? value4:name.age} readOnly={edit4? false:true} type="text"  />
+             <div >Age:<input onChange={(e)=>setValue4(e.target.value)} value={edit4? value4:name.age} readOnly={edit4? false:true} type="text"  />
              <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit4((pre)=>!pre)}>edit</span>
              </div>
              
-             <div className='two'>Email:<input onChange={(e)=>setValue5(e.target.value)} value={edit5? value5:name.email} readOnly={edit5? false:true} type="text"  />
+             <div >Email:<input onChange={(e)=>setValue5(e.target.value)} value={edit5? value5:name.email} readOnly={edit5? false:true} type="text"  />
              <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit5((pre)=>!pre)}>edit</span>
              </div>
              
-             <div className='two'>Address:<br/><textarea cols={40} rows={5} onChange={(e)=>setValue6(e.target.value)} value={edit6? value6:name.address} readOnly={edit6? false:true} type="text"  />
+             <div >Address:<br/><textarea cols={40} rows={5} onChange={(e)=>setValue6(e.target.value)} value={edit6? value6:name.address} readOnly={edit6? false:true} type="text"  />
               <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit6((pre)=>!pre)}>edit</span>
              </div>
              
-             <div className='two'>phone:<input onChange={(e)=>setValue7(e.target.value)} value={edit7? value7:name.phone} readOnly={edit7? false:true} type="text"  />
+             <div >phone:<input onChange={(e)=>setValue7(e.target.value)} value={edit7? value7:name.phone} readOnly={edit7? false:true} type="text"  />
              <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit7((pre)=>!pre)}>edit</span>
              </div>
              
@@ -156,11 +156,11 @@ const Profile = () => {
               <h3>Account Info</h3>
              </div>
              
-             <div className='two'>Username:<input onChange={(e)=>setValue8(e.target.value)} value={edit8? value8:name.user} readOnly={edit8? false:true} type="text"  />
+             <div >Username:<input onChange={(e)=>setValue8(e.target.value)} value={edit8? value8:name.user} readOnly={edit8? false:true} type="text"  />
              <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit8((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='two'>Password:<input onChange={(e)=>setValue9(e.target.value)} value={edit9? value9:name.password} readOnly={edit9? false:true} type="text"  />
+             <div >Password:<input onChange={(e)=>setValue9(e.target.value)} value={edit9? value9:name.password} readOnly={edit9? false:true} type="text"  />
              <span style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit9((pre)=>!pre)}>edit</div>
              </div>
             
