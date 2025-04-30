@@ -94,9 +94,8 @@ useEffect(() => {
     </thead>
      </div>
      {staff?.filter((item)=> {return item.class === name?.class})
-   .map((item,index)=>{const unique =()=>{return setTime(()=>item._id)}
-               const times = unique();
-               return (<div key={index}>{times}</div>)
+   .map((item,index)=>{
+               return (<div key={index}>{item.name}</div>)
    })}
      <div className='row5 green'>
     {name?.Eng.map((name,index)=> { 
