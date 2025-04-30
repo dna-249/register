@@ -230,7 +230,7 @@ const handleResult = async(params) => {
             </div>)
 })}
    
-   </div>:<div > <div className="twoA"><h3> Score:{count2}</h3> <button onClick={()=>handleResult()}>Summit Result</button></div>
+   </div>:<div > <div className="twoA"><h3> Score:{count2}</h3> <button className="click1" onClick={()=>handleResult()}>Summit Result</button></div>
           </div> }</div>
    
 </div>
