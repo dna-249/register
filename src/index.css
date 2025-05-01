@@ -306,7 +306,7 @@ input[type="file"]{
   justify-content: center;
   margin: auto;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   font-size: small;
 }
