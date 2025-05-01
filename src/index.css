@@ -304,7 +304,7 @@ input[type="file"]{
   height: fit-content;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin-top: 25px;
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
