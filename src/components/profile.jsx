@@ -62,18 +62,23 @@ const Profile = () => {
                                     .catch((err)=> console.log(err))   
   }
 
+  const data = (value,key) => {
+    if(value === '') return key
+    else return value
+  }
+  
   const handleChange = async(params) => {
 
     await axios.put(`https://database-api-eight.vercel.app/${id}/${id2}`,
-      { key:value1,
-        name:value2,
-        age:value3,
-        gender:value4,
-        email:value5,
-        address:value6,
-        phone:value7,
-        user:value8,
-        password:value9 
+      { key:data(value1,name.key),
+        name:data(value2,name.name),
+        age:data(value3,name.age),
+        gender:data(value4,name.gender),
+        email:data(value5,name.email),
+        address:data(value6,name.address),
+        phone:data(value7,name.phone),
+        user:data(value8,name.user),
+        password:data(value9,name.password) 
         
         })
                                       .then((res)=> {console.log(res.data);alert("Save successfully")})
