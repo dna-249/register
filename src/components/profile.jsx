@@ -91,7 +91,7 @@ const Profile = () => {
  }, [id])
   return (
     <>
-    <div className="center">
+    <div className="center"></div>
     <div className='profile '>
     <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
       <div>
@@ -126,51 +126,51 @@ const Profile = () => {
           
           
           
-           <div className='twoA'><div>Admission No:{edit1? <input onChange={(e)=>setValue1(e.target.value)} type="text"  /> : <h3 style ={{color:"black"}}>{name.key}</h3>}
+           <div className='twoA'><div>Admission No:{edit1? <input onChange={(e)=>setValue1(e.target.value)} type="text"  /> : name.key}
            </div>
            <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit1((pre)=>!pre)}>edit</div>
          </div>
              
-             <div className='twoA'> <div>Name:{edit2? <input onChange={(e)=>setValue2(e.target.value)}  type="text"  /> : <h3 style ={{color:"black"}}>{name.name}</h3>}
+             <div className='twoA'> <div>Name:{edit2? <input onChange={(e)=>setValue2(e.target.value)}  type="text"  /> : name.name}
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit2((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Gender:{edit3? <input onChange={(e)=>setValue3(e.target.value)} va type="text"  /> : <h3 style ={{color:"black"}}>{name.gender}</h3>}
+             <div className='twoA'><div>Gender:{edit3? <input onChange={(e)=>setValue3(e.target.value)} va type="text"  /> : name.gender}
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit3((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Age:{edit4? <input onChange={(e)=>setValue4(e.target.value)} type="text"  /> : <h3 style ={{color:"black"}}>{name.age}</h3>}
+             <div className='twoA'><div>Age:{edit4? <input onChange={(e)=>setValue4(e.target.value)} type="text"  /> : name.age}
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit4((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Email:{edit5? <input onChange={(e)=>setValue5(e.target.value)}  type="text"  /> : <h3 style ={{color:"black"}}>{name.email}</h3>}
+             <div className='twoA'><div>Email:{edit5? <input onChange={(e)=>setValue5(e.target.value)}  type="text"  /> : name.email}
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit5((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Address:{edit6? <textarea cols={30} rows={5} onChange={(e)=>setValue6(e.target.value)}  type="text"  /> : <h3 style ={{color:"black"}}>{name.address}</h3>}
+             <div className='twoA'><div>Address:{edit6? <textarea cols={30} rows={5} onChange={(e)=>setValue6(e.target.value)}  type="text"  /> : name.address}
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit6((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>phone:{edit7? <input onChange={(e)=>setValue7(e.target.value)}  type="text"  /> : <h3 style ={{color:"black"}}>{name.phone}</h3>}
+             <div className='twoA'><div>phone:{edit7? <input onChange={(e)=>setValue7(e.target.value)}  type="text"  /> : name.phone}
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit7((pre)=>!pre)}>edit</div>
              </div>
              
              <div>
-              <h3 style ={{color:"black"}}>Account Info</h3>
+              <h3>Account Info</h3>
              </div>
              
-             <div className='twoA'><div>Username:{edit8? <input onChange={(e)=>setValue8(e.target.value)}  type="text"  /> :<h3 style ={{color:"black"}}>{ name.user}</h3>}
+             <div className='twoA'><div>Username:{edit8? <input onChange={(e)=>setValue8(e.target.value)}  type="text"  /> : name.user}
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit8((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Password:{edit9? <input onChange={(e)=>setValue9(e.target.value)}  type="text"  /> : <h3 style ={{color:"black"}}>{name.password}</h3>}
+             <div className='twoA'><div>Password:{edit9? <input onChange={(e)=>setValue9(e.target.value)}  type="text"  /> : name.password}
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit9((pre)=>!pre)}>edit</div>
              </div>
@@ -179,7 +179,6 @@ const Profile = () => {
             </div>
         
           </div>
-              </div>
               </div>
     
     </>
