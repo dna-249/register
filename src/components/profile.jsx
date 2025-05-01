@@ -150,7 +150,7 @@ const Profile = () => {
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit5((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Address:<br/><textarea cols={40} rows={5} onChange={(e)=>setValue6(e.target.value)} value={edit6? value6:name.address} readOnly={edit6? false:true} type="text"  />
+             <div className='twoA'><div>Address:<br/><textarea cols={30} rows={5} onChange={(e)=>setValue6(e.target.value)} value={edit6? value6:name.address} readOnly={edit6? false:true} type="text"  />
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit6((pre)=>!pre)}>edit</div>
              </div>
