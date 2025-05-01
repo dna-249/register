@@ -91,7 +91,7 @@ const Profile = () => {
  }, [id])
   return (
     <>
-    <div className="center"></div>
+    
     <div className='profile '>
     <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
       <div>
