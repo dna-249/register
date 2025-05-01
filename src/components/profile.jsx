@@ -91,7 +91,8 @@ const Profile = () => {
  }, [id])
   return (
     <>
-    <div className='profile'>
+    <div className="center">
+    <div className='profile '>
     <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
       <div>
         <div>
@@ -178,6 +179,7 @@ const Profile = () => {
             </div>
         
           </div>
+              </div>
               </div>
     
     </>
