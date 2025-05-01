@@ -6,7 +6,7 @@ import axios from "axios"
 const Student = () => {
   const [select, setSelect]=useState()
   const [toggle, setToggle]=useState()
-  const [time,setTime]=useState()
+ 
   const [name,setName]=useState()
   const [staff,setStaff]=useState()
   const [show,setShow] = useState(0)
@@ -23,9 +23,7 @@ useEffect(() => {
                        .catch((err)=> console.log(err))
           
 }, [id])
-const handleId = (id) => {
-  setTime(id)
-}
+
 
 
  if(show === 0) return (
@@ -50,7 +48,7 @@ const handleId = (id) => {
     <div className="icons bars">
         <div onClick={()=>nav(`/studentActivity/${name._id}`)}>Activity</div>
         <div onClick={()=>nav(`/studentAttendance/${name._id}`)}>Attendance </div>
-        <div onClick={()=>nav(`/profile/${name._id}`)}>profile</div>
+        <div onClick={()=>nav(`/profile/student/${name._id}`)}>profile</div>
     </div>)}
  </div>
  
