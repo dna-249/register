@@ -131,37 +131,37 @@ const Profile = () => {
           
           
           
-           <div className='twoA'><div>Admission No:{edit1? <input onChange={(e)=>setValue1(e.target.value)} type="text"  /> : name.key.toUpperCase()}
+           <div className='twoA'><div className="two"><div>Admission No:</div><div>{edit1? <input onChange={(e)=>setValue1(e.target.value)} type="text"  /> : name.key}</div>
            </div>
            <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit1((pre)=>!pre)}>edit</div>
          </div>
              
-             <div className='twoA'> <div>Name:{edit2? <input onChange={(e)=>setValue2(e.target.value)}  type="text"  /> : name.name.toUpperCase()}
+             <div className='twoA'> <div className="two"><div>Name:</div><div>{edit2? <input onChange={(e)=>setValue2(e.target.value)}  type="text"  /> : name.name}</div>
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit2((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Gender:{edit3? <input onChange={(e)=>setValue3(e.target.value)} va type="text"  /> : name.gender.toUpperCase()}
+             <div className='twoA'><div className="two"><div>Gender:</div><div>{edit3? <input onChange={(e)=>setValue3(e.target.value)} va type="text"  /> : name.gender}</div>
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit3((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Age:{edit4? <input onChange={(e)=>setValue4(e.target.value)} type="text"  /> : name.age.toUpperCase()}
+             <div className='twoA'><div className="two"><div>Age:</div><div>{edit4? <input onChange={(e)=>setValue4(e.target.value)} type="text"  /> : name.age}</div>
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit4((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Email:{edit5? <input onChange={(e)=>setValue5(e.target.value)}  type="text"  /> : name.email.toUpperCase()}
+             <div className='twoA'><div className="two"><div>Email:</div><div>{edit5? <input onChange={(e)=>setValue5(e.target.value)}  type="text"  /> : name.email}</div>
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit5((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Address:{edit6? <textarea cols={30} rows={5} onChange={(e)=>setValue6(e.target.value)}  type="text"  /> : name.address.toUpperCase()}
+             <div className='twoA'><div className="two"><div>Address:</div><div>{edit6? <textarea cols={30} rows={5} onChange={(e)=>setValue6(e.target.value)}  type="text"  /> : name.address}</div>
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit6((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>phone:{edit7? <input onChange={(e)=>setValue7(e.target.value)}  type="text"  /> : name.phone.toUpperCase()}
+             <div className='twoA'><div className="two"><div>phone:</div><div>{edit7? <input onChange={(e)=>setValue7(e.target.value)}  type="text"  /> : name.phone}</div>
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit7((pre)=>!pre)}>edit</div>
              </div>
@@ -170,12 +170,12 @@ const Profile = () => {
               <h3>Account Info</h3>
              </div>
              
-             <div className='twoA'><div>Username:{edit8? <input onChange={(e)=>setValue8(e.target.value)}  type="text"  /> : name.user.toUpperCase()}
+             <div className='twoA'><div className="two"><div>Username:</div><div>{edit8? <input onChange={(e)=>setValue8(e.target.value)}  type="text"  /> : name.user}</div>
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit8((pre)=>!pre)}>edit</div>
              </div>
              
-             <div className='twoA'><div>Password:{edit9? <input onChange={(e)=>setValue9(e.target.value)}  type="text"  /> : name.password.toUpperCase()}
+             <div className='twoA'><div className="two"><div>Password:</div><div>{edit9? <input onChange={(e)=>setValue9(e.target.value)}  type="text"  /> : name.password}</div>
              </div>
              <div style={{color:"blue", textDecoration:"underline"}} onClick={()=>setEdit9((pre)=>!pre)}>edit</div>
              </div>
