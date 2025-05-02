@@ -162,6 +162,9 @@ const handleResult = async(params) => {
                        .then((res)=>{alert("uploaded successfully"); console.log(res.data)})
                        .catch((err)=> console.log(err))
 }
+    const counter = (params) => {
+      return count + 1
+    }
     
 
      return (
@@ -201,10 +204,11 @@ const handleResult = async(params) => {
       Activity:  {staff?.activity} <br />
       Subject:  {staff?.type} <br />
     </h3>
-   <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
+    <div>Instructions: All Questions carry equal marks
 
 
   {score === false ?  <div className="white"> 
+    <h4> Question {counter()} of {staff?.[`${staff?.type}`].length} </h4>
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
