@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 const Admission = ({id}) => {
   const [adm,setAdm]= useState('')
+  const [select,setSelect]= useState('')
+  const [update,setUpdate]= useState(true)
   const [name,setName]= useState([''])
   const [auto,setAuto]= useState(false)
 
@@ -21,6 +23,19 @@ const Admission = ({id}) => {
                   .then((res)=>{alert(`${adm} admission is created`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
+
+  const handleDelete = (params) => {
+    axios.put(`https://database-api-eight.vercel.app/management/push/${id}/admissions/key`,{adm:adm})
+    .then((res)=>{alert(`${adm} admission is created`);setAuto((prev)=>!prev)})
+    .catch((err)=> console.log(err))
+
+  }
+  const handleSelect = (name) => {
+    setSelect(name)
+    setUpdate(false)
+  }
+  
+  
   
   return (
     
@@ -37,10 +52,15 @@ const Admission = ({id}) => {
                     <button className='click1' onClick={()=>handleCreate()}>Register</button>
                  </div></div>
                      <h5>Previous Admissions</h5>
-                 <div className='white2' >
+                 <div className='white2' >{update?
                   <div className="dropDown">
-                   {name?.admissions?.map((name, index)=>{return (<div  key={index}>{name.key}</div>)})} 
-                 </div>
+                   {name?.admissions?.map((name, index)=>{return (<div  key={index}  onClick={()=>handleSelect(name)}>{name.key}</div>)})} 
+                 </div>:
+                      <div>
+                       Delete this admission?
+                       Admission: {name.key}
+                       <button onClick={()=>handleDelete()}>Delete</button> 
+                      </div>}
                  </div>
             </div>
     
