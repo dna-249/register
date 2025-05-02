@@ -204,7 +204,7 @@ const handleResult = async(params) => {
       Activity:  {staff?.activity} <br />
       Subject:  {staff?.type} <br />
     </h3>
-    <div>Instructions: All Questions carry equal marks
+    <div>Instructions: All Questions carry equal marks </div>
 
 
   {score === false ?  <div className="white"> 
