@@ -15,6 +15,7 @@ const StudentActivity = ({setBack}) => {
     const [count2,setCount2]=useState(0)
     const [staff,setStaff]=useState()
     const [select,setSelect]=useState('')
+    const [start,setStart]=useState(false)
     const [names,setNames]=useState('')
     const [timeOut,setTimeOut]= useState(true)
     const [score,setScore]= useState(unSet())
@@ -66,6 +67,7 @@ const StudentActivity = ({setBack}) => {
          console.log(duration)
          setDuration("")
          setScore(false)
+         setStart(true)
          setDuration(()=>time*1000)
         
        
@@ -231,7 +233,7 @@ const handleResult = async(params) => {
 })}
    
    </div>:<div > <div className="twoA">
-    {score === true?<button className="click1" onClick={()=>set()}>START</button>: <div><h3> Score:{count2}</h3> <button className="click1" onClick={()=>handleResult()}>Summit</button>
+    {start === false?<button className="click1" onClick={()=>set()}>START</button>: <div><h3> Score:{count2}</h3> <button className="click1" onClick={()=>handleResult()}>Summit</button>
        </div>}</div>
           </div> }</div>
    
