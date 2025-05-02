@@ -76,7 +76,7 @@ const StudentActivity = ({setBack}) => {
    
    
   const handle = (params) => {
-          if(duration === 0 && score === true){
+          if(duration === 0 && score === false){
              setScore(true);localStorage.removeItem("time")
            localStorage.setItem("unset",JSON.stringify(score))
                handleResult()
@@ -202,7 +202,7 @@ const handleResult = async(params) => {
    <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
 
 
-  {score === true ?  <div> 
+  {score === false ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
