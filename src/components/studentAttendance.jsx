@@ -25,9 +25,9 @@ const StudentAttendance =()=>{
      <div > {name? <img className='img' src={name?.image} />
                      :
                      <FaUser className='img'/>}</div>
-     name: {name?.name}<br />
-     class: <br />
-     Term:
+     <h4> Admission: {name?.key} <br />  
+        Name: {name?.name} <br />
+        Class :{name?.class}</h4>
      
      
      <div className='white'>

@@ -76,7 +76,7 @@ const StudentActivity = ({setBack}) => {
    
    
   const handle = (params) => {
-          if(duration === 0){
+          if(duration === 0 && score === false){
              setScore(true);localStorage.removeItem("time")
            localStorage.setItem("unset",JSON.stringify(score))
                handleResult()
