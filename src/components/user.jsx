@@ -73,7 +73,7 @@ const handleResult = async(params) => {
  <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
-   <div>Activity</div>
+         <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
         <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/update/${name._id}`)}> Update</div>
     </div>)}
