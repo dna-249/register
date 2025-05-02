@@ -231,8 +231,8 @@ const handleResult = async(params) => {
 })}
    
    </div>:<div > <div className="twoA">
-    {score === false?<h3> Score:{count2}</h3> <button className="click1" onClick={()=>handleResult()}>Summit</button>
-       :<button className="click1" onClick={()=>set()}>START</button>}</div>
+    {score === false? <div><h3> Score:{count2}</h3> <button className="click1" onClick={()=>handleResult()}>Summit</button>
+       </div>:<button className="click1" onClick={()=>set()}>START</button>}</div>
           </div> }</div>
    
 </div>
