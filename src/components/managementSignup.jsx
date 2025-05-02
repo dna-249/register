@@ -24,8 +24,8 @@ const ManagementSignup = ({setLogin}) => {
         phone:phone,
         email:email
       })
-      .then((res)=>alert("successfully"))
-      .catch((err)=> console.log(err))
+      .then((res)=>alert("successfully created"))
+      .catch((err)=> {alert("invalid secret_key or network  problem");console.log(err)})
 
   }
   

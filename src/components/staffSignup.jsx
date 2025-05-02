@@ -22,9 +22,10 @@ const StaffSignup = ({setLogin}) => {
         password:password,
         phone:phone,
         email:email})
-      .then((res)=> console.log(res))
-      .catch((err)=> console.log(err))
-  }
+        .then((res)=>alert("successfully created"))
+        .catch((err)=> {alert("invalid secret_key or network problem");console.log(err)})
+  
+    }
   
   return (
     <div className='signUp'>

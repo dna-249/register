@@ -25,8 +25,9 @@ const StudentSignup = ({setLogin}) => {
         phone:phone,
         email:email
       })
-      .then((res)=> console.log(res))
-      .catch((err)=> console.log(err))
+      .then((res)=>alert("successfully created"))
+      .catch((err)=> {alert("invalid Admission Number or network problem");console.log(err)})
+
   }
   
   return (

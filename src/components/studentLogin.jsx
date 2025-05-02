@@ -38,7 +38,7 @@ const StudentLogin = () => {
     await axios.post("https://database-api-eight.vercel.app/student/verify",{
       name:user,
       header:token
-    }).then(res =>{nav(`/student/${res.data._id}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert(user + "is not verified");console.log(err)})
+    }).then(res =>{nav(`/student/${res.data._id}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert("invalid username or password");console.log(err)})
  
   }
   
