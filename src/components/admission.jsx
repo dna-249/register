@@ -57,9 +57,12 @@ const Admission = ({id}) => {
                    {name?.admissions?.map((name, index)=>{return (<div  key={index}  onClick={()=>handleSelect(name)}>{name.key}</div>)})} 
                  </div>:
                       <div>
-                       Delete this admission?
-                       Admission: {name.key}
-                       <button onClick={()=>handleDelete()}>Delete</button> 
+                       Delete this admission? <br/>
+                       Admission: {name.key}<br/>
+                       <div className="twoA">
+                       <button onClick={()=>handleDelete()}>Delete</button>
+                       <button onClick={()=>setUpdate(true)}>Back</button>
+                       </div> 
                       </div>}
                  </div>
             </div>
