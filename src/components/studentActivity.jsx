@@ -8,7 +8,7 @@ import axios from 'axios'
 const StudentActivity = ({setBack}) => {
   const unSet = (params) => {
     const remain = JSON.parse(localStorage.getItem("unset"))
-    if(!remain) {return false} else {return remain}
+    if(!remain) {return true} else {return remain}
   }
 
     const [count,setCount]=useState(0)
@@ -76,7 +76,7 @@ const StudentActivity = ({setBack}) => {
    
    
   const handle = (params) => {
-          if(duration === 0 && score === false){
+          if(duration === 0 && score === true){
              setScore(true);localStorage.removeItem("time")
            localStorage.setItem("unset",JSON.stringify(score))
                handleResult()
@@ -202,7 +202,7 @@ const handleResult = async(params) => {
    <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
 
 
-  {score === false ?  <div> 
+  {score === true ?  <div> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
