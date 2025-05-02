@@ -185,7 +185,8 @@ const handleResult = async(params) => {
  <div style={{marginBottom:"10px"}}  onClick={()=>nav(`/profile/student/${id}`)}>User Profile</div>
  <div>
   <div></div>
-  <div> <h2 onClick={()=>set()}>Duration:{duration !== -1000? timerFormat(duration):'0:0:0'}</h2>   
+  <div className="two"> <h3>Time:{time}s</h3>
+     <h3>Ramaining:{duration !== -1000? timerFormat(duration):'0:0:0'}</h3>   
   </div>
  </div>
     
@@ -193,18 +194,17 @@ const handleResult = async(params) => {
 
 
 <div className='white'>
-<h4>
+<h3>
       
       Session:  {staff?.session} <br />
       Term:  {staff?.term} <br />
       Activity:  {staff?.activity} <br />
       Subject:  {staff?.type} <br />
-      Time in sec:  {staff?.time}
-    </h4>
+    </h3>
    <div> Question {count} of {staff?.[`${staff?.type}`].length} </div>
 
 
-  {score === false ?  <div> 
+  {score === false ?  <div className="white"> 
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 
       return item.session === staff?.session && item.term === staff?.term && index === count 
