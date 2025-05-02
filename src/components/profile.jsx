@@ -116,7 +116,7 @@ const Profile = () => {
               </div>
                :
               <div style={{marginTop:"20px"}}>
-                {image? <img className='img' src={name?.image}/> 
+                {name?.image? <img className='img' src={name?.image}/> 
                : 
                <label for="file"><FaUser className='img'/> <input type='file' id='file' onChange={(e)=>handleImage(e)}/>
                </label>}
