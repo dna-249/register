@@ -197,13 +197,19 @@ const handleResult = async(params) => {
 
 
 <div className='white'>
-<h3>
-      
+<div className="sevenA">
+      <h3>Session:  {staff?.session} </h3>
+      <h3>Term:  {staff?.term} </h3>
+      <h3> Activity:  {staff?.activity} </h3>
+      <h3> Subject:  {staff?.type} </h3>
+    
+    </div>
+    <div className="bars"><h3>
       Session:  {staff?.session} <br />
       Term:  {staff?.term} <br />
       Activity:  {staff?.activity} <br />
       Subject:  {staff?.type} <br />
-    </h3>
+    </h3></div>
     <div>Instructions: All Questions carry equal marks </div>
 
 

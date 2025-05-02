@@ -250,6 +250,13 @@ input[type="file"]{
   padding: 10px;
   width: 800px;
 }
+.sevenA{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  justify-content:baseline;
+  padding: 10px;
+  width: 800px;
+}
 .scroll{
   min-width: 320px;
   overflow-x: scroll;
@@ -534,7 +541,11 @@ image:active{
   .sideA{
     display: none;
   }
-  
+ .sideA{
+    display: none;
+  }.sevenA{
+    display: none;
+  } 
 }
 
 
