@@ -204,16 +204,16 @@ const handleResult = async(params) => {
       <h3> Subject:  {staff?.type} </h3>
     
     </div>
-    <div className="bars"><h3>
+    <h3 className="data">
       Session:  {staff?.session} <br />
       Term:  {staff?.term} <br />
       Activity:  {staff?.activity} <br />
       Subject:  {staff?.type} <br />
-    </h3></div>
+    </h3>
     <div>Instructions: All Questions carry equal marks </div>
 
 
-  {score === false ?  <div className="white"> 
+  {score === false ?  <div className="white2"> 
     <h4> Question {counter()} of {staff?.[`${staff?.type}`].length} </h4>
   
     {staff?.[`${staff?.type}`].filter((item,index) =>{ 

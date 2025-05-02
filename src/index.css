@@ -518,6 +518,9 @@ image:active{
   border-radius: 5px;
   color: white;
 }
+.data{
+  display:none;
+}
 
 
 
@@ -543,8 +546,8 @@ image:active{
   }
  .sideA{
     display: none;
-  }.sevenA{
-    display: none;
+  }.data{
+    display: grid;
   } 
 }
 
