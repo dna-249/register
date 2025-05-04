@@ -17,7 +17,7 @@ const StudentSignup = ({setLogin}) => {
   
 
   const handleSignUp =()=>{
-    if(!adm === ''){
+    if(adm !== ''){
     axios.post("https://database-api-eight.vercel.app/student",
       { key:adm,
         name:name,
