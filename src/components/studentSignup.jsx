@@ -17,6 +17,7 @@ const StudentSignup = ({setLogin}) => {
   
 
   const handleSignUp =()=>{
+    if(!adm === ''){
     axios.post("https://database-api-eight.vercel.app/student",
       { key:adm,
         name:name,
@@ -27,7 +28,9 @@ const StudentSignup = ({setLogin}) => {
       })
       .then((res)=>alert("successfully created"))
       .catch((err)=> {alert("invalid Admission Number or network problem");console.log(err)})
-
+    }else{
+      alert("input field is required")
+    }
   }
   
   return (
