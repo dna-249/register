@@ -120,7 +120,7 @@ const Management = () => {
                 <div onClick={()=>setSelect('3')}>Secret_Keys </div>
                 <div onClick={()=>setSelect('4')}>Classes</div>
                 <div >Results</div>
-                <div onClick={()=>nav(`chat/${id}`)}>Notice</div>
+                <div onClick={()=>nav(`/chat/${id}`)}>Notice</div>
               
             </div>}
             </div>
@@ -138,7 +138,7 @@ const Management = () => {
          <div  className='three2'>
                 <div onClick={()=>setSelect('4')}>Classes</div>
                 <div>Results</div>
-                <div  onClick={()=>nav(`chat/${id}`)}>Notice</div>
+                <div  onClick={()=>nav(`/chat/${id}`)}>Notice</div>
          </div>
  </div>
 <div className="white three4">
