@@ -1,6 +1,5 @@
 import React from 'react'
 import {FaUser,} from "react-icons/fa"
-import {Link } from "react-router-dom"
 import {useState} from "react"
 import axios from "axios"
 
