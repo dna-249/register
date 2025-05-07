@@ -5,7 +5,7 @@ import axios from 'axios';
 const Chat = () => {
  const [adm,setAdm] = useState();
  const [auto,setAuto] = useState(false);
- const [name,setName] = useState();
+ const [name,setName] = useState(['']);
  const [adm2,setAdm2] = useState();
  const [type,setType]= useState();
  const nav = useNavigate()
