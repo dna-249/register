@@ -4,12 +4,12 @@ import { FaUser, FaArrowCircleLeft } from 'react-icons/fa';
 import axios from 'axios';
 
 const Chat = () => {
- const [adm,setAdm] = useState();
+ const [adm,setAdm]   = useState();
  const [auto,setAuto] = useState(false);
  const [name,setName] = useState();
  const [adm2,setAdm2] = useState();
- const [type,setType]= useState();
- const nav = useNavigate()
+ const [type,setType] = useState();
+ const nav  = useNavigate()
  const {id} = useParams()
 
  
@@ -117,12 +117,9 @@ const Chat = () => {
      <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
       
 <div className='two' >
-                         <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
-                         </div>
-                                        :
-                                       <div> <FaUser className='img'/>
-                         </div>
-                        }
+    <div style={{marginTop:"20px"}}>
+                {name?<div><img className='img' src={name?.image} /></div>
+                    :<div><FaUser className='img'/></div>}
                        
                          <h4>
                             Key:{name?.key} <br />
