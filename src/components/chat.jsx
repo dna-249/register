@@ -8,7 +8,7 @@ const Chat = () => {
  const [auto,setAuto] = useState(false);
  const [name,setName] = useState();
  const [adm2,setAdm2] = useState();
- const [type,setType] = useState();
+ const [type,setType] = useState("management");
  const nav  = useNavigate()
  const {id} = useParams()
 
@@ -25,7 +25,7 @@ const Chat = () => {
             date:Date().slice(0,21),
             subject:adm2,
             message:adm,
-            userId:'id'
+            Id:id
         })
                    .then((res)=>{alert(`sent successfully`);setAuto(pre =>!pre);setAdm("")})
                    .catch((err)=> console.log(err))
