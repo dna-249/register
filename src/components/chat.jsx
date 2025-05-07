@@ -54,7 +54,7 @@ const Chat = () => {
                         </div>
                      
                 </div>
-                <div className='seven'>
+                <div className='two'>
     <div className="white">
        <h3>Chat</h3>
     <div className='white2'>
