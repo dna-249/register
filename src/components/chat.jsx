@@ -25,7 +25,7 @@ const Chat = () => {
             date:Date().slice(0,21),
             subject:adm2,
             message:adm,
-            userId:id
+            userId:'id'
         })
                    .then((res)=>{alert(`sent successfully`);setAuto(pre =>!pre);setAdm("")})
                    .catch((err)=> console.log(err))
