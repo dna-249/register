@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useParams,useNavigate } from "react-router-dom"
+import { FaUser, FaArrowCircleLeft } from 'react-icons/fa';
 import axios from 'axios';
 
 const Chat = () => {
@@ -35,6 +36,7 @@ const Chat = () => {
     <>
     <div className='center'>
         <div   className={"bgUserB seven"}>
+             <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
 
               <div className='two' >
                          <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
@@ -110,6 +112,8 @@ const Chat = () => {
         </div>
     
 <div   className={"bgUserA"}>
+     <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
+      
 <div className='two' >
                          <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
                          </div>
