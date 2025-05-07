@@ -4,11 +4,20 @@ import axios from 'axios';
 
 const Chat = () => {
  const [adm,setAdm] = useState();
+ const [auto,setAuto] = useState(false);
+ const [name,setName] = useState();
  const [adm2,setAdm2] = useState();
  const [type,setType]= useState();
-  const nav = useNavigate()
-  const {id} = useParams()
+ const nav = useNavigate()
+ const {id} = useParams()
+
  
+
+ useEffect(()=>{
+    axios.get(`https://database-api-eight.vercel.app/management/${id}`)
+                   .then((res)=>{console.log(res.data); setName(res.data)})
+                   .catch((err)=> console.log(err))
+ },[id,auto])
  const handleCreate = (params) => {
      axios.put(`https://database-api-eight.vercel.app/management/push/${id}/${type}Chat`,
         {
@@ -16,7 +25,7 @@ const Chat = () => {
             subject:adm2,
             message:adm
         })
-                   .then((res)=>{alert(`sent successfully`)})
+                   .then((res)=>{alert(`sent successfully`);setAuto(pre =>!pre)})
                    .catch((err)=> console.log(err))
       }
  
@@ -50,7 +59,8 @@ const Chat = () => {
                     <h4>Previous:</h4>
                     <div className='twoA'>
                     <div className="dropDown">
-                        {adm? <div className="break">{adm}</div>:<div> </div>}
+                        {adm? <div className="break">{adm}</div>
+                        :<div>{name?.managementChat?.map((item,index)=>{return(<div key={index}>{item}</div>)})} </div>}
                     </div>
                     <textarea className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
                  </div>
