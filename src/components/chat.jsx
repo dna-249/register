@@ -109,8 +109,16 @@ Subject:  {adm2?.toUpperCase()}</h4>
             <textarea className='dropDown'  style={{margin:"5px"}} cols={30}  rows={6} onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
             <h4>Previous:</h4>
             <div className="dropDown">
-                {adm? <div className="break">{adm}</div>:<div> </div>}
-            </div>
+            {adm? <div className="break">{adm}</div>
+                        :<div>
+                            {name?.map((item,index)=>Object.keys(item).map((item)=>{return(<div key={index}>
+                            {item.date}
+                            {item.subject}
+                            {item.message}
+                            </div>)}))}
+                            
+                     </div>} 
+                     </div>
          </div>
             </div>
          </div>
