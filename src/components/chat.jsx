@@ -56,9 +56,9 @@ const Chat = () => {
                 </div>
                 <div className='two'>
     <div className="white">
-       <h3>Chat</h3>
+       <h2>Chats</h2>
     <div className='white2'>
-            <h3>Set Notice:</h3>
+            <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
            
         To:  {type}
@@ -130,9 +130,9 @@ const Chat = () => {
                      
                 </div>
 <div className="white">
-       <h3>Chat</h3>
+       <h2>Chat</h2>
     <div className='white2'>
-            <h3>Set Notice:</h3>
+            <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
            
         To:  {type}
