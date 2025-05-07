@@ -5,7 +5,7 @@ import axios from 'axios';
 const Chat = () => {
  const [adm,setAdm] = useState();
  const [auto,setAuto] = useState(false);
- const [name,setName] = useState(['']);
+ const [name,setName] = useState();
  const [adm2,setAdm2] = useState();
  const [type,setType]= useState();
  const nav = useNavigate()
@@ -64,6 +64,15 @@ const Chat = () => {
                             {item.date}
                             {item.subject}
                             {item.message}
+                            </div>)})}
+                            {name?.staffChat?.map((item,index)=>{return(<div key={index}>
+                            {item.date}
+                            {item.subject}
+                            {item.message}
+                            </div>)})}{name?.studentChat?.map((item,index)=>{return(<div key={index}>
+                            {item.date}
+                            {item.subject}
+                            {item.message}
                             </div>)})} </div>}
                     </div>
                     <textarea className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
@@ -111,11 +120,20 @@ Subject:  {adm2?.toUpperCase()}</h4>
             <div className="dropDown">
             {adm? <div className="break">{adm}</div>
                         :<div>
-                            {name?.map((item,index)=>Object.keys(item).map((item)=>{return(<div key={index}>
+                            {name?.managementChat?.map((item,index)=>{return(<div key={index}>
                             {item.date}
                             {item.subject}
                             {item.message}
-                            </div>)}))}
+                            </div>)})}
+                            {name?.staffChat?.map((item,index)=>{return(<div key={index}>
+                            {item.date}
+                            {item.subject}
+                            {item.message}
+                            </div>)})}{name?.studentChat?.map((item,index)=>{return(<div key={index}>
+                            {item.date}
+                            {item.subject}
+                            {item.message}
+                            </div>)})}
                             
                      </div>} 
                      </div>
