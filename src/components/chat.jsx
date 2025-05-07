@@ -92,11 +92,11 @@ const Chat = () => {
                    
                     <div className="dropDown">
                         {adm? <div className="break">{adm}</div>
-                        :<div>{name?.[`${type}Chat`]?.map((item,index)=>{return(<div key={index}>
+                        :<div>{name?.[`${type}Chat`]?.map((item,index)=> {return(<div key={index}>
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
-                            {item.userId}
+                            {item.Id}
                             </div>)})} </div>}
                     </div>
                  <div className='white2'> <h4>From: {type}
@@ -171,7 +171,7 @@ const Chat = () => {
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
-                            {item.userId}
+                            {item.Id}
                             </div>)})} </div>}
                     </div>
                  <div className='white2'> <h4>From: {type}
