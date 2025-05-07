@@ -55,8 +55,12 @@ const Chat = () => {
                  
      <div className='twoA'><h4>Message:</h4>  <button className='click1' onClick={()=>handleCreate()}> Create</button>
                     </div>
-
-                    <h4>Previous:</h4>
+                    <textarea className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
+                
+                    </div>
+                 </div>
+        <div className="white2">
+        <h4>Previous:</h4>
                     <select onChange={(e)=>setType(e.target.value)}>
                         <option value="">select</option>
                         <option value="all">All</option>
@@ -64,7 +68,7 @@ const Chat = () => {
                         <option value="staff">Staff Only</option>
                         <option value="student">Student Only</option>
                         </select> 
-                    <div className='twoA'>
+                   
                     <div className="dropDown">
                         {adm? <div className="break">{adm}</div>
                         :<div>{name?.[`${type}Chat`]?.map((item,index)=>{return(<div key={index}>
@@ -73,11 +77,6 @@ const Chat = () => {
                             {item.message}
                             </div>)})} </div>}
                     </div>
-                    <textarea className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
-                 </div>
-                    </div>
-                 </div>
-        <div className="white">
                  <div className='white2'> <h4>From: {type}
     <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
