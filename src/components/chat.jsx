@@ -96,6 +96,7 @@ const Chat = () => {
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
+                            {item.userId}
                             </div>)})} </div>}
                     </div>
                  <div className='white2'> <h4>From: {type}
@@ -170,6 +171,7 @@ const Chat = () => {
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
+                            {item.userId}
                             </div>)})} </div>}
                     </div>
                  <div className='white2'> <h4>From: {type}
