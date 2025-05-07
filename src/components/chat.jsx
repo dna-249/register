@@ -10,7 +10,7 @@ const Chat = () => {
   const {id} = useParams()
  
  const handleCreate = (params) => {
-     axios.put(`https://database-api-eight.vercel.app/management/push/${id}/${type}Chat/chat`,
+     axios.put(`https://database-api-eight.vercel.app/management/push/${id}/${type}Chat`,
         {
             date:Date().slice(0,21),
             subject:adm2,
