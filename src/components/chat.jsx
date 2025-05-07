@@ -35,6 +35,23 @@ const Chat = () => {
     <>
     <div className='center'>
         <div   className={"bgUserB seven"}>
+
+              <div className='two' >
+                         <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
+                         </div>
+                                        :
+                                       <div> <FaUser className='img'/>
+                         </div>
+                        }
+                       
+                         <h4>
+                            Key:{name?.key} <br />
+                            Name:{name?.name} <br />
+                            Role:
+                          </h4>
+                        </div>
+                     
+                </div>
     <div className="white">
        <h3>Chat</h3>
     <div className='white2'>
@@ -72,8 +89,8 @@ const Chat = () => {
                     <div className="dropDown">
                         {adm? <div className="break">{adm}</div>
                         :<div>{name?.[`${type}Chat`]?.map((item,index)=>{return(<div key={index}>
-                            {item.date}
-                            {item.subject}
+                            {item.date}<br/>
+                            {item.subject}<br/>
                             {item.message}
                             </div>)})} </div>}
                     </div>
@@ -93,6 +110,22 @@ const Chat = () => {
         </div>
     
 <div   className={"bgUserA"}>
+<div className='two' >
+                         <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
+                         </div>
+                                        :
+                                       <div> <FaUser className='img'/>
+                         </div>
+                        }
+                       
+                         <h4>
+                            Key:{name?.key} <br />
+                            Name:{name?.name} <br />
+                            Role:
+                          </h4>
+                        </div>
+                     
+                </div>
 <div className="white">
        <h3>Chat</h3>
     <div className='white2'>
@@ -130,8 +163,8 @@ const Chat = () => {
                     <div className="dropDown">
                         {adm? <div className="break">{adm}</div>
                         :<div>{name?.[`${type}Chat`]?.map((item,index)=>{return(<div key={index}>
-                            {item.date}
-                            {item.subject}
+                            {item.date}<br/>
+                            {item.subject}<br/>
                             {item.message}
                             </div>)})} </div>}
                     </div>
