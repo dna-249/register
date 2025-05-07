@@ -35,9 +35,9 @@ const Chat = () => {
   return (
     <>
     <div className='center'>
-        <div   className={"bgUserB seven"}>
+        <div   className={"bgUserB"}>
              <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
-
+              
               <div className='two' >
                          <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
                          </div>
@@ -54,6 +54,7 @@ const Chat = () => {
                         </div>
                      
                 </div>
+                <div className='seven'>
     <div className="white">
        <h3>Chat</h3>
     <div className='white2'>
@@ -107,6 +108,7 @@ const Chat = () => {
                              <div className="dropDown"></div>
                  
 
+        </div>
         </div>
         </div>
         </div>
