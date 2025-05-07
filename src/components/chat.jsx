@@ -60,7 +60,11 @@ const Chat = () => {
                     <div className='twoA'>
                     <div className="dropDown">
                         {adm? <div className="break">{adm}</div>
-                        :<div>{name?.managementChat?.map((item,index)=>{return(<div key={index}>{item}</div>)})} </div>}
+                        :<div>{name?.managementChat?.map((item,index)=>{return(<div key={index}>
+                            {item.date}
+                            {item.subject}
+                            {item.message}
+                            </div>)})} </div>}
                     </div>
                     <textarea className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
                  </div>
