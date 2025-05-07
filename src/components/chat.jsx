@@ -57,19 +57,17 @@ const Chat = () => {
                     </div>
 
                     <h4>Previous:</h4>
+                    <select onChange={(e)=>setType(e.target.value)}>
+                        <option value="">select</option>
+                        <option value="all">All</option>
+                        <option value="management">Management Only</option>
+                        <option value="staff">Staff Only</option>
+                        <option value="student">Student Only</option>
+                        </select> 
                     <div className='twoA'>
                     <div className="dropDown">
                         {adm? <div className="break">{adm}</div>
-                        :<div>{name?.managementChat?.map((item,index)=>{return(<div key={index}>
-                            {item.date}
-                            {item.subject}
-                            {item.message}
-                            </div>)})}
-                            {name?.staffChat?.map((item,index)=>{return(<div key={index}>
-                            {item.date}
-                            {item.subject}
-                            {item.message}
-                            </div>)})}{name?.studentChat?.map((item,index)=>{return(<div key={index}>
+                        :<div>{name?.[`${type}Chat`]?.map((item,index)=>{return(<div key={index}>
                             {item.date}
                             {item.subject}
                             {item.message}
@@ -80,16 +78,18 @@ const Chat = () => {
                     </div>
                  </div>
         <div className="white">
-                 <div className='white2'> <h4>From Management</h4>
+                 <div className='white2'> <h4>From: {type}
+    <select onChange={(e)=>setType(e.target.value)}>
+      <option value="">select</option>
+      <option value="all">All</option>
+      <option value="management">Management Only</option>
+      <option value="staff">Staff Only</option>
+      <option value="student">Student Only</option>
+    </select> </h4>
                              <div className="dropDown"></div>
-                 </div>
-                 <div className='white2'><h4>From Staff</h4>
-                             <div className="dropDown"></div>
-                 </div>
-                 <div className='white2'><h4>From Student</h4>
-                             <div className="dropDown"></div>
-                 </div>
+                 
 
+        </div>
         </div>
         </div>
     
