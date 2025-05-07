@@ -25,7 +25,7 @@ const Chat = () => {
             date:Date().slice(0,21),
             subject:adm2,
             message:adm,
-            Id:id
+            id:id
         })
                    .then((res)=>{alert(`sent successfully`);setAuto(pre =>!pre);setAdm("")})
                    .catch((err)=> console.log(err))
@@ -96,7 +96,7 @@ const Chat = () => {
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
-                            {item.Id}
+                            {item.id}
                             </div>)})} </div>}
                     </div>
                  <div className='white2'> <h4>From: {type}
