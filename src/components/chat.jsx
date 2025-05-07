@@ -38,7 +38,7 @@ const Chat = () => {
         <div   className={"bgUserB"}>
              <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
               
-              <div className='two' >
+              <div >
                          <div style={{marginTop:"20px"}}> {name?<div> <img className='img' src={name?.image} />
                          </div>
                                         :
