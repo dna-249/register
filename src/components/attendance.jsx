@@ -34,7 +34,7 @@ const Attendance =()=>{
     }
 
     const handleRegister = async(add)=>{
-           await axios.put(`https://database-api-eight.vercel.app/student/${add}`,
+           await axios.put(`https://database-api-eight.vercel.app/student/push/${add}/attend`,
             {
             date:Date().slice(0,21),
             mon:'a',

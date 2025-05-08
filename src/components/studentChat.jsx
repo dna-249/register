@@ -21,6 +21,8 @@ const StudentChat = () => {
                    .then((res)=>{console.log(res.data); setName(res.data)})
                    .catch((err)=> console.log(err))
  },[id,auto])
+ 
+
  const handleCreate = (params) => {
      axios.put(`https://database-api-eight.vercel.app/${id2}/push/${id}/${type}Chat`,
         {
