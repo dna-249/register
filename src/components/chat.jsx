@@ -8,19 +8,21 @@ const Chat = () => {
  const [auto,setAuto] = useState(false);
  const [name,setName] = useState();
  const [adm2,setAdm2] = useState();
- const [type,setType] = useState("management");
+
+ const {id,id2} = useParams()
+ const [type,setType] = useState(id2);
  const nav  = useNavigate()
- const {id} = useParams()
+ 
 
  
 
  useEffect(()=>{
-    axios.get(`https://database-api-eight.vercel.app/management/${id}`)
+    axios.get(`https://database-api-eight.vercel.app/${id2}/${id}`)
                    .then((res)=>{console.log(res.data); setName(res.data)})
                    .catch((err)=> console.log(err))
  },[id,auto])
  const handleCreate = (params) => {
-     axios.put(`https://database-api-eight.vercel.app/management/push/${id}/${type}Chat`,
+     axios.put(`https://database-api-eight.vercel.app/${id2}/push/${id}/${type}Chat`,
         {
             date:Date().slice(0,21),
             subject:adm2,
@@ -91,13 +93,12 @@ const Chat = () => {
                         </select> 
                    
                     <div className="dropDown">
-                        {adm? <div className="break">{adm}</div>
-                        :<div>{name?.[`${type}Chat`]?.map((item,index)=> {return(<div key={index}>
+                        {name?.[`${type}Chat`]?.map((item,index)=> {return(<div key={index}>
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
-                            {item.id}
-                            </div>)})} </div>}
+                          
+                            </div>)})} 
                     </div>
                  <div className='white2'> <h4>From: {type}
     <select onChange={(e)=>setType(e.target.value)}>
@@ -166,13 +167,12 @@ const Chat = () => {
                         </select> 
                    
                     <div className="dropDown">
-                        {adm? <div className="break">{adm}</div>
-                        :<div>{name?.[`${type}Chat`]?.map((item,index)=>{return(<div key={index}>
+                        
+                        {name?.[`${type}Chat`]?.map((item,index)=>{return(<div key={index}>
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
-                            {item.Id}
-                            </div>)})} </div>}
+                            </div>)})}
                     </div>
                  <div className='white2'> <h4>From: {type}
     <select onChange={(e)=>setType(e.target.value)}>

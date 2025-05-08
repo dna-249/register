@@ -56,7 +56,7 @@ return (<div>
       <Route path='/profile/:id/:id2' element={<Profile/>}/>
       <Route path='/attendance/:id' element={<Attendance />}/>
       <Route path='/update/:id' element={<Update />}/>
-      <Route path='/chat/:id' element={<Chat />}/>
+      <Route path='/chat/:id2/:id' element={<Chat />}/>
     </Routes>
   </div>)
 }
