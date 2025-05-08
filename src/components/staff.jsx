@@ -42,7 +42,7 @@ const Staff = ({setBack}) => {
                          :
                          <FaUser className='img'/>}</div>
          <div  className='three2 icons'>
-
+                <div onClick={()=>nav(`/chat/staff/${id}`)}>Notice</div>
                 <div onClick={()=>nav(`/activity/${staff._id}`)}>Activity</div>
                 <div onClick={()=>nav(`/question/${staff._id}`)}>Attendance </div>
                 <div onClick={()=>nav(`/profile/staff/${staff._id}`)}>profile</div>
@@ -51,6 +51,7 @@ const Staff = ({setBack}) => {
                 <div>{toggle?(
   <div className='bars'   onClick={()=>setToggle(pre => !pre)}><FaBars/></div>):(
     <div className="icons bars">
+      <div onClick={()=>nav(`/chat/staff/${id}`)}>Notice</div> 
         <div onClick={()=>nav(`/activity/${staff._id}`)}>Activity</div>
                 <div onClick={()=>nav(`/question/${staff._id}`)}>Attendance </div>
                 <div onClick={()=>nav(`/profile/staff/${staff._id}`)}>profile</div>

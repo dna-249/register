@@ -78,19 +78,19 @@ const Chat = () => {
                  
      <div className='twoA'><h4>Message:</h4>  <button className='click1' onClick={()=>handleCreate()}> send</button>
                     </div>
-                    <textarea value={adm} className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
+                    <textarea value={adm} className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='message...'/>
                 
                     </div>
                  </div>
         <div className="white2">
-        <h4>Previous:</h4>
+        <h4>Previous:{type}
                     <select onChange={(e)=>setType(e.target.value)}>
                         <option value="">select</option>
                         <option value="all">All</option>
                         <option value="management">Management Only</option>
                         <option value="staff">Staff Only</option>
                         <option value="student">Student Only</option>
-                        </select> 
+                        </select> </h4>
                    
                     <div className="dropDown">
                         {name?.[`${type}Chat`]?.map((item,index)=> {return(<div key={index}>
@@ -98,7 +98,7 @@ const Chat = () => {
                             {item.subject}<br/>
                             {item.message}
                           
-                            </div>)})} 
+                             </div>)})} 
                     </div>
                  <div className='white2'> <h4>From: {type}
     <select onChange={(e)=>setType(e.target.value)}>
@@ -133,7 +133,7 @@ const Chat = () => {
                      
                 </div>
 <div className="white">
-       <h2>Chat</h2>
+<h2>Chats</h2>
     <div className='white2'>
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
@@ -152,19 +152,19 @@ const Chat = () => {
                  
      <div className='twoA'><h4>Message:</h4>  <button className='click1' onClick={()=>handleCreate()}> send</button>
                     </div>
-                    <textarea value={adm} className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
+                    <textarea value={adm} className='dropDown'  style={{margin:"5px"}} cols={30}  rows={7} onChange={(e)=>setAdm(e.target.value)} placeholder='message...'/>
                 
                     </div>
                  </div>
         <div className="white2">
-        <h4>Previous:</h4>
+        <h4>Previous:{type}
                     <select onChange={(e)=>setType(e.target.value)}>
                         <option value="">select</option>
                         <option value="all">All</option>
                         <option value="management">Management Only</option>
                         <option value="staff">Staff Only</option>
                         <option value="student">Student Only</option>
-                        </select> 
+                        </select> </h4>
                    
                     <div className="dropDown">
                         
