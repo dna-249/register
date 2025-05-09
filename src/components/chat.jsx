@@ -70,8 +70,7 @@ const Chat = () => {
     <div className='white2'>
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
-           
-      <div>{toggle? <div>  To:  {type}  <h4 onClick={()=>setToggle(false)}>search</h4>
+            To:  {type}  <span onClick={()=>setToggle(false)}>search  <FaSearch/></span>
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
@@ -79,9 +78,11 @@ const Chat = () => {
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
     </select> <br />
+           
+      <div>{toggle? <div>  
     </div>
     :<div>
-     To:<input type='text' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
+     To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
     <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
                              {item.name}<br/>
                              </div>)})} </div>
@@ -89,7 +90,7 @@ const Chat = () => {
       </div>}</div>
 
      Subject:  {adm2?.toUpperCase()}</h4>
-              <input style={{margin:"5px"}} className='input' onChange={(e)=>setAdm2(e.target.value)} />
+              <input style={{margin:"5px"}}  className='input' onChange={(e)=>setAdm2(e.target.value)} />
                  
      <div className='twoA'><h4>Message:</h4>  <button className='click1' onClick={()=>handleCreate()}> send</button>
                     </div>
@@ -158,7 +159,7 @@ const Chat = () => {
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
            
-        To:  {type}
+       To:  {type}  <span onClick={()=>setToggle(false)}>search  <FaSearch/></span>
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
@@ -166,7 +167,16 @@ const Chat = () => {
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
     </select> <br />
+           
+      <div>{toggle? <div>  
+    </div>
+    :<div>
+     To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
+    <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
+                             {item.name}<br/>
+                             </div>)})} </div>
 
+      </div>}</div>
      Subject:  {adm2?.toUpperCase()}</h4>
               <input style={{margin:"5px"}} className='input' onChange={(e)=>setAdm2(e.target.value)} />
                  
