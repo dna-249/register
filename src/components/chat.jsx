@@ -11,6 +11,8 @@ const Chat = () => {
  const [adm2,setAdm2] = useState();
  const [toggle,setToggle] = useState(true);
  const [search,setSearch] = useState('');
+ const [select,setSelect] = useState('');
+ const [selectId,setSelectId] = useState('');
 
  const {id,id2} = useParams()
  const [type,setType] = useState(id2);
@@ -40,7 +42,13 @@ const Chat = () => {
                    .catch((err)=> console.log(err))
       }
  
-
+ const handleSelect = (params) => {
+   setSelect(()=>{if(params)return params 
+   else return type})
+   setSelectId(()=>{if(params)return params._id 
+   else return id})
+ }
+ 
  
   return (
     <>
@@ -70,20 +78,23 @@ const Chat = () => {
     <div className='white2'>
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
-            To:  {type}  <span onClick={()=>setToggle(false)}>search  <FaSearch/></span>
+            To:  {select}  
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
       <option value="management">Management Only</option>
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
-    </select> <br />
+    </select>   
+    <button className='' onClick={()=>setToggle(false)}><FaSearch/></button><br />
+           
            
       <div>{toggle? <div>  
     </div>
     :<div>
      To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
-    <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
+    <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
+       {return(<div key={index} onClick={()=>handleSelect(name)}>
                              {item.name}<br/>
                              </div>)})} </div>
 
@@ -159,19 +170,20 @@ const Chat = () => {
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
            
-       To:  {type}  <span onClick={()=>setToggle(false)}>search  <FaSearch/></span>
+       To:  {type}  
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
       <option value="management">Management Only</option>
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
-    </select> <br />
+    </select>   
+    <button className='' onClick={()=>setToggle(false)}><FaSearch/></button><br />
            
       <div>{toggle? <div>  
     </div>
     :<div>
-     To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
+     To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/>
     <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
                              {item.name}<br/>
                              </div>)})} </div>
