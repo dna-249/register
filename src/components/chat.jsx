@@ -23,7 +23,7 @@ const Chat = () => {
     axios.get(`https://database-api-eight.vercel.app/${id2}/${id}`)
                    .then((res)=>{console.log(res.data); setName(res.data)})
                    .catch((err)=> console.log(err))
-    axios.get(`https://database-api-eight.vercel.app/management`)
+    axios.get(`https://database-api-eight.vercel.app/${type}`)
                    .then((res)=>{console.log(res.data); setNames(res.data)})
                    .catch((err)=> console.log(err))
 
