@@ -43,7 +43,7 @@ const Chat = () => {
       }
  
  const handleSelect = (params) => {
-   setSelect(()=>{if(params)return params 
+   setSelect(()=>{if(params)return params.name 
    else return type})
    setSelectId(()=>{if(params)return params._id 
    else return id})
