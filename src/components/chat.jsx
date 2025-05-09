@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useParams,useNavigate } from "react-router-dom"
-import { FaUser, FaArrowCircleLeft } from 'react-icons/fa';
+import { FaUser, FaArrowCircleLeft, FaSearch } from 'react-icons/fa';
 import axios from 'axios';
 
 const Chat = () => {
@@ -8,6 +8,8 @@ const Chat = () => {
  const [auto,setAuto] = useState(false);
  const [name,setName] = useState();
  const [adm2,setAdm2] = useState();
+ const [toggle,setToggle] = useState(false);
+ const [search,setSearch] = useState();
 
  const {id,id2} = useParams()
  const [type,setType] = useState(id2);
@@ -64,7 +66,7 @@ const Chat = () => {
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
            
-        To:  {type}
+      <div>{toggle? <div>  To:  {type}
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
@@ -72,6 +74,17 @@ const Chat = () => {
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
     </select> <br />
+    </div>
+    :<div>
+     To:<input type='text' onClick={()=>setSearch(e.target.value)} placeholder={<FaSearch/>}/>
+    <div> {name?.[`${type}Chat`]?.filter((item)=>{return search.lowerCase()? item : item.lowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
+                            {item.date}<br/>
+                            {item.subject}<br/>
+                            {item.message}
+                          
+                             </div>)})} </div>
+
+      </div>}</div>
 
      Subject:  {adm2?.toUpperCase()}</h4>
               <input style={{margin:"5px"}} className='input' onChange={(e)=>setAdm2(e.target.value)} />
@@ -108,8 +121,13 @@ const Chat = () => {
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
     </select> </h4>
-                             <div className="dropDown"></div>
-                 
+              <div className="dropDown"></div>
+           {name?.[`${type}Chat`]?.map((item,index)=> {return(<div key={index}>
+                            {item.date}<br/>
+                            {item.subject}<br/>
+                            {item.message}
+                          
+                             </div>)})}  
 
         </div>
         </div>
