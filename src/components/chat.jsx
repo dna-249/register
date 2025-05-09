@@ -81,7 +81,7 @@ const Chat = () => {
     </select> <br />
     </div>
     :<div>
-     To:<input type='text' onClick={()=>setSearch(e.target.value)} placeholder={<FaSearch/>}/>
+     To:<input type='text' onClick={()=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
     <div> {names?.filter((item)=>{return search === ""? item : item?.name.includes(search)}).map((item,index)=> {return(<div key={index}>
                             {item.name}<br/>
                              </div>)})} </div>
