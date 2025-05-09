@@ -77,7 +77,7 @@ const Chat = () => {
     </div>
     :<div>
      To:<input type='text' onClick={()=>setSearch(e.target.value)} placeholder={<FaSearch/>}/>
-    <div> {name?.[`${type}Chat`]?.filter((item)=>{return search.lowerCase()? item : item.lowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
+    <div> {name?.[`${type}Chat`]?.filter((item)=>{return search?.lowerCase()? item : item?.lowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
