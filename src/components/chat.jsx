@@ -8,7 +8,7 @@ const Chat = () => {
  const [auto,setAuto] = useState(false);
  const [name,setName] = useState();
  const [adm2,setAdm2] = useState();
- const [toggle,setToggle] = useState(false);
+ const [toggle,setToggle] = useState(true);
  const [search,setSearch] = useState();
 
  const {id,id2} = useParams()
@@ -66,7 +66,7 @@ const Chat = () => {
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
            
-      <div>{toggle? <div>  To:  {type}
+      <div>{toggle? <div>  To:  {type}  <h4 onClick={()=>setToggle(false)}>search</h4>
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
