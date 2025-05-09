@@ -7,6 +7,7 @@ const Chat = () => {
  const [adm,setAdm]   = useState();
  const [auto,setAuto] = useState(false);
  const [name,setName] = useState();
+ const [names,setNames] = useState();
  const [adm2,setAdm2] = useState();
  const [toggle,setToggle] = useState(true);
  const [search,setSearch] = useState();
@@ -22,6 +23,10 @@ const Chat = () => {
     axios.get(`https://database-api-eight.vercel.app/${id2}/${id}`)
                    .then((res)=>{console.log(res.data); setName(res.data)})
                    .catch((err)=> console.log(err))
+    axios.get(`https://database-api-eight.vercel.app/management`)
+                   .then((res)=>{console.log(res.data); setNames(res.data)})
+                   .catch((err)=> console.log(err))
+
  },[id,auto])
  const handleCreate = (params) => {
      axios.put(`https://database-api-eight.vercel.app/${id2}/push/${id}/${type}Chat`,
@@ -77,11 +82,8 @@ const Chat = () => {
     </div>
     :<div>
      To:<input type='text' onClick={()=>setSearch(e.target.value)} placeholder={<FaSearch/>}/>
-    <div> {name?.[`${type}Chat`]?.filter((item)=>{return search?.lowerCase()? item : item?.lowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
-                            {item.date}<br/>
-                            {item.subject}<br/>
-                            {item.message}
-                          
+    <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=> {return(<div key={index}>
+                            {item.name}<br/>
                              </div>)})} </div>
 
       </div>}</div>
