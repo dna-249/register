@@ -142,13 +142,13 @@ const Chat = () => {
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
     </select> </h4>
-              <div className="dropDown"></div>
+              <div className="dropDown">
            {name?.[`${type}Chat`]?.map((item,index)=> {return(<div key={index}>
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
                           
-                             </div>)})}  
+                             </div>)})} </div> 
 
         </div>
         </div>
