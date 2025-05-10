@@ -45,6 +45,7 @@ const Chat = () => {
  const handleSelect = (params) => {
   setSelect(()=>params.name);
   setSelectId(()=>params._id)
+  setToggle(true)
  }
  
  const handle = (select) => {
@@ -94,8 +95,8 @@ const Chat = () => {
       <div>{toggle? <div>  
     </div>
     :<div>
-     To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
-    <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
+     <input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
+    <div className='dropDown'> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
        {return(<div key={index} onClick={()=>handleSelect(item)}>
                              {item.name}<br/>
                              </div>)})} </div>
@@ -185,8 +186,8 @@ const Chat = () => {
       <div>{toggle? <div>  
     </div>
     :<div>
-     To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
-    <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
+     <input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
+    <div className='dropDown'> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
        {return(<div key={index} onClick={()=>handleSelect(item)}>
                              {item.name}<br/>
                              </div>)})} </div>
