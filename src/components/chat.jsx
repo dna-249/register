@@ -31,7 +31,7 @@ const Chat = () => {
 
  },[id,auto,type,select])
  const handleCreate = (params) => {
-     axios.put(`https://database-api-eight.vercel.app/${id2}/push/${handle(selectId)}/${type}Chat`,
+     axios.put(`https://database-api-eight.vercel.app/${handle2(type)}/push/${handle(selectId)}/${type}Chat`,
         {
             date:Date().slice(0,21),
             subject:adm2,
@@ -44,14 +44,17 @@ const Chat = () => {
  
  const handleSelect = (params) => {
   setSelect(()=>params.name);
-  setSelectId(()=>params._id)
+  setSelectId(()=>params.myId)
   setToggle(true)
  }
  
  const handle = (select) => {
    if(select) return select;
-   if (type) return type;
    else return type
+ }
+ const handle2 = (select) => {
+   if(select) return select;
+   else return id2
  }
  
   return (
