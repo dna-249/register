@@ -524,6 +524,7 @@ image:active{
   overflow-x: hidden;
   border: 2px solid rgba(110, 108, 108, 0.242);
   border-radius: 5px;
+  box-shadow: 0 0 10px black;
 
 }
 .dropDown2 div{
