@@ -4,15 +4,19 @@ import { FaUser, FaArrowCircleLeft } from 'react-icons/fa';
 import axios from 'axios';
 
 const StudentChat = () => {
- const [adm,setAdm]   = useState();
- const [auto,setAuto] = useState(false);
- const [name,setName] = useState();
- const [adm2,setAdm2] = useState();
-
- const {id,id2} = useParams()
- const [type,setType] = useState(id2);
- const nav  = useNavigate()
+  const [adm,setAdm]   = useState();
+  const [auto,setAuto] = useState(false);
+  const [name,setName] = useState();
+  const [names,setNames] = useState();
+  const [adm2,setAdm2] = useState();
+  const [toggle,setToggle] = useState(true);
+  const [search,setSearch] = useState('');
+  const [select,setSelect] = useState('');
+  const [selectId,setSelectId] = useState('');
  
+  const {id,id2} = useParams()
+  const [type,setType] = useState(id2);
+  const nav  = useNavigate()
 
  
 
@@ -20,11 +24,13 @@ const StudentChat = () => {
     axios.get(`https://database-api-eight.vercel.app/${id2}/${id}`)
                    .then((res)=>{console.log(res.data); setName(res.data)})
                    .catch((err)=> console.log(err))
- },[id,auto])
- 
+    axios.get(`https://database-api-eight.vercel.app/${type}`)
+                   .then((res)=>{console.log(res.data); setNames(res.data)})
+                   .catch((err)=> console.log(err))
 
+ },[id,auto,type,select])
  const handleCreate = (params) => {
-     axios.put(`https://database-api-eight.vercel.app/${id2}/push/${id}/${type}Chat`,
+     axios.put(`https://database-api-eight.vercel.app/${handle2(type)}/push/${handle(selectId)}/${type}Chat`,
         {
             date:Date().slice(0,21),
             subject:adm2,
@@ -35,8 +41,20 @@ const StudentChat = () => {
                    .catch((err)=> console.log(err))
       }
  
-
+ const handleSelect = (params) => {
+  setSelect(()=>params.name);
+  setSelectId(()=>params._id)
+  setToggle(true)
+ }
  
+ const handle = (select) => {
+   if(select) return select;
+   else return type
+ }
+ const handle2 = (select) => {
+   if(select) return select;
+   else return id2
+ }
   return (
     <>
     <div className='center'>
@@ -63,17 +81,31 @@ const StudentChat = () => {
     <div className="white">
        <h2>Chats</h2>
     <div className='white2'>
-            <h2>Set Notice:</h2>
-            <h4>Date:{Date().slice(0,21)}<br/>
            
-        To:  {type}
-     <select onChange={(e)=>setType(e.target.value)}>
-      <option value="">select</option>
-      <option value="staff">Staff Only</option>
-      <option value="student">Student Only</option>
-    </select> <br />
-
-     Subject:  {adm2?.toUpperCase()}</h4>
+           <h4>Date:{Date().slice(0,21)}</h4>
+                      <h4 className='twoA'><span> To:  {handle(select)}  
+                <select onChange={(e)=>setType(e.target.value)}>
+                 <option value="">select</option>
+                 <option value="all">All</option>
+                 <option value="management">Management Only</option>
+                 <option value="staff">Staff Only</option>
+                 <option value="student">Student Only</option>
+               </select></span>   
+               <button className='' onClick={()=>setToggle(false)}><FaSearch/></button></h4>
+                      
+                      
+                 <div>{toggle? <div>  
+               </div>
+               :<div className='dropDown2'>
+                <input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/>
+                {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
+                  {return(<div key={index} onClick={()=>handleSelect(item)}>
+                                        {item.name}<br/>
+                                        </div>)})} 
+           
+                 </div>}</div>
+           
+               <h4> Subject:  {adm2?.toUpperCase()}</h4>
               <input style={{margin:"5px"}} className='input' onChange={(e)=>setAdm2(e.target.value)} />
                  
      <div className='twoA'><h4>Message:</h4>  <button className='click1' onClick={()=>handleCreate()}> send</button>
@@ -133,17 +165,30 @@ const StudentChat = () => {
 <div className="white">
 <h2>Chats</h2>
     <div className='white2'>
-            <h2>Set Notice:</h2>
-            <h4>Date:{Date().slice(0,21)}<br/>
+           <h4>Date:{Date().slice(0,21)}</h4>
+                      <h4 className='twoA'><span> To:  {handle(select)}  
+                <select onChange={(e)=>setType(e.target.value)}>
+                 <option value="">select</option>
+                 <option value="all">All</option>
+                 <option value="management">Management Only</option>
+                 <option value="staff">Staff Only</option>
+                 <option value="student">Student Only</option>
+               </select></span>   
+               <button className='' onClick={()=>setToggle(false)}><FaSearch/></button></h4>
+                      
+                      
+                 <div>{toggle? <div>  
+               </div>
+               :<div className='dropDown2'>
+                <input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/>
+                {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
+                  {return(<div key={index} onClick={()=>handleSelect(item)}>
+                                        {item.name}<br/>
+                                        </div>)})} 
            
-        To:  {type}
-     <select onChange={(e)=>setType(e.target.value)}>
-      <option value="">select</option>
-     <option value="staff">Staff Only</option>
-      <option value="student">Student Only</option>
-    </select> <br />
-
-     Subject:  {adm2?.toUpperCase()}</h4>
+                 </div>}</div>
+           
+               <h4> Subject:  {adm2?.toUpperCase()}</h4>
               <input style={{margin:"5px"}} className='input' onChange={(e)=>setAdm2(e.target.value)} />
                  
      <div className='twoA'><h4>Message:</h4>  <button className='click1' onClick={()=>handleCreate()}> send</button>
