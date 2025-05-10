@@ -29,7 +29,7 @@ const Chat = () => {
                    .then((res)=>{console.log(res.data); setNames(res.data)})
                    .catch((err)=> console.log(err))
 
- },[id,auto,type])
+ },[id,auto,type,select])
  const handleCreate = (params) => {
      axios.put(`https://database-api-eight.vercel.app/${id2}/push/${handle(selectId)}/${type}Chat`,
         {
@@ -43,8 +43,8 @@ const Chat = () => {
       }
  
  const handleSelect = (params) => {
-  setSelect(params.name);
-  setSelectId(params._id)
+  setSelect(()=>params.name);
+  setSelectId(()=>params._id)
  }
  
  const handle = (select) => {
