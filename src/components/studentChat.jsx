@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useParams,useNavigate } from "react-router-dom"
-import { FaUser, FaArrowCircleLeft } from 'react-icons/fa';
+import { FaUser, FaArrowCircleLeft, FaSearch } from 'react-icons/fa';
 import axios from 'axios';
 
 const StudentChat = () => {
