@@ -31,7 +31,7 @@ const Chat = () => {
 
  },[id,auto,type])
  const handleCreate = (params) => {
-     axios.put(`https://database-api-eight.vercel.app/${id2}/push/${id}/${type}Chat`,
+     axios.put(`https://database-api-eight.vercel.app/${id2}/push/${handle(selectId)}/${type}Chat`,
         {
             date:Date().slice(0,21),
             subject:adm2,
@@ -43,12 +43,13 @@ const Chat = () => {
       }
  
  const handleSelect = (params) => {
-   setSelect(()=>{if(params)return params.name 
-   else return type})
-   setSelectId(()=>{if(params)return params._id 
-   else return id})
+  setSelect(params.name);
+  setSelectId(params._id)
  }
  
+ const handle = (select) => {
+   if(select) return select;else return type
+ }
  
   return (
     <>
@@ -78,7 +79,7 @@ const Chat = () => {
     <div className='white2'>
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
-            To:  {select}  
+            To:  {handle(select)}  
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
