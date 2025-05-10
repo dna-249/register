@@ -50,6 +50,7 @@ const Chat = () => {
  
  const handle = (select) => {
    if(select) return select;
+   if (type) return type;
    else return type
  }
  
