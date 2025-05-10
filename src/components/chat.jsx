@@ -44,7 +44,7 @@ const Chat = () => {
  
  const handleSelect = (params) => {
   setSelect(()=>params.name);
-  setSelectId(()=>params.myId)
+  setSelectId(()=>params._id)
   setToggle(true)
  }
  
