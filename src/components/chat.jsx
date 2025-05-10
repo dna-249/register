@@ -79,9 +79,9 @@ const Chat = () => {
     <div className="white">
        <h2>Chats</h2>
     <div className='white2'>
-            <h2>Set Notice:</h2>
-            <h4>Date:{Date().slice(0,21)}<br/>
-            To:  {handle(select)}  
+           
+            <h4>Date:{Date().slice(0,21)}</h4>
+           <h4> To:  {handle(select)}  
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
@@ -96,7 +96,7 @@ const Chat = () => {
     </div>
     :<div>
      <input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
-    <div className='dropDown'> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
+    <div className='dropDown2'> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
        {return(<div key={index} onClick={()=>handleSelect(item)}>
                              {item.name}<br/>
                              </div>)})} </div>
@@ -170,10 +170,8 @@ const Chat = () => {
 <div className="white">
 <h2>Chats</h2>
     <div className='white2'>
-            <h2>Set Notice:</h2>
-            <h4>Date:{Date().slice(0,21)}<br/>
-           
-       To:  {handle(select)} 
+           <h4>Date:{Date().slice(0,21)}</h4>
+           <h4> To:
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
@@ -187,7 +185,7 @@ const Chat = () => {
     </div>
     :<div>
      <input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
-    <div className='dropDown'> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
+    <div className='dropDown2'> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
        {return(<div key={index} onClick={()=>handleSelect(item)}>
                              {item.name}<br/>
                              </div>)})} </div>

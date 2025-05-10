@@ -512,6 +512,35 @@ image:active{
   border-radius: 5px;
   color: white;
 }
+
+.dropDown2{
+  display: grid;
+  position: absolute;
+  font-weight: bold;
+  background-color:beige;
+  width: 250px;
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 2px solid rgba(110, 108, 108, 0.242);
+  border-radius: 5px;
+
+}
+.dropDown2 div{
+  display:grid;
+  border-top: 1px solid rgba(172, 255, 47, 0.382);
+  padding: 5px;
+  margin-top: 1px;
+  align-items: center;
+  
+  
+}
+
+.dropDown2 div:hover{
+  background-color: rgb(40, 65, 40);
+  border-radius: 5px;
+  color: white;
+}
 .data{
   display:none;
 }
