@@ -43,14 +43,13 @@ const Chat = () => {
       }
  
  const handleSelect = (params) => {
-  setSelect("")
   setSelect(()=>params.name);
   setSelectId(()=>params._id)
   setToggle(true)
  }
  
  const handle = (select) => {
-   if(select !== '') return select;
+   if(select) return select;
    else return type
  }
  
@@ -82,15 +81,15 @@ const Chat = () => {
     <div className='white2'>
            
             <h4>Date:{Date().slice(0,21)}</h4>
-           <h4> To:  {handle(select)}  
+           <h4 className='twoA'><span> To:  {handle(select)}  
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
       <option value="management">Management Only</option>
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
-    </select>   
-    <button className='' onClick={()=>setToggle(false)}><FaSearch/></button><br />
+    </select></span>   
+    <button className='' onClick={()=>setToggle(false)}><FaSearch/></button></h4>
            
            
       <div>{toggle? <div>  
@@ -104,7 +103,7 @@ const Chat = () => {
 
       </div>}</div>
 
-     Subject:  {adm2?.toUpperCase()}</h4>
+    <h4> Subject:  {adm2?.toUpperCase()}</h4>
               <input style={{margin:"5px"}}  className='input' onChange={(e)=>setAdm2(e.target.value)} />
                  
      <div className='twoA'><h4>Message:</h4>  <button className='click1' onClick={()=>handleCreate()}> send</button>
@@ -172,19 +171,20 @@ const Chat = () => {
 <h2>Chats</h2>
     <div className='white2'>
            <h4>Date:{Date().slice(0,21)}</h4>
-           <h4> To:
+           <h4 className='twoA'><span> To:  {handle(select)}  
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
       <option value="management">Management Only</option>
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
-    </select>   
-    <button className='' onClick={()=>setToggle(false)}><FaSearch/></button><br />
+    </select></span>   
+    <button className='' onClick={()=>setToggle(false)}><FaSearch/></button></h4>
+           
            
       <div>{toggle? <div>  
     </div>
-     :<div className='dropDown2'>
+    :<div className='dropDown2'>
      <input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/>
      {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
        {return(<div key={index} onClick={()=>handleSelect(item)}>
@@ -192,7 +192,8 @@ const Chat = () => {
                              </div>)})} 
 
       </div>}</div>
-     Subject:  {adm2?.toUpperCase()}</h4>
+
+    <h4> Subject:  {adm2?.toUpperCase()}</h4>
               <input style={{margin:"5px"}} className='input' onChange={(e)=>setAdm2(e.target.value)} />
                  
      <div className='twoA'><h4>Message:</h4>  <button className='click1' onClick={()=>handleCreate()}> send</button>
