@@ -171,7 +171,7 @@ const Chat = () => {
             <h2>Set Notice:</h2>
             <h4>Date:{Date().slice(0,21)}<br/>
            
-       To:  {type}  
+       To:  {handle(select)} 
      <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
       <option value="all">All</option>
