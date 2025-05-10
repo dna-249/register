@@ -48,7 +48,8 @@ const Chat = () => {
  }
  
  const handle = (select) => {
-   if(select) return select;else return type
+   if(select) return select;
+   else return type
  }
  
   return (
@@ -95,7 +96,7 @@ const Chat = () => {
     :<div>
      To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
     <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
-       {return(<div key={index} onClick={()=>handleSelect(name)}>
+       {return(<div key={index} onClick={()=>handleSelect(item)}>
                              {item.name}<br/>
                              </div>)})} </div>
 
@@ -186,7 +187,7 @@ const Chat = () => {
     :<div>
      To:<input type='text' className='input' onChange={(e)=>setSearch(e.target.value)} placeholder={"search"}/><FaSearch/>
     <div> {names?.filter((item)=>{return search.toLowerCase() === ""? item : item.name.toLowerCase().includes(search)}).map((item,index)=>
-       {return(<div key={index} onClick={()=>handleSelect(name)}>
+       {return(<div key={index} onClick={()=>handleSelect(item)}>
                              {item.name}<br/>
                              </div>)})} </div>
 
