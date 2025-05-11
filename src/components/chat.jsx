@@ -135,14 +135,15 @@ const Chat = () => {
                     <div className="dropDown">
                         {name?.[`${type}Chat`]?.map((item,index)=> {return(<div onClick={()=>handleSelect2(item)} key={index}>
                             {item.date}<br/>
-                            {item.subject.toUpperCase()}<br/>
+                            {item.subject}<br/>
                             {item.message}
-                          <button onClick={()=>setToggle2(true)}>Back</button>
-                             </div>)})} 
+                               </div>)})} 
                     </div>:<div>
                             {item.date}
-                            {item.subject}
+                            {item?.subject?.toUpperCase()}
                             {item.message}
+           <button onClick={()=>setToggle2(true)}>Back</button>
+                        
 
                       </div>}
                  <div className='white2'> <h4>From: {type}
