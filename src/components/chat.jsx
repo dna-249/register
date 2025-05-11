@@ -50,8 +50,8 @@ const Chat = () => {
   setToggle(true)
  }
  const handleSelect2 = (params) => {
-  setItem(()=>params.name);
-  setToggle(false)
+  setItem(()=>params);
+  setToggle2(false)
  }
  
  const handle = (select) => {
@@ -135,9 +135,9 @@ const Chat = () => {
                     <div className="dropDown">
                         {name?.[`${type}Chat`]?.map((item,index)=> {return(<div onClick={()=>handleSelect2(item)} key={index}>
                             {item.date}<br/>
-                            {item.subject}<br/>
+                            {item.subject.toUpperCase()}<br/>
                             {item.message}
-                          
+                          <button onClick={()=>setToggle2(true)}>Back</button>
                              </div>)})} 
                     </div>:<div>
                             {item.date}
