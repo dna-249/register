@@ -9,10 +9,10 @@ body {
 
   }
   .break{
-    display: flex;
+    display: grid;
     word-break: keep-all;
     width: 150px;
-    justify-content: stretch;
+    
   }
 .signUp{
   min-width: 320px;
