@@ -43,6 +43,13 @@ const Chat = () => {
                    .then((res)=>{alert(`sent successfully`);setAuto(pre =>!pre);setAdm("")})
                    .catch((err)=> console.log(err))
       }
+
+  const handleDelete = (params) => {
+    axios.put(`https://database-api-eight.vercel.app/management/pull/${handle2(type)}/${item._id}`)
+    .then((res)=>{alert(`message deleted`);setAuto((prev)=>!prev)})
+    .catch((err)=> console.log(err))
+
+  }
  
  const handleSelect = (params) => {
   setSelect(()=>params.name);
@@ -144,6 +151,7 @@ const Chat = () => {
                             {item.message}<br/>
                             {item.date}</h5>
            <button onClick={()=>setToggle2(true)}>Back</button>
+           <button onClick={()=>handleDelete()}>Delete</button>
                         
 
                       </div>}

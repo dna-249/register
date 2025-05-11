@@ -11,8 +11,7 @@ body {
   .break{
     display: grid;
     word-break: keep-all;
-   
-    background-color:beige;
+  background-color:beige;
   width: 250px;
   height: 100px;
   overflow-y: scroll;
