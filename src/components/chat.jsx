@@ -11,6 +11,7 @@ const Chat = () => {
  const [adm2,setAdm2] = useState();
  const [toggle,setToggle] = useState(true);
  const [toggle2,setToggle2] = useState(true);
+ const [toggle3,setToggle3] = useState(true);
  const [search,setSearch] = useState('');
  const [select,setSelect] = useState('');
  const [item,setItem] = useState('');
@@ -59,6 +60,10 @@ const Chat = () => {
  const handleSelect2 = (params) => {
   setItem(()=>params);
   setToggle2(false)
+ }
+ const handleSelect3 = (params) => {
+  setItem(()=>params);
+  setToggle3(false)
  }
  
  const handle = (select) => {
@@ -155,9 +160,10 @@ const Chat = () => {
                            <h5>{item?.subject?.toUpperCase()}<br/> 
                             {item.message}<br/>
                             {item.date}</h5>
+                            <div className="twoA">
            <button onClick={()=>setToggle2(true)}>Back</button>
            <button onClick={()=>handleDelete()}>Delete</button>
-                        
+                        </div>
 
                       </div>}
                  <div className='white2'> <h4>From: {type}
@@ -168,13 +174,24 @@ const Chat = () => {
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
     </select> </h4>
-              <div className="dropDown">
-           {name?.[`${type}Chat`]?.map((item,index)=> {return(<div key={index}>
+              {toggle3? 
+                    <div className="dropDown">
+                        {name?.[`${type}Chat`]?.map((item,index)=> {return(<div onClick={()=>handleSelect3(item)} key={index}>
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
-                          
-                             </div>)})} </div> 
+                               </div>)})} 
+                    </div>:<div className='break white2'>
+                           
+                           <h5>{item?.subject?.toUpperCase()}<br/> 
+                            {item.message}<br/>
+                            {item.date}</h5>
+                            <div className="twoA">
+           <button onClick={()=>setToggle3(true)}>Back</button>
+           <button onClick={()=>handleDelete()}>Delete</button>
+                        </div>
+
+                      </div>} 
 
         </div>
         </div>
@@ -242,14 +259,24 @@ const Chat = () => {
                         <option value="student">Student Only</option>
                         </select> </h4>
                    
+                    {toggle2? 
                     <div className="dropDown">
-                        
-                        {name?.[`${type}Chat`]?.map((item,index)=>{return(<div key={index}>
+                        {name?.[`${type}Chat`]?.map((item,index)=> {return(<div onClick={()=>handleSelect2(item)} key={index}>
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
-                            </div>)})}
-                    </div>
+                               </div>)})} 
+                    </div>:<div className='break white2'>
+                           
+                           <h5>{item?.subject?.toUpperCase()}<br/> 
+                            {item.message}<br/>
+                            {item.date}</h5>
+                            <div className="twoA">
+           <button onClick={()=>setToggle2(true)}>Back</button>
+           <button onClick={()=>handleDelete()}>Delete</button>
+                        </div>
+
+                      </div>}
                  <div className='white2'> <h4>From: {type}
     <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
@@ -258,7 +285,24 @@ const Chat = () => {
       <option value="staff">Staff Only</option>
       <option value="student">Student Only</option>
     </select> </h4>
-                             <div className="dropDown"></div>
+                             {toggle3? 
+                    <div className="dropDown">
+                        {name?.[`${type}Chat`]?.map((item,index)=> {return(<div onClick={()=>handleSelect3(item)} key={index}>
+                            {item.date}<br/>
+                            {item.subject}<br/>
+                            {item.message}
+                               </div>)})} 
+                    </div>:<div className='break white2'>
+                           
+                           <h5>{item?.subject?.toUpperCase()}<br/> 
+                            {item.message}<br/>
+                            {item.date}</h5>
+                            <div className="twoA">
+           <button onClick={()=>setToggle3(true)}>Back</button>
+           <button onClick={()=>handleDelete()}>Delete</button>
+                        </div>
+
+                      </div>}
                  
 
         </div>
