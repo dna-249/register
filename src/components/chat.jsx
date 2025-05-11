@@ -140,8 +140,8 @@ const Chat = () => {
                                </div>)})} 
                     </div>:<div className='break white2'>
                            
-                           <h4>{item?.subject?.toUpperCase()}</h4> 
-                           <h5> {item.message}<br/>
+                           <h5>{item?.subject?.toUpperCase()}<br/> 
+                            {item.message}<br/>
                             {item.date}</h5>
            <button onClick={()=>setToggle2(true)}>Back</button>
                         
