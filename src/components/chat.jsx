@@ -45,7 +45,7 @@ const Chat = () => {
       }
 
   const handleDelete = (params) => {
-    axios.put(`https://database-api-eight.vercel.app/management/pull/${handle2(type)}/${item._id}`)
+    axios.put(`https://database-api-eight.vercel.app/${handle2(type)}/pull/${handle(selectId)}/${item._id}`)
     .then((res)=>{alert(`message deleted`);setAuto((prev)=>!prev)})
     .catch((err)=> console.log(err))
 
