@@ -25,7 +25,7 @@ const Admission = ({id}) => {
      }
 
   const handleDelete = (params) => {
-    axios.put(`https://database-api-eight.vercel.app/management/pull/${id}/${select._id}`)
+    axios.put(`https://database-api-eight.vercel.app/management/pull/${id}/${select._id}/admissions`)
     .then((res)=>{alert(`${adm} admission is deleted`);setAuto((prev)=>!prev)})
     .catch((err)=> console.log(err))
 
