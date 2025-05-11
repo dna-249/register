@@ -197,7 +197,7 @@ const StudentChat = () => {
         </div>
     
 <div   className={"bgUserA"}>
-     <div className='click2' onClick={()=>nav(-1)}><FaArrow CircleLeft /></div>
+     <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
       
 <div className='two' >
     <div style={{marginTop:"20px"}}>
