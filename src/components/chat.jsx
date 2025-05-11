@@ -10,8 +10,10 @@ const Chat = () => {
  const [names,setNames] = useState();
  const [adm2,setAdm2] = useState();
  const [toggle,setToggle] = useState(true);
+ const [toggle2,setToggle2] = useState(true);
  const [search,setSearch] = useState('');
  const [select,setSelect] = useState('');
+ const [item,setItem] = useState('');
  const [selectId,setSelectId] = useState('');
 
  const {id,id2} = useParams()
@@ -46,6 +48,10 @@ const Chat = () => {
   setSelect(()=>params.name);
   setSelectId(()=>params._id)
   setToggle(true)
+ }
+ const handleSelect2 = (params) => {
+  setItem(()=>params.name);
+  setToggle(false)
  }
  
  const handle = (select) => {
@@ -125,15 +131,20 @@ const Chat = () => {
                         <option value="staff">Staff Only</option>
                         <option value="student">Student Only</option>
                         </select> </h4>
-                   
+                   {toggle2? 
                     <div className="dropDown">
-                        {name?.[`${type}Chat`]?.map((item,index)=> {return(<div key={index}>
+                        {name?.[`${type}Chat`]?.map((item,index)=> {return(<div onClick={()=>handleSelect2(item)} key={index}>
                             {item.date}<br/>
                             {item.subject}<br/>
                             {item.message}
                           
                              </div>)})} 
-                    </div>
+                    </div>:<div>
+                            {item.date}
+                            {item.subject}
+                            {item.message}
+
+                      </div>}
                  <div className='white2'> <h4>From: {type}
     <select onChange={(e)=>setType(e.target.value)}>
       <option value="">select</option>
