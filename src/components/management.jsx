@@ -18,6 +18,7 @@ const Management = () => {
   const [name,setName] = useState('')
   const [color,setColor] = useState('')
   const [toggle,setToggle] = useState(true)
+  const [edit,setEdit] = useState(true)
   const [select,setSelect] = useState('1')
   const [show,setShow] = useState(true)
   const nav = useNavigate()
@@ -162,15 +163,23 @@ const Management = () => {
                       </div>
                       </div>
                       
-                      <div><h3> Students</h3>
+                      <div><div className='twoA'><h3> Students</h3><h3 onClick={()=>setEdit(false)}> Update</h3></div>
+                         <div>{edit?
                            <div className="dropDown">
                             {names3?.map((name,index) =>
                                <div onClick={()=>nav(`/student/${name._id}`)} key={index}>
                                         {name.name} 
                                            </div>)}
                             
+                       </div>: <div className="dropDown">
+                            {names3?.map((name,index) =>
+                               <div onClick={()=>nav(`/student/${name._id}`)} key={index}>
+                                        {name.name} 
+                                           </div>)}
+                            
+                       </div>} 
                        </div> 
-                       </div> 
+                </div>
                 </div>
                 </div>
                 || select === "2" && <div><Admission id ={id}/></div>
