@@ -44,7 +44,7 @@ const Staff = ({setBack}) => {
          <div  className='three2 icons'>
                 <div onClick={()=>nav(`/chat/staff/${id}`)}>Notice</div>
                 <div onClick={()=>nav(`/activity/${staff._id}`)}>Activity</div>
-                <div onClick={()=>nav(`/question/${staff._id}`)}>Attendance </div>
+                <div onClick={()=>nav(`/question/${staff._id}`)}>Questions </div>
                 <div onClick={()=>nav(`/profile/staff/${staff._id}`)}>profile</div>
                 </div >
 
@@ -53,7 +53,7 @@ const Staff = ({setBack}) => {
     <div className="icons bars">
       <div onClick={()=>nav(`/chat/staff/${id}`)}>Notice</div> 
         <div onClick={()=>nav(`/activity/${staff._id}`)}>Activity</div>
-                <div onClick={()=>nav(`/question/${staff._id}`)}>Attendance </div>
+                <div onClick={()=>nav(`/question/${staff._id}`)}>Questions </div>
                 <div onClick={()=>nav(`/profile/staff/${staff._id}`)}>profile</div>
                </div>)}
  </div>
