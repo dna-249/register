@@ -172,7 +172,7 @@ const Management = () => {
                                         {name.name} 
                                            </div>)}
                             
-                       </div>:{show? <div className="dropDown">
+                       </div>:<div>{show? <div className="dropDown">
                             {names3?.map((name,index) =>
                                <div onClick={()=>setToggle2(false)} key={index}>
                                         {name.name} 
@@ -181,7 +181,7 @@ const Management = () => {
                         </div> : <div><div className="twoA">
            <button onClick={()=>setToggle(true)}>Back</button>
            <button onClick={()=>handleDelete()}>Delete</button>
-                        </div></div>}} 
+                        </div></div>}</div>} 
                        </div>
                 </div>
                 </div>
