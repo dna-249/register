@@ -164,7 +164,7 @@ const Management = () => {
        {select =="1" &&
                <div className="white2 three4">
                 <div className="scroll">
-                    <div><div className='twoA'><h3 onClick={()=>setEdit1(true)}> Management</h3><h3 onClick={()=>setEdit1(false)}>  </h3></div>
+                    <div><div className='twoA'><h3 onClick={()=>setEdit1(true)}> Managements</h3><h3 onClick={()=>setEdit1(false)}>  </h3></div>
                          
                     <div>{edit1?
                            <div className="dropDown">
