@@ -179,7 +179,7 @@ const Management = () => {
                       </div>
                       </div>
                       
-                      <div><div className='twoA'><h3 onClick={()=>setEdit(false)}> Students</h3><h3 onClick={()=>setEdit(false)}> update</h3></div>
+                      <div><div className='twoA'><h3 onClick={()=>setEdit(true)}> Students</h3><h3 onClick={()=>setEdit(false)}> update</h3></div>
                          <div>{edit?
                            <div className="dropDown">
                             {names3?.map((name,index) =>
