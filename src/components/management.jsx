@@ -198,7 +198,7 @@ const Management = () => {
                         </div>
                          : <div>
                            <img className='img' src={selected?.image} /> 
-                           <h4>{selected.name}</div>
+                           <h4>{selected.name}</h4>
                           <div className="twoA">
                                 <button onClick={()=>setToggle(true)}>Back</button>
                                 <button onClick={()=>handleDelete()}>Delete</button>
