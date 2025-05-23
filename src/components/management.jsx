@@ -65,7 +65,7 @@ const Management = () => {
  }
  const handleDelete = (params) => {
     axios.delete(`https://database-api-eight.vercel.app/${selected2}/${selected._id}`)
-    .then((res)=>{alert(`user deleted`);setAuto((prev)=>!prev)})
+    .then((res)=>{alert(`user deleted`);setAuto((prev)=>!prev);setToggle2(true)})
     .catch((err)=> console.log(err))
 
   }
@@ -179,7 +179,7 @@ const Management = () => {
                       </div>
                       </div>
                       
-                      <div><div className='twoA'><h3> Students</h3><h3 onClick={()=>setEdit(false)}> update</h3></div>
+                      <div><div className='twoA'><h3 onClick={()=>setEdit(false)}> Students</h3><h3 onClick={()=>setEdit(false)}> update</h3></div>
                          <div>{edit?
                            <div className="dropDown">
                             {names3?.map((name,index) =>
@@ -200,7 +200,7 @@ const Management = () => {
                            <img className='img' src={selected?.image} /> 
                            <h4>{selected.name}</h4>
                           <div className="twoA">
-                                <button onClick={()=>setToggle(true)}>Back</button>
+                                <button onClick={()=>setToggle2(true)}>Back</button>
                                 <button onClick={()=>handleDelete()}>Delete</button>
                         </div>
                         </div>}
