@@ -21,7 +21,10 @@ const Management = () => {
   const [toggle2,setToggle2] = useState(true)
   const [edit,setEdit] = useState(true)
   const [select,setSelect] = useState('1')
+  const [selected,setSelected] = useState('')
+  const [selected2,setSelected2] = useState('')
   const [show,setShow] = useState(true)
+  const [auto,setAuto] = useState(true)
   const nav = useNavigate()
   const {id} = useParams()
 
@@ -46,7 +49,7 @@ const Management = () => {
   
   
   
- }, [id])
+ }, [id,auto])
  const colorPerSec = (params) => {
    const color = Math.floor(Math.random() * 1001010)
   setColor(()=>color)
@@ -55,6 +58,18 @@ const Management = () => {
  setTimeout(()=>{
  colorPerSec()
  },5000)
+ const handleSelected = (params,user) => {
+   setToggle2(false)
+   setSelected(params)
+   setSelected2(user)
+ }
+ const handleDelete = (params) => {
+    axios.delete(`https://database-api-eight.vercel.app/${selected2}/delete/${selected._id}`)
+    .then((res)=>{alert(`user deleted`);setAuto((prev)=>!prev)})
+    .catch((err)=> console.log(err))
+
+  }
+ 
  
   return (
     <div className='center' >
@@ -164,7 +179,7 @@ const Management = () => {
                       </div>
                       </div>
                       
-                      <div><div className='twoA'><h3> Students</h3><h3 onClick={()=>setEdit(false)}> Update</h3></div>
+                      <div><div className='twoA'><h3> Students</h3><h3 onClick={()=>setEdit(false)}> update</h3></div>
                          <div>{edit?
                            <div className="dropDown">
                             {names3?.map((name,index) =>
@@ -176,14 +191,17 @@ const Management = () => {
                        :<div style={{background:"aliceblue"}}>
                          {toggle2? <div className="dropDown">
                             {names3?.map((name,index) =>
-                               <div onClick={()=>setToggle2(false)} key={index}>
+                               <div onClick={()=>handleSelected(name,"student")} key={index}>
                                         {name.name} 
                                            </div>)}
                             
                         </div>
-                         : <div><div className="twoA">
-           <button onClick={()=>setToggle(true)}>Back</button>
-           <button onClick={()=>handleDelete()}>Delete</button>
+                         : <div>
+                           <img className='img' src={selected?.image} /> 
+                           <h4>{selected.name}</div>
+                          <div className="twoA">
+                                <button onClick={()=>setToggle(true)}>Back</button>
+                                <button onClick={()=>handleDelete()}>Delete</button>
                         </div>
                         </div>}
                         
