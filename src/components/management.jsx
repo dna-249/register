@@ -169,7 +169,7 @@ const Management = () => {
                     <div>{edit1?
                            <div className="dropDown">
                             {names1?.map((name,index) =>
-                               <div onClick={()=>nav(`/student/${name._id}`)} key={index}>
+                               <div onClick={()=>nav(`/management/${name._id}`)} key={index}>
                                         {name.name} 
                                            </div>)}
                             
@@ -201,7 +201,7 @@ const Management = () => {
                      <div>{edit2?
                            <div className="dropDown">
                             {names2?.map((name,index) =>
-                               <div onClick={()=>nav(`/student/${name._id}`)} key={index}>
+                               <div onClick={()=>nav(`/staff/${name._id}`)} key={index}>
                                         {name.name} 
                                            </div>)}
                             
