@@ -66,7 +66,7 @@ const handleResult = async(params) => {
                  <FaUser className='img'/>}</div>
  <div  className='three2'>
  <div onClick={()=>nav(`/studentChat/student/${name._id}`)}>Notice</div>    
-          <div onClick={()=>nav(`/activity/${name._id}`)}>Activity</div>
+          <div onClick={()=>nav(`/studentActivity/${name._id}`)}>Activity</div>
           <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/update/${name._id}`)}> Update</div>
     </div >

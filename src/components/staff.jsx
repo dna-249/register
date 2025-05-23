@@ -43,7 +43,7 @@ const Staff = ({setBack}) => {
                          <FaUser className='img'/>}</div>
          <div  className='three2 icons'>
                 <div onClick={()=>nav(`/chat/staff/${id}`)}>Notice</div>
-                <div onClick={()=>nav(`/activity/${staff._id}`)}>Activity</div>
+                <div onClick={()=>nav(`/studentActivity/${staff._id}`)}>Activity</div>
                 <div onClick={()=>nav(`/question/${staff._id}`)}>Questions </div>
                 <div onClick={()=>nav(`/profile/staff/${staff._id}`)}>profile</div>
                 </div >
