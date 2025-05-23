@@ -64,7 +64,7 @@ const Management = () => {
    setSelected2(user)
  }
  const handleDelete = (params) => {
-    axios.delete(`https://database-api-eight.vercel.app/${selected2}/delete/${selected._id}`)
+    axios.delete(`https://database-api-eight.vercel.app/${selected2}/${selected._id}`)
     .then((res)=>{alert(`user deleted`);setAuto((prev)=>!prev)})
     .catch((err)=> console.log(err))
 
