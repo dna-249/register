@@ -20,6 +20,8 @@ const Management = () => {
   const [toggle,setToggle] = useState(true)
   const [toggle2,setToggle2] = useState(true)
   const [edit,setEdit] = useState(true)
+  const [edit1,setEdit1] = useState(true)
+  const [edit2,setEdit2] = useState(true)
   const [select,setSelect] = useState('1')
   const [selected,setSelected] = useState('')
   const [selected2,setSelected2] = useState('')
@@ -162,24 +164,70 @@ const Management = () => {
        {select =="1" &&
                <div className="white2 three4">
                 <div className="scroll">
-                    <div><h3>Management</h3>
-                    <div className="dropDown">
-                          {names1?.map((name,index) => 
-                          <div key={index} onClick={()=>nav(`/management/${name._id}`)}> {name.name} </div>
-                          )}
-                      </div>
+                    <div><div className='twoA'><h3 onClick={()=>setEdit1(true)}> Management</h3><h3 onClick={()=>setEdit1(false)}>  </h3></div>
+                         
+                    <div>{edit1?
+                           <div className="dropDown">
+                            {names3?.map((name,index) =>
+                               <div onClick={()=>nav(`/student/${name._id}`)} key={index}>
+                                        {name.name} 
+                                           </div>)}
+                            
+                       </div>
+                       :<div style={{background:"aliceblue",padding:"2px"}}>
+                         {toggle2? <div className="dropDown">
+                            {names3?.map((name,index) =>
+                               <div onClick={()=>handleSelected(name,"management")} key={index}>
+                                        {name.name} 
+                                           </div>)}
+                            
+                        </div>
+                         : <div>
+                           <img className='img' src={selected?.image} /> 
+                           <h4>{selected.name}</h4>
+                          <div className="twoA">
+                                <button onClick={()=>setToggle2(true)}>Back</button>
+                                <button onClick={()=>handleDelete()}>Delete</button>
+                        </div>
+                        </div>}
+                        
+                    </div>} 
+                       </div>
                       </div>
 
                       <div>
-                      <h3> Staff  </h3>
-                      <div className="dropDown">
-                          {names2?.map((name,index) => 
-                          <div key={index} onClick={()=>nav(`/staff/${name._id}`)}> {name.name} </div>
-                          )}
-                      </div>
+                     <div className='twoA'><h3 onClick={()=>setEdit2(true)}> Staff</h3><h3 onClick={()=>setEdit2(false)}>  </h3></div>
+                         
+                     <div>{edit2?
+                           <div className="dropDown">
+                            {names3?.map((name,index) =>
+                               <div onClick={()=>nav(`/student/${name._id}`)} key={index}>
+                                        {name.name} 
+                                           </div>)}
+                            
+                       </div>
+                       :<div style={{background:"aliceblue",padding:"2px"}}>
+                         {toggle2? <div className="dropDown">
+                            {names3?.map((name,index) =>
+                               <div onClick={()=>handleSelected(name,"staff")} key={index}>
+                                        {name.name} 
+                                           </div>)}
+                            
+                        </div>
+                         : <div>
+                           <img className='img' src={selected?.image} /> 
+                           <h4>{selected.name}</h4>
+                          <div className="twoA">
+                                <button onClick={()=>setToggle2(true)}>Back</button>
+                                <button onClick={()=>handleDelete()}>Delete</button>
+                        </div>
+                        </div>}
+                        
+                    </div>} 
+                       </div>
                       </div>
                       
-                      <div><div className='twoA'><h3 onClick={()=>setEdit(true)}> Students</h3><h3 onClick={()=>setEdit(false)}> update</h3></div>
+                      <div><div className='twoA'><h3 onClick={()=>setEdit(true)}> Students</h3><h3 onClick={()=>setEdit(false)}>  </h3></div>
                          <div>{edit?
                            <div className="dropDown">
                             {names3?.map((name,index) =>
@@ -188,7 +236,7 @@ const Management = () => {
                                            </div>)}
                             
                        </div>
-                       :<div style={{background:"aliceblue"}}>
+                       :<div style={{background:"aliceblue",padding:"2px"}}>
                          {toggle2? <div className="dropDown">
                             {names3?.map((name,index) =>
                                <div onClick={()=>handleSelected(name,"student")} key={index}>
