@@ -172,7 +172,9 @@ const Management = () => {
                                         {name.name} 
                                            </div>)}
                             
-                       </div>:<div style={{background:"aliceblue"}}>{show? <div className="dropDown">
+                       </div>
+                       :<div style={{background:"aliceblue"}}>
+                         {toggle2? <div className="dropDown">
                             {names3?.map((name,index) =>
                                <div onClick={()=>setToggle2(false)} key={index}>
                                         {name.name} 
