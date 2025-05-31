@@ -163,7 +163,7 @@ const Management = () => {
 <div className="white three4">
        {select =="1" &&
                <div className="white2 three4">
-                <div className="scroll">
+                <div>
                     <div><div className='twoA'><h3 className='border'  onClick={()=>setEdit1(true)}> Managements</h3><h3 className='border' onClick={()=>setEdit1(false)}>Update  </h3></div>
                          
                     <div>{edit1?
