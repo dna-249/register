@@ -164,7 +164,7 @@ const Management = () => {
        {select =="1" &&
                <div className="white2 three4">
                 <div className="scroll">
-                    <div><div className='twoA'><h3 onClick={()=>setEdit1(true)}> Managements</h3><h3 onClick={()=>setEdit1(false)}>Update  </h3></div>
+                    <div><div className='twoA'><h3 className='border'  onClick={()=>setEdit1(true)}> Managements</h3><h3 className='border' onClick={()=>setEdit1(false)}>Update  </h3></div>
                          
                     <div>{edit1?
                            <div className="dropDown">
@@ -174,7 +174,7 @@ const Management = () => {
                                            </div>)}
                             
                        </div>
-                       :<div style={{background:"aliceblue",padding:"2px"}}>
+                       :<div style={{background:"aliceblue",padding:"10px 0px"}}>
                          {toggle2? <div className="dropDown">
                             {names1?.map((name,index) =>
                                <div onClick={()=>handleSelected(name,"management")} key={index}>
@@ -196,7 +196,7 @@ const Management = () => {
                       </div>
 
                       <div>
-                     <div className='twoA'><h3 onClick={()=>setEdit2(true)}> Staff</h3><h3 onClick={()=>setEdit2(false)}> Update </h3></div>
+                     <div className='twoA'><h3 className='border'  onClick={()=>setEdit2(true)}> Staff</h3><h3 className='border'  onClick={()=>setEdit2(false)}> Update </h3></div>
                          
                      <div>{edit2?
                            <div className="dropDown">
@@ -206,7 +206,7 @@ const Management = () => {
                                            </div>)}
                             
                        </div>
-                       :<div style={{background:"aliceblue",padding:"2px"}}>
+                       :<div style={{background:"aliceblue",padding:"10px 0px"}}>
                          {toggle2? <div className="dropDown">
                             {names2?.map((name,index) =>
                                <div onClick={()=>handleSelected(name,"staff")} key={index}>
@@ -227,7 +227,7 @@ const Management = () => {
                        </div>
                       </div>
                       
-                      <div><div className='twoA'><h3 onClick={()=>setEdit(true)}> Students</h3><h3 onClick={()=>setEdit(false)}>Update  </h3></div>
+                      <div><div className='twoA '><h3  className='border' onClick={()=>setEdit(true)}> Students</h3><h3 onClick={()=>setEdit(false)} className='border'>Update  </h3></div>
                          <div>{edit?
                            <div className="dropDown">
                             {names3?.map((name,index) =>
@@ -236,7 +236,7 @@ const Management = () => {
                                            </div>)}
                             
                        </div>
-                       :<div style={{background:"aliceblue",padding:"2px"}}>
+                       :<div style={{background:"aliceblue",padding:"10px 0px"}}>
                          {toggle2? <div className="dropDown">
                             {names3?.map((name,index) =>
                                <div onClick={()=>handleSelected(name,"student")} key={index}>
