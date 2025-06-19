@@ -149,15 +149,15 @@ const Management = () => {
 
     <div className="two"> 
             <div  className='three2' >
-                <div onClick={()=>setSelect('1')}> Index</div>
-                <div onClick={()=>setSelect('2')}> Admissions</div>
-                <div onClick={()=>setSelect('3')}>Secret_Keys </div>
+                <div className="border" onClick={()=>setSelect('1')}> Index</div>
+                <div className="border" onClick={()=>setSelect('2')}> Admissions</div>
+                <div className="border" onClick={()=>setSelect('3')}>Secret_Keys </div>
               
          </div>
          <div  className='three2'>
-                <div onClick={()=>setSelect('4')}>Classes</div>
-                <div>Results</div>
-                <div  onClick={()=>nav(`/chat/management/${id}`)}>Notice</div>
+                <div className="border" onClick={()=>setSelect('4')}>Classes</div>
+                <div className='border'>Results</div>
+                <div className="border" onClick={()=>nav(`/chat/management/${id}`)}>Notice</div>
          </div>
  </div>
 <div className="white three4">

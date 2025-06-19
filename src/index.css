@@ -24,6 +24,8 @@ body {
     padding:4px 10px;
     border: 1px solid rgba(0, 128, 0, 0.21);
     border-radius: 10px;
+    
+
   }
   .border:hover{
     background-color: green;

@@ -78,7 +78,7 @@ const Question = () => {
                     await axios.put(`https://database-api-eight.vercel.app/staff/set/${id}/${object}/${index}/${key}`,{
                      value:value
                     })
-                              .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); setShow(true); console.log(res.data)})
+                              .then((res)=>{setSelect(pre => !pre); alert("Successfully"); setShow(true); console.log(res.data)})
                               .catch((err)=> console.log(err))
               }
     
@@ -90,7 +90,7 @@ const Question = () => {
                   type:type,
                   time:time
                 })
-                          .then((res)=>{setIsNew(pre => !pre); alert("Successfully"); console.log(res.data)})
+                          .then((res)=>{setIsNew(pre => !pre); alert("Successfully");setSelect(pre => !pre); console.log(res.data)})
                           .catch((err)=> console.log(err))
           }
 
