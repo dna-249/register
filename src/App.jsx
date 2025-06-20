@@ -8,6 +8,8 @@ const SignUp =lazy(()=>import('./components/signup'))
 const Login =lazy(()=>import('./components/login'))
 const User =lazy(()=>import('./components/user'))
 const Chat =lazy(()=>import('./components/chat'))
+const Teacher =lazy(()=>import('./components/teacher'))
+const TeacherUser =lazy(()=>import('./components/teacherUser'))
 const StudentChat =lazy(()=>import('./components/studentChat'))
 const Portal =lazy(()=>import('./components/portal'))
 const Question =lazy(()=>import('./components/question'))
@@ -34,6 +36,8 @@ const App = () => {
 return (<div>
     <Routes>
       <Route path='/' element={<Login/>}/>
+      <Route path='/teacher/:id' element={<Teacher/>}/>
+      <Route path='/teacherUser/:id' element={<TeacherUser/>}/>
       <Route path='/portal' element={<Portal/>}/>
       <Route path='/signUp' element={<SignUp/>}/>
       <Route path='/user/:id' element={<User />}/>
