@@ -23,7 +23,7 @@ const StudentLogin = () => {
   const handleLogin = async () => {
     await axios.post("https://database-api-eight.vercel.app/student/login",{
         name:users,
-        password:password,
+        password:password
       }).then(res =>setToken(res.data)).catch(err => {if(typeof user !== "undefined"){alert(user + "" + "access denied")} else console.log(err)})
    
       }
