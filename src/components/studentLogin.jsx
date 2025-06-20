@@ -23,6 +23,7 @@ const StudentLogin = () => {
   const handleLogin = async () => {
     await axios.post("https://database-api-eight.vercel.app/student/login",{
         name:users,
+        password:password,
       }).then(res =>setToken(res.data)).catch(err => {if(typeof user !== "undefined"){alert(user + "" + "access denied")} else console.log(err)})
    
       }
@@ -37,6 +38,7 @@ const StudentLogin = () => {
   const handleVerify = async(tokens) => {
     await axios.post("https://database-api-eight.vercel.app/student/verify",{
       name:user,
+      password:password,
       header:token
     }).then(res =>{nav(`/student/${res.data._id}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert("invalid username or password");console.log(err)})
  

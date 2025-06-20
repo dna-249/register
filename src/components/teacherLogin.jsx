@@ -5,7 +5,7 @@ import {useState ,useEffect} from "react"
 import Staff from './staff'
 import {useNavigate } from "react-router-dom"
 
-const StaffLogin = () => {
+const TeacherLogin = () => {
   const [user,setUser]=useState()
    const [users,setUsers]=useState()
    const [token,setToken]=useState()
@@ -40,7 +40,7 @@ const StaffLogin = () => {
       name:user,
       password:password,
       header:token
-    }).then(res =>{nav(`/staff/${res.data._id}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert("invalid username or password");console.log(err)})
+    }).then(res =>{nav(`/teacher/${res.data._id}`); setName(res.data); console.log(res.data); alert(user +""+ "is verified successfully")}).catch(err => {alert("invalid username or password");console.log(err)})
   
   }
   
@@ -50,7 +50,7 @@ const StaffLogin = () => {
   return (
     <div className='signUp'>
         <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
-           <div><FaUser className='img'/> <br /><span  style={{color:"green",fontWeight:"bolder"}}>Staff Login</span> </div>
+           <div><FaUser className='img'/> <br /><span  style={{color:"green",fontWeight:"bolder"}}>Teacher Login</span> </div>
            <div> Username: <input onChange={(e)=>setUser(e.target.value)} placeholder='username...' type="text" /></div>
            <div> Password: <input onChange={(e)=>setPassword(e.target.value)} placeholder='password... ' type="password" /></div>
            <div><button onClick={()=>setUsers(()=>user)}>Login</button></div> 
@@ -60,4 +60,4 @@ const StaffLogin = () => {
   
 }
 
-export default StaffLogin
+export default TeacherLogin
