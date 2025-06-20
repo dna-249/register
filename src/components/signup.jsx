@@ -13,7 +13,7 @@ const SignUp = () => {
         <button ><Link to="/managementSignup">Management</Link></button>
         <button ><Link to="/staffSignup">Staff</Link></button>
         <button ><Link to="/studentSignup">Student</Link></button> <br/>
-        <div> <Link to="/teacher"> Teacher</Link></div>
+        <div> <Link to="/teacher/:id"> Teacher</Link></div>
     </div>
     
     
