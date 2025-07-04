@@ -6,7 +6,7 @@ import Staff from './staff'
 import {useNavigate } from "react-router-dom"
 
 const TeacherLogin = () => {
-  const [user,setUser]=useState()
+   const [user,setUser]=useState()
    const [users,setUsers]=useState()
    const [token,setToken]=useState()
    const [name,setName]=useState()

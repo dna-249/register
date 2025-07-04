@@ -157,7 +157,7 @@ const handleResult = async(params) => {
       <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
       <th>{total}</th>
       <th>{percents}</th>
-       <th>{grades}</th>
+      <th>{grades}</th>
       </tr>
       )})}
       
