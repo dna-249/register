@@ -29,6 +29,12 @@ const Secret = ({id}) => {
                       .then((res)=> {alert(`${adm} secret_key is created`);setAuto((prev)=>!prev)})
                       .catch((err)=> console.log(err))
          }
+
+          const handleTeacherKey = (params) => {
+        axios.put(`https://database-api-eight.vercel.app/management/push/${id}/teacher/key`,{adm:adm1})
+                      .then((res)=> {alert(`${adm} secret_key is created`);setAuto((prev)=>!prev)})
+                      .catch((err)=> console.log(err))
+         }
   return (
     
             <div >
@@ -73,6 +79,27 @@ const Secret = ({id}) => {
                      </div>
                      </div>
                </div>
+
+                <div >
+                     <div className='white2'>
+                        <h5>Teacher</h5>
+                      <h5>New key: {adm1}</h5>
+                    <div className='twoA'>
+                        <input type="text" className='input' onChange={(e)=>setAdm1(e.target.value)} placeholder='secret key...'/>
+                        <button className='click1' onClick={()=>handleTeacherKey()}>Register</button>
+                       </div>
+                       </div>
+
+                       <div className='white2'>
+                        <h5>Previous Keys</h5>
+                        <div className="dropDown">
+                         {name?.teacher?.map((item,index)=>{return (
+                           <div key={index}>{item.key}</div>
+                         )})}
+                     </div>
+                     </div>
+               </div>
+
 
             </div>
   )
