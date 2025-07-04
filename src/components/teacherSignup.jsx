@@ -15,7 +15,7 @@ const TeacherSignup = ({setLogin}) => {
   const [email,setEmail]= useState("")
   
   const handleSignUp =()=>{
-    axios.post("https://database-api-eight.vercel.app/staff",
+    axios.post("https://database-api-eight.vercel.app/teacher",
       { key:key,
         name:name,
         user:user,
