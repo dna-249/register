@@ -36,7 +36,7 @@ const TeacherUser = () => {
     setKey(key) 
     setIndex(index) 
     setObject(object)
-     const edit = window.prompt("write something")
+    const edit = window.prompt("write something")
     setValue(edit)
   }
 
