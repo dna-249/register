@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaUser ,FaCheck, FaArrowCircleLeft, FaTimes} from 'react-icons/fa'
 import { Link ,useParams,useNavigate} from 'react-router-dom'
-import Attendance from "./attendance"
-import Update from "./update"
-import Activity from './activity'
 import axios from "axios"
 
 const TeacherUser = () => {
