@@ -5,6 +5,7 @@ import axios from "axios"
 import {useState ,useEffect} from "react"
 import Management from './management'
 import {useNavigate} from "react-router-dom"
+import useEnv from './useEnv'
 
 const  ManagementLogin = () => {
   const [user,setUser]=useState()
@@ -13,6 +14,7 @@ const  ManagementLogin = () => {
     const [name,setName]=useState()
     const [login,setLogin]=useState(true)
     const [password,setPassword]=useState()
+    const {url} = useEnv('')
 
 
     const nav = useNavigate()
@@ -23,7 +25,7 @@ const  ManagementLogin = () => {
  
   const handleLogin = async () => {
     
-    await axios.post("https://database-api-eight.vercel.app/management/login",{
+    await axios.post(url+"/management/login",{
         name:users,
         password:password
       }).then(res => {setToken(res.data)})
