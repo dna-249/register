@@ -4,7 +4,7 @@ const Menu = () => {
   return (
    <div className='center' >
       <div className="bgUser">
-        <h1>Welcome <br/> Erudite Online Academy</h1>
+        <h1> Erudite Online Academy</h1>
         
         <div className='white'>
           <h3>Summer Program</h3>
