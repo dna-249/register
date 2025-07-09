@@ -150,7 +150,7 @@ const handleResult = async(params) => {
       return (
      
       <tr  key={index}>
-      <th>Eng</th>
+      <th>Qur'an</th>
       <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input type='number'value={name.ass } width={100} onChange={(e)=>setValue(e.target.value)}/>}</th>
       <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
@@ -188,7 +188,7 @@ const handleResult = async(params) => {
     
       
       <tr key={index}>
-      <th>Math</th>
+      <th>Khuruf</th>
       <th onClick={()=>handleSelect("math","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("math","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("math","test",index)}>{name.test}</th>
@@ -227,7 +227,7 @@ const handleResult = async(params) => {
      
       
       <tr key={index}>
-      <th>Chem</th>
+      <th>Arabic</th>
       <th onClick={()=>handleSelect("chem","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("chem","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("chem","test",index)}>{name.test}</th>
@@ -264,7 +264,7 @@ const handleResult = async(params) => {
      
       
       <tr key={index}>
-      <th>Phy</th>
+      <th>Azkar</th>
       <th onClick={()=>handleSelect("phy","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("phy","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("phy","test",index)}>{name.test}</th>
@@ -302,7 +302,7 @@ const handleResult = async(params) => {
      
       
       <tr key={index}>
-      <th>Bio</th>
+      <th>Hadith</th>
       <th onClick={()=>handleSelect("bio","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("bio","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("bio","test",index)}>{name.test}</th>

@@ -123,7 +123,7 @@ useEffect(() => {
       return (
      
       <tr  key={index}>
-      <th>Eng</th>
+      <th>Qur'an</th>
       <th onClick={()=>handleSelect("Eng","ass",index)}>{name.ass}</th>
       <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
       <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
@@ -161,7 +161,7 @@ useEffect(() => {
     
       
       <tr key={index}>
-      <th>Math</th>
+      <th>Khuruf</th>
       <th >{name.ass}</th>
       <th>{name.ca}</th>
       <th >{name.test}</th>
@@ -200,7 +200,7 @@ useEffect(() => {
      
       
       <tr key={index}>
-      <th>Chem</th>
+      <th>Arabic</th>
       <th >{name.ass}</th>
       <th>{name.ca}</th>
       <th >{name.test}</th>
@@ -237,7 +237,7 @@ useEffect(() => {
      
       
       <tr key={index}>
-      <th>Phy</th>
+      <th>Azkar</th>
       <th >{name.ass}</th>
       <th>{name.ca}</th>
       <th >{name.test}</th>
@@ -275,7 +275,7 @@ useEffect(() => {
      
       
       <tr key={index}>
-      <th>Bio</th>
+      <th>Hadith</th>
       <th >{name.ass}</th>
       <th>{name.ca}</th>
       <th >{name.test}</th>
