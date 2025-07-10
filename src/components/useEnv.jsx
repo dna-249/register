@@ -1,9 +1,9 @@
 
 import React from 'react'
-import "dotenv/config"
+
 
 const useEnv = () => {
-    const url = process.env.env
+    const url = import.meta.VITE_env
   return url
 }
 
