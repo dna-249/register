@@ -1,9 +1,10 @@
-require("dotenv").config()
-import React from 'react'
 
-const UseEnv = () => {
+import React from 'react'
+import "dotenv/config"
+
+const useEnv = () => {
     const url = process.env.env
   return url
 }
 
-export default UseEnv
+export default useEnv
