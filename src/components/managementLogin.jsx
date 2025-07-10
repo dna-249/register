@@ -14,7 +14,7 @@ const  ManagementLogin = () => {
     const [name,setName]=useState()
     const [login,setLogin]=useState(true)
     const [password,setPassword]=useState()
-    const {url} = useEnv('')
+    
 
 
     const nav = useNavigate()
@@ -25,7 +25,7 @@ const  ManagementLogin = () => {
  
   const handleLogin = async () => {
     
-    await axios.post(url+"/management/login",{
+    await axios.post(import.meta.VITE_env+"/management/login",{
         name:users,
         password:password
       }).then(res => {setToken(res.data)})
