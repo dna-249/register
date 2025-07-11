@@ -24,7 +24,7 @@ const  ManagementLogin = () => {
  }, [users])
  
   const handleLogin = async () => {
-    
+    console.log(import.meta.VITE_env)
     await axios.post(import.meta.VITE_env+"/management/login",{
         name:users,
         password:password
