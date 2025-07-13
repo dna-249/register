@@ -25,7 +25,7 @@ const  ManagementLogin = () => {
  
   const handleLogin = async () => {
     console.log(import.meta.VITE_env)
-    await axios.post(import.meta.VITE_env+"/management/login",{
+    await axios.post("https://database-api-eight.vercel.app/management/login",{
         name:users,
         password:password
       }).then(res => {setToken(res.data)})
