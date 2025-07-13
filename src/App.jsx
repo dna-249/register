@@ -1,12 +1,14 @@
 import React, { useState,lazy } from 'react'
 import { Route,Routes } from 'react-router-dom'
 
+
 const Admission  = lazy(()=>import('./components/admission'))
 const Update  = lazy(()=>import( './components/update'))
 const Secret  = lazy(()=>import( './components/secret'))
 const SignUp =lazy(()=>import('./components/signup'))
 const Login =lazy(()=>import('./components/login'))
 const User =lazy(()=>import('./components/user'))
+const Header =lazy(()=>import('./components/header'))
 const Payment =lazy(()=>import('./components/payment'))
 const Chat =lazy(()=>import('./components/chat'))
 const Teacher =lazy(()=>import('./components/teacher'))
@@ -39,6 +41,7 @@ const App = () => {
  
 
 return (<div>
+    <Header />
     <Routes>
       <Route path='/' element={<Login/>}/>
       <Route path='/teacher/:id' element={<Teacher/>}/>
@@ -61,6 +64,7 @@ return (<div>
       <Route path='/secret' element={<Secret />}/>
       <Route path='/timer' element={<Timer />}/>
       <Route path='/menu' element={<Menu />}/>
+      <Route path='/header' element={<Header />}/>
       <Route path='/payment' element={<Payment />}/>
       <Route path='/question/:id' element={<Question />}/>
       <Route path='/admission' element={<Admission />}/>
