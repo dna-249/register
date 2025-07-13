@@ -4,11 +4,10 @@
   min-width: 320px;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-image: url("./bg_eoa.jpg");
-  background-attachment: fixed;
-  background-clip: content-box;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100vh;
   }
   .break{
     display: grid;
