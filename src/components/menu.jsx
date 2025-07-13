@@ -3,7 +3,7 @@ import React from 'react'
 const Menu = () => {
   return (
    <div className='center' >
-      <div className='center2'>
+      <div className='center2'><img src="/bg_eoa.jpg" width={300} height={300} alt="" />
         <h1>Welcome <br/> Erudite Online Academy</h1>
         </div>
         <div  className='center2 white3'>
@@ -19,6 +19,7 @@ const Menu = () => {
             excellence and reach their full potential through
             innovative online education.
            </p>
+
            <img src="/mission.jpg" className='logo2' alt="" />
            <h3>Mission</h3>
            <p>At Erudite Online Academy, our mission is to 
