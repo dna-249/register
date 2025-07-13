@@ -4,7 +4,10 @@ const Menu = () => {
   return (
    <div className='center' >
       <div className='center2'><img src="/bg_eoa.jpg" width={300} height={300} alt="" />
-        <h1>Welcome <br/> Erudite Online Academy</h1>
+       <br/>
+       <br/>
+        <h1>Welcome </h1>
+        <h2> Erudite Online Academy</h2>
         </div>
         <div  className='center2 white3'>
           <h3>Summer Program</h3>
