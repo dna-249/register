@@ -11,15 +11,20 @@ const Menu = () => {
          <h5>Children</h5>
          <h5>Adult</h5>
         </div>
+        <div className='center2'>
+          <h2>ABOUT </h2>
+        </div>
+
         <div className='center2  white3'>
-          <h2>ABOUT ERUDITE</h2>
           <img src="/vision.jpg" className='logo2' alt="" />
            <h3>Vision</h3>
            <p>Empowering learners worldwide to achieve academic
             excellence and reach their full potential through
             innovative online education.
            </p>
+        </div>
 
+<div className='center2 white3'>
            <img src="/mission.jpg" className='logo2' alt="" />
            <h3>Mission</h3>
            <p>At Erudite Online Academy, our mission is to 
