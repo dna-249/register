@@ -43,7 +43,7 @@ const App = () => {
 return (<div>
     <Header />
     <Routes>
-      <Route path='/' element={<Login/>}/>
+      <Route path='/login' element={<Login/>}/>
       <Route path='/teacher/:id' element={<Teacher/>}/>
       <Route path='/teacherLogin' element={<TeacherLogin/>}/>
       <Route path='/teacherSignup' element={<TeacherSignup/>}/>
@@ -63,8 +63,9 @@ return (<div>
       <Route path='/studentAttendance/:id' element={<StudentAttendance />}/>
       <Route path='/secret' element={<Secret />}/>
       <Route path='/timer' element={<Timer />}/>
-      <Route path='/menu' element={<Menu />}/>
+      <Route path='/' element={<Menu />}/>
       <Route path='/header' element={<Header />}/>
+      <Route path='/login' element={<Login />}/>
       <Route path='/payment' element={<Payment />}/>
       <Route path='/question/:id' element={<Question />}/>
       <Route path='/admission' element={<Admission />}/>
