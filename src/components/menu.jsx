@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
   return (
@@ -7,11 +8,24 @@ const Menu = () => {
        
         <h2>Welcome 
         <br/> To<br/>Erudite Online Academy</h2>
+        <p>an online based academy, well reach in resources, in providing excellent moral islamic and western education</p>
+        <p>Erudite Online Academy provide various variety of programs among which Summer Program</p>
         </div>
         <div  className='center2 white3'>
-          <h3>Summer Program</h3>
-         <h5>Children</h5>
-         <h5>Adult</h5>
+          <h3>Summer Programs</h3>
+        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}><h5><Link to="">CHILD PROGRAM</Link> </h5>
+         <h5><Link to="">ADULT PROGRAM</Link></h5></div> 
+        </div>
+        <Link></Link>
+        <div className="center2 white2">
+          <h3>Academic Features</h3>
+          <ul style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}>
+            <li>Online User Account</li>
+            <li>E Examination</li>
+            <li>E Result</li>
+            <li>Interactive Virtual Online Classroom</li>
+            <li>Active Professional Scholars</li>
+          </ul>
         </div>
         <div className='center2'>
           <h2>ABOUT </h2>
