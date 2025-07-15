@@ -1,7 +1,6 @@
 import React, { useState,lazy } from 'react'
 import { Route,Routes } from 'react-router-dom'
 
-
 const Admission  = lazy(()=>import('./components/admission'))
 const Update  = lazy(()=>import( './components/update'))
 const Secret  = lazy(()=>import( './components/secret'))
@@ -11,6 +10,8 @@ const User =lazy(()=>import('./components/user'))
 const Header =lazy(()=>import('./components/header'))
 const Payment =lazy(()=>import('./components/payment'))
 const Chat =lazy(()=>import('./components/chat'))
+const Child =lazy(()=>import('./components/child'))
+const Adult =lazy(()=>import('./components/adult'))
 const Teacher =lazy(()=>import('./components/teacher'))
 const TeacherLogin =lazy(()=>import('./components/teacherLogin'))
 const TeacherSignup =lazy(()=>import('./components/teacherSignup'))
@@ -41,7 +42,7 @@ const App = () => {
  
 
 return (<div>
-    <Header />
+    
     <Routes>
       <Route path='/login' element={<Login/>}/>
       <Route path='/teacher/:id' element={<Teacher/>}/>
@@ -51,6 +52,8 @@ return (<div>
       <Route path='/portal' element={<Portal/>}/>
       <Route path='/signUp' element={<SignUp/>}/>
       <Route path='/user/:id' element={<User />}/>
+      <Route path='/child' element={<Child />}/>
+      <Route path='/adult' element={<Adult />}/>
       <Route path='/studentSignup' element={<StudentSignup />}/>
       <Route path='/studentLogin' element={<StudentLogin />}/>
       <Route path='/staffSignup' element={<StaffSignup />}/>

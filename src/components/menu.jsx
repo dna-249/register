@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Header from './header'
 
 const Menu = () => {
   return (
+    <>
+    <Header />
    <div className='center' >
       <div className='center2'><img src="/bg_eoa.jpg" width={300} height={300} alt="" />
        
@@ -13,8 +16,8 @@ const Menu = () => {
         </div>
         <div  className='center2 white3'>
           <h3>Summer Programs</h3>
-        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}><h5><Link to="">CHILD PROGRAM</Link> </h5>
-         <h5><Link to="">ADULT PROGRAM</Link></h5></div> 
+        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}><h5><Link to="/child">CHILD PROGRAM</Link> </h5>
+         <h5><Link to="/adult">ADULT PROGRAM</Link></h5></div> 
         </div>
         <Link></Link>
         <div className="center2 white2">
@@ -51,11 +54,14 @@ const Menu = () => {
             professional pursuits.
            </p>
         </div>
-        <div className='center2  white3'>
+        <div className='center2'>
           <h2>Contact</h2>
-        
+      </div>
+      <div className="center2">
+
       </div>
     </div>
+    </>
   )
 }
 
