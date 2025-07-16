@@ -15,15 +15,13 @@ const payment = () => {
       email: email,
       name:name,
       phone:phone,
-      amount: 500000, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
+      amount: 500000, //Amountm is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
       publicKey: 'pk_test_616566e8c418c2ea8544844d7b5792290b03ccba',
   };
   
   // you can call this function anything
   const onSuccess = (reference) => {
-    // Implementation for whatever you want to do with reference and after success call.
-    console.log(reference);
-  };
+   console.log("successful")  };
 
   // you can call this function anything
   const onClose = () => {
