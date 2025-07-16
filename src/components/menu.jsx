@@ -14,11 +14,12 @@ const Menu = () => {
         <p>An online based academy rich in educational resource aimed at attaining excellence in the impartation of islamic education, morals, and secular education</p>
         <p>Erudite Online Academy provides a variety of programmes including Summer Lessons.</p>
           </div>
-        <div  className='center2 white3'>
+        <div className='center2 white3'>
           <h3>Programmes Offered</h3>
         <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}><h5><Link to="/child">Summer Lessons</Link> </h5>
         </div>
-        <Link></Link>
+        </div>
+
         <div className="center2 white2">
           <h3>Academic Features</h3>
           <ul style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}>
