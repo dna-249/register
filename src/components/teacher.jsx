@@ -16,6 +16,9 @@ const Teacher = ({setBack}) => {
 
   const {id} = useParams()
   const nav = useNavigate()
+
+  const items =["a","b","c"]
+  
   useEffect(() => {
  
     axios.get(`https://database-api-eight.vercel.app/staff/${id}`)
@@ -65,6 +68,17 @@ const Teacher = ({setBack}) => {
                 Name:{staff?.name} <br />
                 class:{staff?.class}
               </h4>
+              <div>Select Class: <select onChange={(e)=>setSelect(e.target.value)}> 
+                   {items.map((value,index)=>{return(
+                    <div key={index}><option value={value}>{value}</option></div>
+                   )})}
+                  </select>
+              </div>
+              <div>Select Subject: <select onChange={(e)=>setSelect(e.target.value)}> 
+                {items.map((value,index)=>{return(
+                    <div key={index}><option value={value}>{value}</option></div>
+                   )})} </select>
+              </div>
         </div>
         
     </div>

@@ -22,7 +22,7 @@ const Menu = () => {
 
         <div className="center2 white2">
           <h3>Academic Features</h3>
-          <ul style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}>
+          <ul style={{textAlign:"left",color:"darkblue"}}>
             <li>Online User Account</li>
             <li>E Examination</li>
             <li>E Result</li>
