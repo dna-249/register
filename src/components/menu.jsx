@@ -11,12 +11,12 @@ const Menu = () => {
        
         <h2>Welcome 
         <br/> To<br/>Erudite Online Academy</h2>
-        <p>An online based academy rich in educational resource aimed at attaining excellence in the impartation of islamic education, morals, and secular education</p>
+        <p>An online based academy rich in educational resources aimed at attaining excellence in the impartation of islamic education, morals, and secular education</p>
         <p>Erudite Online Academy provides a variety of programmes including Summer Lessons.</p>
           </div>
         <div className='center2 white3'>
-          <h3>Programmes Offered</h3>
-        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}><h5><Link to="/child">Summer Lessons</Link> </h5>
+        
+        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}><h5><Link to="/child">Programmes Offered</Link> </h5>
         </div>
         </div>
 

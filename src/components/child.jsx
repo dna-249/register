@@ -4,17 +4,18 @@ const Child = () => {
   return (
     <div className="center">
         <div className="center2">
-         <h1>Child Program</h1>
+         <h1>Children Summer Lesson</h1>
          </div>
         <div className="center2 white3">
-           <h3>About Child Program</h3>
+   
            <p >This program is designed to help a child:</p>
            <ul style={{textAlign:"left"}}>
-           <li> To master his previous knowledge,to educate the child about teaching and sunnah of our beloved prophet(S A W)</li>
-           <li>To master arabic letter(Khuruf) reading and writing right from its basis</li>
-           <li>To able to Recite Qur'an</li>
+           <li> To refresh his previous knowledge</li>
+           <li>To learn about the teachings and sunnah of our beloved prophet(S A W)</li>
+           <li>To master arabic letters(huruf), reading, and writing right from the basics.</li>
+           <li>To able to recite the Qur'an</li>
            <li>To have basic Figh(jurisprudence) knowledge</li>
-           <li>To know about stories or history of past companions</li>
+           <li>To learn basic islamic history.</li>
         </ul>
         </div>
         <div className="center2 white3">
