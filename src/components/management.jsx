@@ -15,13 +15,16 @@ const Management = () => {
   const [names1,setNames1] = useState([''])
   const [names2,setNames2] = useState([''])
   const [names3,setNames3] = useState([''])
+  const [names4,setNames4] = useState([''])
   const [name,setName] = useState('')
   const [color,setColor] = useState('')
   const [toggle,setToggle] = useState(true)
   const [toggle2,setToggle2] = useState(true)
+  const [toggle4,setToggle4] = useState(true)
   const [edit,setEdit] = useState(true)
   const [edit1,setEdit1] = useState(true)
   const [edit2,setEdit2] = useState(true)
+  const [edit4,setEdit4] = useState(true)
   const [select,setSelect] = useState('1')
   const [selected,setSelected] = useState('')
   const [selected2,setSelected2] = useState('')
@@ -43,6 +46,9 @@ const Management = () => {
 
     axios.get(`https://database-api-eight.vercel.app/staff`)
               .then((res)=> {console.log(res.data);setNames2(res.data)})
+              .catch((err)=> console.log(err))
+axios.get(`https://database-api-eight.vercel.app/teacher`)
+              .then((res)=> {console.log(res.data);setNames4(res.data)})
               .catch((err)=> console.log(err))
 
     axios.get(`https://database-api-eight.vercel.app/student`)
@@ -219,6 +225,37 @@ const Management = () => {
                            <h4>{selected.name}</h4>
                           <div className="twoA">
                                 <button onClick={()=>setToggle2(true)}>Back</button>
+                                <button onClick={()=>handleDelete()}>Delete</button>
+                        </div>
+                        </div>}
+                        
+                    </div>} 
+                       </div>
+                      </div>
+                        <div>
+                     <div className='twoA'><h3 className='border'  onClick={()=>setEdit4(true)}> Teacher</h3><h3 className='border'  onClick={()=>setEdit4(false)}> Update </h3></div>
+                         
+                     <div>{edit4?
+                           <div className="dropDown">
+                            {names4?.map((name,index) =>
+                               <div onClick={()=>nav(`/teacher/${name._id}`)} key={index}>
+                                        {name.name} 
+                                           </div>)}
+                            
+                       </div>
+                       :<div style={{background:"aliceblue",padding:"10px 0px"}}>
+                         {toggle4? <div className="dropDown">
+                            {names4?.map((name,index) =>
+                               <div onClick={()=>handleSelected(name,"teacher")} key={index}>
+                                        {name.name} 
+                                           </div>)}
+                            
+                        </div>
+                         : <div>
+                           <img className='img' src={selected?.image} /> 
+                           <h4>{selected.name}</h4>
+                          <div className="twoA">
+                                <button onClick={()=>setToggle4(true)}>Back</button>
                                 <button onClick={()=>handleDelete()}>Delete</button>
                         </div>
                         </div>}
