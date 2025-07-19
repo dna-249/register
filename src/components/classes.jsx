@@ -160,7 +160,7 @@ const handleAssign3 = (name) => {
                     <div className='white2'> 
                       <h5>Assign subject to Teacher</h5>
                       <div className="dropDown">
-                   {name1?.map((name,index)=>{return(
+                   {name3?.map((name,index)=>{return(
                     <div onClick={()=>handleId(name)} key={index}>{name.name}</div>
 
                    )})} 
