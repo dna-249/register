@@ -41,6 +41,11 @@ const Classes = ({id}) => {
                 .then((res)=> {alert(`${adm} class is assigned`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
+     const handleCreate2 = (params) => {
+    axios.put(`https://database-api-eight.vercel.app/management/push/${id}/subject/key`,{adm:adm})
+                .then((res)=> {alert(`${adm} class is assigned`);setAuto((prev)=>!prev)})
+                  .catch((err)=> console.log(err))
+     }
 
      const handleId = (name) => {
        setSelect(name)
@@ -95,7 +100,16 @@ const handleAssign3 = (name) => {
                     <button className='click1' onClick={()=>handleCreate()}>Create</button>
                  </div>
                  </div>
-                 
+                  <div className='white2'>
+                    <h5>Create Subject</h5>
+                    <h5>New Class: {adm}</h5>
+                    <div className='twoA'>
+                      
+                      
+                    <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
+                    <button className='click1' onClick={()=>handleCreate2()}>Create</button>
+                 </div>
+                 </div>
 
                  <div>
                    {show?(
@@ -156,7 +170,7 @@ const handleAssign3 = (name) => {
                   <div className='white2'>
                       <h5> Select subject</h5>
                       <div className="dropDown">
-                       {name?.classes?.map((name,index)=>{return(
+                       {name?.subject?.map((name,index)=>{return(
                              <div onClick={()=>handleAssign4(name.key)} key={index}>{name.key}</div>
                       )})} 
                 </div>
@@ -193,6 +207,14 @@ const handleAssign3 = (name) => {
                    <h5>Previous Classes</h5>
                    <div className="dropDown">
                    {name?.classes?.map((name,index)=>{return(
+                    <div key={index}>{name.key}</div>
+                   )})} 
+                 </div>
+                 </div>
+                 <div className='white2'>
+                   <h5>Previous Subjects</h5>
+                   <div className="dropDown">
+                   {name?.subject?.map((name,index)=>{return(
                     <div key={index}>{name.key}</div>
                    )})} 
                  </div>
