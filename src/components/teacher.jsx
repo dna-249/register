@@ -43,7 +43,7 @@ const Teacher = ({setBack}) => {
         <div className='click2' onClick={()=>nav(-1)}><FaArrowCircleLeft /></div>
         </div>
          <div className='two'>
-         <div style={{marginTop:"20px"}}> {teacher? <img className='img' src={teacher?.image} />
+         <div style={{marginTop:"20px"}}> {teacher? <img className='img'src={teacher?.image} />
                          :
                          <FaUser className='img'/>}</div>
          <div  className='three2 icons'>
@@ -71,14 +71,14 @@ const Teacher = ({setBack}) => {
                 
               </h4>
               <div>Select Class: <select onChange={(e)=>setSelect(e.target.value)}> 
-                   {teacher?.class?.class?.map((value,index)=>{return(
-                    <div key={index}><option value={value}>{value}</option></div>
+                   {teacher?.class?.map((value,index)=>{return(
+                    <div key={index}><option value={value.class}>{value.class}</option></div>
                    )})}
                   </select>
               </div>
               <div>Select Subject: <select onChange={(e)=>setSelect2(e.target.value)}> 
                 {teacher?.subject?.subject?.map((value,index)=>{return(
-                    <div key={index}><option value={value}>{value}</option></div>
+                    <div key={index}><option value={value.subject}>{value.subject}</option></div>
                    )})} </select>
               </div>
         </div>
