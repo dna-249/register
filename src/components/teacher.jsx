@@ -77,7 +77,7 @@ const Teacher = ({setBack}) => {
                   </select>
               </div>
               <div>Select Subject: <select onChange={(e)=>setSelect2(e.target.value)}> 
-                {teacher?.subject?.subject?.map((value,index)=>{return(
+                {teacher?.subject?.map((value,index)=>{return(
                     <div key={index}><option value={value.subject}>{value.subject}</option></div>
                    )})} </select>
               </div>
@@ -88,7 +88,7 @@ const Teacher = ({setBack}) => {
          <h2> STUDENT LIST</h2>
          {names?.filter((item) => {if(item?.class === select) return item.name})
           .map((item,index)=>  <div key={index}>
-         <div onClick={()=>nav(`/user/${item._id}`)}> {item.name} </div>
+         <div onClick={()=>nav(`/teacherUser/${item._id}/${select2}`)}> {item.name} </div>
          </div>)}
 
     </div>

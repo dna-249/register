@@ -19,7 +19,7 @@ const TeacherUser = () => {
   const [index, setIndex]= useState()
       
 
-  const {id} = useParams()
+  const {id,id2} = useParams()
   const nav  = useNavigate()
 
 
@@ -120,7 +120,7 @@ const handleResult = async(params) => {
     </thead>
      </div>
      <div className='row5 green'>
-    {name.Eng?.map((name,index)=> { 
+    {name?.[`${id2}`]?.map((name,index)=> { 
                   
     const digit = (name)=>{if(typeof name === 'undefined') return "0";else return name}
 
@@ -148,10 +148,10 @@ const handleResult = async(params) => {
      
       <tr  key={index}>
       <th>Eng</th>
-      <th onClick={()=>handleSelect("Eng","ass",index)}>{show? name.ass : <input type='number'value={name.ass } width={100} onChange={(e)=>setValue(e.target.value)}/>}</th>
-      <th onClick={()=>handleSelect("Eng","ca",index)}>{name.ca}</th>
-      <th onClick={()=>handleSelect("Eng","test",index)}>{name.test}</th>
-      <th onClick={()=>handleSelect("Eng","exam",index)}>{name.exam}</th>
+      <th onClick={()=>handleSelect(`${id2}`,"ass",index)}>{show? name.ass : <input type='number'value={name.ass } width={100} onChange={(e)=>setValue(e.target.value)}/>}</th>
+      <th onClick={()=>handleSelect(`${id2}`,"ca",index)}>{name.ca}</th>
+      <th onClick={()=>handleSelect(`${id2}`,"test",index)}>{name.test}</th>
+      <th onClick={()=>handleSelect(`${id2}`,"exam",index)}>{name.exam}</th>
       <th>{total}</th>
       <th>{percents}</th>
       <th>{grades}</th>

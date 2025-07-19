@@ -48,7 +48,7 @@ return (<div>
       <Route path='/teacher/:id' element={<Teacher/>}/>
       <Route path='/teacherLogin' element={<TeacherLogin/>}/>
       <Route path='/teacherSignup' element={<TeacherSignup/>}/>
-      <Route path='/teacherUser/:id' element={<TeacherUser/>}/>
+      <Route path='/teacherUser/:id/:id2' element={<TeacherUser/>}/>
       <Route path='/portal' element={<Portal/>}/>
       <Route path='/signUp' element={<SignUp/>}/>
       <Route path='/user/:id' element={<User />}/>
