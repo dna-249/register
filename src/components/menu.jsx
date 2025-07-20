@@ -1,16 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from './header'
+import Slide from './slide'
 
 const Menu = () => {
+   const pic =['bg_eoa.jpg','onlinepic.JPG','onlinepic2.JPG','onlinepic3.JPG']
+  const title = `Welcome `
+  const title2 = ` To `
+  const title3 = `Erudite Online Academy`
+  
   return (
     <>
-    <Header />
+    <Header  />
    <div className='center' >
-      <div className='center2'><img src="/bg_eoa.jpg" width={300} height={300} alt="" />
+      <div className='center2'>
+        <Slide pic={pic} title={title} title3={title3} title2={title2}/>
        
-        <h2>Welcome 
-        <br/> To<br/>Erudite Online Academy</h2>
+        
         <p>An online based academy rich in educational resources aimed at attaining excellence in the impartation of islamic education, morals, and secular education</p>
         <p>Erudite Online Academy provides a variety of programmes including Summer Lessons.</p>
           </div>

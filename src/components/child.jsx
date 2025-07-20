@@ -1,10 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { BiCurrentLocation, BiMap, BiPrinter } from "react-icons/bi"
+import { FaMap } from 'react-icons/fa'
+import { AiFillHome, AiFillMacCommand } from 'react-icons/ai'
+import Header from './header'
+import Slide from './slide'
 const Child = () => {
+    const pic =['bg_eoa.jpg','onlinepic.JPG']
+  
+  const title = `Children Summer Lesson `
+  const title2 = ` Summer Lesson `
   return (
+   <>
+   <Header />
     <div className="center">
         <div className="center2">
-         <h1>Children Summer Lesson</h1>
+         <Slide pic={pic} title={title} />
+        
+         
+        
          </div>
         <div className="center2 white3">
    
@@ -54,6 +68,7 @@ const Child = () => {
 
 
     </div>
+    </>
   )
 
 }
