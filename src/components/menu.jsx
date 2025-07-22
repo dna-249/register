@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from './header'
 import Slide from './slide'
+import Footer from './footer'
+import { FaMailBulk } from 'react-icons/fa'
 
 const Menu = () => {
    const pic =['bg_eoa.jpg','onlinepic.JPG','onlinepic2.JPG','onlinepic3.JPG']
@@ -61,7 +63,8 @@ const Menu = () => {
            </p>
         </div>
         <div className='center2'>
-          <h2>Contact</h2>
+          <h2>Contact Us <FaMailBulk /></h2>
+          <Footer />
       </div>
       <div className="center2">
 

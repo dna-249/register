@@ -106,7 +106,13 @@ image:active{
   align-content: center;
 }
 .center2 h1,h2,h3,h4,h5{
-   text-shadow: 1.5px 1.5px gold ;
+ color:darkgreen
+}
+.footer{
+  width:100%;
+  background-color:white;
+  color:#000;
+  height: 400px;
 }
 .header{
   display: grid;

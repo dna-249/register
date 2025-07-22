@@ -9,7 +9,7 @@ const Child = () => {
     const pic =['bg_eoa.jpg','onlinepic.JPG']
   
   const title = `Children Summer Lesson `
-  const title2 = ` Summer Lesson `
+  
   return (
    <>
    <Header />
