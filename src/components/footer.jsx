@@ -26,6 +26,7 @@ const sendEmail = async()=>{
   subject:subject,
   html:html,
  })
+ .then(()=>alert("sent successfully")).catch((err)=>alert(err.message))
 }
 
   return (           
