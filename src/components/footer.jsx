@@ -20,7 +20,7 @@ const html =`<div className="center">
              </div>`
 
 const sendEmail = async()=>{
- await axios.post("https://database-api-eight.vercel.app/email",{
+ await axios.post("https://database-api-eight.vercel.app/email/email",{
   from:email,
   to:"danamonuraalhaji@gmail.com",
   subject:subject,
