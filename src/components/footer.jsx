@@ -12,8 +12,7 @@ const [phone,setPhone] = useState("")
 
 const sendEmail = async()=>{
  await axios.post("https://database-api-eight.vercel.app/email",{
-  from:email,
-  to:email2,
+  to:email,
   name:name,
   msg:msg,
   phone:phone 
@@ -29,9 +28,8 @@ const sendEmail = async()=>{
             <div style={{borderRadius:"10px",padding:"20px"}}>
             <div>Message:<textarea onChange={(e)=>setMsg(e.target.value)} style={{outlineColor:"lightgreen",border:" 1px solid rgba(128, 127, 127, 0.28)"}} cols={30} rows={5}   type='text'/></div>
              <div>Name:<input onChange={(e)=>setName(e.target.value)} type='text'/></div>            
-             <div>EmailFrom:<input onChange={(e)=>setEmail(e.target.value)}  type='email'/></div>
-             <div>EmailTo:<input onChange={(e)=>setEmail2(e.target.value)}  type='email'/></div>
-            <div>Phone:<input onChange={(e)=>setPhone(e.target.value)}  type='number'/></div>
+             <div>Email:<input onChange={(e)=>setEmail(e.target.value)}  type='email'/></div>
+               <div>Phone:<input onChange={(e)=>setPhone(e.target.value)}  type='number'/></div>
      
               <div><button style={{border:"none",outline:"none"}} onClick={()=>sendEmail()}> Send</button></div> 
         </div>
