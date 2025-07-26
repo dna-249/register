@@ -5,7 +5,6 @@ import { useState } from 'react'
 const Footer = () => {
 const [name,setName] = useState("")
 const [email, setEmail] = useState("")
-const [email2, setEmail2] = useState("")
 const [msg, setMsg] = useState('')
 const [phone,setPhone] = useState("")
 
@@ -29,7 +28,7 @@ const sendEmail = async()=>{
             <div>Message:<textarea onChange={(e)=>setMsg(e.target.value)} style={{outlineColor:"lightgreen",border:" 1px solid rgba(128, 127, 127, 0.28)"}} cols={30} rows={5}   type='text'/></div>
              <div>Name:<input onChange={(e)=>setName(e.target.value)} type='text'/></div>            
              <div>Email:<input onChange={(e)=>setEmail(e.target.value)}  type='email'/></div>
-               <div>Phone:<input onChange={(e)=>setPhone(e.target.value)}  type='number'/></div>
+             <div>Phone:<input onChange={(e)=>setPhone(e.target.value)}  type='number'/></div>
      
               <div><button style={{border:"none",outline:"none"}} onClick={()=>sendEmail()}> Send</button></div> 
         </div>

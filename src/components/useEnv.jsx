@@ -3,8 +3,8 @@ import React from 'react'
 
 
 const useEnv = () => {
-    const url = import.meta.VITE_env
-  return url
+    const url = import.meta.env.VITE_ENV
+  return {url}
 }
 
 export default useEnv

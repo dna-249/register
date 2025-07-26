@@ -14,6 +14,8 @@ const  ManagementLogin = () => {
     const [name,setName]=useState()
     const [login,setLogin]=useState(true)
     const [password,setPassword]=useState()
+
+    const {url} = useEnv('')
     
 
 
@@ -24,8 +26,8 @@ const  ManagementLogin = () => {
  }, [users])
  
   const handleLogin = async () => {
-    console.log(import.meta.VITE_env)
-    await axios.post("https://database-api-eight.vercel.app/management/login",{
+   
+    await axios.post(`${url}/management/login`,{
         name:users,
         password:password
       }).then(res => {setToken(res.data)})
@@ -41,7 +43,7 @@ const  ManagementLogin = () => {
   }, [token])
 
   const handleVerify = async(tokens) => {
-    await axios.post("https://database-api-eight.vercel.app/management/verify",{
+    await axios.post(`${url}/management/verify`,{
       name:user,
       password:password,
       header:token
