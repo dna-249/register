@@ -65,13 +65,14 @@ const Menu = () => {
         <div className='center2'>
           <h2>Contact Us <FaMailBulk /></h2>
           <Footer />
+          <button style={{justifyItems:"center",backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px"}} ><Link to={""}>WhatsApp Us Here</Link></button>
       </div>
       <div className="footer2">
         <h3>Address</h3>
          <p>NO 7 A close Efab Estate <br/> Life Camp Abuja.</p>
          <h3>Email: </h3>
          <p>eruditeacademyonline@gmail.com</p>
-         <h2>join us through </h2>
+         
 
       </div>
     </div>
