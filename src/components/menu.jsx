@@ -62,14 +62,20 @@ const Menu = () => {
             professional pursuits.
            </p>
         </div>
+        
         <div className='center2'>
           <h2>Contact Us <FaMailBulk /></h2>
+          <div className="center2 white3">
+            <h4>Contact us via Whatsapp below</h4>
+           <button style={{justifyItems:"center",backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px",marginTop:"10px"}} ><a href="https://chat.whatsapp.com/FWpCewRttie467ATLIFTLi?mode=ac_t">WhatsApp Us Here</a></button>
+        </div>
+         <h3>Contact us via email below </h3>
           <Footer />
-          <button style={{justifyItems:"center",backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px",marginTop:"10px"}} ><a href="https://chat.whatsapp.com/FWpCewRttie467ATLIFLi?mode=ac_t">WhatsApp Us Here</a></button>
-      </div>
+           </div>
+           
       <div className="footer2">
         <h3>Address</h3>
-         <p>NO 7 A close Efab Estate <br/> Life Camp Abuja.</p>
+         <p>NO7 A close Efab Estate <br/> Lifecamp, Abuja.</p>
          <h3>Email: </h3>
          <p>eruditeacademyonline@gmail.com</p>
          
