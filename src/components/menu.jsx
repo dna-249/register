@@ -66,7 +66,12 @@ const Menu = () => {
           <h2>Contact Us <FaMailBulk /></h2>
           <Footer />
       </div>
-      <div className="center2">
+      <div className="footer2">
+        <h3>Address</h3>
+         <p>NO 7 A close Efab Estate <br/> Life Camp Abuja.</p>
+         <h3>Email: </h3>
+         <p>eruditeacademyonline@gmail.com</p>
+         <h2>join us through </h2>
 
       </div>
     </div>

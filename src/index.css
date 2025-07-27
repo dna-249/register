@@ -114,6 +114,18 @@ image:active{
   color:#000;
   height: 400px;
 }
+.footer2{
+   width:100%;
+  background-color:rgb(30, 37, 43);
+  color:#f7f3f3;
+  height: 200px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
 .header{
   display: grid;
   position: fixed;
