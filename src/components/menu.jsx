@@ -65,7 +65,7 @@ const Menu = () => {
         <div className='center2'>
           <h2>Contact Us <FaMailBulk /></h2>
           <Footer />
-          <button style={{justifyItems:"center",backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px",marginTop:"10"}} ><a href="https://chat.whatsapp.com/FWpCewRttie467ATLIFLi?mode=ac_t">WhatsApp Us Here</a></button>
+          <button style={{justifyItems:"center",backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px",marginTop:"10px"}} ><a href="https://chat.whatsapp.com/FWpCewRttie467ATLIFLi?mode=ac_t">WhatsApp Us Here</a></button>
       </div>
       <div className="footer2">
         <h3>Address</h3>
