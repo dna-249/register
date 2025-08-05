@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Header from './header'
 import Slide from './slide'
 import Footer from './footer'
-import { FaMailBulk } from 'react-icons/fa'
+import { FaArrowAltCircleDown, FaArrowDown, FaMailBulk } from 'react-icons/fa'
 
 const Menu = () => {
    const pic =['bg_eoa.jpg','onlinepic.JPG','onlinepic2.JPG','onlinepic3.JPG']
@@ -24,12 +24,12 @@ const Menu = () => {
           </div>
         <div className='center2 white3'>
         
-        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}}><h5><Link to="/child">Programmes Offered</Link> </h5>
+        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}} className='center2'><h4 className='center2'>Apply Here <br/><FaArrowAltCircleDown className='arrow' />  </h4><h2><Link to="/child">Programmes Offered</Link> </h2>
         </div>
         </div>
 
         <div className="center2 white2">
-          <h3>Academic Features</h3>
+          <h3> What's unique about <br/> Erudite Academy</h3>
           <ul style={{textAlign:"left",color:"darkblue"}}>
             <li>Online User Account</li>
             <li>E Examination</li>
