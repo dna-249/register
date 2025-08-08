@@ -16,7 +16,7 @@ const payment = () => {
       name:name,
       phone:phone,
       amount: 500000, //Amountm is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
-      publicKey: 'pk_test_616566e8c418c2ea8544844d7b5792290b03ccba',
+      publicKey: 'pk_test_0d62358659020e53e8dfb547a6d690608a7fb7e1',
   };
   
   // you can call this function anything
