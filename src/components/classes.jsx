@@ -91,7 +91,7 @@ const handleAssign3 = (name) => {
    }
    const handleAssignLink = (name) => {
       axios.put(`https://database-api-eight.vercel.app/teacher/${select?._id}`,{link:name})
-      .then((res)=> {alert(`${select1?.name}  is assigned link`);setAuto((prev)=>!prev);setShow1(false)})
+      .then((res)=> {alert(`${select?.name}  is assigned link`);setAuto((prev)=>!prev);setShow1(false)})
         .catch((err)=> console.log(err))
 
    } 
