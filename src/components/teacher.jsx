@@ -51,6 +51,7 @@ const Teacher = ({setBack}) => {
                 <div onClick={()=>nav(`/studentActivity/${teacher._id}`)}>Activity</div>
                 <div onClick={()=>nav(`/question/${teacher._id}`)}>Questions </div>
                 <div onClick={()=>nav(`/profile/teacher/${teacher._id}`)}>profile</div>
+                <div ><Link to={`${teacher.linkname}`}></Link></div>
                 </div >
 
                 <div>{toggle?(
@@ -60,6 +61,8 @@ const Teacher = ({setBack}) => {
         <div onClick={()=>nav(`/activity/${teacher._id}`)}>Activity</div>
                 <div onClick={()=>nav(`/question/${teacher._id}`)}>Questions </div>
                 <div onClick={()=>nav(`/profile/teacher/${teacher._id}`)}>profile</div>
+                <div ><Link to={`${teacher.linc}`}></Link></div>
+
                </div>)}
  </div>
          </div>

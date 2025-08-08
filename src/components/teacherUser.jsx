@@ -74,6 +74,7 @@ const handleResult = async(params) => {
          <div onClick={()=>nav(`/studentActivity/${name._id}`)}>Activity</div>
         <div onClick={()=>nav(`/attendance/${name._id}`)}>Attendance </div>
         <div onClick={()=>nav(`/update/${name._id}`)}> Update</div>
+        
     </div>)}
  </div>
  

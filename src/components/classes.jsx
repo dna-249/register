@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState,useEffect } from 'react'
 const Classes = ({id}) => {
   const [adm,setAdm]= useState('')
+  const [link,setLink]= useState('')
   const [select,setSelect]= useState('')
   const [select1,setSelect1]= useState('')
   const [show,setShow]= useState(true)
@@ -46,6 +47,12 @@ const Classes = ({id}) => {
                 .then((res)=> {alert(`${adm} class is assigned`);setAuto((prev)=>!prev)})
                   .catch((err)=> console.log(err))
      }
+      const handleCreate3 = (params) => {
+    axios.put(`https://database-api-eight.vercel.app/management/push/${id}/link/link`,
+      {adm:adm,linkname:link})
+                .then((res)=> {alert(`${adm} link is assigned`);setAuto((prev)=>!prev)})
+                  .catch((err)=> console.log(err))
+     }
 
      const handleId = (name) => {
        setSelect(name)
@@ -82,6 +89,12 @@ const handleAssign3 = (name) => {
         .catch((err)=> console.log(err))
 
    }
+   const handleAssignLink = (name) => {
+      axios.put(`https://database-api-eight.vercel.app/teacher/${select1?._id}`,{link:name})
+      .then((res)=> {alert(`${select1?.name}  is assigned link`);setAuto((prev)=>!prev);setShow1(false)})
+        .catch((err)=> console.log(err))
+
+   }
     
   
   return (
@@ -106,8 +119,23 @@ const handleAssign3 = (name) => {
                     <div className='twoA'>
                       
                       
-                    <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
+                    <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='tap subject...'/>
                     <button className='click1' onClick={()=>handleCreate2()}>Create</button>
+                 </div>
+                 </div>
+                 <div className='white2'>
+                    <h5>Create Link</h5>
+                    <h5>Class Link Name:{link}</h5>
+                    <h5>New Link: {adm}</h5>
+                    <div className='two'>
+                    <input type="text" className='input' onChange={(e)=>setLink(e.target.value)} placeholder='tap link name...'/>
+                    
+                 </div>
+                    <div className='twoA'>
+                      
+                      
+                    <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='tap link...'/>
+                    <button className='click1' onClick={()=>handleCreate3()}>Create</button>
                  </div>
                  </div>
 
@@ -177,6 +205,35 @@ const handleAssign3 = (name) => {
                 </div>
                 )}
               </div>
+
+
+<div>
+                   {show?(
+                    <div className='white2'> 
+                      <h5>Assign subject to Teacher</h5>
+                      <div className="dropDown">
+                   {name3?.map((name,index)=>{return(
+                    <div onClick={()=>handleId(name)} key={index}>{name.name}</div>
+
+                   )})} 
+                  </div>
+                  </div>
+                  ):(
+                  <div className='white2'>
+                      <h5> Select link</h5>
+                      <div className="dropDown">
+                       {name?.link?.map((name,index)=>{return(
+                             <div onClick={()=>handleAssignLink(name.link)} key={index}>{name.name} <br/> {name.link}</div>
+                      )})} 
+                </div>
+                </div>
+                )}
+              </div>
+
+
+
+
+
 
 
               <div>
