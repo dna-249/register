@@ -90,11 +90,11 @@ const handleAssign3 = (name) => {
 
    }
    const handleAssignLink = (name) => {
-      axios.put(`https://database-api-eight.vercel.app/teacher/${select1?._id}`,{link:name})
+      axios.put(`https://database-api-eight.vercel.app/teacher/${select?._id}`,{link:name})
       .then((res)=> {alert(`${select1?.name}  is assigned link`);setAuto((prev)=>!prev);setShow1(false)})
         .catch((err)=> console.log(err))
 
-   }
+   } 
     
   
   return (
@@ -210,7 +210,7 @@ const handleAssign3 = (name) => {
 <div>
                    {show?(
                     <div className='white2'> 
-                      <h5>Assign subject to Teacher</h5>
+                      <h5>Assign Link to Teacher</h5>
                       <div className="dropDown">
                    {name3?.map((name,index)=>{return(
                     <div onClick={()=>handleId(name)} key={index}>{name.name}</div>
