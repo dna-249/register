@@ -1,5 +1,6 @@
  import React from 'react';
  import { useState } from 'react';
+ import axios from "axios"
  
 import { usePaystackPayment } from 'react-paystack';
   
@@ -9,28 +10,12 @@ const payment = () => {
   const [phone,setPhone]= useState('')
   const [email,setEmail]= useState('')
    
-   
-  const config = {
-      reference: (new Date()).getTime().toString(),
-      email: email,
-      name:name,
-      phone:phone,
-      amount: 500000, //Amountm is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
-      publicKey: 'pk_test_0d62358659020e53e8dfb547a6d690608a7fb7e1',
-  };
-  
-  // you can call this function anything
-  const onSuccess = (reference) => {
-   console.log("successful")  };
-
-  // you can call this function anything
-  const onClose = () => {
-    // implementation for  whatever you want to do when the Paystack dialog closed.
-    console.log('closed')
+  const makePayment = async()=>{
+    await axios.post("https://database-api-eight.vercel.app/pay",{
+      email:email,
+      amount:500000
+    }).then(res => window.location.href = res.authentication_url)
   }
-  
-      const initializePayment = usePaystackPayment(config);
-      
   
   return (
 <>
@@ -42,9 +27,7 @@ const payment = () => {
          <div>Full Name:<input onChange={(e)=>setName(e.target.value)}     type='text'/></div>
          <div>Phone:<input onChange={(e)=>setPhone(e.target.value)}     type='password'/></div>
          <div>Email:<input onChange={(e)=>setEmail(e.target.value)}     type='email'/></div>
-         <button onClick={() => {
-                initializePayment(onSuccess, onClose)
-            }}>Make Payment</button>
+         <button onClick={() =>makePayment()}> Make Payment</button>
     </div>
     
      
