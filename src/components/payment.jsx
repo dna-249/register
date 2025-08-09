@@ -11,10 +11,7 @@ const payment = () => {
   const [email,setEmail]= useState('')
    
   const makePayment = async()=>{
-    await axios.post("https://database-api-eight.vercel.app/pay",{
-      email:email,
-      amount:500000
-    }).then(res => {console.log(res)})
+    await axios.post("https://database-api-eight.vercel.app/pay").then(res => {console.log(res)})
   }
   
   return (
