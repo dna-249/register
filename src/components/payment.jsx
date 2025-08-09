@@ -14,7 +14,7 @@ const payment = () => {
     await axios.post("https://database-api-eight.vercel.app/pay",{
       email:email,
       amount:500000
-    }).then(res => {console.log(res);window.location.href = res.authentication_url})
+    }).then(res => {console.log(res)})
   }
   
   return (
