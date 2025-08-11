@@ -7,6 +7,7 @@ import { usePaystackPayment } from 'react-paystack';
   
 const payment = () => {
   const [name,setName]= useState("")
+  const [reference,setReference]= useState("")
   const [phone,setPhone]= useState('')
   const [email,setEmail]= useState('')
    
@@ -14,7 +15,10 @@ const payment = () => {
     await axios.post("https://database-api-eight.vercel.app/pay",
       {email:email,
         amount:phone
-      }).then(res => {console.log(res);window.location.href = res.data.data.authorization_url})
+      }).then(res => {console.log(res);window.location.href = res.data.data.authorization_url;setReference(res.data.data.reference)}).catch(err => alert(err))
+
+      await axios.post("https://database-api-eight.vercel.app/pay/verify",
+      {ref:reference}).then(res=> alert(res.data.status)).catch(err=>alert(err.message))    
   }
   
   return (
