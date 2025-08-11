@@ -14,11 +14,13 @@ const payment = () => {
   const makePayment = async()=>{
     await axios.post("https://database-api-eight.vercel.app/pay",
       {email:email,
-        amount:phone
+        amount:20000
       }).then(res => {console.log(res);window.location.href = res.data.data.authorization_url;setReference(res.data.data.reference)}).catch(err => alert(err))
 
       await axios.post("https://database-api-eight.vercel.app/pay/verify",
-      {ref:reference}).then(res=> alert(res.data.status)).catch(err=>alert(err.message))    
+      {ref:reference,
+        name:name,
+        phone:phone}).then(res=> alert(res.data.status)).catch(err=>alert(err.message))    
   }
   
   return (
@@ -26,15 +28,13 @@ const payment = () => {
 <div className='signUp'>
 
     <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
-    <div><img src="/bg_eoa.jpg" width={300} height={300} alt="" /> <br />
-     <span style={{color:"green",fontWeight:"bolder"}}>Fill the following information:</span>  </div>
+    <div><img src="/bg_eoa.jpg" width={300} height={300} alt="" />  <br />
+     <span style={{color:"green",fontWeight:"bolder"}}>  Fill the following information:</span>  </div>
          <div>Full Name:<input onChange={(e)=>setName(e.target.value)}     type='text'/></div>
-         <div>Phone:<input onChange={(e)=>setPhone(e.target.value)}     type='password'/></div>
+         <div>Phone:<input onChange={(e)=>setPhone(e.target.value)}     type='number'/></div>
          <div>Email:<input onChange={(e)=>setEmail(e.target.value)}     type='email'/></div>
          <button onClick={() =>makePayment()}> Make Payment</button>
     </div>
-    
-     
     </div>
   
         </>
