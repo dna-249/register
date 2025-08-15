@@ -57,7 +57,7 @@ const Child = () => {
                 <li>Click on the green button to enroll</li>
                 <li>Make payment to obtain Admission No</li>
              </ul>
-       <button style={{justifyItems:"center",backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px"}} ><Link to={"/payment"}>Enroll here</Link></button>
+       <button style={{justifyItems:"center",height:"30", width:"100px",fontSize:"20px", backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px"}} ><Link to={"/payment"}>Enroll here</Link></button>
     <ul>
      <li>Use admission number  to create your account </li>
      </ul>
