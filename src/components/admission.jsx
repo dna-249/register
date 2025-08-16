@@ -26,7 +26,7 @@ const Admission = ({id}) => {
       ref:ref,
       adm:adm
     })
-              .then((res)=>{alert("successfully");setAuto((prev)=>!prev)})
+              .then((res)=>{console.log(res);setAuto((prev)=>!prev)})
               .catch((err)=> console.log(err.message))
   }
 
