@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 const Admission = ({id}) => {
   const [adm,setAdm]= useState('')
+  const [ref,setRef]= useState('')
+  const [email,setEmail]= useState('')
   const [select,setSelect]= useState('')
   const [update,setUpdate]= useState(true)
   const [name,setName]= useState([''])
@@ -19,10 +21,14 @@ const Admission = ({id}) => {
 
 
   const handleCreate = (params) => {
-    axios.put(`https://database-api-eight.vercel.app/management/push/${id}/admissions/key`,{adm:adm})
-                  .then((res)=>{alert(`${adm} admission is created`);setAuto((prev)=>!prev)})
-                  .catch((err)=> console.log(err))
-     }
+    axios.put(`https://database-api-eight.vercel.app/management/pay/verify`,{
+      email:email,
+      ref:ref,
+      adm:adm
+    })
+              .then((res)=>{alert(`${adm} verified successfully`);setAuto((prev)=>!prev)})
+              .catch((err)=> console.log(err))
+  }
 
   const handleDelete = (params) => {
     axios.put(`https://database-api-eight.vercel.app/management/pull/${id}/${select._id}/admissions`)
@@ -42,13 +48,24 @@ const Admission = ({id}) => {
            
             
             <div >
-                 <h4>Admissions</h4>
+                 <h4>Verification & Admissions</h4>
                  <div className='white2'>
-                    <h5>Create Admission</h5>
-                    <h5>New Admission: {adm}</h5> 
+                    <h5>Client Email</h5>
+                    <h5>Email: {email}</h5> 
+
+                    <div className='twoA'>
+                    <input type="number" className='input' onChange={(e)=>setEmail(e.target.value)} placeholder='new admission no...'/>
+                    </div>
+                    <h5>Transaction Ref: {ref}</h5> 
+
+                    <div className='twoA'>
+                    <input type="number" className='input' onChange={(e)=>setRef(e.target.value)} placeholder='new admission no...'/>
+                   </div>
+                   <h5>New Admission: {adm}</h5> 
 
                     <div className='twoA'>
                     <input type="number" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
+                   
                     <button className='click1' onClick={()=>handleCreate()}>Register</button>
                  </div></div>
                      <h5>Previous Admissions</h5>
