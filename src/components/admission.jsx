@@ -21,7 +21,7 @@ const Admission = ({id}) => {
 
 
   const handleCreate = (params) => {
-    axios.put(`https://database-api-eight.vercel.app/pay/verify`,{
+    axios.post(`https://database-api-eight.vercel.app/pay/verify`,{
       email:email,
       ref:ref,
       adm:adm
