@@ -54,17 +54,17 @@ const Admission = ({id}) => {
                     <h5>Email: {email}</h5> 
 
                     <div className='twoA'>
-                    <input type="number" className='input' onChange={(e)=>setEmail(e.target.value)} placeholder='new admission no...'/>
+                    <input type="text" className='input' onChange={(e)=>setEmail(e.target.value)} placeholder='new admission no...'/>
                     </div>
                     <h5>Transaction Ref: {ref}</h5> 
 
                     <div className='twoA'>
-                    <input type="number" className='input' onChange={(e)=>setRef(e.target.value)} placeholder='new admission no...'/>
+                    <input type="text" className='input' onChange={(e)=>setRef(e.target.value)} placeholder='new admission no...'/>
                    </div>
                    <h5>New Admission: {adm}</h5> 
 
                     <div className='twoA'>
-                    <input type="number" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
+                    <input type="text" className='input' onChange={(e)=>setAdm(e.target.value)} placeholder='new admission no...'/>
                    
                     <button className='click1' onClick={()=>handleCreate()}>Register</button>
                  </div></div>
