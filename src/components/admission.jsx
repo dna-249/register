@@ -21,13 +21,13 @@ const Admission = ({id}) => {
 
 
   const handleCreate = (params) => {
-    axios.put(`https://database-api-eight.vercel.app/management/pay/verify`,{
+    axios.put(`https://database-api-eight.vercel.app/pay/verify`,{
       email:email,
       ref:ref,
       adm:adm
     })
               .then((res)=>{alert(`${adm} verified successfully`);setAuto((prev)=>!prev)})
-              .catch((err)=> console.log(err))
+              .catch((err)=> alert(err.message))
   }
 
   const handleDelete = (params) => {
