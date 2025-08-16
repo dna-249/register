@@ -26,7 +26,7 @@ const Admission = ({id}) => {
       ref:ref,
       adm:adm
     })
-              .then((res)=>{alert(`${adm} verified successfully`);setAuto((prev)=>!prev)})
+              .then((res)=>{alert(res.data);setAuto((prev)=>!prev)})
               .catch((err)=> alert(err.message))
   }
 
