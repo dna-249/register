@@ -26,8 +26,8 @@ const Admission = ({id}) => {
       ref:ref,
       adm:adm
     })
-              .then((res)=>{alert(res.data);setAuto((prev)=>!prev)})
-              .catch((err)=> alert(err.message))
+              .then((res)=>{console.log(res);setAuto((prev)=>!prev)})
+              .catch((err)=> console.log(err.message))
   }
 
   const handleDelete = (params) => {
