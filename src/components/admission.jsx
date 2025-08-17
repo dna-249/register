@@ -4,6 +4,7 @@ const Admission = ({id}) => {
   const [adm,setAdm]= useState('')
   const [ref,setRef]= useState('')
   const [email,setEmail]= useState('')
+  const [mail,setMail]= useState('')
   const [select,setSelect]= useState('')
   const [update,setUpdate]= useState(true)
   const [name,setName]= useState([''])
@@ -20,14 +21,25 @@ const Admission = ({id}) => {
    }, [id, auto])
 
 
-  const handleCreate = (params) => {
-    axios.post(`https://database-api-eight.vercel.app/pay/verify`,{
+  const handleCreate = async (params) => {
+     await axios.post(`https://database-api-eight.vercel.app/pay/verify`,{
       email:email,
       ref:ref,
       adm:adm
     })
-              .then((res)=>{console.log(res);setAuto((prev)=>!prev)})
+              .then((res)=>{alert(res.data);setMail(res.data);setAuto((prev)=>!prev)})
               .catch((err)=> console.log(err.message))
+
+    if(mail === true){
+           await  axios.post(`https://database-api-eight.vercel.app/pay/mailing`,{
+            email:email,
+            ref:ref,
+            adm:adm
+              })
+              .then((res)=>{alert(res.data);setAuto((prev)=>!prev)})
+              .catch((err)=> console.log(err.message))
+          }
+
   }
 
   const handleDelete = (params) => {
