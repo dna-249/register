@@ -27,7 +27,7 @@ const Admission = ({id}) => {
       ref:ref,
       adm:adm
     })
-              .then((res)=>{alert(res.data);setMail(res.data);setAuto((prev)=>!prev)})
+              .then((res)=>{console.log(res);setMail(res.data);setAuto((prev)=>!prev)})
               .catch((err)=> console.log(err.message))
 
     if(mail === true){
