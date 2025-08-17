@@ -27,10 +27,11 @@ const Admission = ({id}) => {
       ref:ref,
       adm:adm
     })
-              .then((res)=>{console.log(res);setMail(res.data);setAuto((prev)=>!prev)})
+              .then((res)=>{alert("payment verified succefully");setMail(res.data);setAuto((prev)=>!prev)})
               .catch((err)=> console.log(err.message))
 
     if(mail === true){
+      console.log(mail)
            await  axios.post(`https://database-api-eight.vercel.app/pay/mailing`,{
             email:email,
             ref:ref,
