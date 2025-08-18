@@ -19,7 +19,7 @@ const payment = () => {
  
     await axios.post("https://database-api-eight.vercel.app/pay",
       {email:email,
-        amount:100000
+        amount:100
       }).then(res => {console.log(res);window.location.href = res.data.data.authorization_url;setReference(res.data.data.reference)}).catch(err => alert(err))
 
        }
