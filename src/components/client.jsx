@@ -24,9 +24,11 @@ const Client = () => {
             <div className='center'>
                <div className='bgUser'>
                     <div >
-                        <h5>Clients List</h5>
+                        <h3>Clients List</h3>
                         
-                        {name?.map((name, index)=>{return (<div  key={index}>{index}{name.name}<br/>{name.email}<br/>{name.phone}</div>)})} 
+                        {name?.map((name, index)=>{return (<div  key={index}> <h4>{()=>{return index +1}}{name.name}<br/>
+                                                                              {name.email}<br/>
+                                                                              {name.phone}</h4></div>)})} 
                         
                     </div>
                     </div>
