@@ -7,6 +7,7 @@ const Secret  = lazy(()=>import( './components/secret'))
 const SignUp =lazy(()=>import('./components/signup'))
 const Login =lazy(()=>import('./components/login'))
 const User =lazy(()=>import('./components/user'))
+const Client =lazy(()=>import('./components/client'))
 const Header =lazy(()=>import('./components/header'))
 const Payment =lazy(()=>import('./components/payment'))
 const Chat =lazy(()=>import('./components/chat'))
@@ -67,6 +68,7 @@ return (<div>
       <Route path='/secret' element={<Secret />}/>
       <Route path='/timer' element={<Timer />}/>
       <Route path='/' element={<Menu />}/>
+      <Route path='/client' element={<Client />}/>
       <Route path='/header' element={<Header />}/>
       <Route path='/login' element={<Login />}/>
       <Route path='/payment' element={<Payment />}/>

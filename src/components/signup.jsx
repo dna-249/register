@@ -14,7 +14,7 @@ const SignUp = () => {
         <button ><Link to="/staffSignup">Staff</Link></button>
         <button ><Link to="/teacherSignup">Teacher</Link></button>
         <button ><Link to="/studentSignup">Student</Link></button> <br/>
-        <div> <Link to="/teacher/:id"> Teacher</Link></div>
+        <div> <Link to="/client"> Client List</Link></div>
     </div>
     
     
