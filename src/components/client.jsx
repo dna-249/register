@@ -24,15 +24,16 @@ const Client = () => {
             <div className='center'>
                <div className='bgUser'>
                     <div >
-                        <h3>Clients List</h3>
-                        
-                        {name?.map((name, index)=>{ const serial = ()=>{return index +1}; 
+                       <div className="two"> <h2>Clients List</h2> <h2>Total:{name.length}</h2></div>
+                        <div className="white2">
+                        {name?.reverse().map((name, index)=>{ const serial = ()=>{return index +1}; 
                                                      const serials = serial();
                                                      return (<div  key={index}> <h4>{serials}--{name.name}<br/>
                                                                               {name.email}<br/>
                                                                               {name.phone}<br/>
                                                                               {name.date}</h4></div>)})} 
                         
+                    </div>
                     </div>
                     </div>
                     </div>
