@@ -26,9 +26,10 @@ const Client = () => {
                     <div >
                         <h3>Clients List</h3>
                         
-                        {name?.map((name, index)=>{return (<div  key={index}> <h4>{()=>{return index +1}}{name.name}<br/>
+                        {name?.map((name, index)=>{ const serial = ()=>{return index +1}; return (<div  key={index}> <h4>{serial}--{name.name}<br/>
                                                                               {name.email}<br/>
-                                                                              {name.phone}</h4></div>)})} 
+                                                                              {name.phone}<br/>
+                                                                              {name.date}</h4></div>)})} 
                         
                     </div>
                     </div>
