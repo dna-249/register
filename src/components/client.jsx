@@ -26,7 +26,7 @@ const Client = () => {
                     <div >
                         <h5>Clients List</h5>
                         
-                        {name?.payer?.map((name, index)=>{return (<div  key={index}>{index}{name.name}<br/>{name.email}<br/>{name.phone}</div>)})} 
+                        {name?.map((name, index)=>{return (<div  key={index}>{index}{name.name}<br/>{name.email}<br/>{name.phone}</div>)})} 
                         
                     </div>
                     </div>
