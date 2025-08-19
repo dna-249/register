@@ -16,7 +16,7 @@ const payment = () => {
       {email:email,
         name:name,
         phone:phone,
-        date:Date.now().slice(0,23)
+        date:Date.slice(0,21)
       }).then(res=> alert("processing...")).catch(err=>alert(err.message))    
  
     await axios.post("https://database-api-eight.vercel.app/pay",
