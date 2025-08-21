@@ -6,6 +6,7 @@
 const payment = () => {
   const [name,setName]= useState("")
   const [select,setSelect]= useState("")
+  const [select2,setSelect2]= useState("")
   const [reference,setReference]= useState("")
   const [phone,setPhone]= useState('')
   const [email,setEmail]= useState('')
@@ -21,7 +22,7 @@ const payment = () => {
  
     await axios.post("https://database-api-eight.vercel.app/pay",
       {email:email,
-        amount:100000
+        amount:select
       }).then(res => {console.log(res);window.location.href = res.data.data.authorization_url;setReference(res.data.data.reference)}).catch(err => alert(err))
 
        }
@@ -33,12 +34,24 @@ const payment = () => {
     <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
     <div><img src="/bg_eoa.jpg" width={300} height={300} alt="" />  <br />
      <span style={{color:"green",fontWeight:"bolder"}}>  Fill the following information:</span>  </div>
-          <h3>Program:  {id} </h3>
-          <h3>Select Duration: {select}
+          <h3>Program:    {id} </h3>
+          <h3>Select Duration:  
             <select onChange={(e)=>setSelect(e.target.value)}> 
-      <option value="One Month"> One Month</option>
-      <option value="Two Months"> Two Months</option>
-      <option value="Three Months"> Three Months</option>
+      <option value="50000"> One Month</option>
+      <option value="100000"> Two Months</option>
+      <option value="150000"> Three Months</option>
+      
+    </select>
+   
+    {select  === '50000' && <p>One Month  <br/>Fees: N50,000:00</p> 
+    || select === '100000' && <p>Two Months    <br/>Fees: N100,000:00</p>
+     || select === '150000' && <p>Three Months      <br/>Fees:N150,000</p>}
+         </h3>
+    <h3>Select Time:     {select2}
+            <select onChange={(e)=>setSelect2(e.target.value)}> 
+      <option value="Morning"> Morning</option>
+      <option value="Afternoon"> Afternoon</option>
+      <option value="Evening"> Evening</option>
       
     </select>
     </h3>

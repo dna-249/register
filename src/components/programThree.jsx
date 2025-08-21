@@ -58,7 +58,7 @@ const ProgramThree = () => {
                 <li>Click on the green button to enroll</li>
                 <li>Make payment to obtain Admission No</li>
              </ul>
-       <button style={{justifyItems:"center",height:"30", width:"200px",fontSize:"20px", backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px"}} ><Link to={`payment/${title}`}>Enroll here</Link></button>
+       <button style={{justifyItems:"center",height:"30", width:"200px",fontSize:"20px", backgroundColor:"darkgreen",padding:'5px',borderRadius:"10px"}} ><a href={`payment/${title}`}>Enroll here</a></button>
     <ul>
      <li>Use admission number  to create your account </li>
      </ul>
