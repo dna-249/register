@@ -1,5 +1,10 @@
 import React, { useState,lazy } from 'react'
 import { Route,Routes } from 'react-router-dom'
+import ProgramTwo from './components/programTwo'
+import ProgramThree from './components/programThree'
+import ProgramFour from './components/programFour'
+import ProgramFive from './components/programFive'
+import ProgramOne from './components/programOne'
 
 
 const Admission  = lazy(()=>import('./components/admission'))
@@ -55,7 +60,7 @@ return (<div>
       <Route path='/portal' element={<Portal/>}/>
       <Route path='/signUp' element={<SignUp/>}/>
       <Route path='/user/:id' element={<User />}/>
-      <Route path='/child/:id' element={<Child />}/>
+      <Route path='/child' element={<Child />}/>
       <Route path='/adult' element={<Adult />}/>
       <Route path='/studentSignup' element={<StudentSignup />}/>
       <Route path='/studentLogin' element={<StudentLogin />}/>
@@ -71,6 +76,11 @@ return (<div>
       <Route path='/timer' element={<Timer />}/>
       <Route path='/' element={<Menu />}/>
       <Route path='/program' element={<Program />}/>
+      <Route path='/programOne' element={<ProgramOne/>}/>
+      <Route path='/programTwo' element={<ProgramTwo />}/>
+      <Route path='/programThree' element={<ProgramThree />}/>
+      <Route path='/programFour' element={<ProgramFour />}/>
+      <Route path='/programFive' element={<ProgramFive />}/>
       <Route path='/client' element={<Client />}/>
       <Route path='/header' element={<Header />}/>
       <Route path='/login' element={<Login />}/>

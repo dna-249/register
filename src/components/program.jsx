@@ -1,13 +1,13 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Link, NavLink ,useNavigate} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { FaBars, FaCircle, FaDotCircle, FaGgCircle} from "react-icons/fa"
 const Program = () => {
    const [showPic, setShowPic] = useState(0)
     const pic =['bg_eoa.jpg','onlinepic.JPG']
   
-const nav = useNavigate()   
+   
    const handleImg = (index) => {
      setShowPic(()=>index)
    }
@@ -32,14 +32,17 @@ const nav = useNavigate()
         
     </div>
   <div  className="cover" > 
-    <h2> Select Program</h2>
-    <div className="white2 center2 program" onClick={()=>nav('/child/Child Program')}>Child Program </div>
-    <div className="white2 center2 program" onClick={()=>nav('/child/Tahfeez Program')}>Tahfeez Program </div>
-    <div className="white2 center2 program" onClick={()=>nav('/child/Adult (Male) Program')}> Adult (Male) Program</div>
-    <div className="white2 center2 program" onClick={()=>nav('/child/Woman Program')}> Woman Program</div>
-    <div className="white2 center2 program" onClick={()=>nav('/child/Qur\'an Science')}>Qur'an Science</div>
     
+     <div>
+      <h2> Select Program</h2>
+      <h2> </h2>
+    <div className="white2 center2 program"><Link to={'/programOne'}>Child Program </Link></div>
+    <div className="white2 center2 program"><Link to={'/programTwo'}>Tahfeez Program </Link></div>
+    <div className="white2 center2 program"><Link to={'/programThree'}> Adult (Male) Program</Link></div>
+    <div className="white2 center2 program"><Link to={'/programFour'}> Woman Program</Link></div>
+    <div className="white2 center2 program"> <Link to={'/programFive'}>Qur'an Science</Link></div>
     
+    </div>
     </div>
     <div className='img-icon'>{pic?.map((_,index)=><span key={index} onClick={()=>handleImg(index)}>{index === showPic? <FaDotCircle /> : <FaCircle/>}</span>)}</div>
     </div>
