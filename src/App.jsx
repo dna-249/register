@@ -84,7 +84,7 @@ return (<div>
       <Route path='/client' element={<Client />}/>
       <Route path='/header' element={<Header />}/>
       <Route path='/login' element={<Login />}/>
-      <Route path='/payment' element={<Payment />}/>
+      <Route path='/payment/:id' element={<Payment />}/>
       <Route path='/question/:id' element={<Question />}/>
       <Route path='/admission' element={<Admission />}/>
       <Route path='/activity/:id' element={<Activity />}/>

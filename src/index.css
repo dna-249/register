@@ -714,13 +714,18 @@ color: #fff;
 }
 
 
-
+@media all and (width > 450px){
+  .cover h2{
+   font-size: 100px;
+  }
+}
 
 @media all and (width < 450px){
   .three2{
     display: none;
     background:green;
   }
+  
   .bars{
     display: grid;
     justify-content:center;
