@@ -1,12 +1,14 @@
 import React, { useState,lazy } from 'react'
 import { Route,Routes } from 'react-router-dom'
 
+
 const Admission  = lazy(()=>import('./components/admission'))
 const Update  = lazy(()=>import( './components/update'))
 const Secret  = lazy(()=>import( './components/secret'))
 const SignUp =lazy(()=>import('./components/signup'))
 const Login =lazy(()=>import('./components/login'))
 const User =lazy(()=>import('./components/user'))
+const Program =lazy(()=>import('./components/program'))
 const Client =lazy(()=>import('./components/client'))
 const Header =lazy(()=>import('./components/header'))
 const Payment =lazy(()=>import('./components/payment'))
@@ -53,7 +55,7 @@ return (<div>
       <Route path='/portal' element={<Portal/>}/>
       <Route path='/signUp' element={<SignUp/>}/>
       <Route path='/user/:id' element={<User />}/>
-      <Route path='/child' element={<Child />}/>
+      <Route path='/child/:id' element={<Child />}/>
       <Route path='/adult' element={<Adult />}/>
       <Route path='/studentSignup' element={<StudentSignup />}/>
       <Route path='/studentLogin' element={<StudentLogin />}/>
@@ -68,6 +70,7 @@ return (<div>
       <Route path='/secret' element={<Secret />}/>
       <Route path='/timer' element={<Timer />}/>
       <Route path='/' element={<Menu />}/>
+      <Route path='/program' element={<Program />}/>
       <Route path='/client' element={<Client />}/>
       <Route path='/header' element={<Header />}/>
       <Route path='/login' element={<Login />}/>

@@ -11,6 +11,8 @@
     height: 50px;
     width: 50px;
   }
+  
+ 
   .break{
     display: grid;
     word-break: keep-all;
@@ -246,6 +248,7 @@ color:white;
   justify-content: center;
  
 }
+
 .sideA div:hover{
 background:green;
 color:white;
@@ -487,8 +490,24 @@ input[type="file"]{
   justify-content:baseline;
 
 }
+.program{
+  font-size:x-large;
+  font-weight: bolder;
+  color:darkgreen;
+  
+}
+.program:hover{
+  color: white;
+  background-color: darkorange;
+}
+.program a:hover{
+  color: #fff;
+}
 
-
+.program a{
+  color:darkgreen;
+  text-decoration: none;
+}
 .profile{
   width: 320px;
   height: fit-content;

@@ -24,7 +24,7 @@ const Menu = () => {
           </div>
         <div className='center2 white3'>
         
-        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}} className='center2'><h4 className='center2'>Apply Here <br/><FaArrowAltCircleDown className='arrow' />  </h4><h2><Link to="/child">Programmes Offered</Link> </h2>
+        <div  style={{textAlign:"left",fontWeight:"bold",color:"darkblue"}} className='center2'><h4 className='center2'>Apply Here <br/><FaArrowAltCircleDown className='arrow' />  </h4><h2><Link to="/program">Erudite Programmes</Link> </h2>
         </div>
         </div>
 

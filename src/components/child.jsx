@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useParams } from 'react-router-dom'
 import { BiCurrentLocation, BiMap, BiPrinter } from "react-icons/bi"
 import { FaMap } from 'react-icons/fa'
 import { AiFillHome, AiFillMacCommand } from 'react-icons/ai'
@@ -7,8 +7,9 @@ import Header from './header'
 import Slide from './slide'
 const Child = () => {
     const pic =['bg_eoa.jpg','onlinepic.JPG']
+      const {id} = useParams()
   
-  const title = `Children Summer Lesson `
+  const title = id
   
   return (
    <>
@@ -21,7 +22,7 @@ const Child = () => {
         
          </div>
         <div className="center2 white3">
-   
+                <h3><Link to={'/program'}>Programmes Objectives</Link></h3>
            <p >This program is designed to help a child:</p>
            <ul style={{textAlign:"left"}}>
            <li>  refresh his previous knowledge</li>
