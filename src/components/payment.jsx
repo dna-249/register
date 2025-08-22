@@ -31,7 +31,7 @@ const payment = () => {
 <>
 <div style={{height:"fit-content",padding:"20px"}} className='signUp'>
 
-    <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
+    <div style={{borderRadius:"10px",padding:"5px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
     <div style={{marginTop:"-10px"}}><img src="/bg_eoa.jpg" width={300} height={300} alt="" />  <br />
        </div>
           <h2> PROGRAM DESCRIPTION </h2>
