@@ -29,32 +29,43 @@ const payment = () => {
   
   return (
 <>
-<div className='signUp'>
+<div style={{height:"fit-content",padding:"20px"}} className='signUp'>
 
     <div style={{borderRadius:"10px",padding:"20px",border:" 1px solid rgba(128, 127, 127, 0.28)"}}>
-    <div><img src="/bg_eoa.jpg" width={300} height={300} alt="" />  <br />
-     <span style={{color:"green",fontWeight:"bolder"}}>  Fill the following information:</span>  </div>
-          <h3>Program:    {id} </h3>
-          <h3>Select Duration:  
-            <select onChange={(e)=>setSelect(e.target.value)}> 
-      <option value="50000"> One Month</option>
-      <option value="100000"> Two Months</option>
-      <option value="150000"> Three Months</option>
-      
-    </select>
-   
-    {select  === '50000' && <p>One Month  <br/>Fees: N50,000:00</p> 
-    || select === '100000' && <p>Two Months    <br/>Fees: N100,000:00</p>
-     || select === '150000' && <p>Three Months      <br/>Fees:N150,000</p>}
-         </h3>
-    <h3>Select Time:     {select2}
+    <div style={{marginTop:"-10px"}}><img src="/bg_eoa.jpg" width={300} height={300} alt="" />  <br />
+       </div>
+          <h2> PROGRAM DESCRIPTION </h2>
+          <div style={{fontSize:"20px", color:"coral",fontWeight:"bold"}}>Program Type  </div>
+          <p style={{fontSize:"20px",fontWeight:"bold"}}> {id}</p>
+
+          <div style={{fontSize:"20px", color:"coral",fontWeight:"bold"}}>Select Time:   
             <select onChange={(e)=>setSelect2(e.target.value)}> 
-      <option value="Morning"> Morning</option>
-      <option value="Afternoon"> Afternoon</option>
-      <option value="Evening"> Evening</option>
+      <option value="Morning Plan"> Morning</option>
+      <option value="Afternoon Plan"> Afternoon</option>
+      <option value="Evening Plan"> Evening</option>
       
     </select>
-    </h3>
+    </div>
+       <p style={{fontSize:"20px",fontWeight:"bold"}}> {select2}</p>
+          <div style={{fontSize:"20px", color:"coral",fontWeight:"bold"}}>Select Duration:  
+            <select onChange={(e)=>setSelect(e.target.value)}> 
+      <option value="50000"> One Month Program</option>
+      <option value="100000"> Two Months Program</option>
+      <option value="150000"> Three Months Program</option>
+      
+    </select>
+      </div>
+      {select  === '50000' && <p style={{fontSize:"20px",fontWeight:"bold"}}>One Month Program  </p> 
+    || select === '100000' && <p style={{fontSize:"20px",fontWeight:"bold"}}>Two Months  Program  </p>
+     || select === '150000' && <p style={{fontSize:"20px",fontWeight:"bold"}}>Three Months Program   </p>}
+       
+    
+       <div style={{fontSize:"20px", color:"coral",fontWeight:"bold"}}>Program Fees</div>
+        {select  === '50000' && <p style={{fontSize:"20px",fontWeight:"bold"}}>Fees: N50,000:00</p> 
+    || select === '100000' && <p style={{fontSize:"20px",fontWeight:"bold"}}>Fees: N100,000:00</p>
+     || select === '150000' && <p style={{fontSize:"20px",fontWeight:"bold"}}> Fees:N150,000</p>}
+       
+     <h3 style={{color:"green",fontWeight:"bolder"}}>  Fill the following information:</h3>
          <div>Full Name:<input onChange={(e)=>setName(e.target.value)}     type='text'/></div>
          <div>Phone:<input onChange={(e)=>setPhone(e.target.value)}     type='number'/></div>
          <div>Email:<input onChange={(e)=>setEmail(e.target.value)}     type='email'/></div>
