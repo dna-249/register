@@ -9,7 +9,7 @@ const ProgramTwo = () => {
     const pic =['bg_eoa.jpg','onlinepic.JPG']
     
   
-  const title = "Tahfeez Program"
+  const title = "Intermediate"
   
   return (
    <>

@@ -36,13 +36,10 @@ const Program = () => {
      <div>
       <h2> Select Program</h2>
       <h2> </h2>
-    <div className="white2 center2 program"><Link to={'/programOne'}>Child Program </Link></div>
-    <div className="white2 center2 program"><Link to={'/programTwo'}>Tahfeez Program </Link></div>
-    <div className="white2 center2 program"><Link to={'/programThree'}> Adult (Male) Program</Link></div>
-    <div className="white2 center2 program"><Link to={'/programFour'}> Woman Program</Link></div>
-    <div className="white2 center2 program"> <Link to={'/programFive'}>Qur'an Science</Link></div>
-    
-    </div>
+    <div className="white2 center2 program"><Link to={'/programOne'}>Basic  </Link></div>
+    <div className="white2 center2 program"><Link to={'/programTwo'}>Intermediate </Link></div>
+    <div className="white2 center2 program"><Link to={'/programThree'}> Advanced</Link></div>
+     </div>
     </div>
     <div className='img-icon'>{pic?.map((_,index)=><span key={index} onClick={()=>handleImg(index)}>{index === showPic? <FaDotCircle /> : <FaCircle/>}</span>)}</div>
     </div>

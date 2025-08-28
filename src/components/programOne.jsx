@@ -9,7 +9,7 @@ const ProgramOne = () => {
     const pic =['bg_eoa.jpg','onlinepic.JPG']
     
   
-  const title = "Child Program"
+  const title = "Basic"
   
   return (
    <>

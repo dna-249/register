@@ -9,7 +9,7 @@ const ProgramThree = () => {
     const pic =['bg_eoa.jpg','onlinepic.JPG']
     
   
-  const title = "Adult (Male) Program"
+  const title = "Advanced"
   
   return (
    <>

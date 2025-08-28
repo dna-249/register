@@ -6,6 +6,12 @@
   background-color: aliceblue;
   
   }
+  .box{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    
+  }
   .arrow{
     margin-top:10px;
     height: 50px;
