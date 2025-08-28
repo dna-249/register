@@ -42,8 +42,6 @@ const ProgramOne = () => {
             <li>Hadith</li>
             <li>Huruf </li>
             <li>Fiqh</li>
-            <li>Tauheed</li>
-            <li>Seerah </li>
             <li>Azkaar </li>
             
         </ul>

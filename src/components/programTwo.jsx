@@ -45,8 +45,6 @@ const ProgramTwo = () => {
             <li>Fiqh</li>
             <li>Tauheed</li>
             <li>Seerah </li>
-            <li>Azkaar </li>
-            
         </ul>
         </div>
          <div className="center2 white3">

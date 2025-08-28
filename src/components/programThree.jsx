@@ -22,7 +22,7 @@ const ProgramThree = () => {
         
          </div>
         <div className="center2 white3">
-                <h3><Link to={'/program'}>Programmes Objectives</Link></h3>
+                <h3><Link to={'/program'}>Programme's Objectives</Link></h3>
            <p >This program is designed to help a learner :</p>
            <ul style={{textAlign:"left"}}>
            <li>  refresh previous knowledge</li>
@@ -31,7 +31,6 @@ const ProgramThree = () => {
            <li> be able to recite the Qur'an proficiently and memorize a considerable portion of it</li>
            <li> have Fiqh(jurisprudence) knowledge to an Advanced</li>
            <li> learn islamic creed to an Advanced</li>
-           
         </ul>
         </div>
         <div className="center2 white3">
