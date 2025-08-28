@@ -23,14 +23,15 @@ const ProgramThree = () => {
          </div>
         <div className="center2 white3">
                 <h3><Link to={'/program'}>Programmes Objectives</Link></h3>
-           <p >This program is designed to help a child:</p>
+           <p >This program is designed to help a learner :</p>
            <ul style={{textAlign:"left"}}>
-           <li>  refresh his previous knowledge</li>
-           <li> learn about the teachings and sunnah of our beloved prophet(S A W)</li>
-           <li> master arabic letters(huruf), reading, and writing right from the basics.</li>
-           <li> be able to recite the Qur'an proficiently</li>
-           <li> have basic Fiqh(jurisprudence) knowledge</li>
-           <li> learn basic islamic history.</li>
+           <li>  refresh previous knowledge</li>
+           <li> learn about the teachings and sunnah of our beloved prophet(S A W) to an intermediate lavel</li>
+           <li> master arabic letters(huruf), reading, and writing to an Advanced</li>
+           <li> be able to recite the Qur'an proficiently and memorize a considerable portion of it</li>
+           <li> have Fiqh(jurisprudence) knowledge to an Advanced</li>
+           <li> learn islamic creed to an Advanced</li>
+           
         </ul>
         </div>
         <div className="center2 white3">

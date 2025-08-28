@@ -22,15 +22,16 @@ const ProgramOne = () => {
         
          </div>
         <div className="center2 white3">
-                <h3><Link to={'/program'}>Programmes Objectives</Link></h3>
-           <p >This program is designed to help a child:</p>
+                <h3><Link to={'/program'}>Programme's Objectives</Link></h3>
+           <p >This program is designed to help a learner:</p>
            <ul style={{textAlign:"left"}}>
-           <li>  refresh his previous knowledge</li>
+           <li>  refresh previous knowledge</li>
            <li> learn about the teachings and sunnah of our beloved prophet(S A W)</li>
            <li> master arabic letters(huruf), reading, and writing right from the basics.</li>
            <li> be able to recite the Qur'an proficiently</li>
            <li> have basic Fiqh(jurisprudence) knowledge</li>
-           <li> learn basic islamic history.</li>
+           <li> learn the basics of islamic creed </li>
+           <li> learn some daily Azkar</li>
         </ul>
         </div>
         <div className="center2 white3">
