@@ -27,15 +27,15 @@ const ProgramThree = () => {
            <ul style={{textAlign:"left"}}>
            <li>  refresh previous knowledge</li>
            <li> learn about the teachings and sunnah of our beloved prophet(S A W) to an intermediate lavel</li>
-           <li> master arabic letters(huruf), reading, and writing to an Advanced</li>
+           <li> master arabic letters(huruf), reading, and writing to  an advanced level</li>
            <li> be able to recite the Qur'an proficiently and memorize a considerable portion of it</li>
-           <li> have Fiqh(jurisprudence) knowledge to an Advanced</li>
-           <li> learn islamic creed to an Advanced</li>
+           <li> have Fiqh(jurisprudence) knowledge to  an advanced level</li>
+           <li> learn islamic creed to  an advanced level</li>
         </ul>
         </div>
         <div className="center2 white3">
              <h3>Subjects</h3>
-            <p>Below are the summer programme subjects: </p>
+            <p>Below are the programme subjects: </p>
             <ul style={{textAlign:"left"}}>
             <li>Qur'an</li>
             <li>Hadith</li>

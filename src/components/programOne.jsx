@@ -36,7 +36,7 @@ const ProgramOne = () => {
         </div>
         <div className="center2 white3">
              <h3>Subjects</h3>
-            <p>Below are the summer programme subjects: </p>
+            <p>Below are the programme subjects: </p>
             <ul style={{textAlign:"left"}}>
             <li>Qur'an</li>
             <li>Hadith</li>
